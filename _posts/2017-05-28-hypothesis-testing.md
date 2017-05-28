@@ -12,10 +12,9 @@ Next we imagine that there is some ground truth, so that $S_N^R \to p_R$ and $S_
 \frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)})
 \end{align}
 
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
+{% highlight python linenos %}
+	[Code here]
+{% endhighlight %}
 
 The assumption that we make here is that $p_R = p_B$, ie the underlying distributions are the same. Another way to write this is 
 \begin{align}\label{LLN}
