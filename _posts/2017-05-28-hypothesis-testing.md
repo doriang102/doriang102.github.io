@@ -13,7 +13,7 @@ Next we imagine that there is some ground truth, so that $S_N^R \to p_R$ and $S_
 \end{align}
 
 {% highlight python linenos %}
-	[Code here]
+	print 'hello'
 {% endhighlight %}
 
 The assumption that we make here is that $p_R = p_B$, ie the underlying distributions are the same. Another way to write this is 
