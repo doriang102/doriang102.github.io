@@ -8,3 +8,5 @@ Well. Finally got around to putting this old website together. Neat thing about 
 
 
 Let's define the random variable $$ a^2+b^2$$. 
+
+<script type="math/tex; mode=display"> a^2 + b^2 </script>
