@@ -22,6 +22,9 @@ def show
   end
 end
 {% endhighlight %}
+
+
+
 The assumption that we make here is that $p_R = p_B$, ie the underlying distributions are the same. Another way to write this is 
 \begin{align}\label{LLN}
 \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R &= p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1\\
