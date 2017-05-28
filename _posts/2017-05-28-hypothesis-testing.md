@@ -12,10 +12,16 @@ Next we imagine that there is some ground truth, so that $S_N^R \to p_R$ and $S_
 \frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)})
 \end{align}
 
-{% highlight python linenos %}
-	print 'hello'
+{% highlight ruby linenos %}
+def show
+  puts "Outputting a very lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong line"
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
 {% endhighlight %}
-
 The assumption that we make here is that $p_R = p_B$, ie the underlying distributions are the same. Another way to write this is 
 \begin{align}\label{LLN}
 \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R &= p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1\\
