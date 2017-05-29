@@ -7,6 +7,8 @@ of the $$ith$$ observation for the red and blue buttons respectively, ie. $$X_i^
 
 \begin{align}
 S_N^R &:= \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R\\
+
+
 S_N^R &:= \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R.
 \end{align}
 
