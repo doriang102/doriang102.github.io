@@ -35,19 +35,21 @@ end
 
 
 
-The assumption that we make here is that $p_R = p_B$, ie the underlying distributions are the same. Another way to write this is 
-\begin{align}\label{LLN}
-\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R &= p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1\\
-\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B &= p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(p_B, p_B(1-p_B)) + E_2,
-\end{align}
-where both $E_1$ and $E_2$ tend to $0$ as $N_R$ and $N_B$ tend to infinity, and the equality is understood in the distributional sense. 
+The assumption that we make here is that $$p_R = p_B$$, ie the underlying distributions are the same. Another way to write this is 
+$$\label{LLN}
+\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R &= p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1$$
+
+
+$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B &= p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(p_B, p_B(1-p_B)) + E_2$$
+
+where both $$E_1$$ and $$E_2$$ tend to $$0$$ as $$N_R$$ and $$N_B$$ tend to infinity, and the equality is understood in the distributional sense. 
 
 Next we make the following observations
-\begin{itemize}
-\item The assumption $H_0$ sets $p_B = p_R$. 
-\item We can absorb the $\sqrt{N_R}$ and $\sqrt{N_B}$ terms into the variances of the normal distributions. 
-\item The difference of two normally distributed random variables $\mathcal{N}_1$ and $\mathcal{N}_2$ is again a normally distributed random variable with mean $\mu_1 - \mu_2$ and variances $\sigma_1^2 + \sigma_2^2$. 
-\end{itemize}
+
+- The assumption $$H_0$$ sets $$p_B = p_R$$. 
+-  We can absorb the $$\sqrt{N_R}$$ and $$\sqrt{N_B}$$ terms into the variances of the normal distributions. 
+- The difference of two normally distributed random variables $$\mathcal{N}_1$$ and $$\mathcal{N}_2$$ is again a normally distributed random variable with mean $$\mu_1 - \mu_2$$ and variances $$\sigma_1^2 + \sigma_2^2$$. 
+
 
 We thus obtain
 \begin{equation}
