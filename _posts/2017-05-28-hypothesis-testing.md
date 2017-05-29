@@ -19,7 +19,7 @@ $$
 - Both $$\{X_i^R\}$$ and $$\{X_i^B\}$$ form a collection of independent, identitically dstirbuted random variables (i.i.d). 
 - For each $$i$$, $$X_i^R$$ and $$X_i^B$$ are sampled from normal distributions with means $$p_R$$ and $$p_B$$.
 
-Next we imagine that there is some ground truth, so that $$S_N^R \to p_R$$ and $$S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ - this is a consequence of the **Law of Large Numbers**. The **Central Limit Theorem** tells us that
+As a result of the **Law of Large Numbers**, we have $$\frac{1}{N_R}S_N^R \to p_R$$ and $$\frac{1}{N_B}S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ - this is a consequence of the . The **Central Limit Theorem** tells us that
 
 
 $$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})$$
