@@ -16,10 +16,10 @@ $$
 Next we imagine that there is some ground truth, so that $$S_N^R \to p_R$$ and $$S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ - this is a consequence of the **Law of Large Numbers**. The **Central Limit Theorem** tells us that
 
 
-$$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})$$
+$$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)}$$
 
 
-$$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)})$$
+$$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)}$$
 
 
 {% highlight ruby %}
