@@ -74,8 +74,11 @@ We thus conclude that the following z score is sampled from a normal distributio
 
 **Question:** What is the probability of observing a value equal to or larger than the above value from a normal distribution with mean 0 and variance 1? This is what a p value is.
 
+$$P[p_1 > p_2;f_1,f_2] = \frac{\int_0^1 \int_0^1 I(p_1 > p_2) P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2)}{\int_0 ^1 \int_0^1 P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2) }$$
+
 ## Bayesian Approach
 \section{Coin Bias}
+
 Let's define $X_{N}$ to be the number of heads obtained after $N$ flips of a coin which has bias $p$. Then $X_N$ has a distribution given by
 
 \[ f(X_N = k | p)  = {N \choose k} p^k (1-p)^{N-k} .\]
