@@ -131,7 +131,7 @@ $$ f(p) = f(1/2) + f'(1/2)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2,$$
 where $$\xi \in [0,1/2]$$. 
 Then we have
 $$
-\int f(p) d\mathbb{P}_n(p) &= f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi) \textrm{Var}(p | X_n=x)$$
+\int f(p) d\mathbb{P}_n(p) = f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi) \textrm{Var}(p | X_n=x)$$
 which becomes
 $$= f(1/2) + o(1) \textrm{ as } n \to +\infty.$$
 
