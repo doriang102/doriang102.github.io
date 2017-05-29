@@ -10,7 +10,7 @@ S_N^R = \sum_{i=1}^{N_R} X_i^R
 $$
 
 $$
-S_N^R = \sum_{i=1}^{N_R} X_i^R.
+S_N^B = \sum_{i=1}^{N_B} X_i^B.
 $$
 
 Next we imagine that there is some ground truth, so that $$S_N^R \to p_R$$ and $$S_N^B \to p_B$$ as $N_R,N_B \to +\infty$ - this is a consequence of the Law of Large Numbers. The central limit theorem tells us that
