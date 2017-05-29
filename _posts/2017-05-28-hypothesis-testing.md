@@ -77,33 +77,34 @@ We thus conclude that the following z score is sampled from a normal distributio
 $$P[p_1 > p_2;f_1,f_2] = \frac{\int_0^1 \int_0^1 I(p_1 > p_2) P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2)}{\int_0 ^1 \int_0^1 P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2) }$$
 
 ## Bayesian Approach
-\section{Coin Bias}
 
-Let's define $X_{N}$ to be the number of heads obtained after $N$ flips of a coin which has bias $p$. Then $X_N$ has a distribution given by
 
-\[ f(X_N = k | p)  = {N \choose k} p^k (1-p)^{N-k} .\]
+Let's define $$X_{N}$$ to be the number of heads obtained after $$N$$ flips of a coin which has bias $$p$$. Then $$X_N$$ has a distribution given by
 
-But we really want to know what is $ f(p | X_n = k)$, ie. we want to learn the bias from the data. Thus we use Baye's theorem:
+$$ f(X_N = k | p)  = {N \choose k} p^k (1-p)^{N-k} .$$
 
-\[ f(p | X_N = k) =\frac{ f(X_N = k | p) f(p)}{f(X_n=k)}.\]
+But we really want to know what is $$ f(p | X_n = k)$$, ie. we want to learn the bias from the data. Thus we use Baye's theorem:
 
-What is $f(X_n=k)$? This is summing up all possibilities over all probabilities. In other words, we have
-\[ f(X_n=k) = \int_0^1 {N \choose k} p^k (1-p)^{N-k} f(p) dp.\]
+$$ f(p | X_N = k) =\frac{ f(X_N = k | p) f(p)}{f(X_n=k)}.$$
+
+What is $$f(X_n=k)$$? This is summing up all possibilities over all probabilities. In other words, we have
+$$ f(X_n=k) = \int_0^1 {N \choose k} p^k (1-p)^{N-k} f(p) dp.$$
 
 Thus we have 
-\[ f(p | X_N = k) =\frac{  {N \choose k} p^k (1-p)^{N-k}f(p)}{ \int_0^1 {N \choose k} p^k (1-p)^{N-k} f(p) dp}.\]
+$$ f(p | X_N = k) =\frac{  {N \choose k} p^k (1-p)^{N-k}f(p)}{ \int_0^1 {N \choose k} p^k (1-p)^{N-k} f(p) dp}.$$
 
-What is $f(p)$? This is just our prior belief about what $p$ is - since we don't know anything, we set it to be the \emph{uniform distribution}, so $f(p) \equiv 1$. Thus we finally have
+What is $$f(p)$$? This is just our prior belief about what $$p$$ is - since we don't know anything, we set it to be the *uniform distribution*, so $$f(p) \equiv 1$$. Thus we finally have
 
-\[ f(p | X_N = k) = \frac{ p^k(1-p)^{N-k}}{\int_0^1 p^k (1-p)^{N-k} dp}.\]
-For simplicity in the next sections, are going to write $N = n + m$ so that we have
-\[ f(p | X_n = m) = \frac{ p^m(1-p)^{n}}{\int_0^1 p^m (1-p)^{n} dp}.\]
+$$ f(p | X_N = k) = \frac{ p^k(1-p)^{N-k}}{\int_0^1 p^k (1-p)^{N-k} dp}.$$
+
+For simplicity in the next sections, are going to write $$N = n + m$$ so that we have
+$$ f(p | X_n = m) = \frac{ p^m(1-p)^{n}}{\int_0^1 p^m (1-p)^{n} dp}.$$
 
 Also recall that the Beta function is defined as 
 
-\[B(n+1,m+1) = \int_0^1 p^{n} (1-p)^m dp .\]
+$$B(n+1,m+1) = \int_0^1 p^{n} (1-p)^m dp .$$
 
-\subsection{Case 1: $m = 0$ as  $n \to +\infty$}
+### Case 1: $$m = 0$$ as  $$n \to +\infty$$
 
 In this case we have
 $$ f(p | m= 0, n) = \frac{p^n}{\int_0^1 p^n dp} = (n+1)p^n .$$
@@ -111,7 +112,7 @@ $$ f(p | m= 0, n) = \frac{p^n}{\int_0^1 p^n dp} = (n+1)p^n .$$
 It is easy to verify that the above converges in a distributional sense to $$\delta_{p=1}(p)$$. 
 This works the same when $$m = o(n)$$ as $$n \to +\infty$$. We leave it as an exercise for the reader to ensure the calculations work the same. 
 
-## Case 2: $m = n$ as  $n \to +\infty$
+## Case 2: $$m = n$$ as  $$n \to +\infty$$
 
 $$\mathbb{E} (p | X_n = n) = \frac{B(n+2,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3} \frac{B(n+1,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3}.$$
 
@@ -120,18 +121,20 @@ $$
 
 $$\frac{B(n+3,n+1) - B(n+2,n+1)(n+1)/(2n+3) + (n+1)^2/(2n+3)^2 B(n+1,n+1)}{B(n+1,n+1)}.$$
 
-Using the identity $B(m+1,n) = \frac{m}{m+n} B(m,n)$ repeatedly and using the fact that $n \to + \infty$, we have 
-\begin{align} \textrm{Var}(p | X_n=n) &= o(1) \textrm{ as } n \to +\infty.\\
-\mathbb{E}(p | X_n=n) &=  \frac{1}{2} +  o(1) \textrm{ as } n \to +\infty.
-\end{align}
+Using the identity $$B(m+1,n) = \frac{m}{m+n} B(m,n)$$ repeatedly and using the fact that $$n \to + \infty$$, we have 
+$$\textrm{Var}(p | X_n=n) &= o(1) \textrm{ as } n \to +\infty.$$
 
-Let $f \in C^2([0,1])$, and let's do a Taylor expansion of $f$ around $1/2$. 
+$$\mathbb{E}(p | X_n=n) &=  \frac{1}{2} +  o(1) \textrm{ as } n \to +\infty.$$
+
+
+Let $$f \in C^2([0,1])$$, and let's do a Taylor expansion of $$f$$ around $$1/2$$. 
 \[ f(p) = f(1/2) + f'(1/2)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2,\]
-where $\xi \in [0,1/2]$. 
+where $$\xi \in [0,1/2]$$. 
 Then we have
-\begin{align}
-\int f(p) d\mathbb{P}_n(p) &= f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi) \textrm{Var}(p | X_n=x)\\
- &= f(1/2) + o(1) \textrm{ as } n \to +\infty.
-\end{align}
+$$
+\int f(p) d\mathbb{P}_n(p) &= f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi) \textrm{Var}(p | X_n=x)$$
+which becomes
+$$= f(1/2) + o(1) \textrm{ as } n \to +\infty.$$
 
-Then we simply use the density of smooth functions in the space of continuous functions on $[0,1]$ to extend the result to all continuous functions on $[0,1]$. 
+
+Then we simply use the density of smooth functions in the space of continuous functions on $$[0,1]$$ to extend the result to all continuous functions on $$[0,1]$$. 
