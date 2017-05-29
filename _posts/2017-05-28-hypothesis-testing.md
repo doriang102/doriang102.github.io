@@ -13,7 +13,7 @@ $$
 S_N^R &:= \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R.
 $$
 
-Next we imagine that there is some ground truth, so that $S_N^R \to p_R$ and $S_N^B \to p_B$ as $N_R,N_B \to +\infty$ - this is a consequence of the Law of Large Numbers. The central limit theorem tells us that
+Next we imagine that there is some ground truth, so that $$S_N^R \to p_R$$ and $$S_N^B \to p_B$$ as $N_R,N_B \to +\infty$ - this is a consequence of the Law of Large Numbers. The central limit theorem tells us that
 
 \begin{align}
 \frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})\\
