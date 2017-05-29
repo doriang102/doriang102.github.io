@@ -16,10 +16,10 @@ $$
 Next we imagine that there is some ground truth, so that $$S_N^R \to p_R$$ and $$S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ - this is a consequence of the **Law of Large Numbers**. The **Central Limit Theorem** tells us that
 
 
-$$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)}$$
+$$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})$$
 
 
-$$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)}$$
+$$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)})$$
 
 
 {% highlight ruby %}
@@ -36,10 +36,10 @@ end
 
 
 The assumption that we make here is that $$p_R = p_B$$, ie the underlying distributions are the same. Another way to write this is 
-$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R &= p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1$$
+$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R = p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1$$
 
 
-$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B &= p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(p_B, p_B(1-p_B)) + E_2$$
+$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B = p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(p_B, p_B(1-p_B)) + E_2$$
 
 where both $$E_1$$ and $$E_2$$ tend to $$0$$ as $$N_R$$ and $$N_B$$ tend to infinity, and the equality is understood in the distributional sense. 
 
