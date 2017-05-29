@@ -106,42 +106,32 @@ Also recall that the Beta function is defined as
 \subsection{Case 1: $m = 0$ as  $n \to +\infty$}
 
 In this case we have
-\[ f(p | m= 0, n) = \frac{p^n}{\int_0^1 p^n dp} = (n+1)p^n .\]
+$$ f(p | m= 0, n) = \frac{p^n}{\int_0^1 p^n dp} = (n+1)p^n .$$
 
-It is easy to verify that the above converges in a distributional sense to $\delta_{p=1}(p)$. 
-This works the same when $m = o(n)$ as $n \to +\infty$. We leave it as an exercise for the reader to ensure the calculations work the same. 
+It is easy to verify that the above converges in a distributional sense to $$\delta_{p=1}(p)$$. 
+This works the same when $$m = o(n)$$ as $$n \to +\infty$$. We leave it as an exercise for the reader to ensure the calculations work the same. 
 
-\subsection{Case 2: $m = n$ as  $n \to +\infty$}
+## Case 2: $m = n$ as  $n \to +\infty$
 
-\[\mathbb{E} (p | X_n = n) = \frac{B(n+2,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3} \frac{B(n+1,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3}.\]
+$$\mathbb{E} (p | X_n = n) = \frac{B(n+2,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3} \frac{B(n+1,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3}.$$
 
-\begin{align}\textrm{Var}(p | X_n=n) &= \frac{1}{B(n+1,n+1)} \int_0^1 (p- \frac{n+1}{2n+3})^2 p^n (1-p)^n dp
-\end{align}
-\[\frac{B(n+3,n+1) - B(n+2,n+1)(n+1)/(2n+3) + (n+1)^2/(2n+3)^2 B(n+1,n+1)}{B(n+1,n+1)}.\]
+$$\textrm{Var}(p | X_n=n) &= \frac{1}{B(n+1,n+1)} \int_0^1 (p- \frac{n+1}{2n+3})^2 p^n (1-p)^n dp
+$$
+
+$$\frac{B(n+3,n+1) - B(n+2,n+1)(n+1)/(2n+3) + (n+1)^2/(2n+3)^2 B(n+1,n+1)}{B(n+1,n+1)}.$$
 
 Using the identity $B(m+1,n) = \frac{m}{m+n} B(m,n)$ repeatedly and using the fact that $n \to + \infty$, we have 
-\begin{align} \textrm{Var}(p | X_n=n) &= \frac{1}{2}\left( 1 - \frac{1}{2}\right) + o(n) \textrm{ as } n \to +\infty.\\
-\mathbb{E}(p | X_n=n) &=  \frac{1}{2} +  o(n) \textrm{ as } n \to +\infty.
+\begin{align} \textrm{Var}(p | X_n=n) &= o(1) \textrm{ as } n \to +\infty.\\
+\mathbb{E}(p | X_n=n) &=  \frac{1}{2} +  o(1) \textrm{ as } n \to +\infty.
 \end{align}
 
-Next, we need to check if $\{Z_n = p | X_n=n\}_{n \in \mathbb{N}}$  form an independent set of random variables. Indeed, interpreting $ \{p | X_n=n\}$ as the bias on a coin for which we have observed $n$ heads out of $2n$ trials, we have
-
-\begin{align} \mathbb{E}(Z_m Z_n) &= \frac{1}{B(m+1,m+1)B(n+1,n+1)}\int_0^1 \int_0^1 p_1 p_2 p_1^{m}(1-p_1)^{m} p_2^n(1-p_2)^n dp_1dp_2\\
-&= \mathbb{E}(Z_m) \mathbb{E}(Z_n)
- \end{align}
-ala Fubini's theorem. d
-
-Thus $\{Z_i\}_{i}$ form an indepdent set of random variables with means converging to $1/2$ and variances to $\frac{1}{2}(1-\frac{1}{2})$. 
-
-
- 
-Now define $Z_i = p_i |( X_n = n)$ for $i = 1, \cdots, N$ (noting that $n$ and $N$ are unrelated!), and denote
-\[ d\mathbb{P}_n(p) =  \frac{ p^n(1-p)^{n}}{\int_0^1 p^n(1-p)^{n} dp}.\]
-
-Then using (0.2) and (0.3) and the Central Limit Theorem applied to $Z_i$, we have 
+Let $f \in C^2([0,1])$, and let's do a Taylor expansion of $f$ around $1/2$. 
+\[ f(p) = f(1/2) + f'(1/2)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2,\]
+where $\xi \in [0,1/2]$. 
+Then we have
 \begin{align}
-\int_0^1\frac{1}{N} \sum_{i=1}^N  f(p_i) d\mathbb{P}_n(p_i) &=  \frac{1}{N} \sum_{i=1}^N \int_0^1 f(p) d\mathbb{P}_n(p)\\
-&= \frac{N}{N} \int_0^1 f(p) d\mathbb{P}_n(p) \to \mathcal{N}(1/2 + o(n),1/4 + o(n)).
+\int f(p) d\mathbb{P}_n(p) &= f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi) \textrm{Var}(p | X_n=x)\\
+ &= f(1/2) + o(1) \textrm{ as } n \to +\infty.
 \end{align}
-Sending $n \to +\infty$ proves the result. 
 
+Then we simply use the density of smooth functions in the space of continuous functions on $[0,1]$ to extend the result to all continuous functions on $[0,1]$. 
