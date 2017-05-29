@@ -112,7 +112,7 @@ $$ f(p | m= 0, n) = \frac{p^n}{\int_0^1 p^n dp} = (n+1)p^n .$$
 It is easy to verify that the above converges in a distributional sense to $$\delta_{p=1}(p)$$. 
 This works the same when $$m = o(n)$$ as $$n \to +\infty$$. We leave it as an exercise for the reader to ensure the calculations work the same. 
 
-## Case 2: $$m = n$$ as  $$n \to +\infty$$
+### Case 2: $$m = n$$ as  $$n \to +\infty$$
 
 $$\mathbb{E} (p | X_n = n) = \frac{B(n+2,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3} \frac{B(n+1,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3}.$$
 
