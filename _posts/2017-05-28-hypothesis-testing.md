@@ -1,6 +1,6 @@
 In this first blog post, I plan on discussing the detailed mathematics behind computing p values in data science, but restricted to a single hypothesis (multiple hypothesis testing will be covered later). Almost all of the expalanations I've found skip *very* important details that highlight the issues and limitations with using p values to make conclusions about the effectiveness of treatment.
 
-## Experimental Setup
+## Frequentist Appraoch - p values
 
 Let's assume that we have two buttons, a red button and a blue button. We wish to construct a proper experiment to test out which button results in higher conversions (clicks/likes, etc). 
 
@@ -72,53 +72,9 @@ We thus conclude that the following z score is sampled from a normal distributio
 \frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}}.
 \end{equation}
 
-\textbf{Question:} What is the probability of observing a value equal to or larger than the above value from a normal distribution with mean 0 and variance 1? This is what a p value is. However
+**Question:** What is the probability of observing a value equal to or larger than the above value from a normal distribution with mean 0 and variance 1? This is what a p value is.
 
-
-
-
-Assuming we have $N_R$ and $N_B$ observations for red and blue respectively, we define the conversion rate to simply be the empirical mean of our observations, so $p_R = \hat S_N^R$ and $p_B = \hat S_N^B$. 
-. Now since $S_N^R$ and $S_N^B$ define random variables, we make the hypothesis that 
-\begin{equation}
-H_0: \; S_N^R = S_N^B.
-\end{equation}
-Now let's say we've done the experiment which had $N_B$ views for the blue button and $N_R$ views of the red button. We consider the joint probability distribution $p(k,j)$ for the difference of $p_R - p_J$ which is
-
-\begin{equation}
-p(k,j) = {N_R \choose k}{N_B \choose j} p_R^k (1-p_R)^{N_R-k}p_B^j (1-p_B)^{N_B-j}
-\end{equation}
-
-Under the hypothesis $H_0$, this turns into 
-
-\begin{equation}
-p(k,j|H_0) = {N_R \choose k}{N_B \choose j} p^{k+j} (1-p)^{N_R-k-j}
-\end{equation}
-
-Thus what we want to calculuate is:
-\begin{equation}
-p(k \geq N_R \alpha,j \leq N_B \beta|H_0) = \sum_{k \geq N_R \alpha} \sum_{j \leq N_B \beta} {N_R \choose k}{N_B \choose j} p^{k+j} (1-p)^{N_R-k-j}
-\end{equation}
-
-This is a mess though! Note however that $Z : = p_R - p_B$ satisfies
-\[ \mathbb{E}(X_n) = p_R - p_B,\]
-and, by independence, 
-\[ \textrm{Var}(X_n) = \frac{p_R(1-p_R)}{\sqrt{N_R}} + \frac{p_B(1-p_B)}{\sqrt{N_B}}.\]
-
-The Central Limit Theorem states that $S_n^R$  and $S_n^B$ are both approximately normally distributed for large $n$. It's also true that the sum of two normal random variables is also a normal random variable. Therefore $S_n=S_{N_R}^R - S_{N_B}^B$
-is approximately normally distributed for large $N_R$ and $N_B$. We can also multiply and divide by any constants and retain normality. With this we have
-\[ \frac{S_{N_R}^R - S_{N_B}^N}{p_R(1-p_R)/\sqrt{N_R} + p_B(1-p_B)/\sqrt{N_B}} \sim \mathcal{N}(0, 1) .\]
-We then compute
-\[ \Phi\left(\frac{p_R - p_B} {\frac{p_R(1-p_R)}{\sqrt{N_R}} + \frac{p_B(1-p_B)}{\sqrt{N_B}}}\right),\]
-where $\Phi$ is the normal distribution. 
- By the hypothesis $0$ we have $\mathbb{E}(S_n^R) = \mathbb{E}(S_n^B)$. 
-
-Thus define $z_n = \frac{p_R - p_B} {\frac{p_R(1-p_R)}{\sqrt{N_R}} + \frac{p_B(1-p_B)}{\sqrt{N_B}}.}$ and it's clear that $\mathbb{E}(Z_n) = 0$ and $\textrm{Var}(Z_n) = 1$ for all $n$. 
-We then compute
-\[ \alpha := \Phi\left(\frac{p_R - p_B} {\frac{p_R(1-p_R)}{\sqrt{N_R}} + \frac{p_B(1-p_B)}{\sqrt{N_B}}}\right),\]
-which gives us the probability that the observed difference was by chance. However note that we are not given any kind of explicit convergence rate when we apply the central limit theorem! Thus the best we can say with this
-kind of approximation is that the probability of the observed outcome is $\alpha + o(n)$ as $n \to +\infty$ - \textbf{so really tells us nothing about the actual probability}. It only tells us that \emph{if} our result holds asymptotically, then
-we can compute the p value. 
-\subsection{Bayes ratios}
+## Bayesian Approach
 \section{Coin Bias}
 Let's define $X_{N}$ to be the number of heads obtained after $N$ flips of a coin which has bias $p$. Then $X_N$ has a distribution given by
 
