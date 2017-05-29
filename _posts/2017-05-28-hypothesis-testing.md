@@ -3,14 +3,14 @@ In this first blog post, I plan on discussing the detailed mathematics behind co
 ## Experimental Setup
 
 Let's assume that we have two buttons, a red button and a blue button. We wish to construct a proper experiment to test out which button results in higher conversions (clicks/likes, etc). Let $$X_i^R$$ and $$X_i^B$$ be the outcomes
-of the $$ith$$ observation for the red and blue buttons respectively, ie. $$X_i^{R,B} = 1$$ if the user clicked the button, and $$X_i^{R,B} = 0$$ otherwise.  Then we define the observations after $$N_R$$ and $$N_B$$ respective trials:
+of the $$ith$$ observation for the red and blue buttons respectively, ie. $$X_i^{R,B} = 1$$ if the user clicked the button, and $$X_i^{R,B} = 0$$ otherwise.  Then we define the number of clicks of the red and blue buttons after $$N_R$$ and $$N_B$$ respective trials:
 
 $$
-S_N^R = \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R
+S_N^R = \sum_{i=1}^{N_R} X_i^R
 $$
 
 $$
-S_N^R &:= \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R.
+S_N^R = \sum_{i=1}^{N_R} X_i^R.
 $$
 
 Next we imagine that there is some ground truth, so that $$S_N^R \to p_R$$ and $$S_N^B \to p_B$$ as $N_R,N_B \to +\infty$ - this is a consequence of the Law of Large Numbers. The central limit theorem tells us that
