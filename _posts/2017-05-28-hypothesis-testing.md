@@ -116,19 +116,18 @@ This works the same when $$m = o(n)$$ as $$n \to +\infty$$. We leave it as an ex
 
 $$\mathbb{E} (p | X_n = n) = \frac{B(n+2,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3} \frac{B(n+1,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3}.$$
 
-$$\textrm{Var}(p | X_n=n) &= \frac{1}{B(n+1,n+1)} \int_0^1 (p- \frac{n+1}{2n+3})^2 p^n (1-p)^n dp
-$$
+$$\textrm{Var}(p | X_n=n) = \frac{1}{B(n+1,n+1)} \int_0^1 (p- \frac{n+1}{2n+3})^2 p^n (1-p)^n dp$$
 
 $$\frac{B(n+3,n+1) - B(n+2,n+1)(n+1)/(2n+3) + (n+1)^2/(2n+3)^2 B(n+1,n+1)}{B(n+1,n+1)}.$$
 
 Using the identity $$B(m+1,n) = \frac{m}{m+n} B(m,n)$$ repeatedly and using the fact that $$n \to + \infty$$, we have 
 $$\textrm{Var}(p | X_n=n) &= o(1) \textrm{ as } n \to +\infty.$$
 
-$$\mathbb{E}(p | X_n=n) &=  \frac{1}{2} +  o(1) \textrm{ as } n \to +\infty.$$
+$$\mathbb{E}(p | X_n=n) =  \frac{1}{2} +  o(1) \textrm{ as } n \to +\infty.$$
 
 
 Let $$f \in C^2([0,1])$$, and let's do a Taylor expansion of $$f$$ around $$1/2$$. 
-\[ f(p) = f(1/2) + f'(1/2)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2,\]
+$$ f(p) = f(1/2) + f'(1/2)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2,$$
 where $$\xi \in [0,1/2]$$. 
 Then we have
 $$
