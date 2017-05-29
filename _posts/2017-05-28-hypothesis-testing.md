@@ -1,5 +1,9 @@
+In this first blog post, I plan on discussing the detailed mathematics behind computing p values in data science, but restricted to a single hypothesis (multiple hypothesis testing will be covered later). Almost all of the expalanations I've found skip *very* important details that highlight the issues and limitations with using p values to make conclusions about the effectiveness of treatment.
+
+### Experimental Setup
+
 Let's assume that we have two buttons, a red button and a blue button. We wish to construct a proper experiment to test out which button results in higher conversions (clicks/likes, etc). Let $X_i^R$ and $X_i^B$ be the outcomes
-of the $ith$ observation for the red and blue buttons respectively, ie. $X_i^{R,B} = 1$ if the user clicked the button, and $X_i^{R,B} = 0$ otherwise.  Then we define the observations after $N_R$ and $N_B$ respective trials:
+of the $ith$ observation for the red and blue buttons respectively, ie. $X_i^{R,B} = 1$ if the user clicked the button, and $$X_i^{R,B} = 0$$ otherwise.  Then we define the observations after $N_R$ and $N_B$ respective trials:
 \begin{align}
 S_N^R &:= \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R\\
 S_N^R &:= \frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R.
