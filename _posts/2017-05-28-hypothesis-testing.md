@@ -36,8 +36,7 @@ end
 
 
 The assumption that we make here is that $$p_R = p_B$$, ie the underlying distributions are the same. Another way to write this is 
-$$\label{LLN}
-\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R &= p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1$$
+$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R &= p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1$$
 
 
 $$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B &= p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(p_B, p_B(1-p_B)) + E_2$$
