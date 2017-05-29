@@ -70,5 +70,5 @@
 .post>.highlight pre code.console .go { color: #bbb; }
 .post>.highlight pre code.console .gp { color: #999; }
 
-code { color: #333; background-color: #F4F4F4 }
+code { color: #333; background-color: #F4F4F4,font-size: 10pt; }
 h1 code, h2 code, h3 code, h4 code { color: #c7254e }
