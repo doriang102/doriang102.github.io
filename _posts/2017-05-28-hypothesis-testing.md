@@ -121,7 +121,7 @@ $$\textrm{Var}(p | X_n=n) = \frac{1}{B(n+1,n+1)} \int_0^1 (p- \frac{n+1}{2n+3})^
 $$\frac{B(n+3,n+1) - B(n+2,n+1)(n+1)/(2n+3) + (n+1)^2/(2n+3)^2 B(n+1,n+1)}{B(n+1,n+1)}.$$
 
 Using the identity $$B(m+1,n) = \frac{m}{m+n} B(m,n)$$ repeatedly and using the fact that $$n \to + \infty$$, we have 
-$$\textrm{Var}(p | X_n=n) &= o(1) \textrm{ as } n \to +\infty.$$
+$$\textrm{Var}(p | X_n=n) = o(1) \textrm{ as } n \to +\infty.$$
 
 $$\mathbb{E}(p | X_n=n) =  \frac{1}{2} +  o(1) \textrm{ as } n \to +\infty.$$
 
