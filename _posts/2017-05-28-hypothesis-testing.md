@@ -114,7 +114,7 @@ This works the same when $$m = o(n)$$ as $$n \to +\infty$$. We leave it as an ex
 
 ### Case 2: $$m = n$$ as  $$n \to +\infty$$
 
-We begin by computing the expected value and variance of $p | X_n = n$:
+We begin by computing the expected value and variance of $$p | X_n = n$$:
 
 $$\mathbb{E} (p | X_n = n) = \frac{B(n+2,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3} \frac{B(n+1,n+1)}{B(n+1,n+1)} = \frac{n+1}{2n+3}.$$
 
