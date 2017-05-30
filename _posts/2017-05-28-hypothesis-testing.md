@@ -31,14 +31,14 @@ n_B=1200
 
 # Set conversion rates of observations.
 p_R=0.1
-p_B=0.2
+p_B=0.12
 
 # Set number of samples to take
 samples=10000
 
 # Sample from red and blue butotn given observed conversion rates. 
 x_R = np.random.binomial(n_R, p_R, samples)/n_R
-x_B = np.random.binomial(n_B, p_R, samples)/n_R
+x_B = np.random.binomial(n_B, p_B, samples)/n_B
 
 # Create pandas series
 x_R=pd.Series(x_R)
@@ -49,6 +49,11 @@ x_B.plot(kind='kde',label='Blue Button',color='b')
 x_R.plot(kind='kde',label='Red Button',color='r')
 sns.distplot(x_R,kde=False,norm_hist=True)
 sns.distplot(x_B,kde=False,color='r',norm_hist=True)
+
+
+x_position = 0.11
+plt.axvline(x_position)
+plt.legend()
 {% endhighlight %}
 
 The **Central Limit Theorem** tells us the next order correction term is actually nromal:
