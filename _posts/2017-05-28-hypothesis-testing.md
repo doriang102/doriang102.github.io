@@ -55,7 +55,7 @@ x_position = 0.11
 plt.axvline(x_position)
 plt.legend()
 {% endhighlight %}
-![](img/redvsblue.jpg?raw=true)
+![](img/redvsblue.png?raw=true)
 
 The **Central Limit Theorem** tells us the next order correction term is actually nromal:
 
