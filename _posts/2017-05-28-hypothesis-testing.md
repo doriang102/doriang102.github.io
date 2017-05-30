@@ -51,7 +51,9 @@ $$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R \sim \frac{1}{\sqrt{N_R}} \mathcal{N
 $$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B \sim \frac{1}{\sqrt{N_B}} \mathcal{N}(0, p_B(1-p_B)) + E_2$$
 
 
-$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B = $$
+$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B \sim \mathcal{N}(0, (1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}) + E_3$$
+
+
 Next we make the following observations
 
 - The assumption $$H_0$$ sets $$p_B = p_R$$. 
