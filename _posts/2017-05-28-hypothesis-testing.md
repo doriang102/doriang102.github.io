@@ -49,7 +49,7 @@ Next we make the following observations
 
 - The assumption $$H_0$$ sets $$p_B = p_R$$. 
 -  We can absorb the $$\sqrt{N_R}$$ and $$\sqrt{N_B}$$ terms into the variances of the normal distributions. 
-- The difference of two normally distributed random variables $$\mathcal{N}_1$$ and $$\mathcal{N}_2$$ is again a normally distributed random variable with mean $$\mu_1 - \mu_2$$ and variances $$\sigma_1^2 + \sigma_2^2$$. 
+- The difference of two normally distributed random variables $$\mathcal{N}_1(\mu_1,\sigma_1)$$ and $$\mathcal{N}_2(\mu_2,\sigma_2)$$ is again a normally distributed random variable with mean $$\mu_1 - \mu_2$$ and variances $$\sigma_1^2 + \sigma_2^2$$. 
 
 
   But wait! We don't know what $$p_B$$ and $$p_R$$ are, even if we're assuming they're equal. Well thanks to equation \eqref{LLN}, we can approximate $$p_B$$ and $$p_R$$ by their empircal
