@@ -17,7 +17,7 @@ $$
 
 **We make the following assumptions:**
 - Both $$\{X_i^R\}$$ and $$\{X_i^B\}$$ form a collection of independent, identitically dstirbuted random variables (i.i.d). 
-- For each $$i$$, $$X_i^R$$ and $$X_i^B$$ are sampled from normal distributions with means $$p_R$$ and $$p_B$$.
+- For each $$i$$, $$X_i^R$$ and $$X_i^B$$ are sampled from fixed Bernoulli distributions with means $$p_R$$ and $$p_B$$ respectively.
 
 As a result of the **Law of Large Numbers**, we have $$\frac{1}{N_R}S_N^R \to p_R$$ and $$\frac{1}{N_B}S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ in the sense of distributions. Let's look at a simulation to see how this looks:
 
