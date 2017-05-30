@@ -57,6 +57,19 @@ plt.legend()
 {% endhighlight %}
 ![](/img/redvsblue.png?raw=true)
 
+
+How how do we measure if blue is indeed better than red?
+
+{% highlight ruby %}
+# Plot the difference and shade in the probability that blue is better than red. 
+x_diff = x_B - x_R
+x_diff.plot(kind='kde',label='Difference',color='g')
+sns.distplot(x_diff[x_diff>0],kde=False,norm_hist=True)
+
+x_position = 0.0
+plt.axvline(x_position)
+{% endhighlight %}
+![](/img/rawdiff.png?raw=true)
 The **Central Limit Theorem** tells us the next order correction term is actually nromal:
 
 
