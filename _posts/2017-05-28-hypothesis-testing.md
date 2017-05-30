@@ -22,14 +22,33 @@ $$
 As a result of the **Law of Large Numbers**, we have $$\frac{1}{N_R}S_N^R \to p_R$$ and $$\frac{1}{N_B}S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ in the sense of distributions. Let's look at a simulation to see how this looks:
 
 {% highlight ruby %}
-def show
-  puts "Outputting a very lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong line"
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
+import numpy as np; np.random.seed(10)
+import seaborn as sns; sns.set(color_codes=True)
+
+# Set number of observations.
+n_R=1000
+n_B=1200
+
+# Set conversion rates of observations.
+p_R=0.1
+p_B=0.2
+
+# Set number of samples to take
+samples=10000
+
+# Sample from red and blue butotn given observed conversion rates. 
+x_R = np.random.binomial(n_R, p_R, samples)/n_R
+x_B = np.random.binomial(n_B, p_R, samples)/n_R
+
+# Create pandas series
+x_R=pd.Series(x_R)
+x_B=pd.Series(x_B)
+
+# Plot the results. 
+x_B.plot(kind='kde',label='Blue Button',color='b')
+x_R.plot(kind='kde',label='Red Button',color='r')
+sns.distplot(x_R,kde=False,norm_hist=True)
+sns.distplot(x_B,kde=False,color='r',norm_hist=True)
 {% endhighlight %}
 
 The **Central Limit Theorem** tells us the next order correction term is actually nromal:
