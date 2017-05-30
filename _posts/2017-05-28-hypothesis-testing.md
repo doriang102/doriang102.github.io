@@ -45,12 +45,13 @@ $$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B = p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(0
 where both $$E_1$$ and $$E_2$$ tend to $$0$$ as $$N_R$$ and $$N_B$$ tend to infinity, and the equality is understood in the distributional sense. 
 
 
-$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R = \frac{1}{\sqrt{N_R}} \mathcal{N}(0, p_R(1-p_R)) + E_1$$
+$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R \sim \frac{1}{\sqrt{N_R}} \mathcal{N}(0, p_R(1-p_R)) + E_1$$
 
 
-$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B = \frac{1}{\sqrt{N_B}} \mathcal{N}(0, p_B(1-p_B)) + E_2$$
+$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B \sim \frac{1}{\sqrt{N_B}} \mathcal{N}(0, p_B(1-p_B)) + E_2$$
 
 
+$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B = $$
 Next we make the following observations
 
 - The assumption $$H_0$$ sets $$p_B = p_R$$. 
