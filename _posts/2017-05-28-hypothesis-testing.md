@@ -21,6 +21,27 @@ $$
 
 As a result of the **Law of Large Numbers**, we have $$\frac{1}{N_R}S_N^R \to p_R$$ and $$\frac{1}{N_B}S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ in the sense of distributions. Let's look at a simulation to see how this looks:
 
+The **Central Limit Theorem** tells us the next order correction term is actually nromal:
+
+
+$$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})$$
+
+
+$$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)})$$
+
+
+
+
+
+
+The assumption that we make here is that $$p_R = p_B$$, ie the underlying distributions are the same. Another way to write this is 
+
+
+$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R = p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1$$
+
+
+$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B = p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(p_B, p_B(1-p_B)) + E_2$$
+
 {% highlight ruby %}
 import numpy as np; np.random.seed(10)
 import seaborn as sns; sns.set(color_codes=True)
@@ -70,26 +91,7 @@ x_position = 0.0
 plt.axvline(x_position)
 {% endhighlight %}
 ![](/img/rawdiff.png?raw=true)
-The **Central Limit Theorem** tells us the next order correction term is actually nromal:
 
-
-$$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})$$
-
-
-$$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)})$$
-
-
-
-
-
-
-The assumption that we make here is that $$p_R = p_B$$, ie the underlying distributions are the same. Another way to write this is 
-
-
-$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R = p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1$$
-
-
-$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B = p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(p_B, p_B(1-p_B)) + E_2$$
 
 where both $$E_1$$ and $$E_2$$ tend to $$0$$ as $$N_R$$ and $$N_B$$ tend to infinity, and the equality is understood in the distributional sense. 
 
@@ -101,10 +103,7 @@ Next we make the following observations
 
 
 We thus obtain
-\[
-\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B }{(1/\sqrt{N_R})\sqrt{ p_R(1-p_R)} +(1/\sqrt{N_B})\sqrt{ p_B(1-p_B)}} = \mathcal{N}(0,1) + E_{3},
-\]
-where $E_3 \to 0$ as $N_R, N_B \to +\infty$.   But wait! We don't know what $p_B$ and $p_R$ are, even if we're assuming they're equal. Well thanks to equation \eqref{LLN}, we can approximate $p_B$ and $p_R$ by their empircal
+  But wait! We don't know what $p_B$ and $p_R$ are, even if we're assuming they're equal. Well thanks to equation \eqref{LLN}, we can approximate $p_B$ and $p_R$ by their empircal
 values, and this will old for large $N_R$ and $N_B$ (lots of assumptions here!). So we define the estimators
 \begin{align}
 \frac{1}{N_R} \sum_{i=1}^{N_R} X_i^R  = \hat p_R\\
