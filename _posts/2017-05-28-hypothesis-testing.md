@@ -19,7 +19,10 @@ $$
 - Both $$\{X_i^R\}$$ and $$\{X_i^B\}$$ form a collection of independent, identitically dstirbuted random variables (i.i.d). 
 - For each $$i$$, $$X_i^R$$ and $$X_i^B$$ are sampled from normal distributions with means $$p_R$$ and $$p_B$$.
 
-As a result of the **Law of Large Numbers**, we have $$\frac{1}{N_R}S_N^R \to p_R$$ and $$\frac{1}{N_B}S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ - this is a consequence of the . The **Central Limit Theorem** tells us that
+As a result of the **Law of Large Numbers**, we have $$\frac{1}{N_R}S_N^R \to p_R$$ and $$\frac{1}{N_B}S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ in the sense of distributions. Let's look at a simulation to see how this looks:
+
+
+The **Central Limit Theorem** tells us the next order correction term is actually nromal:
 
 
 $$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})$$
@@ -57,9 +60,9 @@ Next we make the following observations
 
 
 We thus obtain
-\begin{equation}
+\[
 \frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B }{(1/\sqrt{N_R})\sqrt{ p_R(1-p_R)} +(1/\sqrt{N_B})\sqrt{ p_B(1-p_B)}} = \mathcal{N}(0,1) + E_{3},
-\end{equation}
+\]
 where $E_3 \to 0$ as $N_R, N_B \to +\infty$.   But wait! We don't know what $p_B$ and $p_R$ are, even if we're assuming they're equal. Well thanks to equation \eqref{LLN}, we can approximate $p_B$ and $p_R$ by their empircal
 values, and this will old for large $N_R$ and $N_B$ (lots of assumptions here!). So we define the estimators
 \begin{align}
