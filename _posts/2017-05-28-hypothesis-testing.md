@@ -21,16 +21,6 @@ $$
 
 As a result of the **Law of Large Numbers**, we have $$\frac{1}{N_R}S_N^R \to p_R$$ and $$\frac{1}{N_B}S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ in the sense of distributions. Let's look at a simulation to see how this looks:
 
-
-The **Central Limit Theorem** tells us the next order correction term is actually nromal:
-
-
-$$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})$$
-
-
-$$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)})$$
-
-
 {% highlight ruby %}
 def show
   puts "Outputting a very lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong line"
@@ -42,9 +32,22 @@ def show
 end
 {% endhighlight %}
 
+The **Central Limit Theorem** tells us the next order correction term is actually nromal:
+
+
+$$\frac{1}{\sqrt{N_R}} \sum_{i=1}^{N_R} X_i^R \to \mathcal{N}(p_R, \sqrt{p_R(1-p_R)})$$
+
+
+$$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p_B)})$$
+
+
+
+
 
 
 The assumption that we make here is that $$p_R = p_B$$, ie the underlying distributions are the same. Another way to write this is 
+
+
 $$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R = p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p_R, p_R(1-p_R)) + E_1$$
 
 
