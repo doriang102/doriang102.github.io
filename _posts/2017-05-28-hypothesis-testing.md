@@ -42,6 +42,33 @@ $$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R = p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(p
 
 $$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B = p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(p_B, p_B(1-p_B)) + E_2$$
 
+
+where both $$E_1$$ and $$E_2$$ tend to $$0$$ as $$N_R$$ and $$N_B$$ tend to infinity, and the equality is understood in the distributional sense. 
+
+Next we make the following observations
+
+- The assumption $$H_0$$ sets $$p_B = p_R$$. 
+-  We can absorb the $$\sqrt{N_R}$$ and $$\sqrt{N_B}$$ terms into the variances of the normal distributions. 
+- The difference of two normally distributed random variables $$\mathcal{N}_1$$ and $$\mathcal{N}_2$$ is again a normally distributed random variable with mean $$\mu_1 - \mu_2$$ and variances $$\sigma_1^2 + \sigma_2^2$$. 
+
+
+  But wait! We don't know what $$p_B$$ and $$p_R$$ are, even if we're assuming they're equal. Well thanks to equation \eqref{LLN}, we can approximate $$p_B$$ and $$p_R$$ by their empircal
+values, and this will old for large $N_R$ and $N_B$ (lots of assumptions here!). So we define the estimators
+
+$$
+\frac{1}{N_R} \sum_{i=1}^{N_R} X_i^R  = \hat p_R
+$$
+
+$$
+\frac{1}{N_B} \sum_{i=1}^{N_B} X_i^B = \hat p_B.
+$$
+
+
+
+$$
+\frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}}.
+$$
+
 {% highlight ruby %}
 import numpy as np; np.random.seed(10)
 import seaborn as sns; sns.set(color_codes=True)
@@ -93,27 +120,6 @@ plt.axvline(x_position)
 ![](/img/rawdiff.png?raw=true)
 
 
-where both $$E_1$$ and $$E_2$$ tend to $$0$$ as $$N_R$$ and $$N_B$$ tend to infinity, and the equality is understood in the distributional sense. 
-
-Next we make the following observations
-
-- The assumption $$H_0$$ sets $$p_B = p_R$$. 
--  We can absorb the $$\sqrt{N_R}$$ and $$\sqrt{N_B}$$ terms into the variances of the normal distributions. 
-- The difference of two normally distributed random variables $$\mathcal{N}_1$$ and $$\mathcal{N}_2$$ is again a normally distributed random variable with mean $$\mu_1 - \mu_2$$ and variances $$\sigma_1^2 + \sigma_2^2$$. 
-
-
-We thus obtain
-  But wait! We don't know what $p_B$ and $p_R$ are, even if we're assuming they're equal. Well thanks to equation \eqref{LLN}, we can approximate $p_B$ and $p_R$ by their empircal
-values, and this will old for large $N_R$ and $N_B$ (lots of assumptions here!). So we define the estimators
-\begin{align}
-\frac{1}{N_R} \sum_{i=1}^{N_R} X_i^R  = \hat p_R\\
-\frac{1}{N_B} \sum_{i=1}^{N_B} X_i^B = \hat p_B.
-\end{align}
-
-We thus conclude that the following z score is sampled from a normal distribution plus some asymptotic error. 
-\begin{equation}
-\frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}}.
-\end{equation}
 
 **Question:** What is the probability of observing a value equal to or larger than the above value from a normal distribution with mean 0 and variance 1? This is what a p value is.
 
