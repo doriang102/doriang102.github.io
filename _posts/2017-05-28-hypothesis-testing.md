@@ -50,7 +50,7 @@ $$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R \sim \frac{1}{\sqrt{N_R}} \mathcal{N
 
 $$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B \sim \frac{1}{\sqrt{N_B}} \mathcal{N}(0, p_B(1-p_B)) + E_2$$
 
-Now **we do not know $$p_R$$ or $$p_B, even when we assume they're equal.** However we have the following estimators:
+Now **we do not know $$p_R$$ or $$p_B$$, even when we assume they're equal.** However we have the following estimators:
 
 
 
