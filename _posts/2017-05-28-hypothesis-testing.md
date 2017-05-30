@@ -56,16 +56,14 @@ $$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B \sim \frac{1}{\sqrt{N_B}} \mathcal{N
 $$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} \sim \mathcal{N}(0,1) + E_4$$
 
 
-Next we make the following observations
+We've made use of the following facts:
 
 - The assumption $$H_0$$ sets $$p_B = p_R$$. 
 -  We can absorb the $$\sqrt{N_R}$$ and $$\sqrt{N_B}$$ terms into the variances of the normal distributions. 
 - The difference of two normally distributed random variables $$\mathcal{N}_1(\mu_1,\sigma_1)$$ and $$\mathcal{N}_2(\mu_2,\sigma_2)$$ is again a normally distributed random variable with mean $$\mu_1 - \mu_2$$ and variances $$\sigma_1^2 + \sigma_2^2$$. 
 
 
-  But wait! We don't know what $$p_B$$ and $$p_R$$ are, even if we're assuming they're equal. Well thanks to equation \eqref{LLN}, we can approximate $$p_B$$ and $$p_R$$ by their empircal
-values, and this will old for large $$N_R$$ and $$N_B$$ (lots of assumptions here!). So we define the estimators
-
+The above gives a distribution, true in the limit for $$N_R$$ and $$N_B$$ approaching infinity. But we made the following observations:
 $$
 \frac{1}{N_R} \sum_{i=1}^{N_R} X_i^R  = \hat p_R
 $$
@@ -74,6 +72,7 @@ $$
 \frac{1}{N_B} \sum_{i=1}^{N_B} X_i^B = \hat p_B.
 $$
 
+Now what is the probability that this happened by chance? We can use the distribiton $$\mathcal{N}(0,1)$$ to find out!
 
 
 $$
