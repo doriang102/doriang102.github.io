@@ -53,7 +53,7 @@ Next we make the following observations
 
 
   But wait! We don't know what $$p_B$$ and $$p_R$$ are, even if we're assuming they're equal. Well thanks to equation \eqref{LLN}, we can approximate $$p_B$$ and $$p_R$$ by their empircal
-values, and this will old for large $N_R$ and $N_B$ (lots of assumptions here!). So we define the estimators
+values, and this will old for large $$N_R$$ and $$N_B$$ (lots of assumptions here!). So we define the estimators
 
 $$
 \frac{1}{N_R} \sum_{i=1}^{N_R} X_i^R  = \hat p_R
