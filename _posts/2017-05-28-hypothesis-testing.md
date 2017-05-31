@@ -36,14 +36,6 @@ $$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p
 Another way to write the above is
 
 
-$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R \sim p_R + \frac{1}{\sqrt{N_R}} \mathcal{N}(0, p_R(1-p_R)) + E_1$$
-
-
-$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B \sim p_B + \frac{1}{\sqrt{N_B}} \mathcal{N}(0, p_B(1-p_B)) + E_2$$
-
-
-where both $$E_1$$ and $$E_2$$ tend to $$0$$ as $$N_R$$ and $$N_B$$ tend to infinity, and the equality is understood in the distributional sense. 
-
 
 $$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R \sim \frac{1}{\sqrt{N_R}} \mathcal{N}(0, p_R(1-p_R)) + E_1$$
 
