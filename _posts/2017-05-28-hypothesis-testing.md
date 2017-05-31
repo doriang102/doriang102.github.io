@@ -1,15 +1,7 @@
 In this first blog post, I plan on discussing the detailed mathematics behind A/B testing using both a frequentist and bayesian approach. Here is a broad summary before we get into more detail:
 
-**Frequentist approach:** Make no prior assumptions about what the paramaters are, but use the asymptotic convergence of a sequence of indepdent Bernoulli trials to the normal distribution to compute the probability of the *null hypothesis*, ie. the probability of observing a difference between two outcomes based on chance if we assume there is no difference. What I will show however, is that ** frequentists ultimately have to assume a prior assumption on the data in order to computea p value with any kind of asymptotic certainty **. I'm not sure I've seen this emphasized in the literature, so I want to bring it to people's attention here. 
-
-**Bayesian approach:** Given a prior distribution on the possible means, update the posteriors based on Bayes formula, and compute the proabbility that $$p_1 > p_2$$ over the range of all possible values of $$p_R$$ and $$p_B$$ (ie. don't  just assume there is one fixed value). The only criticism I've seen of this method is the assumption of a prior, however, as we will see, the frequentists also make this assumption if they want to have a correctly evaluated p value. 
-
-
-
-## Frequentist Appraoch - p values
-
 Let's assume that we have two buttons, a red button and a blue button. We wish to construct a proper experiment to test out which button results in higher conversions (clicks/likes, etc). 
-
+![](/img/redbluebutton.png?raw=true)
 
 Let $$X_i^R$$ and $$X_i^B$$ be the outcomes of the $$ith$$ observation for the red and blue buttons respectively, ie. $$X_i^{R,B} = 1$$ if the user clicked the button, and $$X_i^{R,B} = 0$$ otherwise.  Then we define the number of clicks of the red and blue buttons after $$N_R$$ and $$N_B$$ respective trials:
 
@@ -21,9 +13,22 @@ $$
 S_N^B = \sum_{i=1}^{N_B} X_i^B.
 $$
 
+
+
+**Frequentist approach:** Make no prior assumptions about what the paramaters are, but use the asymptotic convergence of a sequence of indepdent Bernoulli trials to the normal distribution to compute the probability of the *null hypothesis*, ie. the probability of observing a difference between two outcomes based on chance if we assume there is no difference. What I will show however, is that ** frequentists ultimately have to assume a prior assumption on the data in order to computea p value with any kind of asymptotic certainty **. I'm not sure I've seen this emphasized in the literature, so I want to bring it to people's attention here. 
+
+**Bayesian approach:** Given a prior distribution on the possible means, update the posteriors based on Bayes formula, and compute the proabbility that $$p_1 > p_2$$ over the range of all possible values of $$p_R$$ and $$p_B$$ (ie. don't  just assume there is one fixed value). The only criticism I've seen of this method is the assumption of a prior, however, as we will see, the frequentists also make this assumption if they want to have a correctly evaluated p value. 
+
+
+
+## Frequentist Appraoch - p values
+
+Let's begin by the assumptions that the frequentist makes:
+
 **We make the following assumptions:**
 - Both $$\{X_i^R\}$$ and $$\{X_i^B\}$$ form a collection of independent, identitically dstirbuted random variables (i.i.d). 
 - Moreover, for each $$i$$, $$X_i^R$$ and $$X_i^B$$ are sampled from fixed Bernoulli distributions with means $$p_R$$ and $$p_B$$ respectively.
+
 
 As a result of the **Law of Large Numbers**, we have $$\frac{1}{N_R}S_N^R \to p_R$$ and $$\frac{1}{N_B}S_N^B \to p_B$$ as $$N_R,N_B \to +\infty$$ in probability.
 
