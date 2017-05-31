@@ -56,10 +56,6 @@ $$
 
 which, courtesy of the fact that that $$\hat p_R \to p_R$$ and $$\hat p_B \to p_B$$, we can substitute into the above to conclude that 
 
-$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R \sim \frac{1}{\sqrt{N_R}} \mathcal{N}(0, p_R(1-p_R)) + E_1$$
-
-
-$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B \sim \frac{1}{\sqrt{N_B}} \mathcal{N}(0, p_B(1-p_B)) + E_2$$
 
 
 $$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} \sim \mathcal{N}(0,1) + E_4$$
