@@ -50,6 +50,40 @@ Then the above can be re-written as:
 
 $$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} \sim \mathcal{N}(0,1) + E_4$$
 
+Let's now simulate this with fixed $$p_B$$ and $$p_R$$
+
+{% highlight ruby %}
+# Set number of observations.
+n_R=100
+n_B=120
+
+for f in range(1,5):
+    n_R = n_R*f
+    n_B = n_B*f
+    # Set conversion rates of observations.
+    p_R=0.1
+    p_B=0.12
+
+    # Set number of samples to take
+    samples=10000
+
+    x_null=np.random.normal(0, np.sqrt(p_R*(1-p_R)/n_R) + np.sqrt(p_B*(1-p_B)/n_B), samples)
+ 
+    # Create pandas series
+    x_null=pd.Series(x_null)
+    plt.xlim([-0.5,0.5])
+    
+    # Plot the distribution
+    x_null.plot(kind='kde',label='N=' + str(n_R),color='g')
+    sns.distplot(x_null,kde=False,norm_hist=True)
+
+    # Plot the observed difference of p_B-p_R.
+    x_position = 0.02
+    plt.axvline(x_position)
+
+    plt.legend()
+    plt.show()
+   {% endhighlight %}
 
 Now **we do not know $$p_R$$ or $$p_B$$, even when we assume they're equal.** 
 
