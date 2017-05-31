@@ -179,6 +179,8 @@ then it follows that
 
 $$\left|F_{n}(x)-\Phi (x)\right| \leq \frac{C\rho}{\sigma^3 \sqrt{n}}.$$
 
+Nobody yet has been able to prove what the optimal constant is! The best estimate as of 2012, is C < 0.4748 and is due to
+due to Shevtsova (2011) https://arxiv.org/abs/1111.6554.
 
 
 ## Bayesian Approach - Distribution on Parameters 
