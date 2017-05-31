@@ -156,6 +156,8 @@ In other words, it is the probability of observing any $$z \geq z_n$$ from $$\ma
 $$
 \hat z_N = \frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}}.
 $$
+
+
 This is preceily the p value, ie.
 
 $$p = \Phi( z \geq z_n),$$
