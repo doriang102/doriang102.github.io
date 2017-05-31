@@ -79,10 +79,15 @@ But then this tells us that our observation is sampled from a normal distributio
 $$
 \hat z_N = \frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}},
 $$
+
+
 from $$\mathcal{N}(0,1)$$? This is preceily the p value, ie.
 
 $$p = \Phi( z \geq z_n),$$
-where $$\Phi$$ is a standard unit normal.
+
+
+
+where $$\Phi$$ is a standard unit normal. However notice that we've just conveniently skipped over the error $$\tilde E_4$$, **which there are no currently known estimates for**. For this reason, I would take p values for Bernoulli trials with a grain of salt. 
 
 
 {% highlight ruby %}
