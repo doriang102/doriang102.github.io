@@ -34,7 +34,7 @@ $$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p
 Another way to write the above is
 
 
-$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R + E_1 \sim \mathcal{N}\left(0, \frac{p_R(1-p_R)}{N_R}\right)$
+$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R + E_1 \sim \mathcal{N}\left(0, \frac{p_R(1-p_R)}{N_R}\right)$$
 
 
 $$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B + E_2 \sim \mathcal{N}\left(0, \frac{p_B(1-p_B)}{N_B}\right),$$
