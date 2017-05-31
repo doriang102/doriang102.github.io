@@ -39,7 +39,7 @@ $$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R \sim \frac{1}{\sqrt{N_R}} \left(\mat
 
 $$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B \sim \frac{1}{\sqrt{N_B}} \left(\mathcal{N}(0, p_B(1-p_B)) + E_2\right),$$
 
-where $$E_1$$ and $$E_2$$ are errors that tend to $0$ as $N \to +\infty$. 
+where $$E_1$$ and $$E_2$$ are errors that tend to $$0$$ as $N_R, N_B \to +\infty$. 
 
 We've make use of the following facts:
 
