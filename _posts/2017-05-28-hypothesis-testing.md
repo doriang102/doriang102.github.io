@@ -46,6 +46,44 @@ We've make use of the following facts:
 -  We can absorb the $$\sqrt{N_R}$$ and $$\sqrt{N_B}$$ terms into the variances of the normal distributions. 
 - The difference of two normally distributed random variables $$\mathcal{N}_1(\mu_1,\sigma_1)$$ and $$\mathcal{N}_2(\mu_2,\sigma_2)$$ is again a normally distributed random variable with mean $$\mu_1 - \mu_2$$ and variances $$\sigma_1^2 + \sigma_2^2$$. 
 
+Let's plot the Binomial distributions and see how the red and blue button distributions look for fixed values:
+{% highlight ruby %}
+import numpy as np; np.random.seed(10)
+import seaborn as sns; sns.set(color_codes=True)
+
+# Set number of observations.
+n_R=1000
+n_B=1200
+
+# Set conversion rates of observations.
+p_R=0.1
+p_B=0.12
+
+# Set number of samples to take
+samples=10000
+
+# Sample from red and blue butotn given observed conversion rates. 
+x_R = np.random.binomial(n_R, p_R, samples)/n_R
+x_B = np.random.binomial(n_B, p_B, samples)/n_B
+
+# Create pandas series
+x_R=pd.Series(x_R)
+x_B=pd.Series(x_B)
+
+# Plot the results. 
+x_B.plot(kind='kde',label='Blue Button',color='b')
+x_R.plot(kind='kde',label='Red Button',color='r')
+sns.distplot(x_R,kde=False,norm_hist=True)
+sns.distplot(x_B,kde=False,color='r',norm_hist=True)
+
+
+x_position = 0.11
+plt.axvline(x_position)
+plt.legend()
+{% endhighlight %}
+![](/img/redvsblue.png?raw=true)
+
+
 Then the above can be re-written as:
 
 $$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} \sim \mathcal{N}(0,1) + E_4$$
@@ -124,41 +162,6 @@ $$p = \Phi( z \geq z_n),$$
 where $$\Phi$$ is a standard unit normal. However notice that we've just conveniently skipped over the error $$\tilde E_4$$, **which there are no currently known estimates for**. For this reason, I would take p values for Bernoulli trials with a grain of salt. 
 
 
-{% highlight ruby %}
-import numpy as np; np.random.seed(10)
-import seaborn as sns; sns.set(color_codes=True)
-
-# Set number of observations.
-n_R=1000
-n_B=1200
-
-# Set conversion rates of observations.
-p_R=0.1
-p_B=0.12
-
-# Set number of samples to take
-samples=10000
-
-# Sample from red and blue butotn given observed conversion rates. 
-x_R = np.random.binomial(n_R, p_R, samples)/n_R
-x_B = np.random.binomial(n_B, p_B, samples)/n_B
-
-# Create pandas series
-x_R=pd.Series(x_R)
-x_B=pd.Series(x_B)
-
-# Plot the results. 
-x_B.plot(kind='kde',label='Blue Button',color='b')
-x_R.plot(kind='kde',label='Red Button',color='r')
-sns.distplot(x_R,kde=False,norm_hist=True)
-sns.distplot(x_B,kde=False,color='r',norm_hist=True)
-
-
-x_position = 0.11
-plt.axvline(x_position)
-plt.legend()
-{% endhighlight %}
-![](/img/redvsblue.png?raw=true)
 
 
 How how do we measure if blue is indeed better than red?
