@@ -184,6 +184,14 @@ where $$F_n(x)$$ is the cumulative distribution function of $$\frac{1}{\sqrt{n}\
 Nobody yet has been able to prove what the optimal constant is! The best estimate as of 2012, is C < 0.4748 and is due to
 due to [Shevtsova (2011)](https://arxiv.org/abs/1111.6554.)
 
+
+#### Special case of Bernoulli random variable
+
+Note that for Bernoulli, it is clear that $$\mathb{E}(|X_1^{R,B}|^3) = p_{R,B}$$. **Thus we can only compute p values if we bound the range of possible means to begin with! This is essentially the same as assuming a Bayesian prior in the first place!**
+
+This is why I beleive much more in Bayesian methods. They are simpler, more natural, and don't rely on any mysterious asymptotic approxmiations. 
+
+
 ## Bayesian Approach - Distribution on Parameters 
 
 How how do we measure if blue is indeed better than red?
