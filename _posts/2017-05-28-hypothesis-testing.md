@@ -53,7 +53,6 @@ Now **we do not know $$p_R$$ or $$p_B$$, even when we assume they're equal.**
 
 
 
-
 However we have the following:
 
 
@@ -65,23 +64,24 @@ $$
 \frac{1}{N_B} \sum_{i=1}^{N_B} X_i^B = \hat p_B,
 $$
 
-which, courtesy of the fact that that $$\hat p_R \to p_R$$ and $$\hat p_B \to p_B$$, we can substitute into the above to conclude that 
+which, courtesy of the fact that that $$\hat p_R \to p_R$$ and $$\hat p_B \to p_B$$ in probability, we can replace $$p_R$$ and $$p_B$$ with $$\hat p_R$$ and $$\hat p_B$$ by absorbing the error into $$E_4$$. 
 
-The above gives a distribution, true in the limit for $$N_R$$ and $$N_B$$ approaching infinity. But we made the following observations:
-$$
-\frac{1}{N_R} \sum_{i=1}^{N_R} X_i^R  = \hat p_R
-$$
-
-$$
-\frac{1}{N_B} \sum_{i=1}^{N_B} X_i^B = \hat p_B.
-$$
+Thus we have
 
 Now what is the probability that this happened by chance? We can use the distribiton $$\mathcal{N}(0,1)$$ to find out!
 
+$$\frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{  \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{  \hat p_B(1- \hat p_B)}} \sim \mathcal{N}(0,1) + \tilde E_4$$
+
+But then this tells us that our observation is sampled from a normal distribution, plus some asymptotic error. So what is the probability of observing a value equal or large to 
 
 $$
-\frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}}.
+\hat z_N = \frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}},
 $$
+from $$\mathcal{N}(0,1)$$? This is preceily the p value, ie.
+
+$$p = \Phi( z \geq z_n),$$
+where $$\Phi$$ is a standard unit normal.
+
 
 {% highlight ruby %}
 import numpy as np; np.random.seed(10)
