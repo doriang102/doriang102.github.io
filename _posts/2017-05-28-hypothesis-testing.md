@@ -84,6 +84,8 @@ plt.legend()
 ![](/img/redvsblue.png?raw=true)
 
 
+These distributions *look* approximately normal which is good. 
+
 Then the above can be re-written as:
 
 $$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} \sim \mathcal{N}(0,1) + E_4$$
