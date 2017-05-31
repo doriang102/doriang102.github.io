@@ -47,6 +47,7 @@ We've make use of the following facts:
 - The difference of two normally distributed random variables $$\mathcal{N}_1(\mu_1,\sigma_1)$$ and $$\mathcal{N}_2(\mu_2,\sigma_2)$$ is again a normally distributed random variable with mean $$\mu_1 - \mu_2$$ and variances $$\sigma_1^2 + \sigma_2^2$$. 
 
 Let's plot the Binomial distributions and see how the red and blue button distributions look for fixed values:
+
 {% highlight ruby %}
 import numpy as np; np.random.seed(10)
 import seaborn as sns; sns.set(color_codes=True)
@@ -83,12 +84,32 @@ plt.legend()
 {% endhighlight %}
 ![](/img/redvsblue.png?raw=true)
 
+These distributions *look* approximately normal which is good. Now to continue with the frequentist approach, we need to introduce the null hypothesis. 
 
-These distributions *look* approximately normal which is good. 
+The above difference can be re-written as:
 
-Then the above can be re-written as:
+$$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} \sim \mathcal{N}(0,1) + E_4,$$
 
-$$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} \sim \mathcal{N}(0,1) + E_4$$
+where $$E_4 \to 0$$ as $$N_R,N_B \to +\infty$$. 
+
+
+**Null Hypothesis:** We assume that $$p_B = p_R$$. How probable is our observed result?
+
+
+Now **we do not know $$p_R$$ or $$p_B$$, even when we assume they're equal.** 
+
+However we have the following:
+
+$$
+\frac{1}{N_R} \sum_{i=1}^{N_R} X_i^R  = \hat p_R
+$$
+
+$$
+\frac{1}{N_B} \sum_{i=1}^{N_B} X_i^B = \hat p_B,
+$$
+
+which, courtesy of the fact that that $$\hat p_R \to p_R$$ and $$\hat p_B \to p_B$$ in probability, we can replace $$p_R$$ and $$p_B$$ with $$\hat p_R$$ and $$\hat p_B$$ by absorbing the error into $$E_4$$. 
+
 
 Let's now simulate this with fixed $$p_B$$ and $$p_R$$
 
@@ -124,29 +145,11 @@ for f in range(1,5):
     plt.legend()
     plt.show()
    {% endhighlight %}
-
-Now **we do not know $$p_R$$ or $$p_B$$, even when we assume they're equal.** 
-
-
-
-However we have the following:
+![](/img/normconv1.png?raw=true)
+![](/img/normconv2.png?raw=true)
+![](/img/normconv3.png?raw=true)
 
 
-$$
-\frac{1}{N_R} \sum_{i=1}^{N_R} X_i^R  = \hat p_R
-$$
-
-$$
-\frac{1}{N_B} \sum_{i=1}^{N_B} X_i^B = \hat p_B,
-$$
-
-which, courtesy of the fact that that $$\hat p_R \to p_R$$ and $$\hat p_B \to p_B$$ in probability, we can replace $$p_R$$ and $$p_B$$ with $$\hat p_R$$ and $$\hat p_B$$ by absorbing the error into $$E_4$$. 
-
-Thus we have
-
-Now what is the probability that this happened by chance? We can use the distribiton $$\mathcal{N}(0,1)$$ to find out!
-
-$$\frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{  \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{  \hat p_B(1- \hat p_B)}} \sim \mathcal{N}(0,1) + \tilde E_4$$
 
 But then this tells us that our observation is sampled from a normal distribution, plus some asymptotic error. So what is the probability of observing a value equal or large to 
 
