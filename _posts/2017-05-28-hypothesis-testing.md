@@ -86,14 +86,15 @@ plt.legend()
 
 These distributions *look* approximately normal which is good. Now to continue with the frequentist approach, we need to introduce the null hypothesis. 
 
-The above difference can be re-written as:
+**Null Hypothesis:** We assume that $$p_B = p_R$$. How probable is our observed result?
+
+
+Under this assumption, we can take the difference of the two sums, and normalize to obtain:
 
 $$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} + E_4 \sim \mathcal{N}(0,1),$$
 
 where $$E_4 \to 0$$ as $$N_R,N_B \to +\infty$$. 
 
-
-**Null Hypothesis:** We assume that $$p_B = p_R$$. How probable is our observed result?
 
 
 Now **we do not know $$p_R$$ or $$p_B$$, even when we assume they're equal.** 
