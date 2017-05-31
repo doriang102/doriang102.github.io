@@ -172,6 +172,8 @@ However notice that we've just conveniently skipped over the error $$\tilde E_4$
 What we really need is the Berry-Esseen theorem which, under certain assumptions, gives a rate of convergence to a normal distribution. In particular, if we have
 
 $$ \mathbb{E}(|X_1|^3) := \rho < +\infty $$ 
+
+
 then it follows that
 
 
