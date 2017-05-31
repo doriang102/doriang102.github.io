@@ -198,7 +198,12 @@ due to [Shevtsova (2011)](https://arxiv.org/abs/1111.6554.)
 
 #### Special case of Bernoulli random variable
 
-Note that for Bernoulli, it is clear that $$\mathbb{E}(|X_1^{R,B}|^3) = p_{R,B}$$.
+
+Note that for a Bernoulli random variable with parameter $$p$$, it is clear that 
+
+$$ \mathbb{E}(|X_1|^3) = p $$.
+
+
 
 **Thus we can only compute p values if we bound the range of possible means to begin with! This is essentially the same as assuming a Bayesian prior in the first place!**
 
