@@ -177,11 +177,12 @@ $$ \mathbb{E}(|X_1|^3) := \rho < +\infty $$
 then it follows that
 
 
-$$\left|F_{n}(x)-\Phi (x)\right| \leq \frac{C\rho}{\sigma^3 \sqrt{n}}.$$
+$$\left|F_{n}(x)-\Phi (x)\right| \leq \frac{C\rho}{\sigma^3 \sqrt{n}},$$
+
+where $$F_n(x)$$ is the cumulative distribution function of $$\frac{1}{\sqrt{n}\sigma} \sum_{i=1}^N X_i$$.
 
 Nobody yet has been able to prove what the optimal constant is! The best estimate as of 2012, is C < 0.4748 and is due to
-due to Shevtsova (2011) https://arxiv.org/abs/1111.6554.
-
+due to [Shevtsova (2011)](https://arxiv.org/abs/1111.6554.)
 
 ## Bayesian Approach - Distribution on Parameters 
 
