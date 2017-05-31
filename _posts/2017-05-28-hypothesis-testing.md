@@ -150,21 +150,21 @@ for f in range(1,5):
 ![](/img/normconv3.png?raw=true)
 
 
-
-But then this tells us that our observation is sampled from a normal distribution, plus some asymptotic error. So what is the probability of observing a value equal or large to 
+The area to the right of the line is the probability of observing the difference we have or larger, under the null hypothesis.
+In other words, it is the probability of observing any $$z \geq z_n$$ from $$\mathcal{N}(0,1)$$ where
 
 $$
-\hat z_N = \frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}},
+\hat z_N = \frac{\hat p_R - \hat p_B}{(1/\sqrt{N_R})\sqrt{ \hat p_R(1- \hat p_R)} +(1/\sqrt{N_B})\sqrt{ \hat p_B(1- \hat p_B)}}.
 $$
-
-
-from $$\mathcal{N}(0,1)$$? This is preceily the p value, ie.
+This is preceily the p value, ie.
 
 $$p = \Phi( z \geq z_n),$$
 
 
+where $$\Phi$$ is a standard unit normal. 
 
-where $$\Phi$$ is a standard unit normal. However notice that we've just conveniently skipped over the error $$\tilde E_4$$, **which there are no currently known estimates for**. For this reason, I would take p values for Bernoulli trials with a grain of salt. 
+
+However notice that we've just conveniently skipped over the error $$\tilde E_4$$, **which there are no currently known estimates for**. For this reason, I would take p values for Bernoulli trials with a grain of salt. 
 
 
 ## Bayesian Approach - Distribution on Parameters 
