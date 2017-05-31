@@ -167,7 +167,7 @@ $$p = \Phi( z \geq z_n),$$
 where $$\Phi$$ is a standard unit normal. However notice that we've just conveniently skipped over the error $$\tilde E_4$$, **which there are no currently known estimates for**. For this reason, I would take p values for Bernoulli trials with a grain of salt. 
 
 
-
+## Bayesian Approach - Distribution on Parameters 
 
 How how do we measure if blue is indeed better than red?
 
