@@ -175,7 +175,7 @@ $$ \mathbb{E}(|X_1|^3) := \rho < +\infty $$
 then it follows that
 
 
-$$\left|F_{n}(x)-\Phi (x)\right|\leq {C\rho  \over \sigma ^{3}{\sqrt {n}.$$
+$$\left|F_{n}(x)-\Phi (x)\right| \leq \frac{C\rho}{\sigma^3 \sqrt{n}}.$$
 
 
 
