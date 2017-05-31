@@ -201,7 +201,7 @@ due to [Shevtsova (2011)](https://arxiv.org/abs/1111.6554.)
 
 Note that for a Bernoulli random variable with parameter $$p$$, it is clear that 
 
-$$ \mathbb{E}(|X_1|^3) = p $$.
+
 
 
 
