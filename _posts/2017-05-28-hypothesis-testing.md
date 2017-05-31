@@ -1,4 +1,10 @@
-In this first blog post, I plan on discussing the detailed mathematics behind computing p values in data science, but restricted to a single hypothesis (multiple hypothesis testing will be covered later). Almost all of the expalanations I've found skip *very* important details that highlight the issues and limitations with using p values to make conclusions about the effectiveness of treatment.
+In this first blog post, I plan on discussing the detailed mathematics behind A/B testing using both a frequentist and bayesian approach. Here is a broad summary before we get into more detail:
+
+**Frequentist approach:** Make no prior assumptions about what the paramaters are, but use the asymptotic convergence of a sequence of indepdent Bernoulli trials to the normal distribution to compute the probability of the *null hypothesis*, ie. the probability of observing a difference between two outcomes based on chance if we assume there is no difference. What I will show however, is that ** frequentists ultimately have to assume a prior assumption on the data in order to computea p value with any kind of asymptotic certainty **. I'm not sure I've seen this emphasized in the literature, so I want to bring it to people's attention here. 
+
+**Bayesian approach:** Given a prior distribution on the possible means, update the posteriors based on Bayes formula, and compute the proabbility that $$p_1 > p_2$$ over the range of all possible values of $$p_R$$ and $$p_B$$ (ie. don't  just assume there is one fixed value). The only criticism I've seen of this method is the assumption of a prior, however, as we will see, the frequentists also make this assumption if they want to have a correctly evaluated p value. 
+
+
 
 ## Frequentist Appraoch - p values
 
