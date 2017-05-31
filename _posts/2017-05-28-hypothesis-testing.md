@@ -34,10 +34,10 @@ $$\frac{1}{\sqrt{N_B}} \sum_{i=1}^{N_B} X_i^B \to \mathcal{N}(p_B, \sqrt{p_B(1-p
 Another way to write the above is
 
 
-$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R \sim \mathcal{N}\left(0, \frac{p_R(1-p_R)}{N_R}\right) + E_1$$
+$$\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - p_R + E_1 \sim \mathcal{N}\left(0, \frac{p_R(1-p_R)}{N_R}\right)$
 
 
-$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B \sim \mathcal{N}\left(0, \frac{p_B(1-p_B)}{N_B}\right) + E_2,$$
+$$\frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B - p_B + E_2 \sim \mathcal{N}\left(0, \frac{p_B(1-p_B)}{N_B}\right),$$
 
 where $$E_1$$ and $$E_2$$ are errors that tend to $$0$$ as $$N_R, N_B \to +\infty$$. 
 
@@ -88,7 +88,7 @@ These distributions *look* approximately normal which is good. Now to continue w
 
 The above difference can be re-written as:
 
-$$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} \sim \mathcal{N}(0,1) + E_4,$$
+$$\frac{\frac{1}{N_R}\sum_{i=1}^{N_R} X_i^R - \frac{1}{N_B}\sum_{i=1}^{N_B} X_i^B}{(1/\sqrt{N_R})\sqrt{  p_R(1- p_R)} +(1/\sqrt{N_B})\sqrt{  p_B(1- p_B)}} + E_4 \sim \mathcal{N}(0,1),$$
 
 where $$E_4 \to 0$$ as $$N_R,N_B \to +\infty$$. 
 
