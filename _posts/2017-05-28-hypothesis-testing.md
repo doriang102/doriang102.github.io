@@ -358,7 +358,7 @@ $$\mathbb{E}(p_{R,B}) =  \frac{1}{2} +  o(1) \textrm{ as } M_R,M_B \to +\infty.$
 
 Let $$f \in C^2([0,1])$$, and let's do a Taylor expansion of $$f$$ around $$1/2$$. 
 
-$$ f(p) = f\left(\frac{1}{2}\right) $$,
+$$ f(p) = f\left(\frac{1}{2}\right)+ f^{\prime}left(\frac{1}{2}\right)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2 $$,
 
 where $$\xi \in [0,1/2]$$. 
 
