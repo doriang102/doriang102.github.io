@@ -251,17 +251,24 @@ Plugging the above into $$ p(p_B > p_R \rvert D_R,D_B) $$ we obtain
 
 $$ p(p_B > p_R | D_R, D_B) = \frac{\int_0^1 \int_0^1 I(p_B > p_R) p_R^{k_R}(1-p_R)^{n_R-k_R} p_B^{k_B}(1-p_B)^{n_B-k_B}dp_R dp_B}{\int_0 ^1 \int_0^1p_R^{k_R}(1-p_R)^{n_R-k_R} p_B^{k_B}(1-p_B)^{n_B-k_B}dp_R dp_B }$$
 
-This integral is really quite hard to evaluate! This is one of the main reasons that people have used frequentist methods from what I can tell. But this isn't an issue anymore because of the computational power we now have. Before doing anything more mathematical with this, let's run some simulations using the `pymc` package in python.
+This integral is really quite hard to evaluate! This is one of the main reasons that people have used frequentist methods from what I can tell. But this isn't an issue anymore because of the computational power we now have. 
+
+
+
+Before doing anything more mathematical with this, let's run some simulations using the `pymc` package in python. In this example, we generate Bernoulli trials for the red and blue buttons, assuming 1055 for blue and 1057 for red:
+
 {% highlight ruby %}
 import pymc
 
-# Website A had 1055 clicks and 28 sign-ups
-values_A = np.hstack(([0]*(1055-28),[1]*28))
+# Button had 1055 clicks and 28 sign-ups
+values_R = np.hstack(([0]*(1055-28),[1]*28))
 
-# Website B had 1057 clicks and 45 sign-ups
+# Button B had 1057 clicks and 45 sign-ups
 values_B = np.hstack(([0]*(1057-45),[1]*45))
 
 {% endhighlight %}
+
+
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
 {% highlight ruby %}
