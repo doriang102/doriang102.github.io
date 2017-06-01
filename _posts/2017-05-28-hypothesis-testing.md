@@ -350,7 +350,7 @@ $$\textrm{Var}(p_R) = \frac{1}{B(M_R+1,M_R+1)} \int_0^1 \left(p- \frac{n+1}{2n+3
 
 Evaluating the above, we obtain:
 
-$$\frac{B(M_R+3,M_R+1) - B(M_R+2,M_R+1)(M_R+1)/(2M_R+3) + (M_R+1)^2/(2M_R+3)^2 B(M_R+1,M_R+1)}{B(M_R+1,M_R+1)}.$$
+$$\frac{B(M_R+3,M_R+1) - B(M_R+2,M_R+1)\frac{(M_R+1)}{(2M_R+3)} + \frac{(M_R+1)^2}{(2M_R+3)^2} B(M_R+1,M_R+1)}{B(M_R+1,M_R+1)}.$$
 
 Using the identity $$B(m+1,n) = \frac{mB(m,n)}{m+n} $$ repeatedly and using the fact that $$M_R,M_B \to + \infty$$, we have
 
