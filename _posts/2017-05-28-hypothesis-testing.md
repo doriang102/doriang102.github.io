@@ -299,10 +299,13 @@ mcmc.sample(1000000, 500000)
 {% endhighlight %}
 
 
+Let's now plot the distribution of the difference, which has been generated from above:
+
 {% highlight ruby %}
 delta_distribution = mcmc.trace('delta')[:]
 deltas = pd.Series(delta_distribution)
 deltas.plot(kind="kde")
+plt.axvline(0.00, color = 'black')
 {% endhighlight %}
 ![](/img/bayesab.png?raw=true)
 
