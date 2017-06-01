@@ -268,6 +268,18 @@ values_B = np.hstack(([0]*(1057-45),[1]*45))
 
 {% endhighlight %}
 
+Let's start off by assining uniform priors for $$f_P
+{% highlight ruby %}
+# Create a uniform prior for the probabilities p_a and p_b
+p_A = pymc.Uniform('p_A', 0, 1)
+p_B = pymc.Uniform('p_B', 0, 1)
+
+# Creates a posterior distribution of B - A
+@pymc.deterministic
+def delta(p_A = p_A, p_B = p_B):
+    return p_B - p_A
+
+{% endhighlight %}
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
