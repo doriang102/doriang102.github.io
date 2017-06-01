@@ -330,34 +330,44 @@ with
 
 $$\mathbb{E}(p_R) =  \frac{\int_0^1 \int_0^1 p_R^{M_R+1}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B}{\int_0 ^1 \int_0^1p_R^{M_R}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B } = \frac{B(M_R+2,M_R+1)}{B(M_R+1,M_R+1)}.$$
 
-Using the identity 
+We first do the computations for $$p_R$$ and observe that the computations for $$p_B$$ are identitical. 
 
-$$ \frac{B(m+1,n)}{B(m,n)} = \frac{m}{m+n}B(m,n)$$,
+First, using the identity 
+
+$$ \frac{B(m+1,n)}{B(m,n)} = \frac{m B(m,n)}{m+n}$$,
 
 we obtain 
+
 $$\mathbb{E}(p_R) = \frac{M_R+1}{2M_R+3}$$,
+
 and similarly,
+
 $$\mathbb{E}(p_B) = \frac{M_B+1}{2M_B+3}.$$
 
 By definition:
+
 $$\textrm{Var}(p_R) = \frac{1}{B(M_R+1,M_R+1)} \int_0^1 (p- \frac{n+1}{2n+3})^2 p^n (1-p)^n dp$$
 
 Evaluating the above, we obtain:
 
 $$\frac{B(M_R+3,M_R+1) - B(M_R+2,M_R+1)(M_R+1)/(2M_R+3) + (M_R+1)^2/(2M_R+3)^2 B(M_R+1,M_R+1)}{B(M_R+1,M_R+1)}.$$
 
-Using the identity $$B(m+1,n) = \frac{m}{m+n} B(m,n)$$ repeatedly and using the fact that $$n \to + \infty$$, we have
+Using the identity $$B(m+1,n) = \frac{mB(m,n)}{m+n} $$ repeatedly and using the fact that $$M_R,M_B \to + \infty$$, we have
 
-$$\textrm{Var}(p_{R,B}) = o(1) \textrm{ as } n \to +\infty.$$
+$$\textrm{Var}(p_{R,B}) = o(1) \textrm{ as } M_R,M_B\to +\infty.$$
 
-$$\mathbb{E}(p_{R_B}) =  \frac{1}{2} +  o(1) \textrm{ as } n \to +\infty.$$
+$$\mathbb{E}(p_{R,B}) =  \frac{1}{2} +  o(1) \textrm{ as } M_R,M_B \to +\infty.$$
 
 Let $$f \in C^2([0,1])$$, and let's do a Taylor expansion of $$f$$ around $$1/2$$. 
+
 $$ f(p) = f(1/2) + f'(1/2)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2,$$
+
 where $$\xi \in [0,1/2]$$. 
 
 Then we have
-$$\int f(p) d\mathbb{P}_n(p) = f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi) \textrm{Var}(p | X_n=x)$$
+
+$$\int f(p) d\mathbb{P}_n(p) = f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi)
+\textrm{Var}(p | X_n=x)$$
 
 which becomes
 
