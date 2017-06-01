@@ -324,11 +324,20 @@ What can we say in the limit as the number of observations tends to infinity? Le
 
 Let's start by computing the expectation and varaince of the random variable $$p_R - p_B$$:
 
-$$\mathbb{E}(p_R - p_B) = $$\mathbb{E}(p_R) - $$\mathbb{E}(p_B)$$ 
+$$\mathbb{E}(p_R - p_B) = \mathbb{E}(p_R) - $$\mathbb{E}(p_B)$$ 
 
 with 
 
-$$\mathbb{E}(p_R) =  \frac{\int_0^1 \int_0^1 p_R^{M_R+1}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B}{\int_0 ^1 \int_0^1p_R^{M_R}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B } = \frac{B(M_R+2,M_R+1)}{B(M_R+1,M_R+1)}$$
+$$\mathbb{E}(p_R) =  \frac{\int_0^1 \int_0^1 p_R^{M_R+1}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B}{\int_0 ^1 \int_0^1p_R^{M_R}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B } = \frac{B(M_R+2,M_R+1)}{B(M_R+1,M_R+1)}.$$
+
+Using the identity 
+
+$$ \frac{B(m+1,n)}{B(m,n)} = \frac{m}{m+n}B(m,n)$$,
+
+we obtain 
+$$\mathbb{E}(p_R) = \frac{M_R+1}{2M_R+2}$$,
+and similarly,
+$$\mathbb{E}(p_B) = \frac{M_B+1}{2M_B+2}.$$
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
