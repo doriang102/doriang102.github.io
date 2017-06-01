@@ -21,7 +21,7 @@ $$
 
 
 
-## Frequentist Appraoch - p values
+## Frequentist Appraoch - p values b
 
 Let's begin by the assumptions that the frequentist makes:
 
