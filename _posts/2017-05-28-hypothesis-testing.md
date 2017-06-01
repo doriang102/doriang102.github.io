@@ -268,7 +268,8 @@ values_B = np.hstack(([0]*(1057-45),[1]*45))
 
 {% endhighlight %}
 
-Let's start off by assining uniform priors for $$f_P
+Let's start off by assining uniform priors for $$f_R$$ and $$f_B$$, and defining the deterministic difference between the values:
+
 {% highlight ruby %}
 # Create a uniform prior for the probabilities p_a and p_b
 p_A = pymc.Uniform('p_A', 0, 1)
