@@ -320,7 +320,15 @@ which gives a $$99.8\%$$ chance that blue is better, or a $$0.2\%$$ chance that 
 
 ### Something more analytical.
 
-What can we say in the limit as the number of observations tends to infinity? 
+What can we say in the limit as the number of observations tends to infinity? Let's make a simplifying assumption that $$N_R= 2M_R$$, $$k_R = M_R$$ and $$N_B = 2M_B$$, $$k_B = M_B$$. Thus we should expect that we can show that the red and blue buttons are the same in the limit as $$M_R$$ and $$M_B$$ tend to $$+\infty$$. 
+
+Let's start by computing the expectation and varaince of the random variable $$p_R - p_B$$:
+
+$$\mathbb{E}(p_R - p_B) = $$\mathbb{E}(p_R) - $$\mathbb{E}(p_B)$$ 
+
+with 
+
+$$\mathbb{E}(p_R) =  \frac{\int_0^1 \int_0^1 p_R^{M_R+1}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B}{\int_0 ^1 \int_0^1p_R^{M_R}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B } = \frac{B(M_R+2,M_R+1)}{B(M_R+1,M_R+1)}$$
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
