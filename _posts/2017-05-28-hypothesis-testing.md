@@ -219,7 +219,18 @@ This is why I beleive much more in Bayesian methods. They are simpler, more natu
 
 ## Bayesian Approach - Distribution on Parameters 
 
-The Bayesian approach is to assume some prior distribution on the means (say uniform), ie. $$f(p_R) = f(p_B) = 1$$, and to infer the paramaters by Bayes rule. Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
+The Bayesian approach says *we don't know what the means are for the red and blue buttons, but let's assume they have some prior distribution (say uniform, if we have no idea), ie. $$F(p_R) = F(p_B) = 1$$, and let's try to infer the paramaters by Bayes rule using the data observed.* 
+
+
+Once again, let $$X_i^R$$ and $$X_i^B$$ be the outcomes of the $$ith$$ observation for the red and blue buttons respectively, ie. $$X_i^{R,B} = 1$$ if the user clicked the button, and $$X_i^{R,B} = 0$$ otherwise. 
+
+Our goal is to determine:
+
+$$ p(p_B > p_R | D_R, D_B) $$
+
+where $$D_R$$ and $$D_B$$ represent the observations for the red and blue buttons respectively. 
+
+Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
 {% highlight ruby %}
 # Set number of observations.
