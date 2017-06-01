@@ -178,7 +178,7 @@ $$p = \Phi( z \geq z_n),$$
 where $$\Phi$$ is a standard unit normal. 
 
 
-However notice that we've just conveniently skipped over the error $$\tilde E_4$$, **which there are no currently known estimates for**. For this reason, I would take p values for Bernoulli trials with a grain of salt. 
+However notice that we've just conveniently skipped over the error $$\tilde E_4$$, **which there are no currently known estimates for that don't depend on initial 'priors' on $$p_R$$ and $$p_B$$**. For this reason, I would take p values for Bernoulli trials with a grain of salt. 
 
 What we really need is the Berry-Esseen theorem which, under certain assumptions, gives a rate of convergence to a normal distribution. In particular, if we have
 
