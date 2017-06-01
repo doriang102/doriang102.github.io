@@ -346,7 +346,7 @@ $$\mathbb{E}(p_B) = \frac{M_B+1}{2M_B+3}.$$
 
 By definition:
 
-$$\textrm{Var}(p_R) = \frac{1}{B(M_R+1,M_R+1)} \int_0^1 (p- \frac{n+1}{2n+3})^2 p^n (1-p)^n dp$$
+$$\textrm{Var}(p_R) = \frac{1}{B(M_R+1,M_R+1)} \int_0^1 \left(p- \frac{n+1}{2n+3}\right)^2 p^n (1-p)^n dp$$
 
 Evaluating the above, we obtain:
 
