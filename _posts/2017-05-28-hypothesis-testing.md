@@ -310,6 +310,18 @@ plt.axvline(0.00, color = 'black')
 ![](/img/bayesab.png?raw=true)
 
 
+Now in order to compute $$p[p_R > p_B \rvert D_R, D_B]$$ we can evaluate this as:
+{% highlight ruby %}
+print ("Probability that button B gets MORE sign-ups than site B: %0.3f" % (delta_distribution >0).mean())
+print ("Probability that button B gets LESS sign-ups than site B: %0.3f" % (delta_distribution < 0).mean())
+{% endhighlight %}
+
+which gives a $$99.8\%$$ chance that blue is better, or a $$0.2\%$$ chance that red is better. 
+
+### Something more analytical.
+
+What can we say in the limit as the number of observations tends to infinity? 
+
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
 {% highlight ruby %}
