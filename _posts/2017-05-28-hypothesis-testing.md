@@ -282,6 +282,7 @@ def delta(p_A = p_A, p_B = p_B):
 
 {% endhighlight %}
 
+Next we create a sequene of Bernoulli random variables corresponding to the observed outcomes. We then use Markov Chain Monte Carlo to simulate the difference between the two distributions:
 
 {% highlight ruby %}
 # Create the Bernoulli variables for the observation
@@ -295,6 +296,13 @@ mcmc = pymc.MCMC(model)
 # Sample 1,000,000 million points and throw out the first 500,000
 mcmc.sample(1000000, 500000)
 
+{% endhighlight %}
+
+
+{% highlight ruby %}
+delta_distribution = mcmc.trace('delta')[:]
+deltas = pd.Series(delta_distribution)
+deltas.plot(kind="kde")
 {% endhighlight %}
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
