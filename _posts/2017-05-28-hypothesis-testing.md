@@ -198,7 +198,7 @@ Nobody yet has been able to prove what the optimal constant is! The best estimat
 due to [Shevtsova (2011)](https://arxiv.org/abs/1111.6554.)
 
 
-#### Special case of Bernoulli random variable
+### Special case of Bernoulli random variable
 
 
 Note that for a Bernoulli random variable with parameter $$p$$, it is clear that 
