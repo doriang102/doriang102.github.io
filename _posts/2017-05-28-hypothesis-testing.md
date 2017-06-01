@@ -304,6 +304,8 @@ delta_distribution = mcmc.trace('delta')[:]
 deltas = pd.Series(delta_distribution)
 deltas.plot(kind="kde")
 {% endhighlight %}
+![](/img/bayesab.png?raw=true)
+
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
