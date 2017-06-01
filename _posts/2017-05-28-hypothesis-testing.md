@@ -230,7 +230,7 @@ $$ p(p_B > p_R | D_R, D_B) $$
 
 where $$D_R$$ and $$D_B$$ represent the observations for the red and blue buttons respectively. One can compare this to the frequentist approach which essentially tries to infer:
 
-$$ p(D_R, D_B | p_B = p_R) $$
+$$ p(D_R, D_B|p_B = p_R) $$
 
 How do we compute $$ p(p_B > p_R | D_R, D_B) $$? Let's use Bayes theorem:
 
