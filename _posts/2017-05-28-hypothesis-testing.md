@@ -324,11 +324,11 @@ What can we say in the limit as the number of observations tends to infinity? Le
 
 Let's start by computing the expectation and varaince of the random variable $$p_R - p_B$$:
 
-$$\mathbb{E}(p_R - p_B \rvert M_R, M_B) = \mathbb{E}(p_R \rvert M_R) - \mathbb{E}(p_B \rvert M_B)$$ 
+$$\mathbb{E}(p_R - p_B \rvert D_R, D_B) = \mathbb{E}(p_R \rvert D_R) - \mathbb{E}(p_B \rvert D_B)$$ 
 
 with 
 
-$$\mathbb{E}(p_R \rvert M_R) =  \frac{\int_0^1 \int_0^1 p_R^{M_R+1}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B}{\int_0 ^1 \int_0^1p_R^{M_R}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B } = \frac{B(M_R+2,M_R+1)}{B(M_R+1,M_R+1)}.$$
+$$\mathbb{E}(p_R \rvert D_R) =  \frac{\int_0^1 \int_0^1 p_R^{M_R+1}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B}{\int_0 ^1 \int_0^1p_R^{M_R}(1-p_R)^{M_R} p_B^{M_B}(1-p_B)^{M_B}dp_R dp_B } = \frac{B(M_R+2,M_R+1)}{B(M_R+1,M_R+1)}.$$
 
 We first do the computations for $$p_R$$ and observe that the computations for $$p_B$$ are identitical. 
 
@@ -338,11 +338,11 @@ $$ \frac{B(m+1,n)}{B(m,n)} = \frac{m B(m,n)}{m+n} $$,
 
 we obtain 
 
-$$ \mathbb{E}(p_R) = \frac{M_R+1}{2M_R+3} $$,
+$$ \mathbb{E}(p_R \rvert D_R) = \frac{M_R+1}{2M_R+3} $$,
 
 and similarly,
 
-$$\mathbb{E}(p_B) = \frac{M_B+1}{2M_B+3}.$$
+$$\mathbb{E}(p_B \rvert D_B ) = \frac{M_B+1}{2M_B+3}.$$
 
 By definition:
 
