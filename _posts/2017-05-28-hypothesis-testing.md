@@ -241,6 +241,13 @@ How do we determine $$p[D_B \rvert p_B]$$ and $$p[D_R \rvert p_R]$$? Since this 
 
 $$ p[D_B \rvert p_B] = {n_B \choose k_B} p^{k_B} (1-p)^{k_B} $$
 
+$$ p[D_R \rvert p_R] = {n_R \choose k_R} p^{k_R} (1-p)^{k_R}, $$
+
+and with our uniform priors, we get
+
+$$ F_B(p_B) = F_R(p_R) \equiv 1. $$
+
+
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
 {% highlight ruby %}
