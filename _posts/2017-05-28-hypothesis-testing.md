@@ -364,7 +364,7 @@ where $$\xi \in [0,1/2]$$.
 
 Then we have
 
-$$\int f(p_R-p_B) dF((p_R,p_B) | M_R,M_B) = f\left(\frac{1}{2}\right) +  f'\left(\frac{1}{2}\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B )\right) + \frac{1}{2} f''(\xi)\left(\textrm{Var}(p_R| M_R)+\textrm{Var}(p_B| M_B)\right)$$,
+$$\int f(p_R-p_B) dF((p_R,p_B) \rvert M_R,M_B) = f\left(\frac{1}{2}\right) +  f'\left(\frac{1}{2}\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B )\right) + \frac{1}{2} f''(\xi)\left(\textrm{Var}(p_R| M_R)+\textrm{Var}(p_B| M_B)\right)$$,
 
 which courtesy of the above, tends to $$0$$ as $$M_R, M_B \to +\infty$$. 
 
