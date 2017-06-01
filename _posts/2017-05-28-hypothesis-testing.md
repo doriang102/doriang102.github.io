@@ -236,7 +236,7 @@ How do we infer $$ p(p_B > p_R \rvert D_R, D_B) $$? Let's use Bayes theorem:
 
 $$ p(p_B > p_R | D_R, D_B) = \frac{\int_0^1 \int_0^1 I(p_B > p_R) P[D_B|p_B] P[D_R|p_R] dF_R(p_R) dF_B(p_B)}{\int_0 ^1 \int_0^1 P[D_B|p_B] P[D_R|p_R] dF_B(p_B) dF_R(p_R) }$$
 
-How do we determine $$p[D_B \rvert p_R]$$?
+How do we determine $$p[D_B \rvert p_B]$$ and $$p[D_R \rvert p_R]$$?
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
