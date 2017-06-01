@@ -332,9 +332,9 @@ $$\mathbb{E}(p_R \rvert D_R) =  \frac{\int_0^1 \int_0^1 p_R^{M_R+1}(1-p_R)^{M_R}
 
 We first do the computations for $$p_R$$ and observe that the computations for $$p_B$$ are identitical. 
 
-First, using the identity $$ \frac{B(m+1,n)}{B(m,n)} = \frac{m B(m,n)}{m+n} $$,
+First, using the identity $$ \frac{B(m+1,n)}{B(m,n)} = \frac{m B(m,n)}{m+n} $$ we obtain 
 
-we obtain 
+
 
 $$ \mathbb{E}(p_R \rvert D_R) = \frac{M_R+1}{2M_R+3}, $$
 
