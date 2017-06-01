@@ -219,7 +219,7 @@ This is why I beleive much more in Bayesian methods. They are simpler, more natu
 
 ## Bayesian Approach - Distribution on Parameters 
 
-How how do we measure if blue is indeed better than red?
+The Bayesian approach is to assume some prior distribution on the means (say uniform), ie. $$f(p_R) = f(p_B) = 1$$, and to infer the paramaters by Bayes rule. Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
 {% highlight ruby %}
 # Set number of observations.
@@ -261,7 +261,10 @@ for f in range(1,5):
     plt.show()
     
 {% endhighlight %}
-![](/img/rawdiff.png?raw=true)
+![](/img/bayes1.png?raw=true)
+![](/img/bayes2.png?raw=true)
+![](/img/bayes3.png?raw=true)
+![](/img/bayes4.png?raw=true)
 
 
 
