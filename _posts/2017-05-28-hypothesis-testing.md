@@ -324,7 +324,7 @@ What can we say in the limit as the number of observations tends to infinity? Le
 
 Let's start by computing the expectation and varaince of the random variable $$p_R - p_B$$:
 
-$$\mathbb{E}(p_R - p_B) = \mathbb{E}(p_R) - $$\mathbb{E}(p_B)$$ 
+$$\mathbb{E}(p_R - p_B) = \mathbb{E}(p_R) - \mathbb{E}(p_B)$$ 
 
 with 
 
@@ -335,9 +335,18 @@ Using the identity
 $$ \frac{B(m+1,n)}{B(m,n)} = \frac{m}{m+n}B(m,n)$$,
 
 we obtain 
-$$\mathbb{E}(p_R) = \frac{M_R+1}{2M_R+2}$$,
+$$\mathbb{E}(p_R) = \frac{M_R+1}{2M_R+3}$$,
 and similarly,
-$$\mathbb{E}(p_B) = \frac{M_B+1}{2M_B+2}.$$
+$$\mathbb{E}(p_B) = \frac{M_B+1}{2M_B+3}.$$
+
+By definition:
+$$\textrm{Var}(p_R) = \frac{1}{B(M_R+1,M_R+1)} \int_0^1 (p- \frac{n+1}{2n+3})^2 p^n (1-p)^n dp$$
+
+Evaluating the above, we obtain:
+
+$$\textrm{Var}(p_R) = \frac{B(n+3,n+1) - B(n+2,n+1)(n+1)/(2n+3) + (n+1)^2/(2n+3)^2 B(n+1,n+1)}{B(n+1,n+1)}.$$
+
+
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
