@@ -239,14 +239,17 @@ $$ p(p_B > p_R | D_R, D_B) = \frac{\int_0^1 \int_0^1 I(p_B > p_R) P[D_B|p_B] P[D
 How do we determine $$p[D_B \rvert p_B]$$ and $$p[D_R \rvert p_R]$$? Since this is a Bernoulli distribution, we have
 
 
-$$ p[D_B \rvert p_B] = {n_B \choose k_B} p^{k_B} (1-p)^{k_B} $$
+$$ p[D_B \rvert p_B] = {n_B \choose k_B} p^{k_B} (1-p)^{n_B-k_B} $$
 
-$$ p[D_R \rvert p_R] = {n_R \choose k_R} p^{k_R} (1-p)^{k_R}, $$
+$$ p[D_R \rvert p_R] = {n_R \choose k_R} p^{k_R} (1-p)^{n_R-k_R}, $$
 
 and with our uniform priors, we get
 
-$$ F_B(p_B) = F_R(p_R) \equiv 1. $$
+$$ F_B(p_B) \equiv F_R(p_R) \equiv 1. $$
 
+Plugging the above into $$ p(p_B > p_R \rvert D_R,D_B) $$ we obtain
+
+$$ p(p_B > p_R | D_R, D_B) = \frac{\int_0^1 \int_0^1 I(p_B > p_R) p_R^{k_R}(1-p_R)^{n_R-k_R} p_B^{k_B}(1-p_B)^{n_B-k_B}dp_R dp_B}{\int_0 ^1 \int_0^1p_R^{k_R}(1-p_R)^{n_R-k_R} p_B^{k_B}(1-p_B)^{n_B-k_B}dp_R dp_B }$$
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
