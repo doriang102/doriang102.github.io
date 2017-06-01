@@ -185,6 +185,8 @@ What we really need is the Berry-Esseen theorem which, under certain assumptions
 $$ \mathbb{E}(|X_1|^3) := \rho < +\infty $$ 
 
 
+
+
 then it follows that
 
 
@@ -204,6 +206,11 @@ Note that for a Bernoulli random variable with parameter $$p$$, it is clear that
 
 $$ \mathbb{E}(|X_1|^3) = p. $$
 
+$$ \sigma^3 = p^3(1-p)^3 $$
+
+which results in a best upper bound of 
+
+$$\left|F_{n}(x)-\Phi (x)\right| \leq \frac{0.48}{p^2(1-p)^3 \sqrt{n}},$$
 
 **Thus we can only compute p values if we bound the range of possible means to begin with! This is essentially the same as assuming a Bayesian prior in the first place!**
 
