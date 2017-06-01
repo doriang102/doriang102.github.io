@@ -222,13 +222,44 @@ This is why I beleive much more in Bayesian methods. They are simpler, more natu
 How how do we measure if blue is indeed better than red?
 
 {% highlight ruby %}
-# Plot the difference and shade in the probability that blue is better than red. 
-x_diff = x_B - x_R
-x_diff.plot(kind='kde',label='Difference',color='g')
-sns.distplot(x_diff[x_diff>0],kde=False,norm_hist=True)
+# Set number of observations.
+n_R=1000
+n_B=1200
+for f in range(1,5):
+    n_R = n_R*f
+    n_B = n_B*f
+    # Set conversion rates of observations.
+    p_R=0.1
+    p_B=0.12
 
-x_position = 0.0
-plt.axvline(x_position)
+    # Set number of samples to take
+    samples=10000
+
+    # Sample from red and blue butotn given observed conversion rates. 
+    x_R = np.random.binomial(n_R, p_R, samples)/n_R
+    x_B = np.random.binomial(n_B, p_B, samples)/n_B
+
+    # Create pandas series
+    x_R=pd.Series(x_R)
+    x_B=pd.Series(x_B)
+
+    # Plot the results. 
+    x_B.plot(kind='kde',label='Blue Button',color='b')
+    x_R.plot(kind='kde',label='Red Button',color='r')
+    sns.distplot(x_R,kde=False,norm_hist=True)
+    sns.distplot(x_B,kde=False,color='r',norm_hist=True)
+
+    
+    # Plot the difference and shade in the probability that blue is better than red. 
+    x_diff = x_B - x_R
+    x_diff.plot(kind='kde',label='Difference',color='g')
+    sns.distplot(x_diff[x_diff>0],kde=False,norm_hist=True)
+
+    x_position = 0.0
+    plt.axvline(x_position)
+    plt.legend()
+    plt.show()
+    
 {% endhighlight %}
 ![](/img/rawdiff.png?raw=true)
 
