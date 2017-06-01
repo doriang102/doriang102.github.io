@@ -364,12 +364,9 @@ where $$\xi \in [0,1/2]$$.
 
 Then we have
 
-$$\int f(p) F(p_R | M_R) = f\left(\frac{1}{2}\right) +  f'\left(\frac{1}{2}\right) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi)
-\textrm{Var}(p | X_n=x)$$
+$$\int f(p_R-p_B) F(p_R - p_B | M_R,M_B) = f\left(\frac{1}{2}\right) +  f'\left(\frac{1}{2}\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B )\right) + \frac{1}{2} f''(\xi)\left(\textrm{Var}(p_R| M_R)+\textrm{Var}(p_B| M_B)\right),
 
-which becomes
-
-$$= f\left(\frac{1}{2}\right) + o(1) \textrm{ as } n \to +\infty.$$
+which courtesy of the above, tends to $$0$$ as $$M_R, M_B \to +\infty$$. 
 
 
 Then we simply use the density of smooth functions in the space of continuous functions on $$[0,1]$$ to extend the result to all continuous functions on $$[0,1]$$. 
