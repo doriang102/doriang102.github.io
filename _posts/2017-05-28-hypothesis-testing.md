@@ -344,8 +344,27 @@ $$\textrm{Var}(p_R) = \frac{1}{B(M_R+1,M_R+1)} \int_0^1 (p- \frac{n+1}{2n+3})^2 
 
 Evaluating the above, we obtain:
 
-$$\textrm{Var}(p_R) = \frac{B(n+3,n+1) - B(n+2,n+1)(n+1)/(2n+3) + (n+1)^2/(2n+3)^2 B(n+1,n+1)}{B(n+1,n+1)}.$$
+$$\frac{B(M_R+3,M_R+1) - B(M_R+2,M_R+1)(M_R+1)/(2M_R+3) + (M_R+1)^2/(2M_R+3)^2 B(M_R+1,M_R+1)}{B(M_R+1,M_R+1)}.$$
 
+Using the identity $$B(m+1,n) = \frac{m}{m+n} B(m,n)$$ repeatedly and using the fact that $$n \to + \infty$$, we have
+
+$$\textrm{Var}(p_{R,B}) = o(1) \textrm{ as } n \to +\infty.$$
+
+$$\mathbb{E}(p_{R_B}) =  \frac{1}{2} +  o(1) \textrm{ as } n \to +\infty.$$
+
+Let $$f \in C^2([0,1])$$, and let's do a Taylor expansion of $$f$$ around $$1/2$$. 
+$$ f(p) = f(1/2) + f'(1/2)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2,$$
+where $$\xi \in [0,1/2]$$. 
+
+Then we have
+$$\int f(p) d\mathbb{P}_n(p) = f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi) \textrm{Var}(p | X_n=x)$$
+
+which becomes
+
+$$= f(1/2) + o(1) \textrm{ as } n \to +\infty.$$
+
+
+Then we simply use the density of smooth functions in the space of continuous functions on $$[0,1]$$ to extend the result to all continuous functions on $$[0,1]$$. 
 
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
