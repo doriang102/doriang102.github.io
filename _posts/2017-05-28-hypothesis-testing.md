@@ -338,7 +338,7 @@ $$ \frac{B(m+1,n)}{B(m,n)} = \frac{m B(m,n)}{m+n} $$,
 
 we obtain 
 
-$$ \mathbb{E}(p_R \rvert D_R) = \frac{M_R+1}{2M_R+3} $$,
+$$ \mathbb{E}(p_R \rvert D_R) = \frac{M_R+1}{2M_R+3}, $$
 
 and similarly,
 
