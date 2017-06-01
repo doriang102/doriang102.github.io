@@ -268,7 +268,7 @@ values_B = np.hstack(([0]*(1057-45),[1]*45))
 
 {% endhighlight %}
 
-Let's start off by assining uniform priors for $$f_R$$ and $$f_B$$, and defining the deterministic difference between the values:
+Let's start off by assining uniform priors for $$f_R$$ and $$f_B$$, and defining the deterministic difference between the values for the posterior:
 
 {% highlight ruby %}
 # Create a uniform prior for the probabilities p_a and p_b
@@ -279,6 +279,21 @@ p_B = pymc.Uniform('p_B', 0, 1)
 @pymc.deterministic
 def delta(p_A = p_A, p_B = p_B):
     return p_B - p_A
+
+{% endhighlight %}
+
+
+{% highlight ruby %}
+# Create the Bernoulli variables for the observation
+obs_A = pymc.Bernoulli('obs_A', p_A, value = values_A , observed = True)
+obs_B = pymc.Bernoulli('obs_B', p_B, value = values_B , observed = True)
+
+# Create the model and run the sampling
+model = pymc.Model([p_A, p_B, delta, values_A, values_B])
+mcmc = pymc.MCMC(model)
+
+# Sample 1,000,000 million points and throw out the first 500,000
+mcmc.sample(1000000, 500000)
 
 {% endhighlight %}
 
