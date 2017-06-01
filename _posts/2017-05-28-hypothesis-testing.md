@@ -234,7 +234,9 @@ $$ p(D_R, D_B|p_B = p_R) $$
 
 How do we infer $$ p(p_B > p_R \rvert D_R, D_B) $$? Let's use Bayes theorem:
 
-$$ p(p_B > p_R | D_R, D_B) = \frac{\int_0^1 \int_0^1 I(p_1 > p_2) P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2)}{\int_0 ^1 \int_0^1 P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2) }$$
+$$ p(p_B > p_R | D_R, D_B) = \frac{\int_0^1 \int_0^1 I(p_B > p_R) P[D_B|p_B] P[D_R|p_R] dF_R(p_R) dF_B(p_B)}{\int_0 ^1 \int_0^1 P[D_B|p_B] P[D_R|p_R] dF_B(p_B) dF_R(p_R) }$$
+
+How do we determine $$p[D_B \rvert p_R]$$?
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
@@ -287,7 +289,7 @@ for f in range(1,5):
 
 **Question:** What is the probability of observing a value equal to or larger than the above value from a normal distribution with mean 0 and variance 1? This is what a p value is.
 
-$$P[p_1 > p_2;f_1,f_2] = \frac{\int_0^1 \int_0^1 I(p_1 > p_2) P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2)}{\int_0 ^1 \int_0^1 P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2) }$$
+$$P[p_1 > p_2;f_1,f_2] = \frac{\int_0^1 \int_0^1 I(p_R > p_B) P[D_R|p_R] P[D_2|p_1] dF_1(p_1) dF_2(p_2)}{\int_0 ^1 \int_0^1 P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2) }$$
 
 ## Bayesian Approach
 
