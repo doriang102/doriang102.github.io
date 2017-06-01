@@ -364,12 +364,12 @@ where $$\xi \in [0,1/2]$$.
 
 Then we have
 
-$$\int f(p) d\mathbb{P}_n(p) = f(1/2) +  f'(1/2) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi)
+$$\int f(p) F(p_R | M_R) = f\left(\frac{1}{2}\right) +  f'\left(\frac{1}{2}\right) \left(\mathbb{E}(p | X_n = n) - 1/2\right) + \frac{1}{2} f''(\xi)
 \textrm{Var}(p | X_n=x)$$
 
 which becomes
 
-$$= f(1/2) + o(1) \textrm{ as } n \to +\infty.$$
+$$= f\left(\frac{1}{2}\right) + o(1) \textrm{ as } n \to +\infty.$$
 
 
 Then we simply use the density of smooth functions in the space of continuous functions on $$[0,1]$$ to extend the result to all continuous functions on $$[0,1]$$. 
