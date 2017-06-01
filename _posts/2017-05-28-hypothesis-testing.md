@@ -228,7 +228,13 @@ Our goal is to determine:
 
 $$ p(p_B > p_R | D_R, D_B) $$
 
-where $$D_R$$ and $$D_B$$ represent the observations for the red and blue buttons respectively. 
+where $$D_R$$ and $$D_B$$ represent the observations for the red and blue buttons respectively. One can compare this to the frequentist approach which essentially tries to infer:
+
+$$ p(D_R,D_B | p_B=p_R). $$
+
+How do we compute $$ p(p_B > p_R | D_R, D_B) $$? Let's use Bayes theorem:
+
+$$ p(p_B > p_R | D_R, D_B) = \frac{\int_0^1 \int_0^1 I(p_1 > p_2) P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2)}{\int_0 ^1 \int_0^1 P[D_1|p_1] P[D_2|p_1] dF_1(p_1) dF_2(p_2) }$$
 
 Before we get into the math, let's check a simulation of the difference between the two probability distributions generated above, and plot the probability that $$p_R > p_B$$:
 
