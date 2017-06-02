@@ -358,7 +358,7 @@ $$\mathbb{E}(p_{R,B}) =  \frac{1}{2} +  o(1) \textrm{ as } M_R,M_B \to +\infty.$
 
 Let $$f \in C^2([0,1])$$, and let's do a Taylor expansion of $$f$$ around $$1/2$$. 
 
-$$ f(p) = f\left(\frac{1}{2}\right)+ f^{\prime}\left(\frac{1}{2}\right)(p-1/2) + \frac{1}{2}f''(\xi)(p-1/2)^2 $$,
+$$ f(p) = f\left(0\right)+ f^{\prime}\left(0}\right)p + \frac{1}{2}f''(\xi)p^2 $$,
 
 where $$\xi \in [0,1/2]$$. 
 
@@ -366,9 +366,9 @@ Then we have
 
 $$\int f(p_R-p_B) dF((p_R,p_B) \rvert M_R,M_B)$$
 
-$$= f\left(\frac{1}{2}\right) +  f'\left(\frac{1}{2}\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B )\right) + \frac{1}{2} f''(\xi)\left(\textrm{Var}(p_R \rvert M_R)+\textrm{Var}(p_B \rvert M_B)\right)$$,
+$$= f\left(0\right) +  f'\left(0\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B )\right) + \frac{1}{2} f''(\xi)\left(\textrm{Var}(p_R \rvert M_R)+\textrm{Var}(p_B \rvert M_B)\right)$$,
 
-which courtesy of the above, tends to $$0$$ as $$M_R, M_B \to +\infty$$. 
+which courtesy of the above, tends to $$f(0)$$ as $$M_R, M_B \to +\infty$$. 
 
 
 Then we simply use the density of smooth functions in the space of continuous functions on $$[0,1]$$ to extend the result to all continuous functions on $$[0,1]$$. 
