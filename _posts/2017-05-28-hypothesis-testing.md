@@ -368,7 +368,11 @@ $$\int f(p_R-p_B) dF((p_R,p_B) \rvert M_R,M_B)$$
 
 $$= f\left(0\right) +  f'\left(0\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B )\right) + \frac{1}{2} f''(\xi)\left(\textrm{Var}(p_R \rvert M_R)+\textrm{Var}(p_B \rvert M_B)\right)$$,
 
-which courtesy of the above, tends to $$f(0)$$ as $$M_R, M_B \to +\infty$$. 
+which courtesy of the above, tends to $$f(0)$$ as $$M_R, M_B \to +\infty$$. This is equivalent to saying that
+
+$$ p_A \rvert D_R - p_B \rvert N_B \to \delta(0)$$
+
+in the sense of distributions as $$N_R,N_B \to +\infty$$. 
 
 
 Then we simply use the density of smooth functions in the space of continuous functions on $$[0,1]$$ to extend the result to all continuous functions on $$[0,1]$$. 
