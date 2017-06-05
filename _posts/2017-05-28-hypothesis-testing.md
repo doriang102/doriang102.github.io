@@ -374,8 +374,19 @@ $$ p_A \rvert D_R - p_B \rvert D_B \to \delta(0)$$
 
 in the sense of distributions as $$N_R,N_B \to +\infty$$. 
 
+### When the buttons aren't equal?
 
-Then we simply use the density of smooth functions in the space of continuous functions on $$[0,1]$$ to extend the result to all continuous functions on $$[0,1]$$. 
+In this case, by following the above, it's clear that 
+
+$$ \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B )\right) \to \alpha $$
+
+for some $$ \alpha != 0$$. Then we repeat the above argument by doing a Taylor expansion of $$f$$ around $$\alpha$$ to obtain
+
+$$= f\left(\alpha\right) +  f'\left(\alpha\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B ) - \alpha \right) + \frac{1}{2} f''(\xi)\left(\textrm{Var}(p_R \rvert M_R)+\textrm{Var}(p_B \rvert M_B)\right)$$,
+
+which allows us to concldue that 
+
+$$ p_A \rvert D_R - p_B \rvert D_B \to \delta(\alpha).$$
 
 ## Conclusion
 
