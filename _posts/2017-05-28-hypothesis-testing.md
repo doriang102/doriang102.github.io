@@ -21,7 +21,7 @@ $$
 
 
 
-## Frequentist Appraoch - p values b
+## Frequentist Appraoch - p values and asymptotic normality
 
 Let's begin by the assumptions that the frequentist makes:
 
