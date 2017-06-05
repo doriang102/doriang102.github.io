@@ -380,7 +380,7 @@ In this case, by following the above, it's clear that
 
 $$ \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B )\right) \to \alpha $$
 
-for some $$ \alpha != 0$$. Then we repeat the above argument by doing a Taylor expansion of $$f$$ around $$\alpha$$ to obtain
+for some $$ \alpha \neq 0$$. Then we repeat the above argument by doing a Taylor expansion of $$f$$ around $$\alpha$$ to obtain
 
 $$= f\left(\alpha\right) +  f'\left(\alpha\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mathbb{E}(p_B \rvert D_B ) - \alpha \right) + \frac{1}{2} f''(\xi)\left(\textrm{Var}(p_R \rvert M_R)+\textrm{Var}(p_B \rvert M_B)\right)$$,
 
@@ -389,4 +389,6 @@ which allows us to concldue that
 $$ p_A \rvert D_R - p_B \rvert D_B \to \delta(\alpha).$$
 
 ## Conclusion
+
+Ultimately I believe that it's far more natural to evaluate $$P[p_R > p_B \rvert D_R,D_B]$$ which corresponds to the Bayesian framework. The main criticism of the framework is the assumption of a prior - why should we beleive your prior? How does the prior affect convergence rates. However, as shown in this post, in order to quanitfy convergence rates, we need to actually get bounds of $$p(1-p)$$ from $$0$$, which is essentially assuming some "prior" on the data. 
 
