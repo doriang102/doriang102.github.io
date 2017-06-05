@@ -370,7 +370,7 @@ $$= f\left(0\right) +  f'\left(0\right) \left(\mathbb{E}(p_R \rvert D_R ) - \mat
 
 which courtesy of the above, tends to $$f(0)$$ as $$M_R, M_B \to +\infty$$. This is equivalent to saying that
 
-$$ p_A \rvert D_R - p_B \rvert N_B \to \delta(0)$$
+$$ p_A \rvert D_R - p_B \rvert D_B \to \delta(0)$$
 
 in the sense of distributions as $$N_R,N_B \to +\infty$$. 
 
