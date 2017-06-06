@@ -390,7 +390,7 @@ $$ p_A \rvert D_R - p_B \rvert D_B \to \delta(\alpha).$$
 
 ## Conclusion
 
-Ultimately I believe that it's far more natural to evaluate $$P[p_R > p_B \rvert D_R,D_B]$$ which corresponds to the Bayesian framework. The main criticism of the framework is the assumption of a prior - why should we beleive your prior? How does the prior affect convergence rates. However, as shown in this post, in order to quanitfy convergence rates, we need to actually get bounds of $$p(1-p)$$ from $$0$$, which is essentially assuming some "prior" on the data. 
+Ultimately I believe that it's far more natural to evaluate $$P[p_R > p_B \rvert D_R,D_B]$$ which corresponds to the Bayesian framework. The main criticism of the framework is the assumption of a prior - why should we believe your prior? How does the prior affect convergence rates. However, as shown in this post, in order to quanitfy convergence rates, we need to actually get bounds on $$p(1-p)$$ away from $$0$$, which is essentially assuming some "prior" on the data. 
 
 
 ## Next steps
