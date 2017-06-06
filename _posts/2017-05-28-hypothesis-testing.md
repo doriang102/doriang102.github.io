@@ -219,7 +219,7 @@ This is why I beleive much more in Bayesian methods. They are simpler, more natu
 
 ## Bayesian Approach - Distribution on Parameters 
 
-The Bayesian approach says *we don't know what the means are for the red and blue buttons, but let's assume they have some prior distribution (say uniform, if we have no idea), ie. $$F(p_R) = F(p_B) = 1$$, and let's try to infer the paramaters by Bayes rule using the data observed.* 
+The Bayesian approach says *we don't know what the means are for the red and blue buttons, but let's assume they have some prior distribution (say uniform, if we have no idea), ie. $$F(p_R) = F(p_B) = 1$$, and let's try to infer the parameters by Bayes rule using the data observed.* 
 
 
 Once again, let $$X_i^R$$ and $$X_i^B$$ be the outcomes of the $$ith$$ observation for the red and blue buttons respectively, ie. $$X_i^{R,B} = 1$$ if the user clicked the button, and $$X_i^{R,B} = 0$$ otherwise. 
