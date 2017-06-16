@@ -68,7 +68,13 @@ An application of Holder's inequality, then Cauchy Schwarz, yields:
 
 $$ \int_0^x p^n(1-p)^m f(p) dp \leq \|f\|_{L^{\infty}([0,x])} \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{x^{2m+1}}{2m+1}}$$
 
-$$ \int_0^1  p^n(1-p)^m f(p) dp \geq \min_p f \int_0^{1/2} p^n dp = \frac{\min_p f}{n+1} \left(\frac{1}{2}\right)^{n+1}. $$
+$$ \int_0^1  p^n(1-p)^m f(p) dp \geq \min_p f \int_0^{1} p^n(1-p)^m dp = \frac{\min_p f}{m+1} \int_0^1 p^n (1-p)^{m+1}dp,$$
+
+where we've integrated by parts in the last step. Using positivity of the last expression above, we have
+
+$$\frac{\min_p f}{m+1}\int_0^1 p^n (1-p)^{m+1}dp \geq \frac{\min_p f}{m+1}\int_0^{\frac{m}{m+n}} p^ndp = \frac{\min_p f}{(n+1)(m+1)} \left(\frac{m}{m+n}\right)^{n+1}$$
+
+$$= \frac{\min_p f}{n+1} \left(\frac{1}{2}\right)^{n+1}. $$
 
 Combining the above we obtain:
 
