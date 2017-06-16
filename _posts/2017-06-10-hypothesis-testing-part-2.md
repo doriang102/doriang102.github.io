@@ -64,6 +64,6 @@ $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) 
 
 An application of Holder's inequality, then Cauchy Schwarz, yields:
 
-$$ \int_0^x p^n(1-p)^m f(p) dp \leq \|f\|_{L^{\infty}([0,x])} \sqrt{\frac{x^{n+1}}{n+1}}\sqrt{\frac{x^{m+1}}{m+1}}$$
+$$ \int_0^x p^n(1-p)^m f(p) dp \leq \|f\|_{L^{\infty}([0,x])} \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{2x^{m+1}}{2m+1}}$$
 
 
