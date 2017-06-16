@@ -55,7 +55,7 @@ For this hypothesis, we set $$\alpha = \frac{1}{2}$$ and obtain
 $$ P(X_n \leq \alpha) = \Phi_n(\alpha) \leq  \frac{\max_p f}{\min_p f} \left(\frac{1}{2}\right)^{n+1}. $$
 
 
-
+Thus our convergence rate is affected by the maximum and minimum of $$f$$. This inequality suggests that the best case scenario is a constant prior on the data. This of course can't be completely true, since if we guessed right the first time, our algorithm should converge instantly!
 
 
 
