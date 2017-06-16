@@ -58,4 +58,8 @@ $$ P(X_n \leq \alpha) = \Phi_n(\alpha) \leq  \frac{\max_p f}{\min_p f} \left(\fr
 Thus our convergence rate is affected by the maximum and minimum of $$f$$. This inequality suggests that the best case scenario is a constant prior on the data. This of course can't be completely true, since if we guessed right the first time, our algorithm should converge instantly!
 
 
+### The general case
+
+$$ \Phi_{n,m}(x) = \frac{\int_0^x p^m(1-p)^n f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
+
 
