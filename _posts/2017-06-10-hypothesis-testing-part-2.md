@@ -32,6 +32,9 @@ Using our bounds, we obtain
 
 $$ \int_0^1 p^n f(p) dp \geq \frac{1}{n+1} \min_p f(p)  $$
 
+Combining the above two inequalities, we obtain:
+
+$$ |\Phi_n(x)| \leq \frac{\max_p f}{\min_p f} x^{n+1} $$
 
 
 
