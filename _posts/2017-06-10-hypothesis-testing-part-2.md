@@ -72,7 +72,7 @@ $$ \int_0^1  p^n(1-p)^m f(p) dp \geq \min_p f \int_0^{1/2} p^n dp = \frac{\min_p
 
 Combining the above we obtain:
 
-$$ \Phi_{n,m}(x) \leq \frac{\max_p f \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{2x^{m+1}}{2m+1}}}{\frac{\min_p f}{n+1} \left(\frac{1}{2}\right)^{n+1}}. $$
+$$ \Phi_{n,m}(x) \leq \frac{\max_p f \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{x^{2m+1}}{2m+1}}}{\frac{\min_p f}{n+1} \left(\frac{1}{2}\right)^{n+1}}. $$
 
 
 
