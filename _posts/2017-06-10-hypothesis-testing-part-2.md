@@ -36,6 +36,13 @@ Combining the above two inequalities, we obtain:
 
 $$ |\Phi_n(x)| \leq \frac{\max_p f}{\min_p f} x^{n+1} $$
 
+While this is a modest estimate, let's note the following:
+
+- When $$F \equiv 1$$, we get back $$x^{n+1}$$ which is what we obtain from integrating (so it's tight in some regard)
+- For any given $$\alpha \in (0,1)$$ we have 
+
+$$ |\Phi_n(\alpha)| \leq  \frac{\max_p f}{\min_p f} \alpha^{n+1}. $$
+
 
 
 
