@@ -14,9 +14,15 @@ Let's first consider a simple example - if we flip a coin $$n$$ times, and each 
 
 Let's recall from the last post that we can write the posterior distribution on the coin bias as
 
-$$ f(p | n) = \frac{p^nF(p)dp}{\int_0^1 p^n F(p) dp}.$$
+$$ f(p | n) = \frac{p^nF(p)}{\int_0^1 p^n F(p) dp}.$$
 
 Here we will *no longer assume that $$F \equiv 1$$*. Our goal is to understand the convergence rates to the ground truth in terms of the prior. These estimates are not ideally optimized, since they were done quickly on my own, as I was unable to find any good literature on this particular subject from an analyltical point of view (please email me if you know of some!). 
+
+Let's consider the cumulative distribution function, which we denote as $$\Phi_n(p)$$:
+
+$$ \Phi_n(x) = \frac{\int_0^x p^n f(p) dp }{\int_0^1 p^n f(p) dp}. $$
+
+
 
 
 
