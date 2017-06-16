@@ -22,6 +22,10 @@ Let's consider the cumulative distribution function, which we denote as $$\Phi_n
 
 $$ \Phi_n(x) = \frac{\int_0^x p^n f(p) dp }{\int_0^1 p^n f(p) dp}. $$
 
+A simple application of Holder's inequality yields:
+
+$$ \int_0^x p^n f(p) dp \leq \frac{x^{n+1}}{n+1}\|f\|_{L^{\infty}([0,x])}   $$
+
 
 
 
