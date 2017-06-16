@@ -45,6 +45,14 @@ $$ |\Phi_n(\alpha)| \leq  \frac{\max_p f}{\min_p f} \alpha^{n+1}. $$
 
 Thus we get an exponential rate of convergence to the cumulative distribution of the dirac measure centered at $$p=1$$. 
 
+Let's make our hypothesis:
+
+**Hypothesis:** The coin that you're flipping gives heads more than it does tails. 
+
+For this hypothesis, we set $$\alpha = \frac{1}{2}$$ and obtain 
+$$ P(X_n \leq \alpha) = \Phi_n(\alpha) \leq  \frac{\max_p f}{\min_p f} \frac{1}{2}^{n+1}. $$
+
+
 
 
 
