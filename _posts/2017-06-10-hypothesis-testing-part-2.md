@@ -60,7 +60,7 @@ Thus our convergence rate is affected by the maximum and minimum of $$f$$. This 
 
 ### The general case
 
-Let's assume here that $$m = kn$$ for some $$ k \in \mathbb{N} $$. 
+Let's assume here that $$m = \gamma n$$ for some $$ \gamma \in (0,1)$$. 
 
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
