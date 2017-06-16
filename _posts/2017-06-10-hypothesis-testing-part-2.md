@@ -43,7 +43,7 @@ While this is a modest estimate, let's note the following:
 
 $$ |\Phi_n(\alpha)| \leq  \frac{\max_p f}{\min_p f} \alpha^{n+1}. $$
 
-
+Thus we get an exponential rate of convergence to the cumulative distribution of the dirac measure centered at $$p=1$$. 
 
 
 
