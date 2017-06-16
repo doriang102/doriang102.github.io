@@ -60,6 +60,8 @@ Thus our convergence rate is affected by the maximum and minimum of $$f$$. This 
 
 ### The general case
 
+Let's assume here that $$m = kn$$ for some $$ k \in \mathbb{N} $$. 
+
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
 An application of Holder's inequality, then Cauchy Schwarz, yields:
@@ -67,3 +69,10 @@ An application of Holder's inequality, then Cauchy Schwarz, yields:
 $$ \int_0^x p^n(1-p)^m f(p) dp \leq \|f\|_{L^{\infty}([0,x])} \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{2x^{m+1}}{2m+1}}$$
 
 $$ \int_0^1  p^n(1-p)^m f(p) dp \geq \min_p f \int_0^{1/2} p^n dp = \frac{\min_p f}{n+1} \left(\frac{1}{2}\right)^{n+1}. $$
+
+Combining the above we obtain:
+
+$$ \Phi_{n,m}(x) \leq \frac{\|f\|_{L^{\infty}([0,x])} \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{2x^{m+1}}{2m+1}}}{\frac{\min_p f}{n+1} \left(\frac{1}{2}\right)^{n+1}}. $$
+
+
+
