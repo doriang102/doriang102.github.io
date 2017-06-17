@@ -72,7 +72,7 @@ $$ \int_0^1  p^n(1-p)^m f(p) dp \geq \min_p f \int_0^{1} p^n(1-p)^m dp = \frac{\
 
 where we've integrated by parts in the last step. Using positivity of the last expression above, we have
 
-$$\frac{\min_p f}{m+1}\int_0^1 p^n (1-p)^{m+1}dp \geq \min_p f}\left(1 - \frac{m}{m+n}\right)^{m}\int_0^{\frac{m}{m+n}} p^ndp.$$
+$$\frac{\min_p f}{m+1}\int_0^1 p^n (1-p)^{m+1}dp \geq \min_p f\left(1 - \frac{m}{m+n}\right)^{m}\int_0^{\frac{m}{m+n}} p^ndp.$$
 
 Integrating the last expression, we're finally left with:
 
