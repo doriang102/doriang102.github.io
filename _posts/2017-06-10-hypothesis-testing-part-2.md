@@ -64,6 +64,10 @@ Let's assume here that $$m = \gamma n$$ for some $$ \gamma \in (0,1)$$.
 
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
+It is easy to see that $$ p \mapsto p^n(1-p)^m$$ is monotone increasing up to it's maximum at $$\frac{n}{m+n}$$, and decreasing otherwise. Using this we can conclude for all $$ x \leq \frac{n}{m+n}$$ that
+
+$$\int_0^x p^n(1-p)^m f(p) dp \leq \max_p x^{n+1} (1-x)^m. $$
+
 An application of Holder's inequality, then Cauchy Schwarz, yields:
 
 $$ \int_0^x p^n(1-p)^m f(p) dp \leq \|f\|_{L^{\infty}([0,x])} \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{1 - (1-x)^{2m+1}}{2m+1}}$$
