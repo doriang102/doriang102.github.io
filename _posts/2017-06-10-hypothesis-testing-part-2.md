@@ -81,7 +81,7 @@ $$ \int_0^1  p^n(1-p)^m f(p) dp \geq \frac{\min_p f}{(n+1)} \left(\frac{m}{m+n}\
 
 Combining the above we obtain:
 
-$$ \Phi_{n,m}(x) \leq \frac{\max_p f \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{1 - (1-x)^{2m+1}}{2m+1}}}{\frac{\min_p f}{n+1} \left(\frac{m}{m+n}\right)^{n+1}\left(1 - \frac{m}{m+n}\right)^{m}} = \frac{ \max_p f}{\min_p f} \frac{n+1}{\sqrt{2m+1}\sqrt{2n+1}} \frac{x^{n+1/2}(1-x)^{m+1/2}}{\left(\frac{m}{m+n}\right)^{n+1}\left(1 - \frac{m}{m+n}\right)^{m}} $$
+$$ \Phi_{n,m}(x) \leq \frac{\max_p f \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{1 - (1-x)^{2m+1}}{2m+1}}}{\frac{\min_p f}{n+1} \left(\frac{m}{m+n}\right)^{n+1}\left(1 - \frac{m}{m+n}\right)^{m}} = \frac{ \max_p f}{\min_p f} \frac{n+1}{\sqrt{2m+1}\sqrt{2n+1}} \frac{x^{n+1/2}(1-(1-x)^{2m})^{1/2}}{\left(\frac{m}{m+n}\right)^{n+1}\left(1 - \frac{m}{m+n}\right)^{m}} $$
 
 
 
