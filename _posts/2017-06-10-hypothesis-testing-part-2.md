@@ -64,28 +64,4 @@ Let's assume here that $$m = \gamma n$$ for some $$ \gamma \in (0,1)$$.
 
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
-It is easy to see that $$ p \mapsto p^n(1-p)^m$$ is monotone increasing up to it's maximum at $$\frac{n}{m+n}$$, and decreasing otherwise. Using this we can conclude for all $$ x \leq \frac{n}{m+n}$$ that
-
-$$\int_0^x p^n(1-p)^m f(p) dp \leq \max_p x^{n+1} (1-x)^m. $$
-
-An application of Holder's inequality, then Cauchy Schwarz, yields:
-
-$$ \int_0^x p^n(1-p)^m f(p) dp \leq \|f\|_{L^{\infty}([0,x])} \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{1 - (1-x)^{2m+1}}{2m+1}}$$
-
-$$ \int_0^1  p^n(1-p)^m f(p) dp \geq \min_p f \int_0^{1} p^n(1-p)^m dp = \frac{\min_p f}{m+1} \int_0^1 p^n (1-p)^{m+1}dp,$$
-
-where we've integrated by parts in the last step. Using positivity of the last expression above, we have
-
-$$\frac{\min_p f}{m+1}\int_0^1 p^n (1-p)^{m+1}dp \geq \min_p f\left(1 - \frac{m}{m+n}\right)^{m}\int_0^{\frac{m}{m+n}} p^ndp.$$
-
-Integrating the last expression, we're finally left with:
-
-$$ \int_0^1  p^n(1-p)^m f(p) dp \geq \frac{\min_p f}{(n+1)} \left(\frac{m}{m+n}\right)^{n+1}\left(1 - \frac{m}{m+n}\right)^{m} $$
-
-
-Combining the above we obtain:
-
-$$ \Phi_{n,m}(x) \leq \frac{\max_p f \sqrt{\frac{x^{2n+1}}{2n+1}}\sqrt{\frac{1 - (1-x)^{2m+1}}{2m+1}}}{\frac{\min_p f}{n+1} \left(\frac{m}{m+n}\right)^{n+1}\left(1 - \frac{m}{m+n}\right)^{m}} = \frac{ \max_p f}{\min_p f} \frac{n+1}{\sqrt{2m+1}\sqrt{2n+1}} \frac{x^{n+1/2}(1-(1-x)^{2m})^{1/2}}{\left(\frac{m}{m+n}\right)^{n+1}\left(1 - \frac{m}{m+n}\right)^{m}} $$
-
-
 
