@@ -64,4 +64,9 @@ Let's assume here that $$m = \gamma n$$ for some $$ \gamma \in (0,1)$$.
 
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
+Since this function is smooth, we can perform a first order Taylor expansion:
+
+$$ \Phi_{n,m}(x) = \Phi_{n,m}(0) + \Phi_{n,m}'(0)x = \frac{\xi^n (1-\xi)^n}{B(n,n)}x, $$
+
+where $$ \xi \in [0,\alpha)$$. 
 
