@@ -60,7 +60,7 @@ Thus our convergence rate is affected by the maximum and minimum of $$f$$. This 
 
 ### The general case
 
-Let's assume here that $$m = \gamma n$$ for some $$ \gamma \in (0,1]$$. 
+Let's assume here that $$m = n$$.
 
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
@@ -69,5 +69,5 @@ First we consider the case when $$x = \alpha < 1/2$$. Since this function is smo
 
 $$ \Phi_{n,m}(x) = \Phi_{n,m}(0) + \Phi_{n,m}'(0)x = \frac{\xi^n (1-\xi)^n}{B(n,n)}x, $$
 
-where $$ \xi \in [0,\alpha)$$. 
+where $$ \xi \in [0,\alpha)$$. By noting that $$p \mapsto p^n (1-p)^n$$ attains it's maximum at $$p = \frac{1}{2}$$. 
 
