@@ -75,5 +75,4 @@ $$ \int_0^1 p^n (1-p)^n dp \geq \left(\frac{1}{2}\right)^n\int_0^{1/2} p^ndp = \
 
 By noting that $$p \mapsto p^n (1-p)^n$$ attains it's maximum at $$p = \frac{1}{2}$$, we have
 
-$$\Phi_{n,m}(x) \leq (n+1)\left(\alpha^n (1-\alpha)^n}{\left(\frac{1}{2}\right)^{2n}}$$
-
+$$ \frac{\xi^n (1-\xi)^n}{B(n,n)}x \leq (n+1)\frac{\alpha^n (1-\alpha)^n}{\left(\frac{1}{2}\right)^n}$$
