@@ -68,7 +68,11 @@ $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) 
 First we consider the case when $$x = \alpha < 1/2$$. We begin by integrating by parts to obtain:
 
 
-$$ \Phi_{n,m}(x) = - \frac{1}{n+1} \int_0^x p^{n+1} (1-p)^n f(p)dp + \frac{1}{n+1} x^{n+1}(1-x)^n.$$
+$$ B(n+1,n+1) \Phi_{n,m}(x) = - \frac{1}{n+1} \int_0^x p^{n+1} (1-p)^n f(p)dp + \frac{1}{n+1} x^{n+1}(1-x)^n.$$
+
+Since we assume that $$f \geq 0$$ uniformly on $$[0,1]$$, the above term is bounded:
+
+$$ B(n+1,n+1) \Phi_{n,m}(x) \leq \frac{1}{n+1} x^{n+1}(1-x)^n.$$
 
 Since this function is smooth, we can perform a first order Taylor expansion:
 
