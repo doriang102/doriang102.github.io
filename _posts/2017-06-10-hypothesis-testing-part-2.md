@@ -74,11 +74,7 @@ Since we assume that $$f \geq 0$$ uniformly on $$[0,1]$$, the above term is boun
 
 $$ B(n+1,n+1) \Phi_{n,m}(x) \leq \frac{1}{n+1} x^{n+1}(1-x)^n.$$
 
-Since this function is smooth, we can perform a first order Taylor expansion:
-
-$$ \Phi_{n,m}(x) = \Phi_{n,m}(0) + \Phi_{n,m}'(0)x = \frac{\xi^n (1-\xi)^n}{B(n,n)}x, $$
-
-where $$ \xi \in [0,\alpha)$$. A simple lower bound on $$B(n+1,n+1)$$ is obtained as follows:
+A simple lower bound on $$B(n+1,n+1)$$ is obtained as follows:
 
 $$ \int_0^1 p^n (1-p)^n dp \geq \left(\frac{1}{2}\right)^n\int_0^{1/2} p^ndp = \frac{1}{n+1} \left(\frac{1}{2}\right)^{2n+1}.$$
 
