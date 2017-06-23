@@ -73,6 +73,6 @@ where $$ \xi \in [0,\alpha)$$. A simple lower bound on $$B(n+1,n+1)$$ is obtaine
 
 $$ \int_0^1 p^n (1-p)^n dp \geq \left(\frac{1}{2}\right)^n\int_0^{1/2} p^ndp = \frac{1}{n+1} \left(\frac{1}{2}\right)^{2n+1}.$$
 
-By noting that $$p \mapsto p^n (1-p)^n$$ attains it's maximum at $$p = \frac{1}{2}$$, we have
+By noting that $$p \mapsto p^n (1-p)^n$$ is increasing on $$[0,1/2)$$ attains it's maximum at $$p = \frac{1}{2}$$, we have
 
 $$ \frac{\xi^n (1-\xi)^n}{B(n,n)}x \leq (n+1)\frac{\alpha^n (1-\alpha)^n}{\left(\frac{1}{2}\right)^{2n+1}}$$
