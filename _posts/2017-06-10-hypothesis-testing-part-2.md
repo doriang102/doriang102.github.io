@@ -69,7 +69,11 @@ First we consider the case when $$x = \alpha < 1/2$$. Since this function is smo
 
 $$ \Phi_{n,m}(x) = \Phi_{n,m}(0) + \Phi_{n,m}'(0)x = \frac{\xi^n (1-\xi)^n}{B(n,n)}x, $$
 
-where $$ \xi \in [0,\alpha)$$. By noting that $$p \mapsto p^n (1-p)^n$$ attains it's maximum at $$p = \frac{1}{2}$$, we have
+where $$ \xi \in [0,\alpha)$$. A simple lower bound on $$B(n+1,n+1)$$ is obtained as follows:
 
-$$ \int_0^1 p^n (1-p)^n dp \geq \left(\frac{1}{2}\right)^n\int_0^{1/2} p^ndp = \frac{1}{n+1} \left(\frac{1}{2}\right)^{2n+1}$$ 
+$$ \int_0^1 p^n (1-p)^n dp \geq \left(\frac{1}{2}\right)^n\int_0^{1/2} p^ndp = \frac{1}{n+1} \left(\frac{1}{2}\right)^{2n+1}.$$
+
+By noting that $$p \mapsto p^n (1-p)^n$$ attains it's maximum at $$p = \frac{1}{2}$$, we have
+
+$$\Phi_{n,m}(x) \leq (n+1)\left(\alpha^n (1-\alpha)^n}{\left(\frac{1}{2}\right)^{2n}}$$
 
