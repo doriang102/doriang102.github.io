@@ -65,7 +65,12 @@ Let's assume here that $$m = n$$.
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
 
-First we consider the case when $$x = \alpha < 1/2$$. Since this function is smooth, we can perform a first order Taylor expansion:
+First we consider the case when $$x = \alpha < 1/2$$. We begin by integrating by parts to obtain:
+
+
+$$ \Phi_{n,m}(x) = - \frac{1}{n+1} \int_0^x p^{n+1} (1-p)^n f(p)dp + \frac{1}{n+1} x^{n+1}(1-x)^n.$$
+
+Since this function is smooth, we can perform a first order Taylor expansion:
 
 $$ \Phi_{n,m}(x) = \Phi_{n,m}(0) + \Phi_{n,m}'(0)x = \frac{\xi^n (1-\xi)^n}{B(n,n)}x, $$
 
