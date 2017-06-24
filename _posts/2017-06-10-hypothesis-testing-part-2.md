@@ -65,10 +65,10 @@ Let's assume here that $$m = n$$.
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
 
-First we consider the case when $$x = \alpha < 1/2$$. Performing a taylor expansion around $$x=0$$ we have
+First we consider the case when $$x = \alpha < 1/2$$. Performing a Taylor expansion around $$x=0$$ we have
 
 
-$$ \Phi_{n,m}(x) = \frac{\xi^{n}(1-\xi)^{n}}{B(n,n)}.$$
+$$ \Phi_{n,m}(x) = \frac{\xi^{n}(1-\xi)^{n}}{B(n,n)} \textrm{ for } \xi \in [0,1/2)$$
 
 
 A simple lower bound on $$B(n+1,n+1)$$ is obtained as follows:
