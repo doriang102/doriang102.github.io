@@ -68,12 +68,12 @@ $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) 
 First we consider the case when $$x = \alpha < 1/2$$. Performing a Taylor expansion around $$x=0$$ we have
 
 
-$$ \Phi_{n,m}(x) = \frac{\xi^{n}(1-\xi)^{n}f(\xi)}{B_f(n+1,n+1)} \textrm{ for } \xi \in [0,1/2)$$
+$$ \Phi_{n,m}(x) = \frac{\xi^{n}(1-\xi)^{n}f(\xi)x}{B_f(n+1,n+1)} \textrm{ for } \xi \in [0,1/2)$$
 
 
 A simple lower bound on $$B(n+1,n+1)$$ is obtained as follows:
 
-$$ \int_0^1 p^n (1-p)^n dp \geq \left(\frac{1}{2}\right)^n\int_0^{1/2} p^ndp = \frac{1}{n+1} \left(\frac{1}{2}\right)^{2n+1}.$$
+$$ \int_0^1 p^n (1-p)^n f(p) dp \geq \left(\frac{1}{2}\right)^n\int_0^{1/2} p^ndp = \frac{1}{n+1} \left(\frac{1}{2}\right)^{2n+1}.$$
 
 By noting that $$p \mapsto p^n (1-p)^n$$ is increasing on $$[0,1/2)$$ attains it's maximum at $$p = \frac{1}{2}$$, we have
 
