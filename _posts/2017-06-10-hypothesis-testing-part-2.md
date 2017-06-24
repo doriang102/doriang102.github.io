@@ -64,7 +64,7 @@ Let's assume here that $$m = n$$.
 
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
-$$ B(n+1,n+1) \Phi_{n,n}(x) = \int_0^x p^{n+1}(1-p)^{n-1} f(p) dp - \frac{1}{n+1} \int_0^x p^{n+1}(1-p)^n f'(p) + \frac{1}{n+1} x^{n+1} (1-x)^n.$$
+
 First we consider the case when $$x = \alpha < 1/2$$. Performing a taylor expansion around $$x=0$$ we have
 
 
