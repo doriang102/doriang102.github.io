@@ -64,17 +64,11 @@ Let's assume here that $$m = n$$.
 
 $$ \Phi_{n,m}(x) = \frac{\int_0^x p^n(1-p)^m f(p) dp }{\int_0^1 p^n (1-p)^mf(p) dp}. $$
 
+We start off with the following identity:
 
-First we consider the case when $$x = \alpha < 1/2$$. Performing a Taylor expansion around $$x=0$$ we have
+$$ \Phi_{n,m}(x) = \sum_{k=m}^{n+m} x^k (1-x)^k {n+m \choose k}. $$
 
+Next using Stirling's estimates, we have
 
-$$ \Phi_{n,m}(x) = \frac{\xi^{n}(1-\xi)^{n}f(\xi)x}{B_f(n+1,n+1)} \textrm{ for } \xi \in [0,1/2)$$
+$$ \left(\frac{2n}{n}\right)^n \leq { 2n \choose n } \leq \left(e\frac{2n}{n}\right)^n.$$
 
-
-A simple lower bound on $$B(n+1,n+1)$$ is obtained as follows:
-
-$$ \int_0^1 p^n (1-p)^n f(p) dp \geq \left(\frac{1}{2}\right)^n\int_0^{1/2} p^ndp = \frac{1}{n+1} \left(\frac{1}{2}\right)^{2n+1}.$$
-
-By noting that $$p \mapsto p^n (1-p)^n$$ is increasing on $$[0,1/2)$$ attains it's maximum at $$p = \frac{1}{2}$$, we have
-
-$$ \frac{\xi^n (1-\xi)^n}{B(n,n)}x \leq (n+1)\frac{x\alpha^n (1-\alpha)^n}{\left(\frac{1}{2}\right)^{2n+1}} \leq (n+1) \frac{\alpha^{n+1}}{\left(\frac{1}{2}\right)^{n+1}} = (n+1)(2\alpha)^{n+1}$$
