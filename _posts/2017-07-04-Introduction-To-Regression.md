@@ -7,4 +7,12 @@ Most people are familiar with ordinary least squares. Given a collection of obse
 
 $$ \min_{\beta} \frac{1}{N} \sum_{i=1}^N(y_i - \beta \cdot \mathbf x_i)^2.$$
 
-This seems pretty straightforward, right?
+Formally speaking, we are modeling our dependent variable $$Y$$ as a linear function of the features $$X$$ with some error. In other words,
+
+$$ Y - \beta \cdot \mathbf X \sim \textrm{\eps(\beta)}$$
+
+where $$\eps(\beta)$$ is an error term which we would like to minimize. 
+
+This seems pretty straightforward, right? The inquisitive may wonder the following: Why do we use the $$L^2$$ norm - is there a reason or advantage over using some other $$L^p$$ space? In fact, why not replace $$L^2$$ with any other appropriate metric $$(y,\mathbf x) \mapsto d(x,\mathbf x)$$?
+
+
