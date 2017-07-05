@@ -1,5 +1,5 @@
 
-In this follow up, we will look at Linear Regression. We will go over, in detail, the assumptions made for this model with some concrete examples. After this we will discuss over fitting and the various reguarlization methods used in practice.
+In this post, we will discuss Linear Regression. We will go over, in detail, the assumptions made for this model with some concrete examples. After this we will discuss over fitting and the various reguarlization methods used in practice.
 
 ## Linear Regression
 
@@ -9,7 +9,7 @@ $$ \min_{\beta} \frac{1}{N} \sum_{i=1}^N(y_i - \beta \cdot \mathbf x_i)^2.$$
 
 Formally speaking, we are modeling our dependent variable $$Y$$ as a linear function of the features $$X$$ with some error. In other words,
 
-$$ Y - \beta \cdot \mathbf X \sim \textrm{\epsilon(\beta)}$$
+$$ Y - \beta \cdot \mathbf X \sim \epsilon(\beta)$$
 
 where $$\epsilon(\beta)$$ is an error term which we would like to minimize. Less formally, the optimal $$\epsilon$$ is a random variable which will have mean zero and some unknown variance.
 
