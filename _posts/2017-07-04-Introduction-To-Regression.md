@@ -11,7 +11,7 @@ Formally speaking, we are modeling our dependent variable $$Y$$ as a linear func
 
 $$ Y - \beta \cdot \mathbf X \sim \textrm{\eps(\beta)}$$
 
-where $$\eps(\beta)$$ is an error term which we would like to minimize. 
+where $$\epsilon(\beta)$$ is an error term which we would like to minimize. 
 
 This seems pretty straightforward, right? The inquisitive may wonder the following: Why do we use the $$L^2$$ norm - is there a reason or advantage over using some other $$L^p$$ space? In fact, why not replace $$L^2$$ with any other appropriate metric $$(y,\mathbf x) \mapsto d(x,\mathbf x)$$?
 
