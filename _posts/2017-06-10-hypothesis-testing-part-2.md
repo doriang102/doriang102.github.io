@@ -70,5 +70,5 @@ $$ \Phi_{n,m}(x) = \sum_{k=m}^{n+m} x^k (1-x)^k {n+m \choose k}. $$
 
 Next using Stirling's estimates, we have
 
-$$ \left(\frac{m+n}{k}\right)^n \leq { m+n \choose k } \leq \left(e\frac{m+n}{k}\right)^n.$$
+$$ \left(\frac{m+n}{k}\right)^k \leq { m+n \choose k } \leq \left(e\frac{m+n}{k}\right)^k.$$
 
