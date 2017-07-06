@@ -42,13 +42,25 @@ $$p(y \rvert x, \beta) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(y-\beta \cdot
 
 ## Assumptions of Linear Regression
 
-### Assumption 1 - i.i.d of residuals $$\epsilon_i$$. 
+### Assumption 1 - Linear relationship between dependent and indepdent variables. 
+
+We assume that 
+
+$$ Y = \beta \cdot \mathbf{X} + \epsilon , $$
+
+where $$\epsilon$$ is not influenced by $$\mathbf{X}$$. 
+
+### Assumption 2 - i.i.d of residuals $$\epsilon_i$$. 
 
  We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). 
 
 ### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean. 
 
  $$ \epsilon_i \sim \mathcal{N}(0,\sigma^2). $$
+
+
+### Assumption 3 (not technically necessary) - The matrix $$\mathbf{X^TX}$$ has full rank. 
+
 
 
 
