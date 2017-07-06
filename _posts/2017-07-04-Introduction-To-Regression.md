@@ -13,6 +13,10 @@ $$ Y - \beta \cdot \mathbf X \sim \epsilon(\beta)$$
 
 where $$\epsilon(\beta)$$ is an error term which we would like to minimize. Less formally, the optimal $$\epsilon$$ is a random variable which will have mean zero and some unknown variance.
 
+In fact, for any kind of regression problem, we week to find $$f: \mathbf{X} \mapsto Y$$ such that
+
+$$ Y - f(\mathbb{X}) \sim \epsilon(\beta).$$
+
 
 This seems pretty straightforward, right? The inquisitive may wonder the following: Why do we use the $$L^2$$ norm - is there a reason or advantage over using some other $$L^p$$ space? In fact, why not replace $$L^2$$ with any other appropriate metric $$(y,\mathbf x) \mapsto d(x,\mathbf x)$$?
 
