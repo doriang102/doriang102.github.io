@@ -18,6 +18,23 @@ In fact, for any kind of regression problem, we week to find $$f: \mathbf{X} \ma
 $$ Y - f(\mathbf{X}) \sim \epsilon(f).$$
 
 
-This seems pretty straightforward, right? The inquisitive may wonder the following: Why do we use the $$L^2$$ norm - is there a reason or advantage over using some other $$L^p$$ space? In fact, why not replace $$L^2$$ with any other appropriate metric $$(y,\mathbf x) \mapsto d(x,\mathbf x)$$?
+This seems pretty straightforward, right? The inquisitive may wonder the following: 
+
+- Don't we want $$ \epsilon (\beta) $$ to be as close to zero as possible? What do we mean when we call this a random variable?
+- Why do we use the $$L^2$$ norm - is there a reason or advantage over using some other $$L^p$$ space? In fact, why not replace $$L^2$$ with any other appropriate metric $$(y,\mathbf x) \mapsto d(x,\mathbf x)$$? 
+
+
+To answer the first question. Think of the following examples:
+
+- Predicting the height of an individual based on age, gender and race. For a given combination (ie. (13, male, caucasian) ), we will have many possible values if we consider the entire population. There will be a fixed mean but it will vary. 
+- Predicting flight delays using the airline, destination, source location and weather. There will be many different time delays for any given combination of the above variables.
+
+Thus we can't actually expect to predict any exact value when considering stochastic values. The two main things we need to consider are:
+
+1) What distribution does $$p(y|x,\beta)$$ follow? 
+2) What is the best choice of $$\beta$$ given this prior?
+
+
+
 
 
