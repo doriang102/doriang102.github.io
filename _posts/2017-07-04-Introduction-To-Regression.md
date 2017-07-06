@@ -63,4 +63,15 @@ where $$\epsilon$$ is not influenced by $$\mathbf{X}$$.
 
 
 
+# Regularized Linear Regression
+
+### Requirement 1 - Standardization of independent and dependent variables.
+
+This is needed since we are penalizing the coefficients $$\beta$$ equally regardless of whether we use $$L^2$$ or $$L^1$$. 
+
+
+
+
+
+
 
