@@ -32,7 +32,7 @@ To answer the first question. Think of the following examples:
 Thus we can't actually expect to predict any exact value when considering stochastic values. The two main things we need to consider are:
 
 - What distribution does $$p(y|x,\beta)$$ follow? 
--  What is the best choice of $$\beta$$ given this prior?
+- What is the best choice of $$\beta$$ given this prior?
 
 
 **Note:** We have assumed here that the distribution is *parametric*, ie. $$\exists \beta$$ such that the data is distributed via $$ p(y|x,\beta)$$. For example 
