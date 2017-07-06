@@ -37,7 +37,7 @@ Thus we can't actually expect to predict any exact value when considering stocha
 
 **Note:** We have assumed here that the distribution is *parametric*, ie. $$\exists \beta$$ such that the data is distributed via $$ p(y\|x,\beta)$$. For example 
 
-$$p(y \| x, \beta) = \frac{1}{\sqrt{2\pi \sigma^2} e^{-(y-\beta \cdot x)^2}{2 \sigma^2}.$$
+$$p(y \| x, \beta) = \frac{1}{\sqrt{2\pi \sigma^2} e^{-\frac{(y-\beta \cdot x)^2}{2 \sigma^2}}.$$
 
 
 
