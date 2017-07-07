@@ -43,29 +43,6 @@ Thus we can't actually expect to predict any exact value when considering stocha
 $$p(y \rvert x, \beta) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(y-\beta \cdot x)^2}{2 \sigma^2}}.$$
 
 
-## Assumptions of Linear Regression one can violate
-
-- Implicit independent variables (covariates):
-- Lack of independence in Y:
-
-Note that it sufficies to assume independence of the error terms $\epsilon_i$$. Indeed, 
-
-$$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = \mathbb{E}( (\beta \cdot x_i + \epsilon_i)  (\beta \cdot x_j + \epsilon_j)).$$
-
-Expanding, using the fact that $$x_i$$ and $$x_j$$ are deterministic so $$\mathbb{E}(x_i) = x_i$$ and $$\mathbb{E}(x_j) = x_j$$, along with independence of $$\epsilon_i$$ and $$\epsilon_j$$, so that 
-
-$$\mathbb{E}(\epsilon_i \epsilon_j) = \mathbb{E}(\epsilon_i) \mathbb{E}(\epsilon_j)$$, 
-
-we have
-
-
-$$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \mathbb{E}(\epsilon_j)) = \mathbb{E}(Y | X = x_i) \mathbb{E}(Y | X=x_j).$$
-
-- Outliers:
-- Nonnormality:
-- Variance of Y not constant:
-- The correct model is not linear:
-- The X variable is random, not fixed:
 
 ### Assumption 1 - Linear relationship between dependent and indepdent variables. 
 
@@ -77,7 +54,19 @@ where $$\epsilon$$ is not influenced by $$\mathbf{X}$$.
 
 ### Assumption 2 - i.i.d of residuals $$\epsilon_i$$. 
 
- We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). 
+ We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). Note that it sufficies to assume independence of the error terms $\epsilon_i$$ to conclude that $$Y | X_i$ are independent. 
+ 
+ Indeed, $$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = \mathbb{E}( (\beta \cdot x_i + \epsilon_i)  (\beta \cdot x_j + \epsilon_j)).$$
+
+Expanding, using the fact that $$x_i$$ and $$x_j$$ are deterministic so $$\mathbb{E}(x_i) = x_i$$ and $$\mathbb{E}(x_j) = x_j$$, along with independence of $$\epsilon_i$$ and $$\epsilon_j$$, so that 
+
+$$\mathbb{E}(\epsilon_i \epsilon_j) = \mathbb{E}(\epsilon_i) \mathbb{E}(\epsilon_j)$$, 
+
+we have
+
+
+$$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \mathbb{E}(\epsilon_j)) = \mathbb{E}(Y | X = x_i) \mathbb{E}(Y | X=x_j).$$
+ 
 
 ### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean. 
 
@@ -87,6 +76,18 @@ where $$\epsilon$$ is not influenced by $$\mathbf{X}$$.
 ### Assumption 3 (not technically necessary) - The matrix $$\mathbf{X^TX}$$ has full rank. 
 
 
+
+## Assumptions of Linear Regression one can violate
+
+- Implicit independent variables (covariates):
+- Lack of independence in Y:
+
+
+- Outliers:
+- Nonnormality:
+- Variance of Y not constant:
+- The correct model is not linear:
+- The X variable is random, not fixed:
 
 # Regularized Linear Regression
 
