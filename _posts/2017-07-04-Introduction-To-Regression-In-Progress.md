@@ -60,7 +60,7 @@ where $$\epsilon$$ is not influenced by $$\mathbf{X}$$.
  
  Indeed, 
  
- $$ \mathbb{E}(Y \rvert X=x_i \cdot Y \rvert X = X_j) = \mathbb{E}( (\beta \cdot x_i + \epsilon_i)  (\beta \cdot x_j + \epsilon_j)).$$
+ $$ \mathbb{E}(Y \rvert X=x_i \cdot Y \rvert X = x_j) = \mathbb{E}( (\beta \cdot x_i + \epsilon_i)  (\beta \cdot x_j + \epsilon_j)).$$
 
 Expanding, using the fact that $$x_i$$ and $$x_j$$ are deterministic so $$\mathbb{E}(x_i) = x_i$$ and $$\mathbb{E}(x_j) = x_j$$, along with independence of $$\epsilon_i$$ and $$\epsilon_j$$, so that 
 
