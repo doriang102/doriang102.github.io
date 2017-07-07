@@ -52,7 +52,11 @@ Note that it sufficies to assume independence of the error terms $\epsilon_i$$. 
 
 $$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = \mathbb{E}( (\beta \cdot x_i + \epsilon_i)  (\beta \cdot x_j + \epsilon_j)).$$
 
-Expanding, using the fact that $$x_i$$ and $$x_j$$ are deterministic so $$\mathbb{E}(x_i) = x_i$$ and $$\mathbb{E}(x_j) = x_j$$, along with independence of $$\epsilon_i$$ and $$\epsilon_j$$ (so $$\mathbb{E}(\epsilon_i \epsilon_j) = $$\mathbb{E}(\epsilon_i) \mathbb{E}(\epsilon_j)$$, we have
+Expanding, using the fact that $$x_i$$ and $$x_j$$ are deterministic so $$\mathbb{E}(x_i) = x_i$$ and $$\mathbb{E}(x_j) = x_j$$, along with independence of $$\epsilon_i$$ and $$\epsilon_j$$, so that 
+
+$$\mathbb{E}(\epsilon_i \epsilon_j) = \mathbb{E}(\epsilon_i) \mathbb{E}(\epsilon_j)$$, 
+
+we have
 
 
 $$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \epsilon_j) = \mathbb{E}(Y | X = x_i) \mathbb{E}(Y | X=x_j).$$
