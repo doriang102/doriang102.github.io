@@ -54,7 +54,7 @@ where $$\epsilon$$ is not influenced by $$\mathbf{X}$$.
 
 ### Assumption 2 - i.i.d of residuals $$\epsilon_i$$. 
 
- We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). Note that it sufficies to assume independence of the error terms $\epsilon_i$$ to conclude that $$Y | X_i$ are independent. 
+ We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). Note that it sufficies to assume independence of the error terms $$\epsilon_i$$ to conclude that $$Y_i | X_i$ are independent. 
  
  Indeed, $$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = \mathbb{E}( (\beta \cdot x_i + \epsilon_i)  (\beta \cdot x_j + \epsilon_j)).$$
 
