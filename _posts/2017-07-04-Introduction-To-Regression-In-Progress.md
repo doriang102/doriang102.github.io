@@ -45,13 +45,13 @@ $$p(y \rvert x, \beta) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(y-\beta \cdot
 
 ## Assumptions of Linear Regression
 
-Implicit independent variables (covariates):
-Lack of independence in Y:
-Outliers:
-Nonnormality:
-Variance of Y not constant:
-The correct model is not linear:
-The X variable is random, not fixed:
+- Implicit independent variables (covariates):
+- Lack of independence in Y:
+- Outliers:
+- Nonnormality:
+- Variance of Y not constant:
+- The correct model is not linear:
+- The X variable is random, not fixed:
 
 ### Assumption 1 - Linear relationship between dependent and indepdent variables. 
 
