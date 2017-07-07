@@ -1,4 +1,7 @@
 
+# In progress
+
+
 In this post, we will discuss Linear Regression. We will go over, in detail, the assumptions made for this model with some concrete examples. After this we will discuss over fitting and the various reguarlization methods used in practice.
 
 ## Linear Regression
@@ -41,6 +44,14 @@ $$p(y \rvert x, \beta) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(y-\beta \cdot
 
 
 ## Assumptions of Linear Regression
+
+Implicit independent variables (covariates):
+Lack of independence in Y:
+Outliers:
+Nonnormality:
+Variance of Y not constant:
+The correct model is not linear:
+The X variable is random, not fixed:
 
 ### Assumption 1 - Linear relationship between dependent and indepdent variables. 
 
