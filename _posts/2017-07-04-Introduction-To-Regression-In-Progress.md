@@ -54,9 +54,9 @@ where $$\epsilon$$ is not influenced by $$\mathbf{X}$$.
 
 ### Assumption 2 - i.i.d of residuals $$\epsilon_i$$. 
 
- We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). Note that it sufficies to assume independence of the error terms $$\epsilon_i$$ to conclude that $$Y_i | X_i$ are independent. 
+ We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). Note that it sufficies to assume independence of the error terms $$\epsilon_i$$ to conclude that $$Y_i \rvert X_i$ are independent. 
  
- Indeed, $$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = \mathbb{E}( (\beta \cdot x_i + \epsilon_i)  (\beta \cdot x_j + \epsilon_j)).$$
+ Indeed, $$ \mathbb{E}(Y \rvert X=x_i \cdot Y | X = X_j) = \mathbb{E}( (\beta \cdot x_i + \epsilon_i)  (\beta \cdot x_j + \epsilon_j)).$$
 
 Expanding, using the fact that $$x_i$$ and $$x_j$$ are deterministic so $$\mathbb{E}(x_i) = x_i$$ and $$\mathbb{E}(x_j) = x_j$$, along with independence of $$\epsilon_i$$ and $$\epsilon_j$$, so that 
 
@@ -65,7 +65,7 @@ $$\mathbb{E}(\epsilon_i \epsilon_j) = \mathbb{E}(\epsilon_i) \mathbb{E}(\epsilon
 we have
 
 
-$$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \mathbb{E}(\epsilon_j)) = \mathbb{E}(Y | X = x_i) \mathbb{E}(Y | X=x_j).$$
+$$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \mathbb{E}(\epsilon_j)) = \mathbb{E}(Y \rvert X = x_i) \mathbb{E}(Y \rvert X=x_j).$$
  
 
 ### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean. 
