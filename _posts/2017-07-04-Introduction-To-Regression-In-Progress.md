@@ -69,7 +69,7 @@ $$\mathbb{E}(\epsilon_i \epsilon_j) = \mathbb{E}(\epsilon_i) \mathbb{E}(\epsilon
 we have
 
 
-$$ \mathbb{E}(Y | X=x_i \cdot Y | X = X_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \mathbb{E}(\epsilon_j)) = \mathbb{E}(Y \rvert X = x_i) \mathbb{E}(Y \rvert X=x_j).$$
+$$ \mathbb{E}(Y | X=x_i \cdot Y | X = x_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \mathbb{E}(\epsilon_j)) = \mathbb{E}(Y \rvert X = x_i) \mathbb{E}(Y \rvert X=x_j).$$
  
 
 ### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean. 
