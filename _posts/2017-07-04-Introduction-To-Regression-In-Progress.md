@@ -43,7 +43,7 @@ Thus we can't actually expect to predict any exact value when considering stocha
 $$p(y \rvert x, \beta) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(y-\beta \cdot x)^2}{2 \sigma^2}}.$$
 
 
-## Assumptions of Linear Regression
+## Assumptions of Linear Regression one can violate
 
 - Implicit independent variables (covariates):
 - Lack of independence in Y:
