@@ -121,6 +121,13 @@ $$y_2 = 2x_2^1 + M - 10^{-3}$$
 
 $$y_3 = 2x_3^1 + M + 2\cdot 10^{-3}$$
 
+
+But we have $$\mathbb{R}^k$ features, so we can solve:
+
+$$2x_1^1 + M + 10^{-3} = \beta_1 x_1^1 + \beta_2 x_2^1$$
+
+$$2x_2^1 + M - 10^{-3} = \beta_1 x_2^1 + \beta_2 x_2^2$$
+
 $$ y_1 = M + 2x_1 + $$
 $$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
 
