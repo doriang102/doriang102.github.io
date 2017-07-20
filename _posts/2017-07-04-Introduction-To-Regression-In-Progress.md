@@ -100,6 +100,11 @@ $$ \mathbb{E}(Y | X=x_i \cdot Y | X = x_j) = (\beta \cdot x_i + \mathbb{E}(\epsi
 This is needed since we are penalizing the coefficients $$\beta$$ equally regardless of whether we use $$L^2$$ or $$L^1$$. 
 
 
+Indeed, consider the example where we have a simple rule $$ y = 2x + 1 \epsilon$$ where $$\epsilon \sim \mathcal{N}(0,1)$$. 
+
+
+$$ y = \beta \cdot \mathbf{x} + \beta_0 + \epsilon_i,$$
+where $$ \beta_0 \in \mathbb{R}^2$$ is non-zero. 
 
 
 
