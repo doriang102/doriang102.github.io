@@ -111,7 +111,15 @@ $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k} - \beta_0)^2 + \lambda \|\beta+\be
 
 If $$\{x_k\}$$ are mean-zero centered, then the first expression has mean 0 if we choose the correct intercept for $$\beta_0$$. But what if it isn't? Let's imagine that $$\{y_k\}$$ have mean $$\mu=M$$ for $$ M > > 1$$ an to fix ideas. What will be the best choice of $$\lambda$$? For each $$\lambda > 0$$ we will find that $$\beta_0 = M$$ and so we want to shrink $$\lambda \to 0$$. What effect does this have? It means that we can't penalize any of the information in $$\beta$$ and thus you will over fit.  
 
+$$ \hat y = \beta_0  + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_k x_k $$
 
+Let's say that our actual points are:
+
+$$y_1 = 2x_1 + 0.01$$
+$$y_2 = 2x_2 + 0.02$$
+$$y_3 = 2x_3 - 0.01$$
+
+$$ y_1 = M + 2x_1 + $$
 $$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
 
 
