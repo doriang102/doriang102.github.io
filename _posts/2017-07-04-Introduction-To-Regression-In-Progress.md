@@ -115,11 +115,11 @@ $$ \hat y^i = \beta_0  + \beta_1 x_1^i + \beta_2 x_2^i + \cdots + \beta_k x_k^i 
 
 Let's say that our actual points are:
 
-$$y_1 = 2x_1 + M + 10^{-3}$$
+$$y_1 = 2x_1^1 + M + 10^{-3}$$
 
-$$y_2 = 2x_2 + M - 10^{-3}$$
+$$y_2 = 2x_2^1 + M - 10^{-3}$$
 
-$$y_3 = 2x_3 + M + 2\cdot 10^{-3}$$
+$$y_3 = 2x_3^1 + M + 2\cdot 10^{-3}$$
 
 $$ y_1 = M + 2x_1 + $$
 $$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
