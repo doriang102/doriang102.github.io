@@ -115,11 +115,11 @@ $$ \hat y = \beta_0  + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_k x_k $$
 
 Let's say that our actual points are:
 
-$$y_1 = 2x_1 + 10**^{-3}$$
+$$y_1 = 2x_1 + 10^{-3}$$
 
-$$y_2 = 2x_2  - 10**^{-3}$$
+$$y_2 = 2x_2  - 10^{-3}$$
 
-$$y_3 = 2x_3 + 2**10^{-3}$$
+$$y_3 = 2x_3 + 2*10^{-3}$$
 
 $$ y_1 = M + 2x_1 + $$
 $$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
