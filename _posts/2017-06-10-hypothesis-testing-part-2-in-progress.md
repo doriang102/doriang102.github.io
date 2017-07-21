@@ -27,14 +27,19 @@ Let's define some quantities:
 
 - Let's set $$p_R - p_B = \alpha > 0$$. 
 
-- $$N_R = N_B$$ are the sample sizes of the experiment (set equal for simplicity).
+- $$N_R = N_B=N$$ are the sample sizes of the experiment (set equal for simplicity).
 
-- $$z_{\alpha}$$ is the minimum z score we need to have the probability of observing $$\alpha$$ to be under the necessary threshold. For $$0.05$$, $$z_{\alpha}=1.645$$ for example. Then we have
+- $$z_{\alpha}$$ is the minimum z score we need to have the probability of observing $$\alpha$$ to be under the necessary threshold. For $$0.05$$, $$z_{\alpha}=1.645$$ for example. 
+
+
+Then we have
 
 
 $$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}) = p(z > z_{\alpha} \rvert p_R-p_B = \alpha).$$ 
 
+From the last section, we can write this as
 
+$$\frac{ p_R - p_B }{\sqrt{ p_R(1-p_R)/N + p_B(1-p_B)/N}} > z_{\alpha}.$$
 
 Recall the Berry-Esseen theorem which, under certain assumptions, gives a rate of convergence to a normal distribution. In particular, if we have
 
