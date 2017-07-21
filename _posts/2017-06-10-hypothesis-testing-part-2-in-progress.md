@@ -77,6 +77,20 @@ diffs=[]
 
 Let's then compare a list of p values of different scales:
 
+{% highlight ruby %}
+N_vals_1 = [5.44*(p*(1-p))/((0.01*p)**2) for p in p_conv]
+N_vals_5 = [5.44*(p*(1-p))/((0.05*p)**2) for p in p_conv]
+N_vals_10 = [5.44*(p*(1-p))/((0.10*p)**2) for p in p_conv]
+N_vals_20 = [5.44*(p*(1-p))/((0.20*p)**2) for p in p_conv]
+
+plt.figure(figsize=(8,8))
+plt.xlabel('Conversion Rate')
+plt.ylabel('Required Sample Size for p < 0.05')
+plt.plot(p_conv,N_vals_5,label='5% lift')
+plt.plot(p_conv,N_vals_10,label='10% lift')
+plt.plot(p_conv,N_vals_20,label='20% lift')
+plt.legend()
+{% endhighlight %}
 
 
 ## Normal approximations
