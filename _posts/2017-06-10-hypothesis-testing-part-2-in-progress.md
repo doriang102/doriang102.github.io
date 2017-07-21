@@ -3,6 +3,10 @@
 
 ## Frequentist Approach
 
+
+### Equality of Distributions
+
+
 ### Statistical Power
 
 In this section, we look more carefully at the sample size necessary to make statistically valid
