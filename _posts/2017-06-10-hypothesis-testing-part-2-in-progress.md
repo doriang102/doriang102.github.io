@@ -77,12 +77,7 @@ diffs=[]
 
 Let's then compare a list of p values of different scales:
 
-{% highlight ruby %}
-p_conv = [1/N for N in range(10,100)]
-sigma = [np.sqrt(p*(1-p)) for p in p_conv]
-alphas = [1.1*p for p in p_conv]
-N_vals = [5.44*(p*(1-p))/((0.01*p)**2) for p in p_conv]
-{% end lightlight %}
+
 
 ## Normal approximations
 
