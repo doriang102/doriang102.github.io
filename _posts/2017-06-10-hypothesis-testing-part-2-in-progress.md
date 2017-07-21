@@ -92,7 +92,7 @@ plt.plot(p_conv,N_vals_20,label='20% lift')
 plt.legend()
 {% endhighlight %}
 
-
+![](/img/pvalue_power.png?raw=true)
 ## Normal approximations
 
 Recall the Berry-Esseen theorem which, under certain assumptions, gives a rate of convergence to a normal distribution. In particular, if we have
