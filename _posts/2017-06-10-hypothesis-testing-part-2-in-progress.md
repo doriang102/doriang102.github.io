@@ -73,7 +73,7 @@ def p_value(p_T,p_C,size_T,size_C):
     return diff, p_value
 p_values=[]
 diffs=[]
-{% end highlight %}
+{% endhighlight %}
 
 Let's then compare a list of p values of different scales:
 
