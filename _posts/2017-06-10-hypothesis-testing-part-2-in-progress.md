@@ -41,13 +41,13 @@ From the last section, we can write this as
 
 $$\frac{ p_R - p_B }{\sqrt{ p_R(1-p_R)/N + p_B(1-p_B)/N}} > z_{\alpha}.$$
 
-Since $$p_R - p_B = \alpha $$ and $$\alpha$$ is generally much smaller than both $$p_R$$ or $$p_B$$, we can set $$p_R \sim p_B := p$ in the denominator to obtain
+Since $$p_R - p_B = \alpha $$ and $$\alpha$$ is generally much smaller than both $$p_R$$ or $$p_B$$, we can set $$p_R \sim p_B := p$$ in the denominator to obtain
 
 $$ \frac{N\alpha^2}{2p(1-p)} > z_{\alpha}^2.$$
 
 Rewriting this we obtain
 
-$$ N \geq 2 z_{\alpha}^2 \frac{\sigma^2 z_{\alpha}^2 }{\alpha^2},$$
+$$ N \geq 2 \frac{\sigma^2 z_{\alpha}^2 }{\alpha^2},$$
 
 where $$\sigma^2$$ is the variance of the expected baseline conversion rate. 
 
