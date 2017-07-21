@@ -93,6 +93,9 @@ plt.legend()
 {% endhighlight %}
 
 ![](/img/pvalue_power.png?raw=true)
+
+In my experience, one is generally looking for lifts of the order of $$1-2\%$$, so you can see how the sample size is incredibly important. Generally major websites can have of the order of 20 to 100 million unique cookies visit every month, and can have anywhere from 50k to 1 million actual users. 
+
 ## Normal approximations
 
 Recall the Berry-Esseen theorem which, under certain assumptions, gives a rate of convergence to a normal distribution. In particular, if we have
