@@ -5,6 +5,9 @@
 
 ### Statistical Power
 
+In this section, we look more carefully at the sample size necessary to make statistically valid
+inferences from observations. 
+
 When organizing an experiment, we must ask ourselves a few questions:
 
 - 1) What is the hypothesis we are testing?
@@ -26,11 +29,12 @@ Let's define some quantities:
 
 - $$N_R = N_B$$ are the sample sizes of the experiment (set equal for simplicity).
 
+- $$z_{\alpha}$$ is the minimum z score we need to have the probability of observing $$\alpha$$ to be under the necessary threshold. For $$0.05$$, $$z_{\alpha}=1.645$$ for example. Then we have
 
 
+$$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}) = $$ p(z > z^* \rvert p_R-p_b=\alpha).$$ $$ 
 
-In this follow up, we look more carefully at the sample size necessary to make statistically valid
-inferences from observations. 
+
 
 Recall the Berry-Esseen theorem which, under certain assumptions, gives a rate of convergence to a normal distribution. In particular, if we have
 
