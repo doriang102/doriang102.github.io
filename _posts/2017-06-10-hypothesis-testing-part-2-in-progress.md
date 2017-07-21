@@ -32,7 +32,7 @@ Let's define some quantities:
 - $$z_{\alpha}$$ is the minimum z score we need to have the probability of observing $$\alpha$$ to be under the necessary threshold. For $$0.05$$, $$z_{\alpha}=1.645$$ for example. Then we have
 
 
-$$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}) = $$ p(z > z^* \rvert p_R-p_b=\alpha).$$ $$ 
+$$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}) = p(z > z_{\alpha} \rvert p_R-p_B = \alpha).$$ 
 
 
 
