@@ -53,7 +53,9 @@ Rewriting this we obtain
 
 $$ N \geq 2 \frac{\sigma^2 z_{\alpha}^2 }{\alpha^2},$$
 
-where $$\sigma^2$$ is the variance of the expected baseline conversion rate. 
+where $$\sigma^2$$ is the variance of the expected baseline conversion rate. In particular, when $$z_{\alpha}=1.65$$, we have
+
+$$ N \geq 2 \frac{\sigma^2 2.72 }{\alpha^2}$$
 
 ## Normal approximations
 
