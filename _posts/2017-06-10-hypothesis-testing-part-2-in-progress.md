@@ -47,7 +47,7 @@ $$ \frac{N\alpha^2}{2p(1-p)} > z_{\alpha}^2.$$
 
 Rewriting this we obtain
 
-$$ N \geq 2z_{\alpha}^2 \frac{\sigma^2 z_{\alpha}^2 }{\alpha}^2},$$
+$$ N \geq 2 z_{\alpha}^2 \frac{\sigma^2 z_{\alpha}^2 }{\alpha^2},$$
 
 where $$\sigma^2$$ is the variance of the expected baseline conversion rate. 
 
