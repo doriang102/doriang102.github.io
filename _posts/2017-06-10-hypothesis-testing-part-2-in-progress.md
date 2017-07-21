@@ -1,21 +1,29 @@
 
 # Experimental Design
 
-## Statistical Power
+## Frequentist Approach
+
+### Statistical Power
 
 When organizing an experiment, we must ask ourselves a few questions:
 
-1) What is the hypothesis we are testing?
-2) How big of a sample size do we need to read results in a statistically meaningful way?
-3) What would be considered a 'positive' result?
+- 1) What is the hypothesis we are testing?
+
+- 2) How big of a sample size do we need to read results in a statistically meaningful way?
+
+- 3) What would be considered a 'positive' result?
 
 This brings us to the topic of statistical power. Let's say for 1), we are once again testing if the red button is better than the blue button. How many people do we need to measure this? More precisely, can we estimate
 
-$$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true})$$. In other words, what's the probability we will be able to reject the null hyothesis if the difference we observe is actually true?
+$$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}).$$ 
+
+
+In other words, what's the probability we will be able to reject the null hyothesis if the difference we observe is actually true?
 
 Let's define some quantities:
 
 - Let's set $$p_R - p_B = \alpha > 0$$. 
+
 - $$N_R = N_B$$ are the sample sizes of the experiment (set equal for simplicity).
 
 
