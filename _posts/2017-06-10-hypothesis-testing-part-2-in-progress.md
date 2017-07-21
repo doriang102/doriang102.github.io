@@ -62,26 +62,7 @@ To see what different sample sizes we need, let's plot some of these curves.
 
 First, let's write a formula to compute the p value of the difference between two conversion rates. We first define:
 
-{% highlight ruby %}
-import scipy.stats as st
-def p_value(p_T,p_C,size_T,size_C):
-    var = np.sqrt(p_T*(1-p_T)/size_T + p_C*(1-p_C)/size_C)
-    diff = p_T-p_C
-    z_score = diff/var
-    p_value = st.norm.sf(abs(z_score))
-    return diff, p_value
-p_values=[]
-diffs=[]
-{% end highlight}
 
-Let's then compare a list of p values of different scales:
-
-{% highlight ruby %}
-p_conv = [1/N for N in range(10,100)]
-sigma = [np.sqrt(p*(1-p)) for p in p_conv]
-alphas = [1.1*p for p in p_conv]
-N_vals = [5.44*(p*(1-p))/((0.01*p)**2) for p in p_conv]
-{% end lightlight %}
 test
 
 ## Normal approximations
