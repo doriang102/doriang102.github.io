@@ -81,6 +81,7 @@ sigma = [np.sqrt(p*(1-p)) for p in p_conv]
 alphas = [1.1*p for p in p_conv]
 N_vals = [5.44*(p*(1-p))/((0.01*p)**2) for p in p_conv]
 {% end lightlight %}
+test
 
 ## Normal approximations
 
