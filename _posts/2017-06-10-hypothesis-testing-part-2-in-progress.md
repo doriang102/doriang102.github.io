@@ -1,11 +1,44 @@
 
 # Experimental Design
 
+
+- **Replication**: to provide an estimate of experimental error
+
+- **Randomization**: to ensure that this estimate is statistically valid; and
+
+- **Local control**: to reduce experimental error by making the experiment more efficient.
+
+- **Design structure:** to ensure that the experimental units are homogenous and represent equal samples from the same distribution.
+
+- **Treatment structure:** to ensure that the treatment is given in a uniform way. Are a large percentage of one group receiving the treatment at a different time or in a different way?
+
+### Replication
+
+An essential component to a good experiment is replication. Mathematically this means that our observations are a collection of i.i.d random variables $$\{Y_i\}_{i=1}^n$$ where $$n$$ is sufficiently large so that we can read statistical significance from the results. 
+
+### Randomization
+
+To ensure replicability and to infer proper conclusions, proper randomization is needed. For instance, if you were testing out the efficacy of a new drug, but only tested it on people living in Iceland, you wouldn't be able to make conclusions about people living in France necessarily. 
+
+In other words, you're assuming that you are sampling some distribution when making observations - are you sampling a large and random enough quantity to represent the distribution accurately? Randomization in the context of data science is normally sufficient to ensure proper generalization, but sometimes there are size constraints on what you are studying. 
+
+A good example was the problem of delivering The New York Times newspaper to Starbucks restaurants - we wanted to try out several different models, but only had approximately 6k stores to choose from. When this is the case, we need to introduce local controls:
+
+### Local Control
+
+
+
+
 ## Frequentist Approach
 
  In the last post, we discussed how to test hypotheses from frequentist and Bayesian approaches. In this post we discuss how to properly design an experiment and interpret the results, trying to emphasize pitfalls that are likely to occur. 
  
 ### Equality of Distributions
+
+
+An example of bad experimental design:
+
+![](/img/bad_exp.png?raw=true)
 
 
 ### Statistical Power
@@ -92,6 +125,9 @@ plt.plot(p_conv,N_vals_20,label='20% lift')
 plt.legend()
 {% endhighlight %}
 
+![](/img/pvalue_power.png?raw=true)
+
+In my experience, one is generally looking for lifts of the order of $$1-2\%$$, so you can see how the sample size is incredibly important. Generally major websites can have of the order of 20 to 100 million unique cookies visit every month, and can have anywhere from 50k to 1 million actual users. 
 
 ## Normal approximations
 
