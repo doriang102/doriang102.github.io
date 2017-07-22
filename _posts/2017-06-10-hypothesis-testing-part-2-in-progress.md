@@ -8,6 +8,10 @@
 
 - **Local control**: to reduce experimental error by making the experiment more efficient.
 
+- **Design structure:** 
+
+- **Treatment structure:**
+
 ### Replication
 
 An essential component to a good experiment is replication. Mathematically this means that our observations are a collection of i.i.d random variables $$\{Y_i\}_{i=1}^n$$ where $$n$$ is sufficiently large so that we can read statistical significance from the results. 
