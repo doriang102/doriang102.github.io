@@ -41,7 +41,15 @@ A good example was the problem of delivering The New York Times newspaper to Sta
  
 ### Equality of Distributions
 
+### $$\alpha$$ value
 
+The threshold you choose your cut off at. More precisely,
+
+$$ p(\textrm{ reject }  H_0  \rvert| H_0 \textrm{ is true } ),
+
+which is also known as a Type I error. For example, a significance level of 0.05 indicates a 5% risk of concluding that a difference exists when there is no actual difference.
+
+### P Value
 
 
 
