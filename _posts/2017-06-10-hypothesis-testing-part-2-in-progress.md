@@ -12,6 +12,13 @@
 
 - **Treatment structure:** to ensure that the treatment is given in a uniform way. Are a large percentage of one group receiving the treatment at a different time or in a different way?
 
+An example of bad experimental design:
+
+![](/img/badexp.png?raw=true)
+
+In the above, we see that the treatment and control groups have significantly different browsing characteristics. Thus their behavior is fundamentally different, and we can't expect to interpret the result of a uniform treatment on both groups. This lacks proper **randomization**. It could be fixed by local control - ie. sampling one distribution to match the other one so that the parameters in question are comparable. 
+
+
 ### Replication
 
 An essential component to a good experiment is replication. Mathematically this means that our observations are a collection of i.i.d random variables $$\{Y_i\}_{i=1}^n$$ where $$n$$ is sufficiently large so that we can read statistical significance from the results. 
@@ -36,9 +43,7 @@ A good example was the problem of delivering The New York Times newspaper to Sta
 ### Equality of Distributions
 
 
-An example of bad experimental design:
 
-![](/img/badexp.png?raw=true)
 
 
 ### Statistical Power
