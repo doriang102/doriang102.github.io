@@ -1,6 +1,18 @@
 
 # Experimental Design
 
+
+- **Replication**: to provide an estimate of experimental error
+
+- **Randomization**: to ensure that this estimate is statistically valid; and
+
+- **Local control**: to reduce experimental error by making the experiment more efficient.
+
+### Replication
+
+An essential component to a good experiment is replication. Mathematically this means that our observations are a collection of i.i.d random variables $$\{Y_i\}_{i=1}^n$$ where $n$$ is sufficiently large so that we can read statistical significance from the results. 
+
+
 ## Frequentist Approach
 
  In the last post, we discussed how to test hypotheses from frequentist and Bayesian approaches. In this post we discuss how to properly design an experiment and interpret the results, trying to emphasize pitfalls that are likely to occur. 
