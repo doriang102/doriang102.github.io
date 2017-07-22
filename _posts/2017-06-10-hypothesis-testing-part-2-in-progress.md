@@ -12,7 +12,9 @@
 
 - **Treatment structure:** to ensure that the treatment is given in a uniform way. Are a large percentage of one group receiving the treatment at a different time or in a different way?
 
+An example of bad experimental design is shown here:
 
+![](/img/badexp.png?raw=true)
 
 In the above, we see that the treatment and control groups have significantly different browsing characteristics. Thus their behavior is fundamentally different, and we can't expect to interpret the result of a uniform treatment on both groups. This lacks proper **randomization**. It could be fixed by local control - ie. sampling one distribution to match the other one so that the parameters in question are comparable. 
 
