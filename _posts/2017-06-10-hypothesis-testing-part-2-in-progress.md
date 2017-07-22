@@ -35,7 +35,6 @@ A good example was the problem of delivering The New York Times newspaper to Sta
 
 
 
-
 ## Frequentist Approach
 
  In the last post, we discussed how to test hypotheses from frequentist and Bayesian approaches. In this post we discuss how to properly design an experiment and interpret the results, trying to emphasize pitfalls that are likely to occur. 
