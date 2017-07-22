@@ -38,7 +38,7 @@ A good example was the problem of delivering The New York Times newspaper to Sta
 
 An example of bad experimental design:
 
-![](/img/bad_exp.png?raw=true)
+![](/img/badexp.png?raw=true)
 
 
 ### Statistical Power
