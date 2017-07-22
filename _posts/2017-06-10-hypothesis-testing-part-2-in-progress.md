@@ -51,7 +51,9 @@ which is also known as a Type I error. For example, a significance level of 0.05
 
 ### P Value
 
+This is the probability of observing larger than or equal to the observed value when the null hypothesis is true, ie.
 
+$$ p(Y \geq Y_{\textrm{obs}} \rvert H_0 \textrm{ is true } )$$
 
 ### Statistical Power
 
