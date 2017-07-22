@@ -36,6 +36,11 @@ A good example was the problem of delivering The New York Times newspaper to Sta
 ### Equality of Distributions
 
 
+An example of bad experimental design:
+
+![](/img/bad_exp.png?raw=true)
+
+
 ### Statistical Power
 
 In this section, we look more carefully at the sample size necessary to make statistically valid
