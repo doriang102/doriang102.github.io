@@ -8,9 +8,9 @@
 
 - **Local control**: to reduce experimental error by making the experiment more efficient.
 
-- **Design structure:** 
+- **Design structure:** to ensure that the experimental units are homogenous and represent equal samples from the same distribution.
 
-- **Treatment structure:**
+- **Treatment structure:** to ensure that the treatment is given in a uniform way. Are a large percentage of one group receiving the treatment at a different time or in a different way?
 
 ### Replication
 
