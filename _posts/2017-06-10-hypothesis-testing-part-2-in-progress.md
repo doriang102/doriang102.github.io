@@ -10,7 +10,15 @@
 
 ### Replication
 
-An essential component to a good experiment is replication. Mathematically this means that our observations are a collection of i.i.d random variables $$\{Y_i\}_{i=1}^n$$ where $n$$ is sufficiently large so that we can read statistical significance from the results. 
+An essential component to a good experiment is replication. Mathematically this means that our observations are a collection of i.i.d random variables $$\{Y_i\}_{i=1}^n$$ where $$n$$ is sufficiently large so that we can read statistical significance from the results. 
+
+### Randomization
+
+To ensure replicability and to infer proper conclusions, proper randomization is needed. For instance, if you were testing out the efficacy of a new drug, but only tested it on people living in Iceland, you wouldn't be able to make conclusions about people living in France necessarily. In other words, you're assuming that you are sampling some distribution when making observations - are you sampling a large and random enough quantity to represent the distribution accurately? Randomization in the context of data science is normally sufficient to ensure proper generalization, but sometimes there are size constraints on what you are studying. A good example was the problem of delivering The New York Times newspaper to Starbucks restaurants - we wanted to try out several different models, but only had approximately 6k stores to choose from. When this is the case, we need to introduce local controls:
+
+### Local Control
+
+
 
 
 ## Frequentist Approach
