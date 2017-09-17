@@ -151,11 +151,25 @@ In my experience, one is generally looking for lifts of the order of $$1-2\%$$, 
 We saw in the last post that 
 
 $$ p^n (1-p)^{N-n} \to \delta_{\frac{n}{N}}(p),$$
-in the sense of distributions. How do we infer confidence in the Bayesian setting? We can first consider the Baye's ratio:
+in the sense of distributions. How do we infer confidence in the Bayesian setting? Let's now assume that we have
+$$ \beta = \frac{n}{N} $$ successes.
+
+With what confidence can we infer that the button has bias $\beta$?
+
+Let's define 
+
+$H_1$ - The hypothesis that the bias is $\beta + \epsilon$. 
+
+$H_2$ - The hypothesis that the bias is $\beta$. 
+
+
+We can first consider the Baye's ratio:
 
 $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)}.$$ We can write this as 
 
-$$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{\int_0^1 (p+\alpha)^n (1- (p+\alpha))^{N-n} f(p) dp}{\int_0^1 p^n (1- p)^{N-n} f(p) dp}.$$
+$$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta+\epsilon))^{N-n} }{ \beta^n (1- \beta)^{N-n}}.$$
+
+
 
 ## Normal approximations
 
