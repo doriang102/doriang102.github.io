@@ -191,6 +191,12 @@ What we really want to estimate is
 
 $$ \frac{\int\int_{p_1 > p_2} p_1^n (1-p_1)^{N-n} p_2^n (1-p_2)^{N-n} dp_1dp_2}{\int \int p_1^n (1-p_1)^{N-n} p_2^n (1-p_2)^{N-n} dp_1dp_2}$$
 
+We can rewrite this as
+
+$$ \int_0^1 \int_0^{p_2} s^{n_1} (1-s)^{N-n_1} ds s^{n_2}(1-s)^{N-n_2} dp2$$
+
+
+
 ## Normal approximations
 
 Recall the Berry-Esseen theorem which, under certain assumptions, gives a rate of convergence to a normal distribution. In particular, if we have
