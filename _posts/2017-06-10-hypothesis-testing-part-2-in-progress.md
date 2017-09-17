@@ -177,7 +177,7 @@ $$ \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \beta \log \left(
 We expand the logs to second order to obtain:
 
 
-$$ \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \frac{\epsilon^2}{2\beta^2} - \frac{\epsilon^2}{(1-\beta)^2}  $$
+$$ \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac{\epsilon^2}{2\beta} - \frac{\epsilon^2}{2(1-\beta)^2}  $$
 
 ## Normal approximations
 
