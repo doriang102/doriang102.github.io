@@ -172,7 +172,7 @@ $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta
 Let's take the log of the ratio. Then we have
 
 
-$$ \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \beta \log \left(1+ \frac{\epsilon}{\beta}\right) + (1-\beta) \log \left ( 1 - \frac{\epsilon}{1-\beta}\right).$$
+$$\frac{1}{N} \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \beta \log \left(1+ \frac{\epsilon}{\beta}\right) + (1-\beta) \log \left ( 1 - \frac{\epsilon}{1-\beta}\right).$$
 
 We expand the logs to second order to obtain:
 
@@ -184,7 +184,7 @@ Simplifying, the write side becomes
  $$-\frac{\epsilon^2}{2\sigma^2}.$$
 
 Thus we have
-$$ N \geq \frac{2\sigma^2}{\epsilon^2} \frac{1}{R}.$$
+$$ N \geq \frac{2\sigma^2}{\epsilon^2} \log \frac{1}{R}.$$
 
 
 We can therefore 
