@@ -145,6 +145,16 @@ plt.legend()
 
 In my experience, one is generally looking for lifts of the order of $$1-2\%$$, so you can see how the sample size is incredibly important. Generally major websites can have of the order of 20 to 100 million unique cookies visit every month, and can have anywhere from 50k to 1 million actual users. 
 
+
+## Bayesian Statistical Power
+
+We saw in the last post that 
+
+$$ p^n (1-p)^{N-n} \to \delta_{\frac{n}/n}(p),$$
+in the sense of distributions. How do we infer confidence in the Bayesian setting? We can first consider the Baye's ratio:
+
+$$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)}.$$
+
 ## Normal approximations
 
 Recall the Berry-Esseen theorem which, under certain assumptions, gives a rate of convergence to a normal distribution. In particular, if we have
