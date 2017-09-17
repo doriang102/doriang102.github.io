@@ -177,7 +177,17 @@ $$ \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \beta \log \left(
 We expand the logs to second order to obtain:
 
 
-$$ \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac{\epsilon^2}{2\beta} - \frac{\epsilon^2}{2(1-\beta)}  $$
+$$ \frac{1}{N}\log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac{\epsilon^2}{2\beta} - \frac{\epsilon^2}{2(1-\beta)}  $$
+
+Simplifying, the write side becomes
+
+ $$-\frac{\epsilon^2}{2\sigma^2}.$$
+
+Thus we have
+$$ N \geq \frac{2\sigma^2}{\epsilon^2} \frac{1}{R}.$$
+
+
+We can therefore 
 
 ## Normal approximations
 
