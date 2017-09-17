@@ -170,7 +170,14 @@ $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)}.$$ We can write this as
 $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta+\epsilon))^{N-n} }{ \beta^n (1- \beta)^{N-n}}.$$
 
 Let's take the log of the ratio. Then we have
+
+
 $$ \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \beta \log \left(1+ \frac{\epsilon}{\beta}\right) + (1-\beta) \log \left ( 1 - \frac{\epsilon}{1-\beta}\right).$$
+
+We expand the logs to second order to obtain:
+
+
+$$ \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \frac{\epsilon^2}{2\beta^2} - \frac{\epsilon^2}{(1-\beta)^2}  $$
 
 ## Normal approximations
 
