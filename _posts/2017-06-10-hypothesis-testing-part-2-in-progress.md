@@ -189,7 +189,7 @@ $$ N \geq \frac{2\sigma^2}{\epsilon^2} \log \frac{1}{R}.$$
 
 What we really want to estimate is 
 
-$$ \frac{\int\int_{p_1 > p_2} p_1^n (1-p_1)^{N-n} p_2^n (1-p_2)^{N-n} dp_1dp_2}{\int \int p_1^n (1-p_1)^{N-n} p_2^n (1-p_2)^{N-n} dp_1dp_2}$$
+$$ \frac{\int\int_{p_1 > p_2} p_1^{n_1} (1-p_1)^{N-{n_1}} p_2^{n_2} (1-p_2)^{N-n_2} dp_1dp_2}{\int \int p_1^{n_1} (1-p_1)^{N-n_1} p_2^{n_2} (1-p_2)^{N-n_2} dp_1dp_2}$$
 
 We can rewrite this as
 
