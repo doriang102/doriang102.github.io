@@ -193,8 +193,14 @@ $$ \frac{\int\int_{p_1 > p_2} p_1^{n_1} (1-p_1)^{N-{n_1}} p_2^{n_2} (1-p_2)^{N-n
 
 We can rewrite the numerator as
 
-$$ \int_0^1 p_2^{n_2} (1-p_2)^{N-n_2} \int_0^{p_2} s^{n_1} (1-s)^{N-n_1} ds  dp2.$$
+$$ \int_0^1 p_2^{n_2} (1-p_2)^{N-n_2} \int_0^{p_2} s^{n_1} (1-s)^{N-n_1} ds  dp_2.$$
 
+Separating the denominator out, we have
+
+
+$$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_1) p_2^{n_2} (1-p_2)^{N-n_2} dp_2.$$
+
+Observing that $$f(p) = \frac{p_2^{n_2} (1-p_2)^{N-n_2}}{B(n_2+1,N-n_2-1)}$$ is a probability measure, and $$ p_2 \mapsto \Phi_{n_1} (p_2)$$ is convex, we can use Jensen's inequaity to bound the above by (WAIT)
 
 
 ## Normal approximations
