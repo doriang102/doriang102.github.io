@@ -200,7 +200,7 @@ Separating the denominator out, we have
 
 $$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_1) p_2^{n_2} (1-p_2)^{N-n_2} dp_2.$$
 
-Observing that $$f(p) = \frac{p_2^{n_2} (1-p_2)^{N-n_2}}{B(n_2+1,N-n_2-1)}$$ is a probability measure, and $$ p_2 \mapsto \Phi_{n_1} (p_2)$$ is convex, we can use Jensen's inequaity to bound the above by (WAIT)
+Observing that $$f(p) = \frac{p_2^{n_2} (1-p_2)^{N-n_2}}{B(n_2+1,N-n_2-1)}$$ is a probability measure, and $$ p_2 \mapsto \Phi_{n_1} (p_2)$$ is convex on $$[0,n_1/N)$$, we can use Jensen's inequaity to bound the above by (WAIT)
 
 
 ## Normal approximations
