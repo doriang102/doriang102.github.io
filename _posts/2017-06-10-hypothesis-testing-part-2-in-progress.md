@@ -162,6 +162,7 @@ $$H_1$$ - The hypothesis that the bias is $$\beta + \epsilon$$.
 
 $$H_2$$ - The hypothesis that the bias is $$\beta$$. 
 
+\begin{theorem} This is a theorem \end{theorem}
 
 We can first consider the Baye's ratio:
 
