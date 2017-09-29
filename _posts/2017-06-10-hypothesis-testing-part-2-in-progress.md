@@ -245,4 +245,8 @@ where $$c_{\alpha} \to 0$$ as $$\alpha \to 0$$. Thus for $$ x < \beta$$, we have
 $$\Phi_n(x) \leq \frac{\leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}.$$
 
 
+Since $$p \mapsto p^n(1-p)^{N-n}$$ has a positive slope on $$[0,\beta)$$, this estimate suffices. However for the other direction we will need the more explicit estimate:
 
+$$ c_{\alpha} = N \xi^{n-1}(1-\xi)^{N-n-1}, $$
+
+for $$\xi \in (\beta - \alpha, \beta + \alpha)$$. 
