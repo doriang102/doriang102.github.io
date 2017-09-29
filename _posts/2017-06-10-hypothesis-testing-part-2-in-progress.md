@@ -170,10 +170,9 @@ $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta
 
 **Theorem:** 
 
-*Let $$ \beta = \frac{n}{N}$$. Then it holds that
+*Let $$ \beta = \frac{n}{N}$$. Then it holds that*
 
-$$ \frac{1}{N} \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = e^{-N \alpha^2}{\sigma_{\beta^2}}.$$
-*
+*$$ \frac{1}{N} \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = e^{-N \alpha^2}{\sigma_{\beta^2}}.$$*
 
 
 Let's take the log of the ratio. Then we have
