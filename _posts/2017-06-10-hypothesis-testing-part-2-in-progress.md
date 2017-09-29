@@ -158,9 +158,9 @@ With what confidence can we infer that the button has bias $\beta$?
 
 Let's define 
 
-$$H_1$$ - The hypothesis that the bias is $$\beta + \epsilon$$. 
+$$H_1$$ - The hypothesis that $$p_1 = p_2 $$. 
 
-$$H_2$$ - The hypothesis that the bias is $$\beta$$. 
+$$H_2$$ - The hypothesis that $$p_1 > p_2 $$. 
 
 $$\begin{theorem} This is a theorem \end{theorem}$$
 
@@ -169,6 +169,12 @@ We can first consider the Baye's ratio:
 $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)}.$$ We can write this as 
 
 $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta+\epsilon))^{N-n} }{ \beta^n (1- \beta)^{N-n}}.$$
+
+**Theorem:** *Let $$ \beta = \frac{n}{N}$$. Then it holds that
+
+$$ \frac{1}{N} \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = e^{-N \alpha^2}{\sigma_{\beta^2}}.$$
+*
+
 
 Let's take the log of the ratio. Then we have
 
