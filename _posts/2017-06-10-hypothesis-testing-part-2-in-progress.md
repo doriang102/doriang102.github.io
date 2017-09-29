@@ -195,7 +195,14 @@ Simplifying, the write side becomes
 **Q.E.D.**
 
 
-Thus we have
+Thus we have immediately from the above the following Corollary. 
+
+**Corollary:**  _Let_ 
+
+$$R := \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{e^{-N \epsilon^2}}{\sigma_{\beta^2}}.$$
+
+_Then we have_
+
 $$ N \geq \frac{2\sigma^2}{\epsilon^2} \log \frac{1}{R}.$$
 
 
