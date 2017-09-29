@@ -175,13 +175,14 @@ $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta
 *$$ \frac{1}{N} \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = e^{-N \alpha^2}{\sigma_{\beta^2}}.$$*
 
 
-Let's take the log of the ratio. Then we have
+**Proof:**
+
+Let's take the log of the ratio above. Then we have
 
 
 $$\frac{1}{N} \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \beta \log \left(1+ \frac{\epsilon}{\beta}\right) + (1-\beta) \log \left ( 1 - \frac{\epsilon}{1-\beta}\right).$$
 
-We expand the logs to second order to obtain:
-
+We expand the logs to second order via Taylor series to obtain:
 
 $$ \frac{1}{N}\log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac{\epsilon^2}{2\beta} - \frac{\epsilon^2}{2(1-\beta)}  $$
 
