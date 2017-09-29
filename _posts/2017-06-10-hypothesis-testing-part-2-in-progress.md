@@ -227,7 +227,7 @@ $$ \Phi_n(x) := \frac{\int_0^x p^n (1-p)^{N-n}}{\int_0^1 p^n (1-p)^{N-n}}. $$
 
 Then we have
 
-$$ \Phi_n(x) = \mathbb{1}[0,\frac{n}{N}) + O\left(e^{-\frac{N(p-\beta)^2}{\sigma_{\beta}^2}\right). $$
+$$ \Phi_n(x) = \mathbf{1}[0,\frac{n}{N}) + O\left(e^{-\frac{N(p-\beta)^2}{\sigma_{\beta}^2}}\right). $$
 
 
 Observing that $$f(p) = \frac{p_2^{n_2} (1-p_2)^{N-n_2}}{B(n_2+1,N-n_2-1)}$$ is a probability measure, and $$ p_2 \mapsto \Phi_{n_1} (p_2)$$ is convex on $$[0,n_1/N)$$, we can use Jensen's inequaity to bound the above by (WAIT)
