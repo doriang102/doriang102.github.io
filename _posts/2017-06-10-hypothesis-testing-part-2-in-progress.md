@@ -237,6 +237,8 @@ $$ \int_{|x-\beta| > \alpha} p^n(1-p)^{N-n} dp \leq e^{\frac{-N \alpha^2}{\sigma
 
 By Talor expansion, we also have
 
-$$ \int_{|x-\beta| \leq \alpha} p^n(1-p)^{N-n} dp  = \alpha \beta^n(1-\beta)^{N-n} + o(\alpha).$$
+$$ \int_{|x-\beta| \leq \alpha} p^n(1-p)^{N-n} dp  = \alpha \beta^n(1-\beta)^{N-n} + c_{\alpha},$$
+
+where $$c_{\alpha} \to 0$$ as $$\alpha \to 0$$> 
 
 
