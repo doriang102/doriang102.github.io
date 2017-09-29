@@ -229,7 +229,7 @@ Then we have
 
 $$ \Phi_n(x) = \mathbf{1}[\beta,1) + O(e^{-\frac{N(p-\beta)^2}{\sigma_{\beta}^2}}). $$
 
-**Proof: **
+**Proof:**
 
 Let's begin by bounding
 
