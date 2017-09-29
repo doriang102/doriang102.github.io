@@ -162,8 +162,6 @@ $$H_1$$ - The hypothesis that $$p_1 = p_2 $$.
 
 $$H_2$$ - The hypothesis that $$p_1 > p_2 $$. 
 
-$$\begin{theorem} This is a theorem \end{theorem}$$
-
 We can first consider the Baye's ratio:
 
 $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)}.$$ We can write this as 
