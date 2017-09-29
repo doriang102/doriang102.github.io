@@ -167,13 +167,13 @@ We can first consider the Baye's ratio:
 $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)}.$$ We can write this as 
 
 $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta+\epsilon))^{N-n} }{ \beta^n (1- \beta)^{N-n}}.$$
-
+```{theorem}
 **Lemma:**  *Let $$ \beta = \frac{n}{N}$$. Then it holds that*
 
 $$\frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{e^{-N \epsilon^2}}{\sigma_{\beta^2}},$$
 
 _where_  $$\sigma_{\beta} = \beta (1- \beta) $$. 
-
+```
 
 **Proof:**
 
@@ -189,6 +189,8 @@ $$ \frac{1}{N}\log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac
 Simplifying, the write side becomes
 
  $$-\frac{\epsilon^2}{2\sigma^2}.$$
+ 
+ Taking the exponential completes the argument. 
 
 Thus we have
 $$ N \geq \frac{2\sigma^2}{\epsilon^2} \log \frac{1}{R}.$$
