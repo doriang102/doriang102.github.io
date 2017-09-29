@@ -229,3 +229,8 @@ Then we have
 
 $$ \Phi_n(x) = \mathbf{1}[\beta,1) + O(e^{-\frac{N(p-\beta)^2}{\sigma_{\beta}^2}}). $$
 
+**Proof: **
+
+Let's begin by bounding
+
+$$ \int_{|x-\beta| > \alpha} p^n(1-p)^{N-n} dp \leq e^{-N \alpha^2}{\sigma_{\beta}^2}.$$
