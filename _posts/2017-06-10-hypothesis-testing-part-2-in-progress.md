@@ -241,6 +241,7 @@ $$ \int_{|x-\beta| \leq \alpha} p^n(1-p)^{N-n} dp  = \alpha \beta^n(1-\beta)^{N-
 
 where $$c_{\alpha} \to 0$$ as $$\alpha \to 0$$. Thus for $$ x < \beta$$, we have
 
+
 $$\Phi_n(x) \leq \frac{\leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}$$.
 
 
