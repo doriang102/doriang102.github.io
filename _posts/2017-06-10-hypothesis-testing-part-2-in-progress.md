@@ -242,7 +242,7 @@ $$ \int_{|x-\beta| \leq \alpha} p^n(1-p)^{N-n} dp  = \alpha \beta^n(1-\beta)^{N-
 where $$c_{\alpha} \to 0$$ as $$\alpha \to 0$$. Thus for $$ x < \beta$$, we have
 
 
-$$\Phi_n(x) \leq \frac{\leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}.$$
+$$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}.$$
 
 
 Since $$p \mapsto p^n(1-p)^{N-n}$$ has a positive slope on $$[0,\beta)$$, this estimate suffices, and we conclude that
@@ -250,7 +250,11 @@ Since $$p \mapsto p^n(1-p)^{N-n}$$ has a positive slope on $$[0,\beta)$$, this e
 $$\Phi_n(x) \leq \frac{1}{\alpha}e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}} \textrm{ for } x < [0,\beta-\alpha). $$
 
 
-However for the other direction we will need the more explicit estimate:
+However for the other direction we use the upper and lower bound on the integrand, along with the Taylor expansion:
+
+$$\frac{e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}{\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}} \leq \Phi_n(x) $$
+
+
 
 $$ c_{\alpha} = N \xi^{n-1}(1-\xi)^{N-n-1} (\beta (1 - \xi) + (1-\beta) \xi), $$
 
