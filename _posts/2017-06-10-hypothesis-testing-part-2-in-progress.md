@@ -247,7 +247,7 @@ $$\Phi_n(x) \leq \frac{\leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\b
 
 Since $$p \mapsto p^n(1-p)^{N-n}$$ has a positive slope on $$[0,\beta)$$, this estimate suffices, and we conclude that
 
-$$\Phi_n(x) \leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}} \textrm{ for } x < [0,\beta-\alpha). $$
+$$\Phi_n(x) \leq \frac{1}{\alpha}e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}} \textrm{ for } x < [0,\beta-\alpha). $$
 
 
 However for the other direction we will need the more explicit estimate:
