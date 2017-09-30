@@ -168,7 +168,7 @@ $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)}.$$ We can write this as
 
 $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta+\epsilon))^{N-n} }{ \beta^n (1- \beta)^{N-n}}.$$
 
-**Lemma:**  *Let $$ \beta = \frac{n}{N}$$. Then it holds that*
+**Lemma 1:**  *Let $$ \beta = \frac{n}{N}$$. Then it holds that*
 
 $$\frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{e^{-N \epsilon^2}}{\sigma_{\beta^2}},$$
 
@@ -197,7 +197,7 @@ Simplifying, the write side becomes
 
 Thus we have immediately from the above the following Corollary. 
 
-**Corollary:**  _Let_ 
+**Corollary 1:**  _Let_ 
 
 $$R := \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{e^{-N \epsilon^2}}{\sigma_{\beta^2}}.$$
 
@@ -221,7 +221,7 @@ $$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_1) p_2^{n_2} (1-p_2)^{N-n_2} 
 
 Let's start off with an easier Lemma though. 
 
-**Lemma:** _Let_ 
+**Lemma 2:** _Let_ 
 
 $$ \Phi_n(x) := \frac{\int_0^x p^n (1-p)^{N-n}}{\int_0^1 p^n (1-p)^{N-n}}. $$
 
@@ -231,7 +231,7 @@ $$ \Phi_n(x) = \mathbf{1}[\beta,1) + O(e^{-\frac{N(p-\beta)^2}{\sigma_{\beta}^2}
 
 **Proof:**
 
-Let's begin by bounding
+Let's begin by bounding the integrand, courtesy of Lemma 1,
 
 $$ \int_{|x-\beta| > \alpha} p^n(1-p)^{N-n} dp \leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}.$$
 
