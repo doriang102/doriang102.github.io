@@ -266,3 +266,7 @@ $$ c_{\alpha} = N \xi^{n-1}(1-\xi)^{N-n-1} =  2N \xi^{n-1}(1-\xi)^{N-n-1} (\beta
 
 
 for $$\xi \in (\beta - \alpha, \beta + \alpha) $$. 
+
+Thus we can obtain the bound, using the fact that $$\xi^{n-1}(1-\xi)^{N-n-1}$$ obtains its maximum at $$\beta$$,
+
+$$ |c_{\alhpa}| \leq 2N \alpha \beta^{n-1}(1-\beta)^{N-n-1}$$
