@@ -251,21 +251,9 @@ $$\Phi_n(x) \leq \frac{1}{\alpha}e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}} \textr
 
 However for the other direction we use the upper and lower bound on the integrand, along with the Taylor expansion for $$x > \beta + \alpha$$:
 
-$$\Phi_n(x) \geq \frac{e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}{\alpha \beta^n(1-\beta)^{N-n}}  $$
+$$\Phi_n(x) \geq \frac{e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n} }{\alpha \beta^n(1-\beta)^{N-n}}  $$
 
 $$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n}}  $$
 
 
 
-$$ c_{\alpha} = N \xi^{n-1}(1-\xi)^{N-n-1} (\beta (1 - \xi) + (1-\beta) \xi), $$
-
-which reduces to
-$$ c_{\alpha} = N \xi^{n-1}(1-\xi)^{N-n-1} =  2N \xi^{n-1}(1-\xi)^{N-n-1} (\beta - \xi) .$$
-
-
-
-for $$\xi \in (\beta - \alpha, \beta + \alpha) $$. 
-
-Thus we can obtain the bound, using the fact that $$\xi^{n-1}(1-\xi)^{N-n-1}$$ obtains its maximum at $$\beta$$,
-
-$$ |c_{\alpha}| \leq 2N \alpha \beta^{n-1}(1-\beta)^{N-n-1}$$
