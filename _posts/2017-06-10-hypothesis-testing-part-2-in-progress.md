@@ -256,4 +256,6 @@ $$\Phi_n(x) \geq \frac{e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\bet
 $$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n}}  $$
 
 
+Thus we have
 
+$$ \frac{1}{\alpha} e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2} + 1 \leq \Phi_n(x) \leq 1 + \frac{1}{\alpha} e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}.$$
