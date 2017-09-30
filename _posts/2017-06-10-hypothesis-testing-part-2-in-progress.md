@@ -235,26 +235,25 @@ Let's begin by bounding the integrand, courtesy of Lemma 1,
 
 $$ e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} \leq \int_{|x-\beta| > \alpha} p^n(1-p)^{N-n} dp \leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}.$$
 
-By Talor expansion, we also have
+By Young's inequality, we have
 
-$$ \int_{|x-\beta| \leq \alpha} p^n(1-p)^{N-n} dp  = \alpha \beta^n(1-\beta)^{N-n} + c_{\alpha},$$
+$$ \int_{|x-\beta| \leq \alpha} p^n(1-p)^{N-n} dp  \leq \alpha \beta^n(1-\beta)^{N-n}.$$
 
-where $$c_{\alpha} \to 0$$ as $$\alpha \to 0$$. Thus for $$ x < \beta$$, we have
-
-
-$$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}.$$
+Thus for $$ x < \beta$$, we have
 
 
-Since $$p \mapsto p^n(1-p)^{N-n}$$ has a positive slope on $$[0,\beta)$$, this estimate suffices, and we conclude that
+$$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n}}.$$
 
+
+Hence,
 $$\Phi_n(x) \leq \frac{1}{\alpha}e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}} \textrm{ for } x < [0,\beta-\alpha). $$
 
 
 However for the other direction we use the upper and lower bound on the integrand, along with the Taylor expansion for $$x > \beta + \alpha$$:
 
-$$\Phi_n(x) \geq \frac{e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}{\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}  $$
+$$\Phi_n(x) \geq \frac{e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}{\alpha \beta^n(1-\beta)^{N-n}}  $$
 
-$$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}{\alpha \beta^n(1-\beta)^{N-n} + c_{\alpha}}  $$
+$$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n}}  $$
 
 
 
