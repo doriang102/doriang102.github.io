@@ -252,6 +252,8 @@ $$ \Phi_n(x) = \mathbf{1}[\beta,1) + O(e^{-\frac{N(p-\beta)^2}{\sigma_{\beta}^2}
 
 Let's begin by bounding the integrand, courtesy of Lemma 1,
 
+$$\frac{ \int_0^x e^{-\frac{-N (\beta-p)^2}{\sigma_{\beta}^2}}dp}{\int_0^1 e^{-\frac{-N (\beta-p)^2}{4\sigma_{\beta}^2}}dp} \leq \Phi_n(x)$$
+
 $$ e^{\frac{-N \max(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} \leq \int_{|x-\beta| > \alpha} p^n(1-p)^{N-n} dp \leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}.$$
 
 By Young's inequality, we have
