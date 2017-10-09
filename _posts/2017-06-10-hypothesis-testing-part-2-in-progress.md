@@ -170,9 +170,12 @@ $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta
 
 **Lemma 1:**  *Let $$ \beta = \frac{n}{N}$$. Then it holds that*
 
-$$\frac{p(D \lvert H_1)}{p(D \lvert H_2)} = e^{\frac{-N \epsilon^2}{\sigma_{\beta^2}}},$$
+$$\frac{p(D \lvert H_1)}{p(D \lvert H_2)} = e^{\frac{-N c_{\beta,\epsilon} \epsilon^2}{\sigma_{\beta^2}}},$$
 
-_where_  $$\sigma_{\beta} = \beta (1- \beta) $$ .
+_where_  $$\sigma_{\beta} = \beta (1- \beta) $$ _and $$c_{\beta,\epsilon}$$ _is a constant satisfying_
+
+$$ \frac{1/4} \leq c_{\beta, \epsilon} \leq 1. $$
+
 
 
 
