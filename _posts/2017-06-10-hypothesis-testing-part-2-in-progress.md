@@ -174,7 +174,7 @@ $$\frac{p(D \lvert H_1)}{p(D \lvert H_2)} = e^{\frac{-N c_{\beta,\epsilon} \epsi
 
 _where_  $$\sigma_{\beta} = \beta (1- \beta) $$ _and $$c_{\beta,\epsilon}$$ _is a constant satisfying_
 
-$$ \frac{1/4} \leq c_{\beta, \epsilon} \leq 1. $$
+$$ \frac{1}{4} \leq c_{\beta, \epsilon} \leq 1. $$
 
 
 
