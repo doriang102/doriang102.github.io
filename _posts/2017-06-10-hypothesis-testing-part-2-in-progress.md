@@ -172,7 +172,7 @@ $$ \frac{p(D \lvert H_1)}{p(D \lvert H_2)} = \frac{(\beta+\epsilon)^n (1- (\beta
 
 $$\frac{p(D \lvert H_1)}{p(D \lvert H_2)} = e^{\frac{-N c_{\beta,\epsilon} \epsilon^2}{\sigma_{\beta^2}}},$$
 
-_where_  $$\sigma_{\beta} = \beta (1- \beta) $$ _and $$c_{\beta,\epsilon}$$ _is a constant satisfying_
+_where_  $$\sigma_{\beta} = \beta (1- \beta) $$ _and $$c_{\beta,\epsilon}$$ *is a constant satisfying*
 
 $$ \frac{1}{4} \leq c_{\beta, \epsilon} \leq 1. $$
 
@@ -186,9 +186,20 @@ Let's take the log of the ratio above. Then we have
 
 $$\frac{1}{N} \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \beta \log \left(1+ \frac{\epsilon}{\beta}\right) + (1-\beta) \log \left ( 1 - \frac{\epsilon}{1-\beta}\right).$$
 
-We expand the logs to second order via Taylor series to obtain:
+We expand the logs to second order via Taylor series with remainder to obtain:
 
-$$ \frac{1}{N}\log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac{\epsilon^2}{2\beta} - \frac{\epsilon^2}{2(1-\beta)}  $$
+$$ \frac{1}{N}\log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac{c_{\epsilon,\beta} \epsilon^2}{2\beta} - \frac{\tildec_{\epsilon,\beta}\epsilon^2}{2(1-\beta)} .$$
+
+Since we have
+
+$$ \frac{d^2}{dx^2} \log (1 + x) = - \frac{1}{1+x}^2, $$
+
+by Taylor's formula we can bound $$c_{\epsilon,\beta}$$ and $$\tilde c_{\epsilon,\beta}$$ by:
+
+$$ \frac{1}{4} \leq c_{\alpha, \beta}, \tilde c_{\alpha, \beta} \leq 1.$$
+
+
+
 
 Simplifying, the write side becomes
 
