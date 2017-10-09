@@ -218,11 +218,11 @@ Thus we have immediately from the above the following Corollary.
 
 **Corollary 1:**  _Let_ 
 
-$$R := \frac{p(D \lvert H_1)}{p(D \lvert H_2)} \leq e^{-\frac{N \epsilon^2}{8\sigma_{\beta^2}}}.$$
+$$R := \frac{p(D \lvert H_1)}{p(D \lvert H_2)} \leq e^{-\frac{N \epsilon^2}{8\sigma_{\beta}^2}}.$$
 
 _Then we have_
 
-$$ N \geq \frac{8\sigma^2}{\epsilon^2} \log \frac{1}{R}.$$
+$$ N \geq \frac{8\sigma_{\beta}^2}{\epsilon^2} \log \frac{1}{R}.$$
 
 
 What we really want to estimate is 
