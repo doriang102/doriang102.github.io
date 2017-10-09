@@ -188,15 +188,19 @@ $$\frac{1}{N} \log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = \beta 
 
 We expand the logs to second order via Taylor series with remainder to obtain:
 
-$$ \frac{1}{N}\log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac{c_{\epsilon,\beta} \epsilon^2}{2\beta} - \frac{\tildec_{\epsilon,\beta}\epsilon^2}{2(1-\beta)} .$$
+$$ \frac{1}{N}\log \left(\frac{p(D \lvert H_1)}{p(D \lvert H_2)}\right) = -\frac{c_{\epsilon,\beta} \epsilon^2}{2\beta} - \frac{\tilde c_{\epsilon,\beta}\epsilon^2}{2(1-\beta)} .$$
 
 Since we have
 
-$$ \frac{d^2}{dx^2} \log (1 + x) = - \frac{1}{1+x}^2, $$
+$$ \frac{d^2}{dx^2} \log (1 + x) = - \frac{1}{1+x^2}, $$
 
 by Taylor's formula we can bound $$c_{\epsilon,\beta}$$ and $$\tilde c_{\epsilon,\beta}$$ by:
 
 $$ \frac{1}{4} \leq c_{\alpha, \beta}, \tilde c_{\alpha, \beta} \leq 1.$$
+
+Thus we have
+
+$$ -\frac{c_{\epsilon,\beta} \epsilon^2}{2\beta} - \frac{\tilde c_{\epsilon,\beta}\epsilon^2}{2(1-\beta)} = -\left(\beta c_{\epsilon,\beta} + (1-\beta) \tilde c_{\epsilon,\beta}\right) \frac{\epsilon^2}{2\sigma_{\beta}^2}.$$
 
 
 
