@@ -205,9 +205,9 @@ $$ -\frac{c_{\epsilon,\beta} \epsilon^2}{2\beta} - \frac{\tilde c_{\epsilon,\bet
 
 
 
-Simplifying, the write side becomes
+Simplifying, and changing the constant $$c_{\beta, \epsilon}$$, the right side becomes
 
- $$-\frac{\epsilon^2}{2\sigma^2}.$$
+ $$-\frac{c_{\beta,\epsilon} \epsilon^2}{2\sigma_{\beta}^2}.$$
  
  Taking the exponential completes the argument. 
 
