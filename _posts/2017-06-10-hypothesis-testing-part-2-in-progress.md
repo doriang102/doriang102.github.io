@@ -259,12 +259,12 @@ $$ y =  \frac{\sqrt{N c_{\epsilon,\beta}} (p-\beta)}{\sigma_{\beta}}.$$
 
 Then we have
 
-$$ \Phi_n(x) = \frac{\bigint_{-\frac{\sqrt{Nc_{\epsilon,\beta}}\beta}{\sigma_{\beta}}}^{\frac{\sqrt{Nc_{\epsilon}}(x-\beta)}{\sigma_{\beta}}} e^{-y^2} dy}{\bigint_{-\frac{\sqrt{Nc_{\epsilon,\beta}}\beta}{\sigma_{\beta}}}^{\frac{\sqrt{Nc_{\epsilon}}(1-\beta)}{\sigma_{\beta}}} e^{-y^2} dy}$$
+\[  \Phi_n(x) = \frac{\int_{-\frac{\sqrt{Nc_{\epsilon,\beta}}\beta}{\sigma_{\beta}}}^{\frac{\sqrt{Nc_{\epsilon}}(x-\beta)}{\sigma_{\beta}}} e^{-y^2} dy}{\int_{-\frac{\sqrt{Nc_{\epsilon,\beta}}\beta}{\sigma_{\beta}}}^{\frac{\sqrt{Nc_{\epsilon}}(1-\beta)}{\sigma_{\beta}}} e^{-y^2} dy}\]
 
 
 
 
-$$\frac{ \bigint_0^x e^{-\frac{-N (\beta-p)^2}{\sigma_{\beta}^2}}dp}{\bigint_0^1 e^{-\frac{-N (\beta-p)^2}{4\sigma_{\beta}^2}}dp} \leq \Phi_n(x)$$
+$$\frac{ \int_0^x e^{-\frac{-N (\beta-p)^2}{\sigma_{\beta}^2}}dp}{\int_0^1 e^{-\frac{-N (\beta-p)^2}{4\sigma_{\beta}^2}}dp} \leq \Phi_n(x)$$
 
 $$ e^{\frac{-N \max(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} \leq \int_{|x-\beta| > \alpha} p^n(1-p)^{N-n} dp \leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}.$$
 
