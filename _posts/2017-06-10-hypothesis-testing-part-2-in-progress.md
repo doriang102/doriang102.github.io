@@ -251,7 +251,7 @@ $$ \Phi_n(x) = \mathbf{1}[\beta,1) + O(e^{-\frac{N(p-\beta)^2}{\sigma_{\beta}^2}
 
 Courtesy of Lemma 1, we can write the function as 
 
-$$ \Phi_n(x) := \frac{\int_0^x e^{-N\frac{c_{\epsilon,\beta} (p-\beta)^2}{\sigma_{\beta}^2}}dp}{e^{-N\frac{c_{\epsilon,\beta} (p-\beta)^2}{\sigma_{\beta}^2}}dp}. $$
+$$ \Phi_n(x) := \frac{\int_0^x e^{-N\frac{c_{\epsilon,\beta} (p-\beta)^2}{\sigma_{\beta}^2}}dp}{\int_0^1 e^{-N\frac{c_{\epsilon,\beta} (p-\beta)^2}{\sigma_{\beta}^2}}dp}. $$
 
 $$\frac{ \int_0^x e^{-\frac{-N (\beta-p)^2}{\sigma_{\beta}^2}}dp}{\int_0^1 e^{-\frac{-N (\beta-p)^2}{4\sigma_{\beta}^2}}dp} \leq \Phi_n(x)$$
 
