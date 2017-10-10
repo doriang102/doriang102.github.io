@@ -253,6 +253,17 @@ Courtesy of Lemma 1, we can write the function as
 
 $$ \Phi_n(x) := \frac{\int_0^x e^{-N\frac{c_{\epsilon,\beta} (p-\beta)^2}{\sigma_{\beta}^2}}dp}{\int_0^1 e^{-N\frac{c_{\epsilon,\beta} (p-\beta)^2}{\sigma_{\beta}^2}}dp}. $$
 
+Let's introduce the change of variables
+
+$$ y =  \frac{Nc_{\epsilon,\beta} (p-\beta)}{\sigma_{\beta}^2}.$$
+
+Then we have
+
+$$ \Phi_n(x) = \int_{-frac{Nc_{\epsilon,\beta}\beta}{\sigma_{\beta}^2}}^{\frac{Nc_{\espilon}(x-\beta)}{\sigma_{\beta}^2}} e^{-y^2} dy$$
+
+
+
+
 $$\frac{ \int_0^x e^{-\frac{-N (\beta-p)^2}{\sigma_{\beta}^2}}dp}{\int_0^1 e^{-\frac{-N (\beta-p)^2}{4\sigma_{\beta}^2}}dp} \leq \Phi_n(x)$$
 
 $$ e^{\frac{-N \max(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} \leq \int_{|x-\beta| > \alpha} p^n(1-p)^{N-n} dp \leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}.$$
