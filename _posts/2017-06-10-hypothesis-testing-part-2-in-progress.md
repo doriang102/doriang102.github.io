@@ -255,11 +255,11 @@ $$ \Phi_n(x) := \frac{\int_0^x e^{-N\frac{c_{\epsilon,\beta} (p-\beta)^2}{\sigma
 
 Let's introduce the change of variables
 
-$$ y =  \frac{Nc_{\epsilon,\beta} (p-\beta)}{\sigma_{\beta}^2}.$$
+$$ y =  \frac{N c_{\epsilon,\beta} (p-\beta)}{\sigma_{\beta}^2}.$$
 
 Then we have
 
-$$ \Phi_n(x) = \int_{-frac{Nc_{\epsilon,\beta}\beta}{\sigma_{\beta}^2}}^{\frac{Nc_{\espilon}(x-\beta)}{\sigma_{\beta}^2}} e^{-y^2} dy$$
+$$ \Phi_n(x) = \int_{-\frac{Nc_{\epsilon,\beta}\beta}{\sigma_{\beta}^2}}^{\frac{Nc_{\espilon}(x-\beta)}{\sigma_{\beta}^2}} e^{-y^2} dy$$
 
 
 
