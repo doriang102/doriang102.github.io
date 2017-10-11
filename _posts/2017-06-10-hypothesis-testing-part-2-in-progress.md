@@ -269,6 +269,8 @@ $$\int_{a}^{+\infty} e^{-y^2} dy \leq \sqrt{2\pi} e^{-a^2}.$$
 
 Using this we obtain the bound for $$x < \beta - \alpha $$:
 
-$$\Phi_n(x) \leq \frac{ e^{-N c_{\epsilon}^2 \alpha^2/\sigma_{\beta}^2}}{1 - e^{-N c_{\epsilon,\beta}^2\beta^2/\sigma_{\beta}^2}} \leq 2e^{-N c_{\epsilon}^2 \alpha^2/\sigma_{\beta}^2}$$
+$$\Phi_n(x) \leq \frac{ e^{-N c_{\epsilon}^2 \alpha^2/\sigma_{\beta}^2}}{\sqrt{1 - e^{-N c_{\epsilon,\beta}^2\beta^2/\sigma_{\beta}^2}}} \leq 2e^{-N c_{\epsilon}^2 \alpha^2/\sigma_{\beta}^2}$$
 
-For $$ x > \alpha + \beta$$
+For $$ x > \alpha + \beta$$,
+
+$$ \Phi_n(x) \geq \frac{ \sqrt{1 - e^{-N c_{\epsilon,\beta}^2 \alpha^2/\sigma_{\beta}^2}}}{\sqrt{1 - e^{-N c_{\epsilon,\beta}^2\beta^2/\sigma_{\beta}^2}}}.$$
