@@ -271,31 +271,4 @@ Using this we obtain the bound for $$x < \beta - \alpha $$:
 
 $$\Phi_n(x) \leq \frac{ e^{-N c_{\epsilon}^2 \alpha^2/\sigma_{\beta}^2}}{1 - e^{-N c_{\epsilon,\beta}^2\beta^2/\sigma_{\beta}^2}} \leq 2e^{-N c_{\epsilon}^2 \alpha^2/\sigma_{\beta}^2}$$
 
-$$\frac{ \int_0^x e^{-\frac{-N (\beta-p)^2}{\sigma_{\beta}^2}}dp}{\int_0^1 e^{-\frac{-N (\beta-p)^2}{4\sigma_{\beta}^2}}dp} \leq \Phi_n(x)$$
-
-$$ e^{\frac{-N \max(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} \leq \int_{|x-\beta| > \alpha} p^n(1-p)^{N-n} dp \leq e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}.$$
-
-By Young's inequality, we have
-
-$$ \int_{|x-\beta| \leq \alpha} p^n(1-p)^{N-n} dp  \leq \alpha \beta^n(1-\beta)^{N-n}.$$
-
-Thus for $$ x < \beta$$, we have
-
-
-$$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n}}.$$
-
-
-Hence,
-$$\Phi_n(x) \leq \frac{1}{\alpha}e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}} \textrm{ for } x < [0,\beta-\alpha). $$
-
-
-However for the other direction we use the upper and lower bound on the integrand, along with the Taylor expansion for $$x > \beta + \alpha$$:
-
-$$\Phi_n(x) \geq \frac{e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n} }{\alpha \beta^n(1-\beta)^{N-n}}  $$
-
-$$\Phi_n(x) \leq \frac{e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}\beta^n(1-\beta)^{N-n} +\alpha \beta^n(1-\beta)^{N-n}}{\alpha \beta^n(1-\beta)^{N-n}}  $$
-
-
-Thus we have
-
-$$ \frac{1}{\alpha} e^{\frac{-N \min(\beta,1-\beta)^2}{\sigma_{\beta}^2}} + 1 \leq \Phi_n(x) \leq 1 + \frac{1}{\alpha} e^{\frac{-N \alpha^2}{\sigma_{\beta}^2}}.$$
+For $$ x > \alpha + \beta$$
