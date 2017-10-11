@@ -273,4 +273,4 @@ $$\Phi_n(x) \leq \frac{ e^{-N c_{\epsilon}^2 \alpha^2/\sigma_{\beta}^2}}{\sqrt{1
 
 For $$ x > \alpha + \beta$$,
 
-$$ \Phi_n(x) \geq \frac{ \sqrt{1 - e^{-N c_{\epsilon,\beta}^2 \alpha^2/\sigma_{\beta}^2}}}{\sqrt{1 - e^{-N c_{\epsilon,\beta}^2\beta^2/\sigma_{\beta}^2}}}.$$
+$$ \Phi_n(x) \geq \frac{ \sqrt{1 - e^{-N c_{\epsilon,\beta}^2 \alpha^2/\sigma_{\beta}^2}}}{\sqrt{1 - e^{-N c_{\epsilon,\beta}^2\beta^2/\sigma_{\beta}^2}}} \geq 1 - e^{-N c_{\epsilon,\beta}^2\beta^2/\sigma_{\beta}^2}.$$
