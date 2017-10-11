@@ -282,7 +282,12 @@ $$ \Phi_n(x) \geq \frac{ \sqrt{1 - e^{-N c_{\epsilon,\beta}^2 \alpha^2/\sigma_{\
 
 From this we can estimate:
 
-$$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_1) p_2^{n_2} (1-p_2)^{N-n_2} dp_2.$$
+$$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_2) p_2^{n_2} (1-p_2)^{N-n_2} dp_2.$$
+
+
+We can write this as
+
+
 
 
 
