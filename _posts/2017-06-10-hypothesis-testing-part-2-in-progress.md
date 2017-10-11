@@ -243,11 +243,11 @@ Let's start off with an easier Lemma though.
 
 $$ \Phi_n(x) := \frac{\int_0^x p^n (1-p)^{N-n}}{\int_0^1 p^n (1-p)^{N-n}}. $$
 
-Then we have for $$\lvert x - \beta \rvert > \alpha$$,
+_Then we have for_ $$\lvert x - \beta \rvert > \alpha$$,
 
 $$\lvert \Phi_n(x) - \mathbf{1}[\beta,1) \rvert \leq 2e^{-\frac{N\alpha^2}{\sigma_{\beta}^2}}, $$
 
-and $$\Phi_n(\beta) \to 1/2$$ exponentially fast. 
+_and_ $$\Phi_n(\beta) \to 1/2$$ _exponentially fast_. 
 
 
 **Proof:**
