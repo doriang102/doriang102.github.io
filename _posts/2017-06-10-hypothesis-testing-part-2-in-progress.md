@@ -261,6 +261,12 @@ Then we have
 
 $$  \Phi_n(x) = \frac{\int_{-\frac{\sqrt{Nc_{\epsilon,\beta}}\beta}{\sigma_{\beta}}}^{\frac{\sqrt{Nc_{\epsilon}}(x-\beta)}{\sigma_{\beta}}} e^{-y^2} dy}{\int_{-\frac{\sqrt{Nc_{\epsilon,\beta}}\beta}{\sigma_{\beta}}}^{\frac{\sqrt{Nc_{\epsilon}}(1-\beta)}{\sigma_{\beta}}} e^{-y^2} dy}$$
 
+Using the stanard Calculus trick of changing to polar coordinates, we can bound the Guassian integral:
+
+$$\sqrt{2\pi} \sqrt{ 1 - e^{-a^2}} \leq \int_0^a e^{-y^2} dy \leq \sqrt{2\pi} \sqrt{1 - e^{2a^2}}.$$
+
+Using this we obtain the bound:
+
 
 
 
