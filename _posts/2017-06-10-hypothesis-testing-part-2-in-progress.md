@@ -269,7 +269,7 @@ $$\int_{a}^{+\infty} e^{-y^2} dy \leq \sqrt{2\pi} e^{-a^2}.$$
 
 Using this we obtain the bound:
 
-$$\Phi_n(x) \leq \frac{ e^{-N c_{\epsilon}^2 \beta^2/\sigma_{\beta}^2}}{1 - e^{-N c_{\epsilon,\beta}^2\beta^2/sigma_{\beta}^2}}$$
+$$\Phi_n(x) \leq \frac{ e^{-N c_{\epsilon}^2 \beta^2/\sigma_{\beta}^2}}{1 - e^{-N c_{\epsilon,\beta}^2\beta^2/\sigma_{\beta}^2}}$$
 
 $$\frac{ \int_0^x e^{-\frac{-N (\beta-p)^2}{\sigma_{\beta}^2}}dp}{\int_0^1 e^{-\frac{-N (\beta-p)^2}{4\sigma_{\beta}^2}}dp} \leq \Phi_n(x)$$
 
