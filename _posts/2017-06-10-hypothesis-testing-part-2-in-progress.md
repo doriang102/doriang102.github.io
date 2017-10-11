@@ -265,7 +265,7 @@ Using the stanard Calculus trick of changing to polar coordinates, we can bound 
 
 $$\sqrt{2\pi} \sqrt{ 1 - e^{-a^2}} \leq \int_{-a}^a e^{-y^2} dy \leq \sqrt{2\pi} \sqrt{1 - e^{2a^2}},$$
 
-$$\int_{a}^{+\infty} e^{-y^2} dy \leq \sqrt{2\pi} e^{-a^2}}.$$
+$$\int_{a}^{+\infty} e^{-y^2} dy \leq \sqrt{2\pi} e^{-a^2}.$$
 
 Using this we obtain the bound:
 
