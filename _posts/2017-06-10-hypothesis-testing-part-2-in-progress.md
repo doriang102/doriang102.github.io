@@ -292,7 +292,7 @@ $$ P(p_1 > p_2) \geq \mathbf{1}[\beta_2, 1)(\beta_1) - C e^{-N\alpha^2}{\sigma_{
 Thus if we wish to be 95% sure that $$p_1 > p_2$$, as before we can compute:
 
 
-$$ 1 - 1-C e^{\frac{-N\alpha^2}{\sigma_{\beta}^2}}  \geq 0.95$$. 
+$$  1-C e^{\frac{-N\alpha^2}{\sigma_{\beta}^2}}  \geq 0.95$$. 
 
 Rearranging this, we obtain:
 
