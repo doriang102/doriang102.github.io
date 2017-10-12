@@ -239,7 +239,7 @@ $$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_1) p_2^{n_2} (1-p_2)^{N-n_2} 
 
 Let's start off with an easier Lemma though. 
 
-**Lemma 2:** _Let_ 
+** Theorem 2:** _Let_ 
 
 $$ \Phi_n(x) := \frac{\int_0^x p^n (1-p)^{N-n}}{\int_0^1 p^n (1-p)^{N-n}}. $$
 
@@ -285,7 +285,18 @@ From this we can estimate:
 $$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_2) p_2^{n_2} (1-p_2)^{N-n_2} dp_2.$$
 
 
-We can write this as
+By using Theorem 2, if we assume $$\beta_1 - \beta_2 > \alpha$$, we have for a universal constant $$C>0$$
+
+$$ P(p_1 > p_2) \geq \mathbf{1}[\beta_2, 1)(\beta_1) - C e^{-N\alpha^2}{\sigma_{\beta}^2} = 1-C e^{-N\alpha^2}{\sigma_{\beta}^2} .$$
+
+Thus if we wish to be 95% sure that $$p_1 > p_2$$, as before we can compute:
+
+
+$$ 1 - C e^{-N\alpha^2 \geq 0.95$$. 
+
+Rearranging this, we obtain:
+
+$$ N \geq \frac{C\sigma_{\beta}^2}{\alpha^2} \log \frac{1}{0.95}.$$
 
 
 
