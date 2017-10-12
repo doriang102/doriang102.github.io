@@ -287,12 +287,12 @@ $$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_2) p_2^{n_2} (1-p_2)^{N-n_2} 
 
 By using Theorem 2, if we assume $$\beta_1 - \beta_2 > \alpha$$, we have for a universal constant $$C>0$$
 
-$$ P(p_1 > p_2) \geq \mathbf{1}[\beta_2, 1)(\beta_1) - C e^{-N\alpha^2}{\sigma_{\beta}^2} = 1-C e^{-N\alpha^2}{\sigma_{\beta}^2} .$$
+$$ P(p_1 > p_2) \geq \mathbf{1}[\beta_2, 1)(\beta_1) - C e^{-N\alpha^2}{\sigma_{\beta}^2} = 1-C e^{\frac{-N\alpha^2}{\sigma_{\beta}^2}} .$$
 
 Thus if we wish to be 95% sure that $$p_1 > p_2$$, as before we can compute:
 
 
-$$ 1 - C e^{-N\alpha^2 \geq 0.95$$. 
+$$ 1 - 1-C e^{\frac{-N\alpha^2}{\sigma_{\beta}^2}}  \geq 0.95$$. 
 
 Rearranging this, we obtain:
 
