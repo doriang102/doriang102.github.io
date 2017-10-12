@@ -10,7 +10,12 @@ When organizing an experiment, we must ask ourselves a few questions:
 
 - 3) What would be considered a 'positive' result?
 
-This brings us to the topic of statistical power. Let's say for 1), we are once again testing if the red button is better than the blue button. How many people do we need to measure this? More precisely, can we estimate
+This brings us to the topic of statistical power. Let's say for 1), we are once again testing if the red button is better than the blue button. How many people do we need to measure this? We will first outline the frequentist approach, then the Bayesian approach, and see that the sample size needed to make inferences scales in identical ways. However I believe the Bayesian appraoch is more natural. 
+
+## Frequentist Statistical Power
+
+
+More precisely, can we estimate
 
 $$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}).$$ 
 
