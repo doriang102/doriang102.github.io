@@ -1,10 +1,4 @@
 
-# Hypothesis Testing Part 2 - Sample size and Statistical Power
-
-
-
-### Statistical Power
-
 In this section, we look more carefully at the sample size necessary to make statistically valid
 inferences from observations. 
 
