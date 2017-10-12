@@ -91,6 +91,33 @@ In my experience, one is generally looking for lifts of the order of $$1-2\%$$, 
 
 ## Bayesian Statistical Power
 
+We'll see in this post that the distributions of outcomes concentrate as (asymptotically) Gaussians around the observed success frequency. We will show that the probability that $$p_1 > p_2$$ when $$\beta_1 < \beta_2$$ involves an integral over the shaded region shown below:
+
+{% highlight ruby %}
+import matplotlib.pyplot as plt
+import numpy as np
+
+X = np.linspace(0, 1, 100)
+Y = np.linspace(0, 1, 100)
+
+x,y = np.meshgrid(X,Y)
+
+f1 = (1/(2*np.pi*sigma_x*sigma_y) * np.exp(-((x-0.8)**2/(2*sigma_x**2)
+     + y**2/(2*sigma_y**2))))
+f2 = (1/(2*np.pi*sigma_x*sigma_y) * np.exp(-((x-0.4)**2/(2*sigma_x**2)
+     + y**2/(2*sigma_y**2))))
+
+plt.contour(x,y,f2,cmap='Reds')
+plt.contour(x,y,f1,cmap='Blues')
+plt.contour(y,x,f2,cmap='Reds')
+plt.contour(y,x,f1,cmap='Blues')
+plt.fill_between(x[0],x[0],1,where=x[0] >= 0.6, facecolor='blue', interpolate=True,alpha=0.1)
+plt.plot(X,X)
+plt.show()
+{% endhighlight %}
+
+![](/img/bayesianintegral.png?raw=true)
+
 We saw in the last post that 
 
 $$ p^n (1-p)^{N-n} \to \delta_{\frac{n}{N}}(p),$$
