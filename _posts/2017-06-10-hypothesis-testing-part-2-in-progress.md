@@ -1,61 +1,7 @@
 
-# Experimental Design
+# Hypothesis Testing Part 2 - Sample size and Statistical Power
 
 
-- **Replication**: to provide an estimate of experimental error
-
-- **Randomization**: to ensure that this estimate is statistically valid; and
-
-- **Local control**: to reduce experimental error by making the experiment more efficient.
-
-- **Design structure:** to ensure that the experimental units are homogenous and represent equal samples from the same distribution.
-
-- **Treatment structure:** to ensure that the treatment is given in a uniform way. Are a large percentage of one group receiving the treatment at a different time or in a different way?
-
-An example of bad experimental design is shown here:
-
-![](/img/badexp.png?raw=true)
-
-In the above, we see that the treatment and control groups have significantly different browsing characteristics. Thus their behavior is fundamentally different, and we can't expect to interpret the result of a uniform treatment on both groups. This lacks proper **randomization**. It could be fixed by local control - ie. sampling one distribution to match the other one so that the parameters in question are comparable. 
-
-
-### Replication
-
-An essential component to a good experiment is replication. Mathematically this means that our observations are a collection of i.i.d random variables $$\{Y_i\}_{i=1}^n$$ where $$n$$ is sufficiently large so that we can read statistical significance from the results. 
-
-### Randomization
-
-To ensure replicability and to infer proper conclusions, proper randomization is needed. For instance, if you were testing out the efficacy of a new drug, but only tested it on people living in Iceland, you wouldn't be able to make conclusions about people living in France necessarily. 
-
-In other words, you're assuming that you are sampling some distribution when making observations - are you sampling a large and random enough quantity to represent the distribution accurately? Randomization in the context of data science is normally sufficient to ensure proper generalization, but sometimes there are size constraints on what you are studying. 
-
-A good example was the problem of delivering The New York Times newspaper to Starbucks restaurants - we wanted to try out several different models, but only had approximately 6k stores to choose from. When this is the case, we need to introduce local controls:
-
-### Local Control
-
-### Equality of Distributions
-
-
-## Frequentist Approach
-
- In the last post, we discussed how to test hypotheses from frequentist and Bayesian approaches. In this post we discuss how to properly design an experiment and interpret the results, trying to emphasize pitfalls that are likely to occur. 
- 
-
-Let's first define some quantities.
-
-### $$\alpha$$ value
-
-The threshold you choose your cut off at. More precisely,
-
-$$ p(\textrm{ reject }  H_0  \rvert H_0 \textrm{ is true } ),$$
-
-which is also known as a Type I error. For example, a significance level of 0.05 indicates a 5% risk of concluding that a difference exists when there is no actual difference.
-
-### P Value
-
-This is the probability of observing larger than or equal to the observed value when the null hypothesis is true, ie.
-
-$$ p(Y \geq Y_{\textrm{obs}} \rvert H_0 \textrm{ is true } )$$
 
 ### Statistical Power
 
@@ -85,9 +31,7 @@ Let's define some quantities:
 
 - $$z_{\alpha}$$ is the minimum z score we need to have the probability of observing $$\alpha$$ to be under the necessary threshold. For $$0.05$$, $$z_{\alpha}=1.645$$ for example. 
 
-
 Then we have
-
 
 $$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}) = p(z > z_{\alpha} \rvert p_R-p_B = \alpha).$$ 
 
@@ -239,7 +183,7 @@ $$ \frac{1}{B(n_2+1,N-n_2-1)}\int_0^1 \Phi_{n_1}(p_1) p_2^{n_2} (1-p_2)^{N-n_2} 
 
 Let's start off with an easier Lemma though. 
 
-** Theorem 2:** _Let_ 
+**Theorem 2:** _Let_ 
 
 $$ \Phi_n(x) := \frac{\int_0^x p^n (1-p)^{N-n}}{\int_0^1 p^n (1-p)^{N-n}}. $$
 
