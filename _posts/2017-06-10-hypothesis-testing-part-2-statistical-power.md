@@ -131,7 +131,7 @@ $$ N \geq \frac{C(\sigma_{\beta_1}^2 + \sigma_{\beta_2}^2)}{\alpha^2} \log \frac
 
 where $$p_{\min}$$ is the minimum probability (ie. $$0.95$$) we require to be confident of our result. 
 
-#### Main results 
+### Main results 
 
 We saw in the last post that 
 
