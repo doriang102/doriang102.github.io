@@ -91,7 +91,13 @@ In my experience, one is generally looking for lifts of the order of $$1-2\%$$, 
 
 ## Bayesian Statistical Power
 
-We'll see in this post that the distributions of outcomes concentrate as (asymptotically) Gaussians around the observed success frequency. We will show that the probability that $$p_1 > p_2$$ when $$\beta_1 < \beta_2$$ involves an integral over the shaded region shown below:
+We'll see in this post that the distributions of outcomes concentrate as (asymptotically) Gaussians around the observed success frequency. We will work to estimate:
+
+$$ P[p_1 > p_2 | D_1,D_2] \sim \int_{p_1>p_2} \delta_{\beta_1}(p_1) \delta_{\beta_2}(p_2),$$
+
+where $$\delta_{\beta_i}$$ like a mollified dirac measure concentrated at $$\beta_i$$ in the form of a narrow Gaussian. 
+
+We will estimate $$p_1 > p_2$$ when $$\beta_1 < \beta_2$$ from above and see that it is an integral over the red shaded region of the blue triangle in the plot below, which is expnentially small in $$\sqrt{N}$$ as $$N \to +\infty$$:
 
 {% highlight ruby %}
 import matplotlib.pyplot as plt
