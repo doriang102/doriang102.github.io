@@ -84,7 +84,7 @@ plt.plot(p_conv,N_vals_20,label='20% lift')
 plt.legend()
 {% endhighlight %}
 
-![](/img/pvalue_power.png?raw=true){:height="50px" width="50x"}
+![](/img/pvalue_power.png?raw=true)
 
 In my experience, one is generally looking for lifts of the order of $$1-2\%$$, so you can see how the sample size is incredibly important. Generally major websites can have of the order of 20 to 100 million unique cookies visit every month, and can have anywhere from 50k to 1 million actual users. 
 
