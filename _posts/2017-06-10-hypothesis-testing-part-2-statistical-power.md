@@ -124,6 +124,13 @@ plt.show()
 
 ![](/img/bayesianintegral.png?raw=true)
 
+We will see that
+$$ N \geq \frac{C\sigma_{\beta}^2}{\alpha^2} \log \frac{1}{p_{\min}},$$
+
+where $$p_{\min}$$ is the minimum probability (ie. $$0.95$$) we require to be confident of our result. 
+
+#### Main results 
+
 We saw in the last post that 
 
 $$ p^n (1-p)^{N-n} \to \delta_{\frac{n}{N}}(p),$$
