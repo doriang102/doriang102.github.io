@@ -125,7 +125,9 @@ plt.show()
 ![](/img/bayesianintegral.png?raw=true)
 
 We will see that
-$$ N \geq \frac{C\sigma_{\beta}^2}{\alpha^2} \log \frac{1}{p_{\min}},$$
+
+$$ N \geq \frac{C(\sigma_{\beta_1}^2 + \sigma_{\beta_2}^2)}{\alpha^2} \log \frac{1}{p_{\min}},$$
+
 
 where $$p_{\min}$$ is the minimum probability (ie. $$0.95$$) we require to be confident of our result. 
 
