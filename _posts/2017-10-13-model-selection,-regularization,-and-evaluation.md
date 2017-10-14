@@ -11,13 +11,12 @@ We will explore the idea of over fitting and model selection in this section and
 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
-This is needed since we are penalizing the coefficients $$\beta$$ equally regardless of whether we use $$L^2$$ or $$L^1$$. 
+We will introduce a basic example in this section to deleniate the need for regularization and how over fitting can occur by simply havin too many variables. 
 
-Indeed, consider the example where we have a simple rule $$ y = 2x_1 + 1 + \epsilon$$ where $$\epsilon \sim \mathcal{N}(0,1)$$, but we are seeking to learn a model with $$\mathbb{x} \in \mathbb{R}^d$$ for $$d > 1$$. Clearly we can over fit this model. 
+Cnsider the example where we have a simple rule $$ y = 2x_1 + 1 + \epsilon$$ where $$\epsilon \sim \mathcal{N}(0,1)$$, but we are seeking to learn a model with $$\mathbb{x} \in \mathbb{R}^d$$ for $$d > 1$$. More data is a good thing right? We'll see why it's not, and Linear Algebra will be our tour guide. 
 
-We seek to find a model:
-$$ y = \beta \cdot \mathbf{x} + \beta_0 + \epsilon_i,$$
-where $$ \beta_0 \in \mathbb{R}^d$$ is non-zero. More precisely we seek to minimize
+
+Let's consider a one dimensional example:
 
 $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k} - \beta_0)^2 + \lambda \|\beta+\beta_0\|_{L^p}$$
 
