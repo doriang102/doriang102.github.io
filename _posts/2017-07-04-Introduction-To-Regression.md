@@ -1,6 +1,8 @@
 
 
-In this post, we will discuss Linear Regression. We will go over, in detail, the assumptions made for this model with some concrete examples. We will provide concrete examples of the failure of these assumptions and then discuss the lack of stability when you have correlated features. In the next post, we will discuss model selection techniques and how to prevent over fitting by using various constraints on the coefficients. 
+In this post, we will discuss Linear Regression. We will go over, in detail, the assumptions made for this model with some concrete examples. We will provide concrete examples of the failure of these assumptions and then discuss the lack of stability when you have correlated features. 
+
+In the next post, we will discuss model selection techniques and how to prevent over fitting by using various constraints on the coefficients. 
 
 ## Linear Regression
 
