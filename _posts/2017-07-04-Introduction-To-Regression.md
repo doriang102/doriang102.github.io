@@ -238,6 +238,38 @@ plt.show()
 
 ![](/img/perpcoefs2.png?raw=true)
 
+
+We see from the above two scenarios that the coefficients are much more stable when we have orthongla features. Let's actually plot Hessian of the objective function for $$\mathbf{X} = [\mathbf{x_1} \mathbf{x_2}]$$ in the two cases. 
+
+#### Correlated Features
+
+
+  {% highlight ruby %} 
+xlist = np.linspace(0, 1.0, 100) # Create 1-D arrays for x,y dimensions
+ylist = np.linspace(0, 1.0, 100)
+
+A=df.corr()
+X,Y = np.meshgrid(xlist,ylist)
+plt.figure(figsize=(8,8))
+A=df.corr()
+Z = A.loc['x1','x1']*X**2 + 2*X*Y*A.loc['x1','x2'] + A.loc['x2','x2']*Y**2
+plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = 'k', linestyles = 'solid')
+plt.savefig("/Users/dgoldma1/Documents/doriang102.github.io/img/perpellipse.png")
+
+plt.show()
+{% endhighlight %}
+
+![](/img/correllipse.png?raw=true)
+
+Running the same code on the Hessian of the orthogonal features, we obtain:
+
+![](/img/perpellipse.png?raw=true)
+
+
+Notice how in the correlated case, there is clear degeneracy - the solution is not unique. Any value along that line is constant, so there is no unique solution. This is what accounts for the instability in the solution. 
+
+
+
 ## Assumptions of Linear Regression one can violate
 
 - Implicit independent variables (covariates):
@@ -249,6 +281,7 @@ plt.show()
 - Variance of Y not constant:
 - The correct model is not linear:
 - The X variable is random, not fixed:
+
 
 # Regularized Linear Regression
 
