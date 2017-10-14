@@ -68,7 +68,22 @@ we have
 
 
 $$ \mathbb{E}(Y | X=x_i \cdot Y | X = x_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \mathbb{E}(\epsilon_j)) = \mathbb{E}(Y \rvert X = x_i) \mathbb{E}(Y \rvert X=x_j).$$
+
+{% highlight ruby %} 
+n = 5000
+x = np.random.randn(n)
+s = np.random.normal(0, 2, n)
+yvals = [3*xval + np.random.normal(0, xval**2,1)[0] for xval in x]
+y = 3*x +s
+
+fig, ax = plt.subplots()
+fit = np.polyfit(x, yvals, deg=1)
+ax.plot(x, fit[0] * x + fit[1], color='red')
+ax.scatter(x, yvals)
+{% endhighlight %}
  
+ ![](/img/noniid.png?raw=true)
+
 
 ### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean. 
 
