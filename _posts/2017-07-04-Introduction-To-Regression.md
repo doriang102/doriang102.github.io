@@ -134,7 +134,15 @@ What went wrong here? Let's check the coefficients:
  
  $$ \hat y = 1.03 x.$$
  
- The model got the linear coeffficient correct, but since we didn't 
+ The model got the linear coeffficient correct, but *`scikit-learn` assumes that the data has been mean centered before training by default*. If we want to correct this issue, we can add `fit_intercept=False`:
+ 
+  {% highlight ruby %} 
+ regr = linear_model.LinearRegression(fit_intercept=False)
+  {% endhighlight %}
+  
+  Then we obtain:
+   ![](/img/zeromean.png?raw=true)
+
 
 ### Assumption 3 (not technically necessary) - The matrix $$\mathbf{X^TX}$$ has full rank. 
 
