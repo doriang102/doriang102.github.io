@@ -1,7 +1,7 @@
 
 *Under Construction*
 
-Recall that in the last post, our aim was, given $$y \in \mathbb{R}^n$$ and our features $$X \in \mathbb{R}^{n \times d}$$ to find $$\beta \in \mathbb{R}^d$$ which minimized:
+Recall that in the last post, our aim was, given $$y \in \mathbb{R}^n$$ and our features $$X \in \mathbb{R}^{n \times k}$$ to find $$\beta \in \mathbb{R}^k$$ which minimized:
 
 $$ \min_{\beta} \frac{1}{N} \sum_{i=1}^N(y_i - \beta \cdot \mathbf x_i)^2.$$
 
@@ -19,7 +19,7 @@ $$y_2 = 2x_2^1 + M - 10^{-3}$$
 $$y_3 = 2x_3^1 + M + 2\cdot 10^{-3}$$
 
 
-But we have $$\mathbb{R}^k$ features, so we can solve:
+But we have $$\mathbb{R}^k$$ features, so we can solve:
 
 $$2x_1^1 + M + 10^{-3} = \beta_1 x_1^1 + \beta_2 x_1^2 + \beta_0$$
 
@@ -29,9 +29,9 @@ $$ y_1 = M + 2x_1 + $$
 $$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
 ### Requirement 1 - Standardization of independent and dependent variables.
 
-We will introduce a basic example in this section to deleniate the need for regularization and how over fitting can occur by simply havin too many variables. 
+We will introduce a basic example in this section to deleniate the need for regularization and how over fitting can occur by simply having too many variables. 
 
-Cnsider the example where we have a simple rule $$ y = 2x_1 + 1 + \epsilon$$ where $$\epsilon \sim \mathcal{N}(0,1)$$, but we are seeking to learn a model with $$\mathbb{x} \in \mathbb{R}^d$$ for $$d > 1$$. More data is a good thing right? We'll see why it's not, and Linear Algebra will be our tour guide. 
+Cnsider the example where we have a simple rule $$ y = 2x_1 + 1 + \epsilon $$ where $$\epsilon \sim \mathcal{N}(0,1)$$, but we are seeking to learn a model with $$\mathbb{x} \in \mathbb{R}^d$$ for $$d > 1$$. More data is a good thing right? We'll see why it's not, and Linear Algebra will be our tour guide. 
 
 
 Let's consider a one dimensional example:
