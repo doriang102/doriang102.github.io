@@ -50,6 +50,21 @@ $$ Y = \beta \cdot \mathbf{X} + \epsilon , $$
 
 where $$\epsilon$$ is not influenced by $$\mathbf{X}$$. 
 
+{% highlight ruby %} 
+n = 5000
+x = np.random.randn(n)
+s = np.random.normal(0, 2, n)
+yvals = [xval**2 + np.random.normal(0,1,1)[0] for xval in x]
+y = 3*x +s
+
+fig, ax = plt.subplots()
+fit = np.polyfit(x, yvals, deg=1)
+ax.plot(x, fit[0] * x + fit[1], color='red')
+ax.scatter(x, yvals)
+{% endhighlight %}
+
+ ![](/img/nonlinear.png?raw=true)
+
 ### Assumption 2 - i.i.d of residuals $$\epsilon_i$$. 
 
  We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). 
