@@ -146,7 +146,9 @@ What went wrong here? Let's check the coefficients:
 
 ### Assumption 3 (not technically necessary) - The matrix $$\mathbf{X^TX}$$ has full rank. 
 
+Using Calculus, we obtain the general solution when $$X^X$$ is invertible:
 
+$$ \hat \beta = (X^TX)^{-1} X^T y.$$
 
 ## Assumptions of Linear Regression one can violate
 
