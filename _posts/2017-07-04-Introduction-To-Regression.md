@@ -196,7 +196,7 @@ plt.show()
 {% endhighlight %}
 
 
-![](/img/perpcoefs.png?raw=true)
+![](/img/perpcoefs2.png?raw=true)
 
 ## Assumptions of Linear Regression one can violate
 
