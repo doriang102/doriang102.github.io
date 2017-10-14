@@ -1,6 +1,6 @@
 
 In this section, we look more carefully at the sample size necessary to make statistically valid
-inferences from observations. 
+inferences from observations and see what estimates we obtain on our confidence for both Frequentist and Bayesian approaches. 
 
 When organizing an experiment, we must ask ourselves a few questions:
 
@@ -10,15 +10,17 @@ When organizing an experiment, we must ask ourselves a few questions:
 
 - 3) What would be considered a 'positive' result?
 
-This brings us to the topic of statistical power. Let's say for 1), we are once again testing if the red button is better than the blue button. How many people do we need to measure this? We will first outline the frequentist approach, then the Bayesian approach, and see that the sample size needed to make inferences scales in identical ways. However I believe the Bayesian appraoch is more natural. 
+**In this post, we will focus on 2)**. First, we outline the frequentist approach, then the Bayesian approach. We will see that the sample size needed to make inferences scales in identical ways even though they are two entirely different ways of thinking about the problem of inference. I personally feel that the Bayesian approach is more natural, and make a case for this in the second section. 
+
+We reconsider the example of the two buttons outlined in the first blog post *Hypothesis Testing*. If you haven't read this already, I highly recommend you skim it in order to be familiar with the notation/ideas in this post. 
 
 ## Frequentist Statistical Power
 
+In the frequentist approach, as we saw in the last section, we wish to estimate the probability of making an observation *at least as large as the difference observed*. 
 
 More precisely, can we estimate
 
 $$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}).$$ 
-
 
 In other words, what's the probability we will be able to reject the null hyothesis if the difference we observe is actually true?
 
