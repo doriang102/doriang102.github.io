@@ -42,7 +42,18 @@ Thus we can't actually expect to predict any exact value when considering stocha
 
 $$p(y \rvert x, \beta) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(y-\beta \cdot x)^2}{2 \sigma^2}}.$$
 
+### Why $$L^2$$, why do we need all these assumptions below??
 
+I find that many introductory articles/books on regression feel that students will be far too intimidated by probability to understand the idea of *Maximum Likelihood*. But without it, there is really no way to get a sense of what all the assumptions are that go into linear regressions, and why they are so important. For maximum likelihood, we wish to *fit* data to a prior distribution. More precisely, assuming an underlying distribution, can we solve:
+
+$$ \max_{\beta} \prod_{i=1}^Np(y_i | \beta_i,x_i) = \max_{\beta} \prod_{i=1}^N \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(y_i-\beta \cdot x_i)^2}{2 \sigma^2}}.$$
+
+Noting that we can always compose any monotone function with an expression we are trying to maximize, we can take the log of the above function, which results (when the variances are equal!)  in precisely 
+
+$$ \min_{\beta} \frac{1}{N} \sum_{i=1}^N(y_i - \beta \cdot \mathbf x_i)^2.$$
+
+
+**Note:** This is where all of the assumptions come from below. I encourage the reader to think about how each one of the assummptions directly ties back to the assumption that $$y - \beta \cdot x$$ is normally distributed with mean zero and constant variance. 
 
 ### Assumption 1 - Linear relationship between dependent and indepdent variables. 
 
