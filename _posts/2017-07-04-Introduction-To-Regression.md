@@ -154,7 +154,47 @@ When it's not, we can still minimize the $$L^2$$ norm of the residuals, but we l
 
 $$ \frac{d^2}{d\beta^2} \sum_i (y_i - \mathbf{\beta} \cdot \mathbf{x_i})^2 = \frac{2}{N} X^TX.$$
 
-From what we know about linear algebra, this matrix is positive semi-definite and symmetric. It is positive definite precisely when the columns of $$X$$ are linearly independent (ie. the features aren't correlated). 
+From what we know about linear algebra, this matrix is positive semi-definite and symmetric. It is positive definite precisely when the columns of $$X$$ are linearly independent (ie. the features aren't correlated). Let's simulate two correlated features with noise $$x_1$$ and $$x_2$$ with a well defined linear trend:
+
+$$ y = x_1 + \epsilon, $$
+
+where $$\epsilon \sim \mathcal{N}(0,0.01)$$ and see how stable the coefficients are:
+
+{ % highlight ruby % }
+from numpy import linalg as LA
+n=10000
+x1 = np.linspace(0,0.01,n)
+
+
+k = np.random.normal(0,0.01,n)/np.linalg.norm(k)**2
+s = np.random.normal(0, 0.001, n)
+
+x2 = 100*np.linspace(0,0.01,n)
+x2 -= x1.dot(k) * k / np.linalg.norm(k)**2
+x1=k
+df=pd.DataFrame({'x1':x1,'x2':x2})
+
+y = x1 + np.random.normal(0, 0.01, n)
+coefs1=[]
+coefs2=[]
+scores_perp=[]
+for i in range(0,100):
+    y = x1 + np.random.normal(0, 0.001, n)
+    regr = linear_model.LinearRegression()
+    x=df
+    # Train the model 
+    regr.fit(x,y)
+    coefs1.append(regr.coef_[0])
+    coefs2.append(regr.coef_[1]*100)
+    scores_perp.append(regr.score(x,y))
+    
+plt.figure(figsize=(8,5))
+plt.plot(coefs1,label='x1')
+plt.plot(coefs2,label='x2')
+plt.legend()
+plt.show()
+{ % endhighlight % }
+![](/img/perpcoefs.png?raw=true)
 
 ## Assumptions of Linear Regression one can violate
 
