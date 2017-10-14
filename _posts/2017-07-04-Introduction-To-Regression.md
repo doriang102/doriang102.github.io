@@ -101,17 +101,18 @@ ax.scatter(x, yvals)
   
 
 
-### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean. 
-
- $$ \epsilon_i \sim \mathcal{N}(0,\sigma^2). $$
+### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean, $$ \epsilon_i \sim \mathcal{N}(0,\sigma^2). $$
  
+ Let's take an example where we have a residual which has a non-zero mean, and see how `scikit-learn` learns the coefficients. 
  
 {% highlight ruby %} 
 from sklearn import datasets, linear_model
 regr = linear_model.LinearRegression()
-n = 5000
+n = 50000
 x = np.linspace(0,1,n)
-yvals = [xval + np.random.normal(10,5,1)[0] for xval in x]
+x_pd=pd.DataFrame(x,columns=['x'])
+x_pd['const']=1
+yvals = [xval + np.random.normal(10,2,1)[0] for xval in x]
 
 # Train the model using the training sets
 regr.fit(x_pd,yvals)
@@ -119,19 +120,21 @@ regr.fit(x_pd,yvals)
 # Make predictions using the testing set
 y_pred = regr.predict(x_pd)
 plt.scatter(x,yvals)
-plt.scatter(x,y_pred-x)
+plt.plot(x,x*regr.coef_[0] + regr.coef_[1],color='r')
 {% endhighlight %}
  ![](/img/nonzeromean.png?raw=true)
 
- At first this looks ok right? Well let's see what coefficients our model has determined:
- 
+What went wrong here? Let's check the coefficients:
+
  {% highlight ruby %} 
  regr.coef_
  {% endhighlight %}
  
  We obtain the following model:
  
- $$ \hat y = 1.33 x $$
+ $$ \hat y = 1.03 x.$$
+ 
+ The model got the linear coeffficient correct, but since we didn't 
 
 ### Assumption 3 (not technically necessary) - The matrix $$\mathbf{X^TX}$$ has full rank. 
 
