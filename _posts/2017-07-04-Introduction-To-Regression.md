@@ -105,7 +105,7 @@ ax.scatter(x, yvals)
  
  Let's take an example where we have a residual which has a non-zero mean, and see how `scikit-learn` learns the coefficients. 
  
-{% highlight python %} 
+{% highlight ruby %} 
 from sklearn import datasets, linear_model
 regr = linear_model.LinearRegression()
 n = 50000
