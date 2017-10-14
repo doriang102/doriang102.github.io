@@ -1,6 +1,6 @@
 
 
-In this post, we will discuss Linear Regression. We will go over, in detail, the assumptions made for this model with some concrete examples. After this we will discuss over fitting and the various reguarlization methods used in practice.
+In this post, we will discuss Linear Regression. We will go over, in detail, the assumptions made for this model with some concrete examples. We will provide concrete examples of the failure of these assumptions and then discuss the lack of stability when you have correlated features. In the next post, we will discuss model selection techniques and how to prevent over fitting by using various constraints on the coefficients. 
 
 ## Linear Regression
 
@@ -269,56 +269,18 @@ Running the same code on the Hessian of the orthogonal features, we obtain:
 Notice how in the correlated case, there is clear degeneracy - the solution is not unique. Any value along that line is constant, so there is no unique solution. This is what accounts for the instability in the solution. 
 
 
+## Conclusion
 
-## Assumptions of Linear Regression one can violate
+In this post we've seen that essential ingredients for the lienar regression problem to be well posed are:
 
-- Implicit independent variables (covariates):
-- Lack of independence in Y:
+- 1) The outcome variable $$y$$ follows a linear trend with the data $$X$$. 
+- 2) The residuals, $$y - \beta \cdot \mathbf{x}$$ are normally distributed with mean zero and constant variance. 
+- 3) Correlated features don't preclude the existence of solutions to the linear regression problem, but they cause issues with instability of the coefficients, and can potentially impact perfomance. 
 
+In the next post, we will look into methods of regularization and how it can help with over fitting models. We will also look at standard data preparation techniques that are needed for regularization, or any kind of interpretability even without regularization.
 
-- Outliers:
-- Nonnormality:
-- Variance of Y not constant:
-- The correct model is not linear:
-- The X variable is random, not fixed:
+**Common Confusions:**
 
-
-# Regularized Linear Regression
-
-### Requirement 1 - Standardization of independent and dependent variables.
-
-This is needed since we are penalizing the coefficients $$\beta$$ equally regardless of whether we use $$L^2$$ or $$L^1$$. 
-
-
-Indeed, consider the example where we have a simple rule $$ y = 2x_1 + 1 + \epsilon$$ where $$\epsilon \sim \mathcal{N}(0,1)$$, but we are seeking to learn a model with $$\mathbb{x} \in \mathbb{R}^d$$ for $$d > 1$$. Clearly we can over fit this model. 
-
-We seek to find a model:
-$$ y = \beta \cdot \mathbf{x} + \beta_0 + \epsilon_i,$$
-where $$ \beta_0 \in \mathbb{R}^d$$ is non-zero. More precisely we seek to minimize
-
-$$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k} - \beta_0)^2 + \lambda \|\beta+\beta_0\|_{L^p}$$
-
-
-If $$\{x_k\}$$ are mean-zero centered, then the first expression has mean 0 if we choose the correct intercept for $$\beta_0$$. But what if it isn't? Let's imagine that $$\{y_k\}$$ have mean $$\mu=M$$ for $$ M > > 1$$ an to fix ideas. What will be the best choice of $$\lambda$$? For each $$\lambda > 0$$ we will find that $$\beta_0 = M$$ and so we want to shrink $$\lambda \to 0$$. What effect does this have? It means that we can't penalize any of the information in $$\beta$$ and thus you will over fit.  
-
-$$ \hat y^i = \beta_0  + \beta_1 x_1^i + \beta_2 x_2^i + \cdots + \beta_k x_k^i $$
-
-Let's say that our actual points are:
-
-$$y_1 = 2x_1^1 + M + 10^{-3}$$
-
-$$y_2 = 2x_2^1 + M - 10^{-3}$$
-
-$$y_3 = 2x_3^1 + M + 2\cdot 10^{-3}$$
-
-
-But we have $$\mathbb{R}^k$ features, so we can solve:
-
-$$2x_1^1 + M + 10^{-3} = \beta_1 x_1^1 + \beta_2 x_1^2 + \beta_0$$
-
-$$2x_2^1 + M - 10^{-3} = \beta_1 x_2^1 + \beta_2 x_2^2 + \beta_0$$
-
-$$ y_1 = M + 2x_1 + $$
-$$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
-
+- 1) Some beginningers think that the features themselves need to be normally distributed, or that $$y$$ does, *this is false*. 
+- 2) Your data does not need to be normalized for the problem to be well posed, but as we will see in the next section, interpretiability is impacted if you don't, and it's very important if you are performing regularization methods (which is almost always the case). 
 
