@@ -126,9 +126,9 @@ plt.plot(x,x*regr.coef_[0] + regr.coef_[1],color='r')
 
 What went wrong here? Let's check the coefficients:
 
- {% highlight ruby %} 
+{% highlight ruby %}  
  regr.coef_
- {% endhighlight %}
+{% endhighlight %}
  
  We obtain the following model:
  
@@ -160,7 +160,7 @@ $$ y = x_1 + \epsilon, $$
 
 where $$\epsilon \sim \mathcal{N}(0,0.01)$$ and see how stable the coefficients are:
 
-{ % highlight ruby % }
+  {% highlight ruby %} 
 from numpy import linalg as LA
 n=10000
 x1 = np.linspace(0,0.01,n)
@@ -193,7 +193,7 @@ plt.plot(coefs1,label='x1')
 plt.plot(coefs2,label='x2')
 plt.legend()
 plt.show()
-{ % endhighlight % }
+{% endhighlight %}
 ![](/img/perpcoefs.png?raw=true)
 
 ## Assumptions of Linear Regression one can violate
