@@ -84,7 +84,7 @@ we have
 
 $$ \mathbb{E}(Y | X=x_i \cdot Y | X = x_j) = (\beta \cdot x_i + \mathbb{E}(\epsilon_i))(\beta \cdot x_j + \mathbb{E}(\epsilon_j)) = \mathbb{E}(Y \rvert X = x_i) \mathbb{E}(Y \rvert X=x_j).$$
 
-{% highlight python %} 
+{% highlight ruby %} 
 n = 5000
 x = np.random.randn(n)
 s = np.random.normal(0, 2, n)
@@ -99,13 +99,6 @@ ax.scatter(x, yvals)
  ![](/img/noniid.png?raw=true)
   
   
- At first this looks ok right? Well let's see what coefficients our model has determined:
- 
- {% highlight ruby %} 
- regr.coef_
- {% endhighlight %}
- 
-
 
 
 ### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean. 
@@ -130,7 +123,15 @@ plt.scatter(x,y_pred-x)
 {% endhighlight %}
  ![](/img/nonzeromean.png?raw=true)
 
-
+ At first this looks ok right? Well let's see what coefficients our model has determined:
+ 
+ {% highlight ruby %} 
+ regr.coef_
+ {% endhighlight %}
+ 
+ We obtain the following model:
+ 
+ $$ \hat y = 1.33 x $$
 
 ### Assumption 3 (not technically necessary) - The matrix $$\mathbf{X^TX}$$ has full rank. 
 
