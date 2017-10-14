@@ -154,6 +154,7 @@ When it's not, we can still minimize the $$L^2$$ norm of the residuals, but we l
 
 $$ \frac{d^2}{d\beta^2} \sum_i (y_i - \mathbf{\beta} \cdot \mathbf{x_i})^2 = \frac{2}{N} X^TX.$$
 
+From what we know about linear algebra, this matrix is positive semi-definite and symmetric. It is positive definite precisely when the columns of $$X$$ are linearly independent (ie. the features aren't correlated). 
 
 ## Assumptions of Linear Regression one can violate
 
