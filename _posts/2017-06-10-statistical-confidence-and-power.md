@@ -1,8 +1,8 @@
 
 In this section, we look more carefully at the sample size necessary to make statistically valid
-inferences from observations and see what estimates we obtain on our confidence for both Frequentist and Bayesian approaches. 
+inferences from observations, and see what estimates we obtain on our confidence of the outcome for both Frequentist and Bayesian approaches. 
 
-When organizing an experiment, we must ask ourselves a few questions:
+When organizing an experiment, we must ask ourselves a few questions (not exhaustive):
 
 - 1) What is the hypothesis we are testing?
 
@@ -10,7 +10,7 @@ When organizing an experiment, we must ask ourselves a few questions:
 
 - 3) What would be considered a 'positive' result?
 
-**In this post, we will focus on 2)**. First, we outline the frequentist approach, then the Bayesian approach. We will see that the sample size needed to make inferences scales in identical ways even though they are two entirely different ways of thinking about the problem of inference. I personally feel that the Bayesian approach is more natural, and make a case for this in the second section. 
+**In this post, we will focus on 2) and 3)**. First, we outline the frequentist approach, then the Bayesian approach. We will see that the sample size needed to make inferences scales in identical ways even though they are two entirely different ways of thinking about the problem of inference. I personally feel that the Bayesian approach is more natural, and make a case for this in the second section. 
 
 We reconsider the example of the two buttons outlined in the first blog post *Hypothesis Testing*. If you haven't read this already, I highly recommend you skim it in order to be familiar with the notation/ideas in this post. 
 
@@ -26,21 +26,21 @@ In other words, what's the probability we will be able to reject the null hyothe
 
 Let's define some quantities:
 
-- Let's set $$p_R - p_B = \alpha > 0$$. 
+- Let's set $$p_1 - p_2 = \alpha > 0$$. 
 
-- $$N_R = N_B=N$$ are the sample sizes of the experiment (set equal for simplicity).
+- $$N_1 = N_2=N$$ are the sample sizes of the experiment (set equal for simplicity).
 
 - $$z_{\alpha}$$ is the minimum z score we need to have the probability of observing $$\alpha$$ to be under the necessary threshold. For $$0.05$$, $$z_{\alpha}=1.645$$ for example. 
 
 Then we have
 
-$$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}) = p(z > z_{\alpha} \rvert p_R-p_B = \alpha).$$ 
+$$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}) = p(z > z_{\alpha} \rvert p_1-p_2 = \alpha).$$ 
 
 From the last section, we can write this as
 
-$$\frac{ p_R - p_B }{\sqrt{ p_R(1-p_R)/N + p_B(1-p_B)/N}} > z_{\alpha}.$$
+$$\frac{ p_1 - p_2 }{\sqrt{ p_1(1-p_1)/N + p_2(1-p_2)/N}} > z_{\alpha}.$$
 
-Since $$p_R - p_B = \alpha $$ and $$\alpha$$ is generally much smaller than both $$p_R$$ or $$p_B$$, we can set $$p_R \sim p_B := p$$ in the denominator to obtain
+Since $$p_1 - p_2 = \alpha $$ and $$\alpha$$ is generally much smaller than both $$p_1$$ or $$p_2$$, we can set $$p_1 \sim p_2 := p$$ in the denominator to obtain
 
 $$ \frac{N\alpha^2}{2p(1-p)} > z_{\alpha}^2.$$
 
