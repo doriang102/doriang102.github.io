@@ -103,6 +103,25 @@ ax.scatter(x, yvals)
 ### Assumption 2 - The residuals $$\epsilon_i$$ are all normally distributed with zero mean. 
 
  $$ \epsilon_i \sim \mathcal{N}(0,\sigma^2). $$
+ 
+ 
+{% highlight ruby %} 
+from sklearn import datasets, linear_model
+regr = linear_model.LinearRegression()
+n = 5000
+x = np.linspace(0,1,n)
+yvals = [xval + np.random.normal(10,5,1)[0] for xval in x]
+
+# Train the model using the training sets
+regr.fit(x_pd,yvals)
+
+# Make predictions using the testing set
+y_pred = regr.predict(x_pd)
+plt.scatter(x,yvals)
+plt.scatter(x,y_pred-x)
+{% endhighlight %}
+ ![](/img/nonzeromean.png?raw=true)
+
 
 
 ### Assumption 3 (not technically necessary) - The matrix $$\mathbf{X^TX}$$ has full rank. 
