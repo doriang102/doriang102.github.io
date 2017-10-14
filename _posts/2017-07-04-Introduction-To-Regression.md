@@ -65,7 +65,7 @@ ax.scatter(x, yvals)
 
  ![](/img/nonlinear.png?raw=true)
 
-### Assumption 2 - i.i.d of residuals $$\epsilon_i$$. 
+### Assumption 2 - The residuals, $$\epsilon_i$$, are i.i.d. 
 
  We assume that $$\epsilon_i := Y_i - f(\mathbf X_i)$$ are all i.i.d random variables (indepdendent, identically distributed). 
  
