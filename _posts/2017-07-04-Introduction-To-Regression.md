@@ -160,6 +160,46 @@ $$ y = x_1 + \epsilon, $$
 
 where $$\epsilon \sim \mathcal{N}(0,0.01)$$ and see how stable the coefficients are:
 
+#### Correlated Features
+  {% highlight ruby %} 
+n=10000
+x1 = np.linspace(0,0.01,n)
+
+
+s = np.random.normal(0, 0.001, n)
+
+x2 = 100*x1 + s
+
+df=pd.DataFrame({'x1':x1,'x2':x2})
+
+y = x1 + np.random.normal(0, 0.01, n)
+coefs1=[]
+coefs2=[]
+scores_perp=[]
+for i in range(0,100):
+    y = x1 + np.random.normal(0, 0.001, n)
+    regr = linear_model.LinearRegression()
+    x=df
+    # Train the model 
+    regr.fit(x,y)
+    coefs1.append(regr.coef_[0])
+    coefs2.append(regr.coef_[1]*100)
+    scores_perp.append(regr.score(x,y))
+    
+plt.figure(figsize=(8,5))
+plt.plot(coefs1,label='x1')
+plt.plot(coefs2,label='x2')
+plt.legend()
+{% endhighlight %}
+
+![](/img/corrcoefs2.png?raw=true)
+
+
+
+#### Orthogonal Features
+
+Now let's check the same model with $$x_1 \perp x_2$$. 
+
   {% highlight ruby %} 
 from numpy import linalg as LA
 n=10000
