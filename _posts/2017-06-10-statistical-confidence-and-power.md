@@ -100,7 +100,7 @@ In my experience, one is generally looking for lifts of the order of $$1-2\%$$, 
 
 For statistical power in the Bayesian setting, we ask:
 
-**Question:** *What is the required sample size to be 95% sure that $$p_1 > p2$$?*
+**Question:** *What is the required sample size to be 95% sure that $$p_1 > p_2$$?*
 
 I personally find this question much more 'natural'. We focus here on the case of a uniform prior on the outcomes, and will possibly study later the effects of different priors on the sample size. Although it is clear from this discussion that the more we know in the beginning, smaller $$N$$ we need to draw conclusions. There is always a risk that our prior is wrong though, so we are safe in choosing a uniform one.
 
