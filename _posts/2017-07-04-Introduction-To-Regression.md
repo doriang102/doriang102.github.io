@@ -194,6 +194,8 @@ plt.plot(coefs2,label='x2')
 plt.legend()
 plt.show()
 {% endhighlight %}
+
+
 ![](/img/perpcoefs.png?raw=true)
 
 ## Assumptions of Linear Regression one can violate
