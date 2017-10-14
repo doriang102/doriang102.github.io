@@ -146,9 +146,14 @@ What went wrong here? Let's check the coefficients:
 
 ### Assumption 3 (not technically necessary) - The matrix $$\mathbf{X^TX}$$ has full rank. 
 
-Using Calculus, we obtain the general solution when $$X^X$$ is invertible:
+Using Calculus, we obtain the general solution when $$X^TX$$ is invertible:
 
 $$ \hat \beta = (X^TX)^{-1} X^T y.$$
+
+When it's not, we can still minimize the $$L^2$$ norm of the residuals, but we lack stability. To see why, a simple computation shows that:
+
+$$ \frac{d^2}{d\beta^2} \sum_i (y_i - \mathbf{beta} \cdot \mathbf{x_i})^2 = \frac{2}{N} X^TX.$$
+
 
 ## Assumptions of Linear Regression one can violate
 
