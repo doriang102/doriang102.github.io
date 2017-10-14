@@ -16,13 +16,18 @@ We reconsider the example of the two buttons outlined in the first blog post *Hy
 
 ## Frequentist Statistical Power
 
-In the frequentist approach, as we saw in the last section, we wish to estimate the probability of making an observation *at least as large as the difference observed under the assumption that the two buttons are identical*. For statistical power, we want to say *what is the required sample size to reject the null hypothesis assuming that the two buttons are different?*
+In the frequentist approach, as we saw in the last section, we wish to estimate the probability of making an observation *at least as large as the difference observed under the assumption that the two buttons are identical*. 
+
+
+For statistical power, we ask:
+
+**Question:** *What is the required sample size to reject the null hypothesis assuming that the two buttons are different?*
 
 Mathematically this is expressed as:
 
 $$ p(\textrm{reject } H_0 \rvert H_1 \textrm{ is true}).$$ 
 
-In other words, what's the probability we will be able to reject the null hyothesis if the difference we observe is actually true? If we reject the null hypothesis at a p value of $0.05$ for instance, and we know that button 1 out performs button 2 by some threshold $$\alpha$$, how many observations would we need to be 95% sure that this result is true?
+In other words, what's the probability we will be able to reject the null hyothesis if the difference we observe is actually true? If we reject the null hypothesis at a p value of $$0.05$$ for instance, and we know that button 1 out performs button 2 by some threshold $$\alpha$$, how many observations would we need to be 95% sure that this result is true?
 
 Let's define some quantities:
 
