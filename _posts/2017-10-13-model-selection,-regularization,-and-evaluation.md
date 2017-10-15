@@ -12,7 +12,7 @@ We will explore the idea of over fitting and model selection in this section and
 
 Let's say that our data points satisfy the following:
 
-$$ y = 10*\mathbf{x_0} + \epsilon(0,1) $$
+$$ \mathbf{y} = 10*\mathbf{x_0} + \epsilon(0,1) $$
 
 
 But we have $$\mathbb{R}^k$$ features, so we can solve:
