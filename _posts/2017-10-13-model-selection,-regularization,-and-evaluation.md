@@ -176,6 +176,52 @@ Notice how Ridge performs much worse? (You can try other parameter ranges but yo
 
 **Answer:** Recall that Lasso is *sparse* so it will essentially remove all features except for $$\mathbf X[0]$$, which is our true model! Ridge on the other hand, will spread the error throughout the features. Given that there are 49 useless features, that is enough noise to ruin any chance at a model.
 
+Let's double check this. After training on Lasso, we have:
+{% highlight ruby %}
+grid.best_estimator_.coef_
+{% endhighlight %}
+```
+Output:
+array([  1.05785570e+00,   0.00000000e+00,  -3.97239654e-02,
+         0.00000000e+00,  -1.65517361e-02,  -1.03520066e-03,
+         8.22425684e-02,  -1.60858912e-02,  -0.00000000e+00,
+         0.00000000e+00,  -3.91051979e-02,  -0.00000000e+00,
+        -5.80074470e-03,   1.94973935e-03,   7.09372453e-03,
+        -0.00000000e+00,  -0.00000000e+00,   1.15456179e-01,
+        -8.09916690e-03,  -2.72481555e-02,   9.60580824e-03,
+         3.80422275e-02,   2.26666184e-02,  -0.00000000e+00,
+         0.00000000e+00,   0.00000000e+00,  -0.00000000e+00,
+        -6.26972411e-02,   3.94658168e-02,   6.93556738e-03,
+         1.22673252e-02,  -6.07421934e-02,  -2.84176838e-02,
+         3.00211452e-02,   0.00000000e+00,   0.00000000e+00,
+         0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+         0.00000000e+00,   4.11046517e-02,  -0.00000000e+00,
+         0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+        -0.00000000e+00,   1.97821804e-02,   0.00000000e+00,
+        -6.26263115e-03,   1.16571657e-01])
+```
+
+For Ridge, we have:
+{% highlight ruby %}
+grid.best_estimator_.coef_
+{% endhighlight %}
+```
+Output:
+array([ 0.20285968, -0.00381662, -0.01798887,  0.00624603, -0.01002174,
+       -0.01013711,  0.03426703, -0.0482153 , -0.00826484,  0.00050287,
+       -0.0387924 ,  0.00443102, -0.02819009, -0.00531801, -0.01693061,
+        0.00971638,  0.01825128, -0.02331878,  0.00077924,  0.03763423,
+       -0.00199511,  0.03372401,  0.04555866, -0.01923509,  0.00451275,
+       -0.03902588, -0.00967512, -0.00360199, -0.00269359, -0.00210888,
+        0.01085484, -0.02292944, -0.01691767,  0.02910946,  0.00655689,
+        0.02819384,  0.00583345,  0.00651882,  0.0077957 ,  0.00493482,
+        0.01773861, -0.02133379,  0.00595596, -0.00179284, -0.00505557,
+        0.0009076 ,  0.02494769,  0.02942028, -0.02384785,  0.00133697])
+```
+
+Notice how in the Lasso case, all of the coefficients are either zero, or two orders of magnitude smaller than $$X[0]$$? The eometric explanation above is the reason. For Ridge on the other hand, the coefficients spread the error out evenly as we expect. 
+
+
 **Conclusion:** Thus, *Lasso is often better for **feature selection**. However once you have the "true" model, Ridge is better for performance according to most research (see papers of Andrew Ng if you are interested). 
 
 
