@@ -28,6 +28,22 @@ $$2x_2^1 + M - 10^{-3} = \beta_1 x_2^1 + \beta_2 x_2^2 + \beta_0$$
 
 $$ y_1 = M + 2x_1 + $$
 $$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
+
+{% highlight ruby %} 
+from scipy.stats import ortho_group 
+m = ortho_group.rvs(dim=50)
+df_orth = pd.DataFrame(m).T
+
+
+y = 10*x0 + np.random.normal(0, 1, 50)
+
+plt.scatter(x0,y)
+
+ {% endhighlight %}
+
+![](/img/scatter_overfit.png?raw=true)
+
+
 ### Requirement 1 - Standardization of independent and dependent variables.
 
 We will introduce a basic example in this section to deleniate the need for regularization and how over fitting can occur by simply having too many variables. 
