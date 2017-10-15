@@ -9,7 +9,7 @@ $$ \prod_{k=1}^N p(x_i)^{y_i} (1 - p(x_i))^{1-y_i}.$$
 
 Taking a log we have
 
-$$ \sum_{k=1}^N \sum_k y_i p(x_i) + (1-y_i)(1-p(x_i)).$$
+$$ \sum_{k=1}^N  y_i \log p(x_i) + (1-y_i)\log (1-p(x_i)).$$
 
 # Random Forests
 
