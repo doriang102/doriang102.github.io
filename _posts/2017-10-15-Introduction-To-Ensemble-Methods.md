@@ -39,9 +39,9 @@ First we compute the total entropy:
 $$ H(P) = \sum_{i=0}^1 p(Y=i) \log p(Y=i).$$
 
 
-### Step 2: For each feature $$x_i$$, compute conditional Entropy.
+### Step 2: For each feature $$X_j$$, compute conditional Entropy.
 
-$$ H(P) = \sum_{i=0}^1 p(Y=i) \log p(Y=i).$$
+$$ H(P | X_j) = \sum_{X_j=x_j} \sum_{i=0}^1 p(Y=i | X_j=x_j) \log p(Y=i | X_j=x_j^i).$$
 
 
 # Random Forests
