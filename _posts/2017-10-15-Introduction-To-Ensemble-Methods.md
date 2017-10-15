@@ -3,6 +3,8 @@ So far all of the models we have considered have been *parametric* - ie. there i
 
 # Classification
 
+## Optimization Problem
+
 Let's consider data $$(\mathbf X, \mathbf y)$$ where $$y \in \{0,1\}$$. For classification, we seek a rule $$\mathbf x \mapsto p(\mathbf x)$$ which maximizes:
 
 $$ \mathcal{L}(p) := \prod_{k=1}^N p(x_i)^{y_i} (1 - p(x_i))^{1-y_i}.$$
@@ -18,6 +20,14 @@ $$ \sum_{k=1}^N \frac{y_i}{N} \log p(s) = p(s) \log p(s).$$
 If we do this over the segments of $$X$$ which componse the level sets of $$p$$, then we have
 
 $$ \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) = \sum_{k=1}^N p(x_k) \log p(x_k).$$
+
+The calculation for the second term is similar, and optimizing $$p(X) \log P(X)$$ is the same as $$ (1-P(X)) \log 1 - P(X)$$. Thus if we constrain our functions to be piecewise constant, we wish to minimize the overall *Entropy*:
+
+$$H(p) := \sum_{k=1}^N p(x_k) \log p(x_k).$$
+
+## Decision Tree Algorithm
+
+How do we minimize $$H$$ above? In decision trees we use a forward greedy method.
 
 # Random Forests
 
