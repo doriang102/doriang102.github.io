@@ -23,7 +23,9 @@ $$ \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) = \sum_{k=1}^N p(x_k) \log p(x_k).$$
 
 The calculation for the second term is similar, and optimizing $$p(X) \log P(X)$$ is the same as $$ (1-P(X)) \log 1 - P(X)$$. Thus if we constrain our functions to be piecewise constant, we wish to minimize the overall *Entropy*:
 
-$$H(p) := \sum_{k=1}^N p(x_k) \log p(x_k).$$
+$$H(p) := \sum_{c=1}^M p_{c} \log p_c,$$
+
+where $$p_c = p(Y = c)$$ and there are $$M$$ possible classes. 
 
 ## Decision Tree Algorithm
 
