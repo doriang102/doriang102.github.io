@@ -82,7 +82,7 @@ First we define cross validation:
 
 **K-Fold Cross Validation:** This is the standard method of evaluating models. It's an extension of the above which involves splitting your data into $$K$$ different *folds*, where you train on a random subset and evaluate on the remaining portion ofthe data set. The following picture explains this more clearly than words can.
 
- ![](/img/crossval.png?raw=true)
+ ![](/img/crossval2.png?raw=true)
 
 ### Regularization - Penalizing the Size of Coefficients
 
