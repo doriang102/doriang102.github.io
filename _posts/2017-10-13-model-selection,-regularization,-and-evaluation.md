@@ -128,12 +128,13 @@ plt.plot(scores)
 # Set the parameters by cross-validation
 from sklearn.grid_search import GridSearchCV
 
-alphas=np.linspace(0,1,1000)
+alphas=np.linspace(0.00001,1,1000)
 
 model=linear_model.Lasso()
 grid = GridSearchCV(estimator=model, param_grid=dict(alpha=alphas),cv=5)
 grid.fit(X_train,y_train)
 
+print(grid)
 # summarize the results of the grid search
 print(grid.best_score_)
 print(grid.best_estimator_.alpha)
@@ -141,8 +142,8 @@ print(grid.best_estimator_.alpha)
 
 ```
 Output:
-0.78
-0.003
+0.92
+1e-5
 ```
 
 Thus our best choice of $$\alpha$$ is 0.003 and it gives us an $$R^2$$ of $$0.78$$. 
