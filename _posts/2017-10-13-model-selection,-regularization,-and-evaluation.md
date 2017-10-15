@@ -70,7 +70,15 @@ for d in range(0,80,20):
  ![](/img/overfit_60.png?raw=true)
 
 
-Do you see what's going on here? As we increase the number of features, we are able to solve for every point exactly, which is not the true trend of the model. This will not generalize properly to new data, as we will see when we evaluate these models using cross validation in this section. 
+Do you see what's going on here? As we increase the number of features, we are able to solve for every point exactly, which is not the true trend of the model. 
+
+**Question:** Why is this not ok? Isn't that a perfect model?
+
+**Answer:** No! This will *not generalize properly to new data*, as we will see when we evaluate these models using cross validation in this section. 
+
+First we define cross validation:
+
+**Cross Validation:** Given features $$\mathbf X$$ and output $$\mathbf y$$, we train on a (ideally random) subset of rows of $$\mathbf X$$ and $$\mathbf y$$ which we will call $$\mathbf X_{\textrm{train}}$$ and $$\mathbf y_{\textrm{train}}$$ and evaluate the performance of the model on the remaining subsets which we call $$\mathbf X_{\textrm{test}}$$ and $$\mathbf y_{\textrm{test}}$$. 
 
 
 ### Regularization - Penalizing the Size of Coefficients
@@ -86,9 +94,7 @@ $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k})^2 + \lambda \|\beta\|_{L^p}$$
  
 
 
-On the left in the figure above is the $$L^1$$ norm and on the right the $$L^2$$ norm. As a result of the square shape, $$L^1$$ results in much sparser solutions (it's more likely to hit a kink than a side), and $$L^2$$ tends to spread out the error more. Before diving into this however, let's consider for now the $$L^1$$ norm and evaluate on held out data. First we make a definition. 
-
-**Cross Validation:** Given features $$\mathbf X$$ and output $$\mathbf y$$, we train on a (ideally random) subset of rows of $$\mathbf X$$ and $$\mathbf y$$ which we will call $$\mathbf X_{\textrm{train}}$$ and $$\mathbf y_{\textrm{train}}$$ and evaluate the performance of the model on the remaining subsets which we call $$\mathbf X_{\textrm{test}}$$ and $$\mathbf y_{\textrm{test}}$$. 
+On the left in the figure above is the $$L^1$$ norm and on the right the $$L^2$$ norm. As a result of the square shape, $$L^1$$ results in much sparser solutions (it's more likely to hit a kink than a side), and $$L^2$$ tends to spread out the error more. Before diving into this however, let's consider for now the $$L^1$$ norm and evaluate on held out data. 
 
 Now let's try this on the data from before and see what we get:
 
