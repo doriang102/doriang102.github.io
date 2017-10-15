@@ -176,7 +176,7 @@ Notice how Ridge performs much worse? (You can try other parameter ranges but yo
 
 **Answer:** Recall that Lasso is *sparse* so it will essentially remove all features except for $$\mathbf X[0]$$, which is our true model! Ridge on the other hand, will spread the error throughout the features. Given that there are 49 useless features, that is enough noise to ruin any chance at a model.
 
-Thus, *Lasso is often better for feature selection*. However once you have the "true" model, Ridge is better for performance according to most research (see papers of Andrew Ng if you are interested). 
+**Conclusion:** Thus, *Lasso is often better for **feature selection**. However once you have the "true" model, Ridge is better for performance according to most research (see papers of Andrew Ng if you are interested). 
 
 
 
