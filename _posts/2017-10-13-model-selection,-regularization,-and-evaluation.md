@@ -12,7 +12,7 @@ We will explore the idea of over fitting and model selection in this section and
 
 Let's say that our data points satisfy the following:
 
-$$ \mathbf{y} = 10*\mathbf{x_0} + \epsilon, $$
+$$ \mathbf{y} = 10\mathbf{x_0} + \epsilon, $$
 
 where $$\epsilon \sim \mathcal{N}(0,1)$$. 
 
@@ -24,7 +24,7 @@ exactly for a unique $$\beta \in \mathbb{R}^k$$. *But wait!* Doesn't that mean w
 
 We are going to construct an orthogonal matrix of dimension $$50$$ when $$y$$ depends on only one variable:
 
-$$ \mathbf{y} = 10*\mathbf{x_0} + \epsilon. $$
+$$ \mathbf{y} = 10\mathbf{x_0} + \epsilon. $$
 
 What do you think will happen if we include only 1 feature? 20? 40? 80? Let's write some code in Python to investigate. First let's construct the orthogonal matrix and make a scatter plot to see how $$y$$ depends on $$x$$:
 
