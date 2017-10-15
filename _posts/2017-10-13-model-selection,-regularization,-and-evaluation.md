@@ -63,8 +63,11 @@ for d in range(0,80,20):
  
  
  ![](/img/overfit_0.png.png?raw=true)
+ 
  ![](/img/overfit_20.png.png?raw=true)
+ 
  ![](/img/overfit_40.png.png?raw=true)
+ 
  ![](/img/overfit_60.png.png?raw=true)
 
 
