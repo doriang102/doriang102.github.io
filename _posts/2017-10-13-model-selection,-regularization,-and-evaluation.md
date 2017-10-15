@@ -82,6 +82,28 @@ $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k})^2 + \lambda \|\beta\|_{L^p}$$
 
 **Cross Validation:** Given features $$\mathbf X$$ and output $$\mathbf y$$, we train on a (ideally random) subset of rows of $$\mathbf X$$ and $$\mathbf y$$ which we will call $$\mathbf X_{\textrm{train}}$$ and $$\mathbf y_{\textrm{train}}$$ and evaluate the performance of the model on the remaining subsets which we call $$\mathbf X_{\textrm{test}}$$ and $$\mathbf y_{\textrm{test}}$$. 
 
+{% highlight ruby %} 
+scores = []
+
+alphas=[0,0.001,0.01]
+
+
+for d in alphas:
+    regr = linear_model.Lasso(alpha=d)
+    X=df_orth
+    
+    # Train the model using the training sets
+    regr.fit(X_train,y_train)
+
+    # Make predictions using the testing set
+    y_pred = regr.predict(X)
+    scores.append(regr.score(X_test,y_test))
+plt.plot(scores)
+
+{% endhighlight %}   
+ 
+ 
+ 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
 We will introduce a basic example in this section to deleniate the need for regularization and how over fitting can occur by simply having too many variables. 
