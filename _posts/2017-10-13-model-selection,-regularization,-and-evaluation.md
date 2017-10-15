@@ -17,9 +17,9 @@ $$ y = 10*\mathbf{x_0} + \epsilon(0,1) $$
 
 But we have $$\mathbb{R}^k$$ features, so we can solve:
 
-$$ 10 \mathbf{x_0}^i + \epsilon^i = y_i, $$
+$$ \mathbf{X} \beta =  \mathbf{y}, $$
 
-for all $$i \in [0,n]$$. 
+exactly for a unique $$\beta \in \mathbb{R}^k$$. 
 
 $$ y_1 = M + 2x_1 + $$
 $$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
