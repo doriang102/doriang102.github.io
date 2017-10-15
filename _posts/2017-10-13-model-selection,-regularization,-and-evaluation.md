@@ -61,15 +61,14 @@ for d in range(0,80,20):
     plt.show()
  {% endhighlight %}   
  
- Test
  
- ![](/img/overfit_0.png.png?raw=true)
+ ![](/img/overfit_0.png?raw=true)
  
- ![](/img/overfit_20.png.png?raw=true)
+ ![](/img/overfit_20.png?raw=true)
  
- ![](/img/overfit_40.png.png?raw=true)
+ ![](/img/overfit_40.png?raw=true)
  
- ![](/img/overfit_60.png.png?raw=true)
+ ![](/img/overfit_60.png?raw=true)
 
 
 ### Requirement 1 - Standardization of independent and dependent variables.
