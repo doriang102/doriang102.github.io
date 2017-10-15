@@ -60,6 +60,8 @@ for d in range(0,80,20):
     plt.scatter(x0,y_pred,color='r')
     plt.show()
  {% endhighlight %}   
+ 
+ 
  ![](/img/overfit_0.png.png?raw=true)
  ![](/img/overfit_20.png.png?raw=true)
  ![](/img/overfit_40.png.png?raw=true)
