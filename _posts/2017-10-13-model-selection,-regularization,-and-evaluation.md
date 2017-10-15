@@ -75,6 +75,9 @@ Do you see what's going on here? As we increase the number of features, we are a
 
 ### Regularization - Penalizing the Size of Coefficients
 
+
+ ![](/img/lassovsridge.png?raw=true)
+ 
 In the example above, we see that as we increase the number of features we use, we over fit the model. But how do we quantify this and evaluate in a rigorous way? First we must discuss the notion of cross validation - evaluating your model on held out data. 
 
 $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k})^2 + \lambda \|\beta\|_{L^p}$$
