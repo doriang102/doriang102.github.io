@@ -72,6 +72,12 @@ for d in range(0,80,20):
 
 Do you see what's going on here? As we increase the number of features, we are able to solve for every point exactly, which is not the true trend of the model. This will not generalize properly to new data, as we will see when we evaluate these models using cross validation in this section. 
 
+
+### Regularization - Penalizing the Size of Coefficients
+
+In the example above, we see that as we increase the number of features we use, we over fit the model. But how do we quantify this and evaluate in a rigorous way? First we must discuss the notion of cross validation - evaluating your model on held out data. 
+
+
 ### Requirement 1 - Standardization of independent and dependent variables.
 
 We will introduce a basic example in this section to deleniate the need for regularization and how over fitting can occur by simply having too many variables. 
