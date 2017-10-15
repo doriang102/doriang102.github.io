@@ -80,7 +80,7 @@ In the example above, we see that as we increase the number of features we use, 
 $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k})^2 + \lambda \|\beta\|_{L^p}$$
 
 
-**Cross Validation:** Given features $$X\mathbf $$ and output $$\mathbf y$$, we train on a (ideally random) subset of rows of $$X$$ and $$y$$ which we will call $$\mathbf X_{\textrm{train}}$$ and $$\mathbf y_{\textrm{train}}$$ and evaluate the performance of the model on the remaining subsets which we call $$\mathbf X_{\textrm{test}}$$ and $$\mathbf y_{\textrm{test}}$$. 
+**Cross Validation:** Given features $$\mathbf X$$ and output $$\mathbf y$$, we train on a (ideally random) subset of rows of $$\mathbf X$$ and $$\mathbf y$$ which we will call $$\mathbf X_{\textrm{train}}$$ and $$\mathbf y_{\textrm{train}}$$ and evaluate the performance of the model on the remaining subsets which we call $$\mathbf X_{\textrm{test}}$$ and $$\mathbf y_{\textrm{test}}$$. 
 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
