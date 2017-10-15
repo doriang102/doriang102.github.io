@@ -20,10 +20,13 @@ We have $$\mathbb{R}^k$$ features, so we can actually solve:
 
 $$ \mathbf{X} \beta =  \mathbf{y}, $$
 
-exactly for a unique $$\beta \in \mathbb{R}^k$$. 
+exactly for a unique $$\beta \in \mathbb{R}^k$$. *But wait!* Doesn't that mean we can pick up every single point of $$y$$ by finding a unique vector $$\beta = (\beta_1,\cdots,\beta_k)$$? Yes! This is actually why we need regularization in the first place. Even though we have a collection of $$k$$ orthogonal features, if we have $$j < k$$ variables which influence $$y$$, then we can over solve the system. This all seems very abstract though, so let's construct a concrete example. 
 
-$$ y_1 = M + 2x_1 + $$
-$$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
+We are going to construct an orthogonal matrix of dimension $$50$$ when $$y$$ depends on only one variable:
+
+$$ \mathbf{y} = 10*\mathbf{x_0} + \epsilon. $$
+
+What do you think will happen if we include only 1 feature? 20? 40? 80? Let's write some code in Python to investigate. First let's construct the orthogonal matrix and make a scatter plot to see how $$y$$ depends on $$x$$:
 
 {% highlight ruby %} 
 from scipy.stats import ortho_group 
@@ -39,7 +42,7 @@ plt.scatter(x0,y)
 
 ![](/img/scatter_overfit.png?raw=true)
 
-Now we have an orthogonal set of 50 features, but our output variable $$y$$ depends on only one of them. What happens as we include more of the features into our model? If you followed the previous discussion, you should know the answer already. But let's see what happens:
+Now we have an orthogonal set of 50 features, but our output variable $$y$$ depends on only one of them. What happens as we include more of the features into our model? If you followed the previous discussion, you should know the answer already. 
 
 {% highlight ruby %} 
 from sklearn import datasets, linear_model
@@ -66,6 +69,8 @@ for d in range(0,80,20):
  
  ![](/img/overfit_60.png?raw=true)
 
+
+Do you see what's going on here? As we increase the number of features, we are able to solve for every point exactly, which is not the true trend of the model. This will not generalize properly to new data, as we will see when we evaluate these models using cross validation in this section. 
 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
