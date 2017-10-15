@@ -80,6 +80,9 @@ First we define cross validation:
 
 **Cross Validation:** Given features $$\mathbf X$$ and output $$\mathbf y$$, we train on a (ideally random) subset of rows of $$\mathbf X$$ and $$\mathbf y$$ which we will call $$\mathbf X_{\textrm{train}}$$ and $$\mathbf y_{\textrm{train}}$$ and evaluate the performance of the model on the remaining subsets which we call $$\mathbf X_{\textrm{test}}$$ and $$\mathbf y_{\textrm{test}}$$. 
 
+**K-Fold Cross Validation:** This is the standard method of evaluating models. It's an extension of the above which involves splitting your data into $$K$$ different *folds*, where you train on a random subset and evaluate on the remaining portion ofthe data set. The following picture explains this more clearly than words can.
+
+ ![](/img/crossval.png?raw=true)
 
 ### Regularization - Penalizing the Size of Coefficients
 
