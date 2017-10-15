@@ -43,6 +43,24 @@ plt.scatter(x0,y)
 
 ![](/img/scatter_overfit.png?raw=true)
 
+Now we have an orthogonal set of 50 features, but our output variable $$y$$ depends on only one of them. What happens as we include more of the features into our model? If you followed the previous discussion, you should know the answer already. But let's see what happens:
+
+{% highlight ruby %} 
+from sklearn import datasets, linear_model
+
+for d in range(10,100,10):
+    regr = linear_model.LinearRegression(fit_intercept=False)
+    X=df_orth.loc[:,0:d]
+    # Train the model using the training sets
+    regr.fit(X,y)
+
+    # Make predictions using the testing set
+    y_pred = regr.predict(X)
+    plt.scatter(x0,y,color='b')
+    plt.scatter(x0,y_pred,color='r')
+    plt.show()
+ {% endhighlight %}   
+    
 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
