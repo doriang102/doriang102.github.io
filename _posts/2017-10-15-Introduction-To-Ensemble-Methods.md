@@ -27,7 +27,10 @@ $$H(p) := \sum_{k=1}^N p(x_k) \log p(x_k).$$
 
 ## Decision Tree Algorithm
 
-How do we minimize $$H$$ above? In decision trees we use a forward greedy method.
+How do we minimize $$H$$ above? In decision trees we use a forward greedy method. First we compute the total entropy:
+
+$$ H(P) = \sum_{i=0}^1 p(Y=i) \log p(Y=i).$$
+
 
 # Random Forests
 
