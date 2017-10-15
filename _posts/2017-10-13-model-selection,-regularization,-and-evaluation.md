@@ -75,15 +75,22 @@ Do you see what's going on here? As we increase the number of features, we are a
 
 ### Regularization - Penalizing the Size of Coefficients
 
-
- ![](/img/lassovsridge.png?raw=true)
- 
 In the example above, we see that as we increase the number of features we use, we over fit the model. But how do we quantify this and evaluate in a rigorous way? First we must discuss the notion of cross validation - evaluating your model on held out data. 
+
+First, let's introduce the penalty term:
 
 $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k})^2 + \lambda \|\beta\|_{L^p}$$
 
 
+ ![](/img/lassovsridge.png?raw=true)
+ 
+
+
+On the left in the figure above is the $$L^1$$ norm and on the right the $$L^2$$ norm. As a result of the square shape, $$L^1$$ results in much sparser solutions (it's more likely to hit a kink than a side), and $$L^2$$ tends to spread out the error more. Before diving into this however, let's consider for now the $$L^1$$ norm and evaluate on held out data. First we make a definition. 
+
 **Cross Validation:** Given features $$\mathbf X$$ and output $$\mathbf y$$, we train on a (ideally random) subset of rows of $$\mathbf X$$ and $$\mathbf y$$ which we will call $$\mathbf X_{\textrm{train}}$$ and $$\mathbf y_{\textrm{train}}$$ and evaluate the performance of the model on the remaining subsets which we call $$\mathbf X_{\textrm{test}}$$ and $$\mathbf y_{\textrm{test}}$$. 
+
+Now let's try this on the data from before and see what we get:
 
 {% highlight ruby %} 
 scores = []
