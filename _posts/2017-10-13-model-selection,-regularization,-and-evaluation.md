@@ -61,6 +61,7 @@ for d in range(0,80,20):
     plt.show()
  {% endhighlight %}   
  
+ Test
  
  ![](/img/overfit_0.png.png?raw=true)
  
