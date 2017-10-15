@@ -122,7 +122,25 @@ plt.plot(scores)
 {% endhighlight %}   
   ![](/img/lasso1.png?raw=true)
  
+ Let's do this properly now using `sklearn`'s `GridSearchCV` package:
  
+ {% highlight ruby %}
+ # Set the parameters by cross-validation
+from sklearn.grid_search import GridSearchCV
+tuned_parameters = [{'kernel': ['linear'], 'alpha': [0,0.001,0.01]}]
+alphas=np.linspace(0,1,1000)
+scores = ['precision', 'recall']
+
+model=linear_model.Lasso()
+grid = GridSearchCV(estimator=model, param_grid=dict(alpha=alphas))
+grid.fit(X_train,y_train)
+print(grid)
+# summarize the results of the grid search
+print(grid.best_score_)
+print(grid.best_estimator_.alpha)
+{% endhighlight %}
+
+
 ### Requirement 1 - Standardization of independent and dependent variables.
 
 We will introduce a basic example in this section to deleniate the need for regularization and how over fitting can occur by simply having too many variables. 
