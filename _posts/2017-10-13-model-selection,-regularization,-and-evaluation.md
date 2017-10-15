@@ -146,7 +146,7 @@ Output:
 1e-5
 ```
 
-Thus our best choice of $$\alpha$$ is $$10**{-5}$$ and it gives us an $$R^2$$ of $$0.92$$, which is consistent with our original plot above.  
+Thus our best choice of $$\alpha$$ is $$10^{-5}$$ and it gives us an $$R^2$$ of $$0.92$$, which is consistent with our original plot above.  
 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
