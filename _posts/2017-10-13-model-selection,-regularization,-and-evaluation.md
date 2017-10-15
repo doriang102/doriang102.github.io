@@ -12,19 +12,14 @@ We will explore the idea of over fitting and model selection in this section and
 
 Let's say that our data points satisfy the following:
 
-$$y_1 = 2x_1^1 + M + 10^{-3}$$
-
-$$y_2 = 2x_2^1 + M - 10^{-3}$$
-
-$$y_3 = 2x_3^1 + M + 2\cdot 10^{-3}$$
+$$ y = 10*\mathbf{x_0} + \epsilon(0,1) $$
 
 
 But we have $$\mathbb{R}^k$$ features, so we can solve:
 
-$$2x_1^1 + M + 10^{-3} = \beta_1 x_1^1 + \beta_2 x_1^2 + \beta_0$$
+$$ 10 \mathbf{x_0}^i + \epsilon^i = y_i, $$
 
-$$2x_2^1 + M - 10^{-3} = \beta_1 x_2^1 + \beta_2 x_2^2 + \beta_0$$
-
+for all $$i \in [0,n]$$. 
 
 $$ y_1 = M + 2x_1 + $$
 $$\begin{bmatrix}a & b\\c & d\end{bmatrix}$$
