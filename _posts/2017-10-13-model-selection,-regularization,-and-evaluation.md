@@ -20,7 +20,7 @@ We have $$\mathbb{R}^k$$ features, so we can actually solve:
 
 $$ \mathbf{X}_k \beta =  \mathbf{y}, $$
 
-for a unique $$\beta \in \mathbb{R}^k$$ where $$\mathbf{X}_k$$ is the first $$k$$ rows of $$X$. *But wait!* Doesn't that mean we can pick up not just $$y$$, but the noise terms from $$\epsilon$$ as well? Yes! This is actually why we need regularization in the first place. Even though we have a collection of $$k$$ orthogonal features, if we have $$j < k$$ variables which influence $$y$$, then we can over solve the system. This all seems very abstract though, so let's construct a concrete example. 
+for a unique $$\beta \in \mathbb{R}^k$$ where $$\mathbf{X}_k$$ is the first $$k$$ rows of $$X$$. *But wait!* Doesn't that mean we can pick up not just $$y$$, but the noise terms from $$\epsilon$$ as well? Yes! This is actually why we need regularization in the first place. Even though we have a collection of $$k$$ orthogonal features, if we have $$j < k$$ variables which influence $$y$$, then we can over solve the system. This all seems very abstract though, so let's construct a concrete example. 
 
 We are going to construct an orthogonal matrix of dimension $$50$$ when $$y$$ depends on only one variable:
 
