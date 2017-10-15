@@ -99,7 +99,7 @@ $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k})^2 + \lambda \|\beta\|_{L^p}$$
 
 On the left in the figure above is the $$L^1$$ norm and on the right the $$L^2$$ norm. As a result of the square shape, $$L^1$$ results in much sparser solutions (it's more likely to hit a kink than a side), and $$L^2$$ tends to spread out the error more. Before diving into this however, let's consider for now the $$L^1$$ norm and evaluate on held out data. 
 
-Now let's try this on the data from before and see what we get. Note that this is a basic and crude example to demonstrate the method.
+Now let's try this on the data from before and see what we get. Note that this is a basic and crude example to demonstrate the method. The purpose is to show that our goal is to maximize our objective function over the possible parameters. 
 
 {% highlight ruby %} 
 scores = []
