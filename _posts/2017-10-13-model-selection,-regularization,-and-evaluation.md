@@ -94,7 +94,7 @@ $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k})^2 + \lambda \|\beta\|_{L^p}$$
 
 Equivalently, we can write the miniization problem as a maximum likelhihood problem:
 
-$$ \prod_{k=1}^N \frac{1}{2\sqrt{\pi}N} e^{\frac{(y_k - \beta \cdot \mathbf{x_k})^2)}{\sigma^2} + \lambda \|\beta\|_{L^p}},$$
+$$ \prod_{k=1}^N \frac{1}{2\sqrt{\pi}N} e^{-\frac{(y_k - \beta \cdot \mathbf{x_k})^2)}{\sigma^2} - \lambda \|\beta\|_{L^p}},$$
 
 which is just adding in a prior to our Gaussian. 
 
