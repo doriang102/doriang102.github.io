@@ -92,6 +92,12 @@ First, let's introduce the penalty term:
 
 $$\sum_{k=1}^n (y_k- \beta \cdot \mathbf{x_k})^2 + \lambda \|\beta\|_{L^p}$$
 
+Equivalently, we can write the miniization problem as a maximum likelhihood problem:
+
+$$ \prod_{k=1}^N \frac{1}{2\sqrt{\pi}N} e^{\frac{(y_k - \beta \cdot \mathbf{x_k})^2)}{\sigma^2} + \lambda \|\beta\|_{L^p}},$$
+
+which is just adding in a prior to our Gaussian. 
+
 
  ![](/img/lassovsridge.png?raw=true)
  
@@ -226,7 +232,7 @@ Notice how in the Lasso case, all of the coefficients are either zero, or two or
 
 
 
-### Requirement 1 - Standardization of independent and dependent variables.
+### Requirements - Preparing your data for regularization
 
 We will introduce a basic example in this section to deleniate the need for regularization and how over fitting can occur by simply having too many variables. 
 
