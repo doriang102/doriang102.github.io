@@ -145,7 +145,7 @@ Output:
 0.003
 ```
 
-Thus our best choice of $$\alpha$$ is 0.2 and it gives us an $$R^2$$ of $$0.78$$. 
+Thus our best choice of $$\alpha$$ is 0.003 and it gives us an $$R^2$$ of $$0.78$$. 
 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
