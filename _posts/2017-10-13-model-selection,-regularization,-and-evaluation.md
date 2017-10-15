@@ -124,6 +124,8 @@ plt.plot(scores)
  
  Let's do this properly now using `sklearn`'s `GridSearchCV` package and 5-fold cross validation:
  
+ #### Lasso
+ 
  {% highlight ruby %}
 # Set the parameters by cross-validation
 from sklearn.grid_search import GridSearchCV
@@ -146,7 +148,37 @@ Output:
 1e-5
 ```
 
-Thus our best choice of $$\alpha$$ is $$10^{-5}$$ and it gives us an $$R^2$$ of $$0.92$$, which is consistent with our original plot above.  
+#### Ridge
+
+{% highlight ruby %}
+# Set the parameters by cross-validation
+from sklearn.grid_search import GridSearchCV
+
+alphas=np.linspace(1,1000,1000)
+
+model=linear_model.Ridge()
+grid = GridSearchCV(estimator=model, param_grid=dict(alpha=alphas),cv=5)
+grid.fit(X_train,y_train)
+
+print(grid)
+# summarize the results of the grid search
+print(grid.best_score_)
+print(grid.best_estimator_.alpha)
+{% endhighlight %}
+```
+Output:
+-0.1678716256381307
+53.0
+```
+Notice how Ridge performs much worse? (You can try other parameter ranges but you won't see much of an improvement). 
+
+**Question:** Why do you think that Lasso is clearly out performing Ridge here?
+
+**Answer:** Recall that Lasso is *sparse* so it will essentially remove all features except for $$\mathbfx_0$$, which is our true model! Ridge on the other hand, will spread the error throughout the features. Given that there are 49 useless features, that is enough noise to ruin any chance at a model.
+
+Thus, *Lasso is often better for feature selection*. However once you have the "true" model, Ridge is better for performance according to most research (see papers of Andrew Ng if you are interested). 
+
+
 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
