@@ -29,7 +29,17 @@ where $$p_c = p(Y = c)$$ and there are $$M$$ possible classes.
 
 ## Decision Tree Algorithm
 
-How do we minimize $$H$$ above? In decision trees we use a forward greedy method. First we compute the total entropy:
+How do we minimize $$H$$ above? In decision trees we use a forward greedy method. We will assume below our data is categorical. If it is not, then we assume we have applied some bucketing to the continous values. 
+
+
+First we compute the total entropy:
+
+### Step 1: Compute the total entropy of $$Y$$.
+
+$$ H(P) = \sum_{i=0}^1 p(Y=i) \log p(Y=i).$$
+
+
+### Step 2: For each feature $$x_i$$, compute conditional Entropy.
 
 $$ H(P) = \sum_{i=0}^1 p(Y=i) \log p(Y=i).$$
 
