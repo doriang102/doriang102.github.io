@@ -48,7 +48,7 @@ Now we have an orthogonal set of 50 features, but our output variable $$y$$ depe
 {% highlight ruby %} 
 from sklearn import datasets, linear_model
 
-for d in range(10,100,10):
+for d in range(0,80,20):
     regr = linear_model.LinearRegression(fit_intercept=False)
     X=df_orth.loc[:,0:d]
     # Train the model using the training sets
@@ -60,7 +60,11 @@ for d in range(10,100,10):
     plt.scatter(x0,y_pred,color='r')
     plt.show()
  {% endhighlight %}   
-    
+ ![](/img/overfit_0.png.png?raw=true)
+ ![](/img/overfit_20.png.png?raw=true)
+ ![](/img/overfit_40.png.png?raw=true)
+ ![](/img/overfit_60.png.png?raw=true)
+
 
 ### Requirement 1 - Standardization of independent and dependent variables.
 
