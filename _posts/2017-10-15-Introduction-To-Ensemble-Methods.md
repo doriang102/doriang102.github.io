@@ -153,7 +153,31 @@ in the categorical case and
 
 $$Y_1 := Y \lvert X_j >= c_j^{*}$$ and $$Y_2 = Y \lvert X_j < c_j^*$$ 
 
-in the continous case. Then repeat Step 2 with the new variables $$Y_1$$ and $$Y_2$$ recursively. 
+in the continous case. Then repeat Step 2 with the new variables $$Y_1$$ and $$Y_2$$ recursively. Let's just do one split to demonstrate how it works. Our best split was `petal_width = 0` and `petal_width > 0`:
+
+{% highlight ruby %}
+entropy(df_cat[df_cat['petal_length']==0]['species'])
+Output:
+0.0
+{% endhighlight %}
+
+Thus we have a pure branch on the second split! 
+
+
+### Final decision tree code
+
+Let's now use `sklearn` to make the decision tree and plot it.
+
+{% highlight ruby %}
+from sklearn.datasets import load_iris
+from sklearn import tree
+iris = load_iris()
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(iris.data, iris.target)
+{% endhighlight %}
+![](/img/iris_dt.png?raw=true)
+
+Notice how the decision tree found the same thing we did manually? `petal_length` is the top feature with a left split that has pure class. 
 
 # Random Forests
 
