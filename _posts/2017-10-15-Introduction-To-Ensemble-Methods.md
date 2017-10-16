@@ -25,7 +25,15 @@ The calculation for the second term is similar, and optimizing $$p(X) \log P(X)$
 
 $$H(p) := \sum_{c=1}^M p_{c} \log p_c,$$
 
-where $$p_c = p(Y = c)$$ and there are $$M$$ possible classes. 
+where $$p_c = p(Y = c)$$ and there are $$M$$ possible classes. To get a sense of this term, observe that it is concave with maximum at $$\frac{1}{2}$$ and $$H(0)=H(1) = 1$$:
+
+{% highlight ruby %}
+p = np.linspace(0.001,1,1000)
+H = [-x*np.log(x) for x in p]
+plt.plot(p,H)
+{% endhighlight %}
+![](/img/entropy.png?raw=true)
+
 
 ## Decision Tree Algorithm
 
@@ -36,8 +44,9 @@ First we compute the total entropy:
 
 ### Step 1: Compute the total entropy of $$Y$$.
 
-$$ H(P) = \sum_{i=0}^1 p(Y=i) \log p(Y=i).$$
+$$ H(P) = \sum_{c=1}^M p(Y=c) \log p(Y=c).$$
 
+This tells us how pure the classes are. To get a s
 
 ### Step 2: For each feature $$X_j$$, compute conditional Entropy. 
 
