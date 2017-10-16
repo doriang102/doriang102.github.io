@@ -70,11 +70,11 @@ Now split on $$X_*^1$$ to be the optimal $$x_j^i$$.
 
 Define 
 
-$$Y_1 := Y | X_j = c_j^{*}$$ and $$Y_2 = Y | X_j \neq c_j^*$$ 
+$$Y_1 := Y \lvert X_j = c_j^{*}$$ and $$Y_2 = Y \lvert X_j \neq c_j^*$$ 
 
 in the categorical case and 
 
-$$Y_1 := Y | X_j >= c_j^{*}$$ and $$Y_2 = Y | X_j < c_j^*$$ 
+$$Y_1 := Y \lvert X_j >= c_j^{*}$$ and $$Y_2 = Y \lvert X_j < c_j^*$$ 
 
 in the continous case. Then repeat Step 2 with the new variables $$Y_1$$ and $$Y_2$$ recursively. 
 # Random Forests
