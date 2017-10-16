@@ -39,7 +39,9 @@ First we compute the total entropy:
 $$ H(P) = \sum_{i=0}^1 p(Y=i) \log p(Y=i).$$
 
 
-### Step 2: For each feature $$X_j$$, compute conditional Entropy. Let $$x_j^k$$ be the values (or levels) that $$X_j$$ takes on. 
+### Step 2: For each feature $$X_j$$, compute conditional Entropy. 
+
+Let $$x_j^k$$ be the values (or levels) that $$X_j$$ takes on. 
 
 $$ H(P | X_j) = \sum_{k=1}^{K_j} \sum_{c=1}^M p(Y=c | X_j=x_j^k) \log p(Y=c | X_j=x_j^k).$$
 
@@ -47,7 +49,9 @@ We define the **Information Gain** of $$X_j$$ as:
 
 $$ H(Y) - H(P | X_j). $$
 
-We perform the above computation for every $$X_j$$, and choose our first feature be the solution of
+### Step 3: Pick $$X_*^1$$ to be the feature which has largeest information gain. 
+
+We perform Step 2 for every $$X_j$$, and choose our first feature be the solution of
 
 $$ X_*^1 := \textrm{argmax}_{j} H(Y) - H(P | X_j). $$
 
