@@ -57,7 +57,21 @@ First we compute the total entropy:
 
 $$ H(P) = \sum_{c=1}^M p(Y=c) \log p(Y=c).$$
 
-This tells us how pure the classes are. To get a s
+This tells us how pure the classes are. In the Iris dataset above, we have $$M=3$$ classes. Let's compute this manually for Iris:
+{% highlight ruby %}
+def entropy(y):
+    classes = np.unique(y)
+    size_classes = [len(y[y==c]) for c in classes]
+    N = len(y)
+    entropy = -np.sum([(s/N) * np.log(s/N) for s in size_classes])
+    return entropy
+entropy(iris['species'])
+{% endhighlight %}
+
+{% highlight ruby %}
+Output:
+1.0986122886681096
+{% endhighlight %}
 
 ### Step 2: For each feature $$X_j$$, compute conditional Entropy. 
 
