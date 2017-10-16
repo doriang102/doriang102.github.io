@@ -83,6 +83,42 @@ We define the **Information Gain** of $$X_j$$ as:
 
 $$ H(Y) - H(P | X_j). $$
 
+First we break our continous features into quantiles:
+{% highlight ruby %}
+df_cat = pd.DataFrame(columns=iris.columns,index=range(len(iris)))
+for feature in iris.columns.values[:-1]:
+    df_cat[feature]=pd.qcut(iris[feature],4,range(4))
+
+df_cat['species']=iris['species']
+{% endhighlight %}
+
+Next we will cycle through each feature and add up the entropies from each split to see which one is the best.
+
+{% highlight ruby %}
+entropy_total = 0.0
+entropies=[]
+for feature in iris.columns.values[0:-1]:
+    entropies=[]
+    vals=np.unique(df_cat[feature].values)
+    entropy_total = 0.0
+    for t in np.unique(df_cat[feature].values):
+        entropy_total = 0.0
+        df_split1 = df_cat[df_cat[feature] <= t]
+        df_split2 = df_cat[df_cat[feature] > t]
+
+        if len(df_split1)>0:
+            entropy_total = entropy_total + entropy(df_split1[feature])
+        if len(df_split2)>0:
+            entropy_total = entropy_total + entropy(df_split2[feature])
+        entropies.append(entropy_total)
+
+    plt.plot(vals,entropies,label=feature)
+    plt.legend()
+    plt.savefig(path + "entropy_iris_compare.png")
+{% endhighlight %}
+![](/img/entropy_iris_compare.png?raw=true)
+
+
 ### Step 3: Pick $$X_*^1$$ to be the feature which has largeest information gain and split. 
 
 We perform Step 2 for every $$X_j$$, and choose our first feature be the solution of
