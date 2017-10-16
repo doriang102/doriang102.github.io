@@ -118,6 +118,8 @@ for feature in iris.columns.values[0:-1]:
 {% endhighlight %}
 ![](/img/entropy_iris_compare.png?raw=true)
 
+Notice that it seems that the lowest entropy split (or highest information gain) is for the `sepal_width` feature at the 2.0 threshold. This means it will be our first split, and top feature. 
+
 
 ### Step 3: Pick $$X_*^1$$ to be the feature which has largeest information gain and split. 
 
