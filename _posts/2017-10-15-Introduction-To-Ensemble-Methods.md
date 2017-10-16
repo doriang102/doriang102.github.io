@@ -118,8 +118,22 @@ for feature in iris.columns.values[0:-1]:
 {% endhighlight %}
 ![](/img/entropy_iris_compare.png?raw=true)
 
-Notice that it seems that the lowest entropy split (or highest information gain) is for the `sepal_width` feature at the 2.0 threshold. This means it will be our first split, and top feature. 
+Printing the raw output we have:
 
+{% highlight ruby %}
+Feature  sepal_length
+[1.0972811987124906, 1.3859818285596666, 1.0964752493540126, 1.3839038058416437]
+Feature  sepal_width
+[1.0944710658789472, 1.3720185953928703, 1.0813741858392665, 1.3732786055462978]
+Feature  petal_length
+[1.0916813968397496, 1.366834096362366, 1.0879487948449884, 1.3765642287411282]
+Feature  petal_width
+[1.0975084815466807, 1.383434855088411, 1.0976531947932993, 1.3840689647011553]
+
+{% endhighlight %}
+
+
+Notice that it seems that the lowest entropy split (or highest information gain) is for the `petal_length` feature at the 25% threshold. Thus `petal_length` is our top feature. 
 
 ### Step 3: Pick $$X_*^1$$ to be the feature which has largeest information gain and split. 
 
@@ -127,7 +141,7 @@ We perform Step 2 for every $$X_j$$, and choose our first feature be the solutio
 
 $$ X_*^1 := \textrm{argmax}_{j} H(Y) - H(P | X_j). $$
 
-Now split on $$X_*^1$$ to be the optimal $$x_j^i$$. 
+Now split on $$X_*^1$$ to be the optimal $$x_j^i$$. In our case, the top feature was `petal_length`.
 
 ### Step 4: Split on the above attribute and continue recursively.
 
@@ -140,5 +154,6 @@ in the categorical case and
 $$Y_1 := Y \lvert X_j >= c_j^{*}$$ and $$Y_2 = Y \lvert X_j < c_j^*$$ 
 
 in the continous case. Then repeat Step 2 with the new variables $$Y_1$$ and $$Y_2$$ recursively. 
+
 # Random Forests
 
