@@ -34,6 +34,17 @@ plt.plot(p,H)
 {% endhighlight %}
 ![](/img/entropy.png?raw=true)
 
+To fix ideas, we are going to use the Iris data set, which is a well known data set used to classify different types of flowers based on its size properties. It's a good dataset to explain the fundamental principles of decision trees since there is a rich structure within a very small dataset.
+
+Let's load in the data and see what it looks like:
+
+{% highlight ruby %}
+import seaborn as sns; sns.set(style="ticks", color_codes=True)
+iris = sns.load_dataset("iris")
+g = sns.pairplot(iris, hue="species")
+{% endhighlight %}
+![](/img/iriscorr?raw=true)
+
 
 ## Decision Tree Algorithm
 
