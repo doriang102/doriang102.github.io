@@ -49,12 +49,24 @@ We define the **Information Gain** of $$X_j$$ as:
 
 $$ H(Y) - H(P | X_j). $$
 
-### Step 3: Pick $$X_*^1$$ to be the feature which has largeest information gain. 
+### Step 3: Pick $$X_*^1$$ to be the feature which has largeest information gain and split. 
 
 We perform Step 2 for every $$X_j$$, and choose our first feature be the solution of
 
 $$ X_*^1 := \textrm{argmax}_{j} H(Y) - H(P | X_j). $$
 
+Now split on $$X_*^1$$ to be the optimal $$x_j^i$$. 
 
+### Step 4: Split on the above attribute and continue recursively.
+
+Define 
+
+$$Y_1 := Y | X_j = c_j^{*}$$ and $$Y_2 = Y | X_j \neq c_j^*$$ 
+
+in the categorical case and 
+
+$$Y_1 := Y | X_j >= c_j^{*}$$ and $$Y_2 = Y | X_j < c_j^*$$ 
+
+in the continous case. Then repeat Step 2 with the new variables $$Y_1$$ and $$Y_2$$ recursively. 
 # Random Forests
 
