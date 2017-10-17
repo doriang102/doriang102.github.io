@@ -141,7 +141,23 @@ We perform Step 2 for every $$X_j$$, and choose our first feature be the solutio
 
 $$ X_*^1 := \textrm{argmax}_{j} H(Y) - H(P | X_j). $$
 
-Now split on $$X_*^1$$ to be the optimal $$x_j^i$$. In our case, the top feature was `petal_length`.
+Now split on $$X_*^1$$ to be the optimal $$x_j^i$$. In our case, the top feature was `petal_length`. Putting this into `scikit-learn`, we see it obtains the same result:
+
+{% highlight ruby %}
+from sklearn.datasets import load_iris
+from sklearn import tree
+iris = load_iris()
+clf = tree.DecisionTreeClassifier(max_depth=1)
+clf = clf.fit(iris.data, iris.target)
+dot_data = tree.export_graphviz(clf, out_file=None, 
+                         feature_names=iris.feature_names,  
+                         class_names=iris.target_names,  
+                         filled=True, rounded=True,  
+                         special_characters=True) 
+graph = graphviz.Source(dot_data) 
+graph 
+{% endhighlight %}
+![](/img/iris_dt1.png?raw=true)
 
 ### Step 4: Split on the above attribute and continue recursively.
 
@@ -181,3 +197,4 @@ Notice how the decision tree found the same thing we did manually? `petal_length
 
 # Random Forests
 
+Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. 
