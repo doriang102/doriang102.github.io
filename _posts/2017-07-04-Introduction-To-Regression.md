@@ -291,7 +291,10 @@ We will cover this in the next section, but one simple way to make the OLS probl
 
 $$ \min_{\beta} \frac{1}{N} \sum_{i=1}^N(y_i - \beta \cdot \mathbf x_i)^2 + \lambda \|\beta\|_{L^p}.$$
 
-For $$p > 1$$, this problem is now strictly convex even with correlated features, and thus there is a unique solution.
+For $$p > 1$$, this problem is now strictly convex even with correlated features, and thus there is a unique solution, which for $$p=2$$ is:
+
+$$ \beta^* = (X^TX + \lambda I)^{-1} X^T y.$$
+
 
 
 ## Conclusion
