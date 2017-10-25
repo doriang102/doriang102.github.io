@@ -284,7 +284,7 @@ Running the same code on the Hessian of the orthogonal features, we obtain:
 Notice how in the correlated case, there is clear degeneracy - the solution is not unique. Any value along that line is constant, so there is no unique solution. This is what accounts for the instability in the solution. 
 
 
-#### Fixing the issue using regularization.
+### Fixing the issue using regularization.
 
 We will cover this in the next section, but one simple way to make the OLS problem well posed is to add in a convex penalization term:
 
@@ -300,7 +300,7 @@ In this post we've seen that essential ingredients for the linear regression pro
 
 - 1) The outcome variable $$y$$ follows a linear trend with the data $$X$$. 
 - 2) The residuals, $$y - \beta \cdot \mathbf{x}$$ are normally distributed with mean zero and constant variance. 
-- 3) Correlated features don't preclude the existence of solutions to the linear regression problem, but they cause issues with instability of the coefficients, and can potentially impact perfomance. 
+- 3) Correlated features don't preclude the existence of solutions to the linear regression problem, but they cause issues with instability of the coefficients, and can potentially impact perfomance. We can fix this via regularization though, and we will cover this in the next post.
 
 In the next post, we will look into methods of regularization and how it can help with over fitting models. We will also look at standard data preparation techniques that are needed for regularization, or any kind of interpretability even without regularization.
 
