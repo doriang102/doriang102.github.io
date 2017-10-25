@@ -276,15 +276,27 @@ plt.show()
 
 Running the same code on the Hessian of the orthogonal features, we obtain:
 
+#### Orthogonal Features
+
 ![](/img/perpellipse.png?raw=true)
 
 
 Notice how in the correlated case, there is clear degeneracy - the solution is not unique. Any value along that line is constant, so there is no unique solution. This is what accounts for the instability in the solution. 
 
 
+#### Fixing the issue using regularization.
+
+We will cover this in the next section, but one simple way to make the OLS problem well posed is to add in a convex penalization term:
+
+
+\min_{\beta} $$ \min_{\beta} \frac{1}{N} \sum_{i=1}^N(y_i - \beta \cdot \mathbf x_i)^2 + \lambda \|\beta\|_{L^p}.$$
+
+For $$p > 1$$, this problem is now strictly convex even with correlated features, and thus there is a unique solution.
+
+
 ## Conclusion
 
-In this post we've seen that essential ingredients for the lienar regression problem to be well posed are:
+In this post we've seen that essential ingredients for the linear regression problem to be well posed are:
 
 - 1) The outcome variable $$y$$ follows a linear trend with the data $$X$$. 
 - 2) The residuals, $$y - \beta \cdot \mathbf{x}$$ are normally distributed with mean zero and constant variance. 
