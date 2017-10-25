@@ -289,7 +289,7 @@ Notice how in the correlated case, there is clear degeneracy - the solution is n
 We will cover this in the next section, but one simple way to make the OLS problem well posed is to add in a convex penalization term:
 
 
-\min_{\beta} $$ \min_{\beta} \frac{1}{N} \sum_{i=1}^N(y_i - \beta \cdot \mathbf x_i)^2 + \lambda \|\beta\|_{L^p}.$$
+$$\min_{\beta} $$ \min_{\beta} \frac{1}{N} \sum_{i=1}^N(y_i - \beta \cdot \mathbf x_i)^2 + \lambda \|\beta\|_{L^p}.$$
 
 For $$p > 1$$, this problem is now strictly convex even with correlated features, and thus there is a unique solution.
 
