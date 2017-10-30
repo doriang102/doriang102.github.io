@@ -148,11 +148,11 @@ print(grid.best_score_)
 print(grid.best_estimator_.alpha)
 {% endhighlight %}
 
-```
+ {% highlight ruby %}
 Output:
 0.92
 1e-5
-```
+{% endhighlight %}
 
 ####Ridge
 
