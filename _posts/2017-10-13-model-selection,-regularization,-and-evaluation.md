@@ -171,11 +171,13 @@ print(grid)
 print(grid.best_score_)
 print(grid.best_estimator_.alpha)
 {% endhighlight %}
-```
+
+{% highlight ruby %}
 Output:
 -0.1678716256381307
 53.0
-```
+{% endhighlight %}
+
 Notice how Ridge performs much worse? (You can try other parameter ranges but you won't see much of an improvement). 
 
 **Question:** Why do you think that Lasso is clearly out performing Ridge here?
@@ -186,7 +188,8 @@ Let's double check this. After training on Lasso, we have:
 {% highlight ruby %}
 grid.best_estimator_.coef_
 {% endhighlight %}
-```
+
+{% highlight ruby %}
 Output:
 array([  1.05785570e+00,   0.00000000e+00,  -3.97239654e-02,
          0.00000000e+00,  -1.65517361e-02,  -1.03520066e-03,
@@ -205,13 +208,14 @@ array([  1.05785570e+00,   0.00000000e+00,  -3.97239654e-02,
          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
         -0.00000000e+00,   1.97821804e-02,   0.00000000e+00,
         -6.26263115e-03,   1.16571657e-01])
-```
+{% endhighlight %}
 
 For Ridge, we have:
 {% highlight ruby %}
 grid.best_estimator_.coef_
 {% endhighlight %}
-```
+
+{% highlight ruby %}
 Output:
 array([ 0.20285968, -0.00381662, -0.01798887,  0.00624603, -0.01002174,
        -0.01013711,  0.03426703, -0.0482153 , -0.00826484,  0.00050287,
@@ -223,7 +227,7 @@ array([ 0.20285968, -0.00381662, -0.01798887,  0.00624603, -0.01002174,
         0.02819384,  0.00583345,  0.00651882,  0.0077957 ,  0.00493482,
         0.01773861, -0.02133379,  0.00595596, -0.00179284, -0.00505557,
         0.0009076 ,  0.02494769,  0.02942028, -0.02384785,  0.00133697])
-```
+{% highlight ruby %}
 
 Notice how in the Lasso case, all of the coefficients are either zero, or two orders of magnitude smaller than $$X[0]$$? The eometric explanation above is the reason. For Ridge on the other hand, the coefficients spread the error out evenly as we expect. 
 
