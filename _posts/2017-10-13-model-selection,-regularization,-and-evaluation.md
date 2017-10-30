@@ -203,7 +203,7 @@ array([ 0.90447066, -0.        ,  0.        ,  0.        ,  0.        ,
 ```
 Plotting these coefficients looks like:
 
- ![](/img/lasso_coeffs_plot.png.png?raw=true)
+ ![](/img/lasso_coeffs_plot.png?raw=true)
 
 For Ridge, we have:
 {% highlight ruby %}
@@ -225,7 +225,7 @@ array([ 0.72697755, -0.07368477,  0.04537106, -0.00722343,  0.02094348,
 
 Plotting these coefficients looks like:
 
- ![](/img/ridge_coeffs_plot.png.png?raw=true)
+ ![](/img/ridge_coeffs_plot.png?raw=true)
 
 Notice how in the Lasso case, all of the coefficients are either zero, or two orders of magnitude smaller than $$X[0]$$? The eometric explanation above is the reason. For Ridge on the other hand, the coefficients spread the error out evenly as we expect. 
 
