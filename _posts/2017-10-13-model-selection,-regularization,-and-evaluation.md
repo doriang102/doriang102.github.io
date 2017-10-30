@@ -129,7 +129,7 @@ plt.plot(scores)
  
  Let's do this properly now using `sklearn`'s `GridSearchCV` package and 5-fold cross validation:
  
- #### Lasso
+ ####Lasso
  
 {% highlight ruby %}
 # Set the parameters by cross-validation
