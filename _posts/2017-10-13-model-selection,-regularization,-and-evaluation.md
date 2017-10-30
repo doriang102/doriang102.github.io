@@ -129,7 +129,7 @@ plt.plot(scores)
  
  Let's do this properly now using `sklearn`'s `GridSearchCV` package and 5-fold cross validation:
  
- ####Lasso
+**Lasso**
  
 {% highlight ruby %}
 # Set the parameters by cross-validation
@@ -152,8 +152,7 @@ Output:
 0.92
 1e-5
 ```
-
-#### Ridge
+**Ridge**
 
 {% highlight ruby %}
 # Set the parameters by cross-validation
@@ -230,7 +229,7 @@ Plotting these coefficients looks like:
 Notice how in the Lasso case, all of the coefficients are either zero, or two orders of magnitude smaller than $$X[0]$$? The eometric explanation above is the reason. For Ridge on the other hand, the coefficients spread the error out evenly as we expect. 
 
 
-**Conclusion:** Thus, *Lasso is often better for **feature selection**. However once you have the "true" model, Ridge is better for performance according to most research (see papers of Andrew Ng if you are interested). 
+**Conclusion:** Thus, **Lasso is often better for feature selection**. However once you have the "true" model, Ridge is better for performance according to most research (see papers of Andrew Ng if you are interested). 
 
 
 
