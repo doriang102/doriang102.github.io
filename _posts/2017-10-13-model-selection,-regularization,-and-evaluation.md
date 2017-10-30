@@ -124,13 +124,14 @@ for d in alphas:
 plt.plot(scores)
 
 {% endhighlight %}   
-  ![](/img/lasso1.png?raw=true)
+
+ ![](/img/lasso1.png?raw=true)
  
  Let's do this properly now using `sklearn`'s `GridSearchCV` package and 5-fold cross validation:
  
  #### Lasso
  
- {% highlight ruby %}
+{% highlight ruby %}
 # Set the parameters by cross-validation
 from sklearn.grid_search import GridSearchCV
 
