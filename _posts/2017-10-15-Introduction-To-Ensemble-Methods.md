@@ -197,4 +197,9 @@ Notice how the decision tree found the same thing we did manually? `petal_length
 
 # Random Forests
 
-Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. One simply chooses random subsets of $$\tilde K < K$$ features where $$K$$ is the number of features. You then you train $$T$$ decision trees and average the results over the trees (you can also take the mode or median if you wish). To do variable importance you simply average out over all of the trees as well.
+Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. One simply chooses random subsets of $$\tilde K < K$$ features where $$K$$ is the number of features. You then you train $$T$$ decision trees and average the results over the trees (you can also take the mode or median if you wish). To do variable importance you simply average out over all of the trees as well. 
+
+![](/img/rfpic.png?raw=true)
+
+
+We have covered a lot of the foundational methods in supervised learning. In our next post, we will discuss recommendation engines.
