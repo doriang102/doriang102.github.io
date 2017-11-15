@@ -33,9 +33,15 @@ $$
 \end{cases}
 $$
 
+## Binomial
+
 - **Logistic Regression:** Assume that $$\log \frac{p(x)}{1-p(x)} = \beta \cdot x$$ and solve by maximum Likelihood.
 - **Poisson Distribution:** Assume that there are $$Np = \lambda$$ successes on average in a time interval of length $$N$$. Then we'll see that
 $$ P(X_n=k) \to \frac{\lambda^k}{k!} e^{-\lambda}.$$
+- **Normal Distribution:** If $$p$$ is fixed independent of $$N$, then by the central limit theorem we have
+
+$$f_p{k,N} \to \mathcal{N}(np,np(1-p)).$$
+
 
 ### Poisson
 
