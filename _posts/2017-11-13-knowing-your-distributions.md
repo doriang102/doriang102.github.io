@@ -45,6 +45,7 @@ For this, we take $$N$$ trial of the Bernoulli distribution and obtain:
  The factorial takes into account the number of ways we can have $$k$$ "successes" out of $$N$$ trials. 
 
 **Generality:** This distribution is the most general way of describing the probability of $$k$$ succesess out of $$N$$ trials. It can be applied to a wide variety of problems, and its asymptotic properties are nice (see Poisson and Normal below). 
+
 **Inference:** Aside from being a natural distribution, one can make inference, as was done in the Hypothesis Testing posts from before. For example, if you flip a coin and every time it shows up heads, how confident are you that $$p=1$$ (or $$p=0$$ equivalently). 
 
 - **Poisson Distribution:** Assume that there are $$Np = \lambda$$ successes on average in a time interval of length $$N$$. Then we'll see that
