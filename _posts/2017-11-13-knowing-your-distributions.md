@@ -8,6 +8,7 @@ While this list is by no means exhaustive, it is the list of distributions which
 
 - Bernoulli
 - Binomial
+- Multinomial
 -  Beta
 -  Normal
 -  Poisson
