@@ -37,7 +37,7 @@ Important applications:
 - **Logistic Regression:** Assume that $$\log \frac{p(x)}{1-p(x)} = \beta \cdot x$$ and solve by maximum Likelihood.
 - **Random Walk:** If a person has a fixed probability $$p$$ of moving right (so $$1-p$$ of moving left), then this process is called a *Random Walk*. This will have important implications when we discuss recommendation engines.
 
-## Binomial
+##$ Binomial
 For this, we take $$N$$ trial of the Bernoulli distribution and obtain:
 
  $$ f_p^{N}(k) = {N \choose k} p^k (1-p)^{N-k}.$$
