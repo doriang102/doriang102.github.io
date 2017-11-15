@@ -59,9 +59,8 @@ The Poisson distribution aims to model the number of independent events which oc
 
 ### Exponential
 
-For a Poisson process, hits occur at random independent of the past, but with a known long term average rate λλ of hits per time unit. The Poisson distribution would let us find the probability of getting some particular number of hits.
-
-Now, instead of looking at the number of hits, we look at the random variable LL (for Lifetime), the time you have to wait for the first hit.
+For a Poisson process, hits occur at random independent of the past, but with a known long term average rate $$\lambda$$ of hits per time unit. The Poisson distribution would let us find the probability of getting some particular number of hits.
+Now, instead of looking at the number of hits, we look at the random variable L (for Lifetime), the time you have to wait for the first hit.
 
 The probability that the waiting time is more than a given time value is 
 
