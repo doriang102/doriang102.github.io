@@ -72,11 +72,13 @@ $$ P(L \leq t) = 1 - e^{-\lambda t}. $$
 
 
  We can get the density function by taking the derivative of this:
+ 
+ 
 $$ 
    f(t)= 
 \begin{cases}
    \lambda e^{-\lambda t},& \text{if } t\geq 0\\
     0,              & t < 0
-\end{cases} 
+\end{cases}.
 $$
 
