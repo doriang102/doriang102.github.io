@@ -22,10 +22,9 @@ The Bernoulli distribution is probably the simplest distribution, and connected 
 $$
    f(k)= 
 \begin{cases}
-   p},& \text{if } k=0\\
+   p,& \text{if } k=0\\
     1-p,              & k=1
-\end{cases} 
-
+\end{cases}
 $$
 ### Poisson
 
