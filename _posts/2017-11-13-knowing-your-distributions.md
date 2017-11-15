@@ -18,7 +18,9 @@ While this list is by no means exhaustive, it is the list of distributions which
 
 ### Bernoulli
 
-The Bernoulli distribution is probably the simplest distribution, and connected with the coin toss. If I flip a coin which has probability $$p$$ of showing up, this follows a Bernoulli disttribution. This simple distribution is used in many frameworks for modeling such as Logistic Regression, Poisson Regression, Random Walks, Bayesian Inference (seen in prevous post on Hypothesis Testing) and many others. It is one of the most general probability distributions, which is often replaced with ones like Poisson or Normal in the limit of large sample size (which is rigorously justified). 
+The Bernoulli distribution is probably the simplest distribution, and connected with the coin toss. If I flip a coin which has probability $$p$$ of showing up, this follows a Bernoulli disttribution. This simple distribution is used in many frameworks for modeling such as Logistic Regression, Poisson Regression, Random Walks, Bayesian Inference (seen in prevous post on Hypothesis Testing) and many others. It is one of the most general probability distributions, which is often replaced with ones like Poisson or Normal in the limit of large sample size (which is rigorously justified). We define the Bernoulli distribution as
+
+
 $$
    f(k)= 
 \begin{cases}
@@ -26,6 +28,7 @@ $$
     1-p,              & k=1
 \end{cases}
 $$
+
 ### Poisson
 
 The Poisson distribution aims to model the number of independent events which occur in a fixed time interval, assuming that the probability is *memoryless*. 
