@@ -34,8 +34,8 @@ $$
 $$
 
 Important applications:
-- **Logistic Regression:** Assume that $$\log \frac{p(x)}{1-p(x)} = \beta \cdot x$$ and solve by maximum Likelihood.
-- **Random Walk:** If a person has a fixed probability $$p$$ of moving right (so $$1-p$$ of moving left), then this process is called a *Random Walk*. This will have important implications when we discuss recommendation engines.
+- **Classification:** Assume that $$\log \frac{p(x)}{1-p(x)} = \beta \cdot x$$ for Logistic Regression or that $$p$$ is piecewise constant for decision trees, and solve via maximum likelihood.
+- **Recommendation Enginesk:** This idea is very useful when studying recommendation engines. If a person has a fixed probability $$p$$ of moving right (so $$1-p$$ of moving left), then this process is called a *Random Walk*. Now extend this to a graph with probabilities depending on nodes!
 
 ### Binomial
 For this, we take $$N$$ trial of the Bernoulli distribution and obtain:
