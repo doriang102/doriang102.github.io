@@ -13,7 +13,7 @@ While this list is by no means exhaustive, it is the list of distributions which
 -  Poisson
 - General Exponential
 
-# When to use which?
+# Applications of Each Distribution
 
 
 ### Bernoulli
@@ -50,10 +50,34 @@ For this, we take $$N$$ trial of the Bernoulli distribution and obtain:
 $$ P(X_n=k) \to \frac{\lambda^k}{k!} e^{-\lambda}.$$
 - **Normal Distribution:** If $$p$$ is fixed independent of $$N$$, then by the central limit theorem we have
 
-$$f_p{k,N} \to \mathcal{N}(np,np(1-p)).$$
+$$f_p^{N} \to \mathcal{N}(np,np(1-p)).$$
 
 
 ### Poisson
 
 The Poisson distribution aims to model the number of independent events which occur in a fixed time interval, assuming that the probability is *memoryless*. 
+
+### Exponential
+
+For a Poisson process, hits occur at random independent of the past, but with a known long term average rate λλ of hits per time unit. The Poisson distribution would let us find the probability of getting some particular number of hits.
+
+Now, instead of looking at the number of hits, we look at the random variable LL (for Lifetime), the time you have to wait for the first hit.
+
+The probability that the waiting time is more than a given time value is 
+
+$$P(L > t) = P(\textrm{ no hits at time t }) =  e^{-\lambda t}. $$
+
+Then
+
+$$ P(L \leq t) = 1 - e^{-\lambda t}. $$
+
+
+ We can get the density function by taking the derivative of this:
+$$ 
+   f(t)= 
+\begin{cases}
+   \lambda e^{-\lambda t},& \text{if } t\geq 0\\
+    0,              & t < 0
+\end{cases} 
+$$
 
