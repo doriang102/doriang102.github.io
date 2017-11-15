@@ -1,4 +1,4 @@
-# Knowing your distributions (Under Construction)
+
 
 In this post we will dig deeper into the types of distributions that one encounters in practice. It takes a considerable amount of 
 time and experience to understand and appreciate which distribution is most appropriate for the problem you're trying to solve.
