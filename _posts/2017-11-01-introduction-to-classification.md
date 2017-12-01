@@ -10,6 +10,15 @@ where we assume that $$Y \sim f(\beta)$$. Since products are difficult to deal w
 
 $$L(\beta) := \sum_{i=1}^n \log p(y_i | X_i, \beta). $$
 
+To begin with, let's assume that we have a Logit prior. If we consider a *success* to be $$y_i=1$$ then we can model this as a Binomail distribution, ie:
+
+$$L(\beta) = \sum_{i=1}^n \log p(x_i)^{y_i} (1-p(x_i))^{1-y_i}.$$
+
+Using properties of the logarithm, we have
+
+$$L(\beta) = \sum_{i=1}^N y_i \log p(x_i) + (1-y_i) \log (1-p(x_i)).$$
+
+
 
 # Maximizing Likelihood
 
