@@ -31,6 +31,18 @@ clf = LogisticRegression()
 clf.fit(Xtrain, ytrain)
 {% endhighlight %}
 
+Now let's add the actual outcome and score to a Pandas dataframe so we can study the results:
+{% highlight ruby %}
+from sklearn import metrics
+import pandas as pd
+%matplotlib inline
+
+df_X=pd.DataFrame(X)
+df_X['score']=clf.predict_proba(df_X)[:,1]
+df_X['outcome']=y_vals
+
+{% endhighlight %}
+
  ![](/img/roc_0.png?raw=true)
  ![](/img/roc_2.png?raw=true)
    ![](/img/roc_4.png?raw=true)
