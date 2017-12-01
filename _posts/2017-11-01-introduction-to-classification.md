@@ -14,10 +14,11 @@ To begin with, let's assume that we have a Logit prior. If we consider a *succes
 
 $$L(\beta) = \sum_{i=1}^n \log p(x_i)^{y_i} (1-p(x_i))^{1-y_i}.$$
 
+### Logistic Regression
+
 Using properties of the logarithm, we have
 
 $$L(\beta) = \sum_{i=1}^N y_i \log p(x_i) + (1-y_i) \log (1-p(x_i)).$$
-
 
 
 # Maximizing Likelihood
