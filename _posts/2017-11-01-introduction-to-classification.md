@@ -43,6 +43,28 @@ df_X['outcome']=y_vals
 
 {% endhighlight %}
 
+Now that we have the dataframe, let's plot the TPR and FPR as a function of our threshold:
+{% highlight ruby %}
+import seaborn
+import matplotlib.pyplot as plt
+fprs=[]
+tprs=[]
+for i in range(0,11):
+    threshold = float(i)/10
+    print (threshold)
+    fig, ax = plt.subplots()
+    df_X[df_X['outcome']==1]['score'].hist(bins=20,color='b',alpha=0.5)
+    df_X[df_X['outcome']==0]['score'].hist(bins=20,color='r',alpha=0.5)
+    fpr = np.round(len(df_X[(df_X['outcome']==0) & (df_X['score']>threshold)])/len(df_X[df_X['outcome']==0]),2)
+    tpr = np.round(len(df_X[(df_X['outcome']==1) & (df_X['score']>threshold)])/len(df_X[df_X['outcome']==1]),2)
+    fprs.append(fpr)
+    tprs.append(tpr)
+    ax.axvspan(threshold, 1, alpha=0.5, color='g',label='Labeled Positive - FRP= ' + str(fpr)+' TPR = ' + str(tpr))
+    plt.legend()
+    plt.savefig("../img/roc_" + str(i) + ".png")
+    plt.show()
+{% endhighlight %}
+
  ![](/img/roc_0.png?raw=true)
  ![](/img/roc_2.png?raw=true)
    ![](/img/roc_4.png?raw=true)
