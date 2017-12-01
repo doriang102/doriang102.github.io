@@ -22,4 +22,4 @@
 
 Now that we've calculated all of the tue positive rates (TPR) and false positive rates (FPR), let's plot them:
 
-![](/img/roc_final.pngraw=true)
+![](/img/roc_final.png?raw=true)
