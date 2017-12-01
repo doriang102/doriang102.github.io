@@ -10,16 +10,20 @@ where we assume that $$Y \sim f(\beta)$$. Since products are difficult to deal w
 
 $$L(\beta) := \sum_{i=1}^n \log p(y_i | X_i, \beta). $$
 
-To begin with, let's assume that we have a Logit prior. If we consider a *success* to be $$y_i=1$$ then we can model this as a Binomail distribution, ie:
+If we consider a *success* to be $$y_i=1$$ then we can model this as a Binomail distribution, ie:
 
 $$L(\beta) = \sum_{i=1}^n \log p(x_i)^{y_i} (1-p(x_i))^{1-y_i}.$$
-
-### Logistic Regression
 
 Using properties of the logarithm, we have
 
 $$L(\beta) = \sum_{i=1}^N y_i \log p(x_i) + (1-y_i) \log (1-p(x_i)).$$
 
+This is our starting point for a large collection of classification models, whether we are talking about Logistic Regression or Random Forest.
+
+### Logistic Regression
+Here we assume that
+$$ p(x) = \frac{1}{1 + e^{-\beta \cdot x} } .$$
+### Decision Trees
 
 # Maximizing Likelihood
 
