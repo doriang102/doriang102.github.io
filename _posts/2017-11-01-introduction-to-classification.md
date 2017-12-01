@@ -2,6 +2,14 @@
 
 # What is classification?
 
+Let's first assume that we are modeling some parameterized family of distributions with an outcome $$y \in \{0,1\}$$. In this case we wish to maximize the Likelihood function:
+
+$$ Q(\beta) := \prod_{i=1}^N p(y_i | X_i, \beta),$$
+
+where we assume that $$Y \sim f(\beta)$$. Since products are difficult to deal with, we take the log of this product to obtain the *Log-Likelihood*, $$L$$:
+
+$$L(\beta) := \sum_{i=1}^n \log p(y_i | X_i, \beta). $$
+
 
 # Maximizing Likelihood
 
