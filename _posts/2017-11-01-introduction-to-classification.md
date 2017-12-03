@@ -44,6 +44,32 @@ Recall = $$ \frac{\textrm{tp}}{\textrm{tp} + \textrm{fn}}.$$
 
 Precision = $$ \frac{\textrm{tp}}{\textrm{tp} + \textrm{fp}}.$$
 
+
+When do we care more about **precision** and when do we care more about **recall**? This depends deeply on the problem at hand. For instance, if we may care more about not missing people in our prediction when there is little risk in taking an action. For example, showing somebody an ad for cars might annoy some if they are not interested in the product, but probably won't have a severely negative impact on the user. On the other hand, if we are looking at the probability the value of a stock will sky rocket tomorrow, we may wish to be more conservative, and make sure that the predictions we are making are with high confidence, even if we miss out on some opportunities. 
+
+Let's see this in action.
+
+{% highlight ruby %}
+precisions=[]
+recalls=[]
+for i in range(0,10):
+    threshold = float(i)/10
+    print (threshold)
+    fig, ax = plt.subplots()
+    df_X[df_X['outcome']==1]['score'].hist(bins=20,color='b',alpha=0.5)
+    df_X[df_X['outcome']==0]['score'].hist(bins=20,color='r',alpha=0.5)
+    tp=len(df_X[(df_X['outcome']==1) & (df_X['score']>threshold)])
+    fp = len(df_X[(df_X['outcome']==0) & (df_X['score']>threshold)])
+    fn = len(df_X[(df_X['outcome']==1) & (df_X['score']<threshold)])
+    precision = np.round(tp/(tp+fp),2)
+    recall = np.round(tp/(tp+fn),2)
+    precisions.append(precision)
+    recalls.append(recall)
+    ax.axvspan(threshold, 1, alpha=0.5, color='g',label='Labeled Positive - Pre= ' + str(precision)+' recall = ' + str(recall))
+    plt.legend()
+    plt.savefig("../img/prec_recall_" + str(i) + ".png")
+    plt.show()
+{% endhighlight %}
 # Area Under the Curve (ROC)
 Let's consider a concrete example where we use a very small fraction of the training data. The only purpose of this is to demonstrate the behavior of TPR and FPR as we modify the threshold for the model. We create some sample classification data:
 
