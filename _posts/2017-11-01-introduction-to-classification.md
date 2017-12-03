@@ -34,6 +34,16 @@ $$ p(x) = \frac{1}{1 + e^{-\beta \cdot x} } .$$
 
 # Precision vs. Recall
 
+For classification problems, accuracy is usually not a great metric. Why? Imagine you had only $$1%$$ of your data having a positive outcome $$y = 1$$. Then simply defining $$y \equiv 0$$ would result in $$99%$$ accuracy! How do we account for this? The first way is by defining precision and recall:
+
+**Recall:** Out of all of the positive outcomes, what percentage does your model get right? More precisely
+
+Recall = $$ \frac{\textrm{tp}}{\textrm{tp} + \textrm{fn}}.$$
+
+**Precision:** Out of all outcomes your model *labels* as positive, what percentage are actually positive?
+
+Precision = $$ \frac{\textrm{tp}}{\textrm{tp} + \textrm{fp}}.$$
+
 # Area Under the Curve (ROC)
 Let's consider a concrete example where we use a very small fraction of the training data. The only purpose of this is to demonstrate the behavior of TPR and FPR as we modify the threshold for the model. We create some sample classification data:
 
