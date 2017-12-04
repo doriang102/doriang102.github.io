@@ -32,7 +32,7 @@ $$ p(x) = \frac{1}{1 + e^{-\beta \cdot x} } .$$
 
 # Classification Evaluation
 
-# Precision vs. Recall
+## Precision vs. Recall
 
 For classification problems, accuracy is usually not a great metric. Why? Imagine you had only $$1%$$ of your data having a positive outcome $$y = 1$$. Then simply defining $$y \equiv 0$$ would result in $$99%$$ accuracy! How do we account for this? The first way is by defining precision and recall:
 
@@ -45,7 +45,9 @@ Recall = $$ \frac{\textrm{tp}}{\textrm{tp} + \textrm{fn}}.$$
 Precision = $$ \frac{\textrm{tp}}{\textrm{tp} + \textrm{fp}}.$$
 
 
-When do we care more about **precision** and when do we care more about **recall**? This depends deeply on the problem at hand. For instance, if we may care more about not missing people in our prediction when there is little risk in taking an action. For example, showing somebody an ad for cars might annoy some if they are not interested in the product, but probably won't have a severely negative impact on the user. On the other hand, if we are looking at the probability the value of a stock will sky rocket tomorrow, we may wish to be more conservative, and make sure that the predictions we are making are with high confidence, even if we miss out on some opportunities. 
+When do we care more about **precision** and when do we care more about **recall**? This depends deeply on the problem at hand. For instance, if we may care more about not missing people in our prediction when there is little risk in taking an action.
+
+Take the example of showing somebody an ad for cars might annoy some if they are not interested in the product, but probably won't have a severely negative impact on the user. On the other hand, if we are looking at the probability the value of a stock will sky rocket tomorrow, we may wish to be more conservative, and make sure that the predictions we are making are with high confidence, even if we miss out on some opportunities. 
 
 Let's see this in action.
 
@@ -70,7 +72,8 @@ for i in range(0,10):
     plt.savefig("../img/prec_recall_" + str(i) + ".png")
     plt.show()
 {% endhighlight %}
-# Area Under the Curve (ROC)
+
+## Area Under the Curve (ROC)
 Let's consider a concrete example where we use a very small fraction of the training data. The only purpose of this is to demonstrate the behavior of TPR and FPR as we modify the threshold for the model. We create some sample classification data:
 
 {% highlight ruby %}
