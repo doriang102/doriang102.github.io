@@ -4,19 +4,19 @@
 
 Let's first assume that we are modeling some parameterized family of distributions with an outcome $$y \in \{0,1\}$$. In this case we wish to maximize the Likelihood function:
 
-$$ Q(\beta) := \prod_{i=1}^N p(y_i | X_i, \beta),$$
+$$ Q(\beta) := \prod_{i=1}^N p(y_i \lvert X_i, \beta),$$
 
 where we assume that $$Y \sim f(\beta)$$. Since products are difficult to deal with, we take the log of this product to obtain the *Log-Likelihood*, $$L$$:
 
-$$L(\beta) := \sum_{i=1}^n \log p(y_i | X_i, \beta). $$
+$$L(\beta) := \sum_{i=1}^n \log p(y_i \lvert X_i, \beta). $$
 
 If we consider a *success* to be $$y_i=1$$ then we can model this as a Binomail distribution, ie:
 
-$$L(\beta) = \sum_{i=1}^n \log p(x_i)^{y_i} (1-p(x_i))^{1-y_i}.$$
+$$L(\beta) = \sum_{i=1}^n \log p(x_i \lvert \beta )^{y_i} (1-p(x_i \lvert \beta))^{1-y_i}.$$
 
 Using properties of the logarithm, we have
 
-$$L(\beta) = \sum_{i=1}^N y_i \log p(x_i) + (1-y_i) \log (1-p(x_i)).$$
+$$L(\beta) = \sum_{i=1}^N y_i \log p(x_i \lvert \beta ) + (1-y_i) \log (1-p(x_i \lvert \beta)).$$
 
 This is our starting point for a large collection of classification models, whether we are talking about Logistic Regression or Random Forest.
 
