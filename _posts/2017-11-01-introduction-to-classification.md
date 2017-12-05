@@ -12,11 +12,11 @@ $$L(\beta) := \sum_{i=1}^n \log p(y_i \lvert X_i, \beta). $$
 
 If we consider a *success* to be $$y_i=1$$ then we can model this as a Binomail distribution, ie:
 
-$$L(\beta) = \sum_{i=1}^n \log p(x_i \lvert \beta )^{y_i} (1-p(x_i \lvert \beta))^{1-y_i}.$$
+$$L(\beta) = \sum_{i=1}^n \log p(y_i=1 \lvert x_i, \beta )^{y_i} (1-p(y_i=1 \lvert x_i, \beta))^{1-y_i}.$$
 
 Using properties of the logarithm, we have
 
-$$L(\beta) = \sum_{i=1}^N y_i \log p(x_i \lvert \beta ) + (1-y_i) \log (1-p(x_i \lvert \beta)).$$
+$$L(\beta) = \sum_{i=1}^N y_i \log p(y_i=1 \lvert x_i, \beta ) + (1-y_i) \log (1-p(y_i=1 \lvert x_i, \beta)).$$
 
 This is our starting point for a large collection of classification models, whether we are talking about Logistic Regression or Random Forest. However with Random Forests, we don't have a parameterization, but rather assume that our probability functions are piecewise constant (see below or the post on Ensemble Methods for more details). 
 
