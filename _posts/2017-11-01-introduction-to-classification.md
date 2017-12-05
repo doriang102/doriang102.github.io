@@ -22,7 +22,7 @@ This is our starting point for a large collection of classification models, whet
 
 ## Logistic Regression
 Here we assume that
-$$ p(x) = \frac{1}{1 + e^{-\beta \cdot x} } .$$
+$$ p(y=1 \lvert x, \beta) = \frac{1}{1 + e^{-\beta \cdot x} } .$$
 
 ### Decision Trees
 
