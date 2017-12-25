@@ -252,6 +252,13 @@ h_i &= \partial_{\hat{y}_i^{(t-1)}}^2 l(y_i, \hat{y}_i^{(t-1)})
 \end{split}.
 $$
 
+Thus at each time step $$t$$, we wish to find $$f_t(x)$$ which minimizes:
 $$
-\sum_{i=1}^n [g_i f_t(x_i) + \frac{1}{2} h_i f_t^2(x_i)] + \Omega(f_t)
+Q_t(f) := \sum_{i=1}^n [g_i f_t(x_i) + \frac{1}{2} h_i f_t^2(x_i)] + \Omega(f_t).
 $$
+
+Recalling that we are building a decision tree though, we wish to make the ansatz that $$f_t(x) = w_{q(x)}$$ where $$q: \mathbb{R}^d \to \{1,2,\cdots,T\}$$ maps each data point $$x_i$$ to one of the $$T$$ leaves. 
+
+Substituting $$ f_t(x) = w_{q(x_)}$$ into $$Q_t(f)$$ we have
+
+
