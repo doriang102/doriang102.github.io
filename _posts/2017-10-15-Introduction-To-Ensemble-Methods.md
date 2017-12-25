@@ -279,4 +279,24 @@ $$
  \sum^T_{j=1} [(\sum_{i\in I_j} g_i) w_j + \frac{1}{2} (\sum_{i\in I_j} h_i + \lambda) w_j^2 ] + \gamma T
 $$
 
-where $$I_j = \{ i  \lvert q(x_i) = j\}$$ and $$j$$ denotes the leaf. 
+where $$I_j = \{ i  \lvert q(x_i) = j\}$$ and $$j$$ denotes the leaf. Now let
+
+$$ G_j = \sum_{i\in I_j} g_i$$
+$$ H_j = \sum_{i\in I_j} h_i$$
+
+and we can write the above loss as 
+
+$$
+ \sum^T_{j=1} [G_j w_j + \frac{1}{2} (H_j + \lambda) w_j^2 ] + \gamma T.
+$$
+
+Solving for the optimal weights $$w_j$$ for fixed struture, and substituting back into the expression, we obtain:
+
+$$
+\begin{split}w_j^\ast = -\frac{G_j}{H_j+\lambda}\\
+\text{obj}^\ast = -\frac{1}{2} \sum_{j=1}^T \frac{G_j^2}{H_j+\lambda} + \gamma T
+\end{split}
+
+$$
+
+which can be optimized for $$G_j$$ and $$H_j$$ by recursive splitting. 
