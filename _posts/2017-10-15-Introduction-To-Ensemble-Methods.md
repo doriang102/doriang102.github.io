@@ -209,8 +209,15 @@ $$p_{RF}(y | x) = \frac{1}{K} \sum_{k=1}^K p_K (y \vert x),$$
 
 where $$p_K$$ is an individual tree and $$p_{RF}$$ is the final tree based on averaging over the decision trees. Note that we can also take the mode or median instead of the average here.
 
+The main advantages of Random Forests are:
 
-## Boosted Trees
+- Not prone to over fitting due to the averaging of many trees. 
+- Easy to implement 'off the shelf'.
+- Easy to parallelize since the decision trees do not need to exchange information when being constructed. 
 
 
+## Gradient Boosted Trees
 
+Recall that our goal is to construct an estimator, $$\hat y$$ for y which is a collection of decision trees. The Random Forest method provided one way of doing this - simply construct many decision trees in parallel, then average the results out. A method which focucses on reducing the errors made by the previous decision trees is \textbf{Gradient Boosted Decision Trees}.
+
+As before we have a differentiable loss function $$\mathcal{L}(y_i, \hat y_i)$$. 
