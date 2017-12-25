@@ -195,11 +195,22 @@ clf = clf.fit(iris.data, iris.target)
 
 Notice how the decision tree found the same thing we did manually? `petal_length` is the top feature with a left split that has pure class. 
 
-# Random Forests
+# Ensemble Methods
+
+## Random Forests
 
 Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. One simply chooses random subsets of $$\tilde K < K$$ features where $$K$$ is the number of features. You then you train $$T$$ decision trees and average the results over the trees (you can also take the mode or median if you wish). To do variable importance you simply average out over all of the trees as well. 
 
 ![](/img/rfpic.png?raw=true)
 
+In other words, our prediction would be 
 
-We have covered a lot of the foundational methods in supervised learning. In our next post, we will discuss recommendation engines.
+$$p_{RF}(y | x) = \frac{1}{K} \sum_{k=1}^K p_K (y \vert x),$$
+
+where $$p_K$$ is an individual tree and $$p_{RF}$$ is the final tree based on averaging over the decision trees. Note that we can also take the mode or median instead of the average here.
+
+
+## Boosted Trees
+
+
+
