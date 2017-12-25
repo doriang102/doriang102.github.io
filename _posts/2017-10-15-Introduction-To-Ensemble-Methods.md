@@ -222,9 +222,11 @@ Recall that our goal is to construct an estimator, $$\hat y$$ for y which is a c
 
 Let's imagine we add a decision tree at each step:
 
+$$
 \begin{split}\hat{y}_i^{(0)} &= 0\\
 \hat{y}_i^{(1)} &= f_1(x_i) = \hat{y}_i^{(0)} + f_1(x_i)\\
 \hat{y}_i^{(2)} &= f_1(x_i) + f_2(x_i)= \hat{y}_i^{(1)} + f_2(x_i)\\
 &\dots\\
 \hat{y}_i^{(t)} &= \sum_{k=1}^t f_k(x_i)= \hat{y}_i^{(t-1)} + f_t(x_i)
 \end{split}
+$$
