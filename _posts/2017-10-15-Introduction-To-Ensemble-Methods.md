@@ -279,3 +279,4 @@ $$
  \sum^T_{j=1} [(\sum_{i\in I_j} g_i) w_j + \frac{1}{2} (\sum_{i\in I_j} h_i + \lambda) w_j^2 ] + \gamma T
 $$
 
+where $$I_j = \{ i  \lvert q(x_i) = j\}$$ and $$j$$ denotes the leaf. 
