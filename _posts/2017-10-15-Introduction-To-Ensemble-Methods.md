@@ -239,7 +239,7 @@ $$
 \end{split}
 $$
 
-Next we do a Taylor expansion:
+Next we do a Taylor expansion of the above and sum over all $$i$$:
 
 $$
 \mathcal{L}^{(t)}\approx \sum_{i=1}^n \underbrace{\ell(y_i,\hat{y}_i^{(t-1)})}_{\text{constant}}+\underbrace{g_i}_{\text{constant}}f_t(\mathbf{x}_i)+\frac{1}{2}\underbrace{h_i}_{\text{constant}}f_t^2(\mathbf{x}_i)+\Omega(f_t),$$
@@ -250,4 +250,8 @@ $$
 \begin{split}g_i &= \partial_{\hat{y}_i^{(t-1)}} l(y_i, \hat{y}_i^{(t-1)})\\
 h_i &= \partial_{\hat{y}_i^{(t-1)}}^2 l(y_i, \hat{y}_i^{(t-1)})
 \end{split}.
+$$
+
+$$
+\sum_{i=1}^n [g_i f_t(x_i) + \frac{1}{2} h_i f_t^2(x_i)] + \Omega(f_t)
 $$
