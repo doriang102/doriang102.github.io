@@ -267,5 +267,10 @@ $$
 Q_t(w(q)) = \sum_{i=1}^n [g_i w_{q(x_i)} + \frac{1}{2} h_i w_{q(x_i)}^2 ] + \Omega(w,q).
 $$
 
+We define our regularization term, as in XGBoost to be
+
+$$
+\Omega(f) = \gamma T + \frac{1}{2}\lambda \sum_{j=1}^T w_j^2.
+$$
 
 
