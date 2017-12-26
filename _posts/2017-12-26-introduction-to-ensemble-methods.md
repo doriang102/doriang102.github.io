@@ -7,13 +7,13 @@ We will go over two main methods in this post - *Random Forests* and *Gradient B
 
 ## Random Forests
 
-Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. One simply chooses random subsets of $$\tilde K < K$$ features where $$K$$ is the number of features. You then you train $$T$$ decision trees and average the results over the trees (you can also take the mode or median if you wish). To do variable importance you simply average out over all of the trees as well. 
+Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. If you haven't read my post on Decision Trees, please read that one first. Once you understand how decision trees work, building a random forest is an easy extension. One simply chooses random subsets of $$\tilde K < K$$ features where $$K$$ is the number of features and $J$ random rows. You then you train $$T$$ decision trees and average the results over the trees (you can also take the mode or median if you wish). To do variable importance you simply average out over all of the trees as well. 
 
 ![](/img/rfpic.png?raw=true)
 
 In other words, our prediction would be 
 
-$$p_{RF}(y | x) = \frac{1}{K} \sum_{k=1}^K p_K (y \vert x),$$
+$$\hat p_{RF}(y | x) = \frac{1}{K} \sum_{k=1}^K \hat p_K (y \vert x),$$
 
 where $$p_K$$ is an individual tree and $$p_{RF}$$ is the final tree based on averaging over the decision trees. Note that we can also take the mode or median instead of the average here.
 
