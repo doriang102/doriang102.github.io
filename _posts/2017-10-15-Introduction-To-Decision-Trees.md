@@ -195,6 +195,8 @@ clf = clf.fit(iris.data, iris.target)
 
 Notice how the decision tree found the same thing we did manually? `petal_length` is the top feature with a left split that has pure class. 
 
+**Next:** In our next post, we will cover ensemble methods, which combine many decision trees, or more generally, *weak learners* into one strong learner. 
+
 # Ensemble Methods
 
 We will go over two main methods here - bagging methods, and boosting methods. Bagging methods take multiple trees or *weak learners*, trained in parallele, then combine the result. While boosting iterates and corrects the errors on the residuals in a recursive manner. 
