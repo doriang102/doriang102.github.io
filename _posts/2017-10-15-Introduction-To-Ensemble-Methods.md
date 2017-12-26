@@ -262,7 +262,7 @@ where $$\alpha_t$$ is solved via line search.
 
 ## Gradient Boosted Trees
 
-Recall that our goal is to construct an estimator, $$\hat y$$ for y which is a collection of decision trees. The Random Forest method provided one way of doing this - simply construct many decision trees in parallel, then average the results out. A method which focucses on reducing the errors made by the previous decision trees is \textbf{Gradient Boosted Decision Trees}.
+Recall that our goal is to construct an estimator, $$\hat y$$ for y which is a collection of decision trees. The Random Forest method provided one way of doing this - simply construct many decision trees in parallel, then average the results out. A method which focucses on reducing the errors made by the previous decision trees is *Gradient Boosted Decision Trees*.
 
 Let's imagine we add a decision tree at each step:
 
