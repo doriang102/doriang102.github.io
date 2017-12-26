@@ -311,12 +311,18 @@ and let $$h_t(x)$$ be the decision tree which is solved from $$(x_i, r_{ij})$$.
 
 **Algorithm**:
 
-Initialize model with a constant value:
-$${\displaystyle F_{0}(x)={\underset {\gamma }{\arg \min }}\sum _{i=1}^{n}L(y_{i},\gamma ).} F_0(x) = \underset{\gamma}{\arg\min} \sum_{i=1}^n L(y_i, \gamma).$$
-For $$m = 1$$ to $$M$$:
-Compute so-called pseudo-residuals:
-$${\displaystyle r_{im}=-\left[{\frac {\partial L(y_{i},F(x_{i}))}{\partial F(x_{i})}}\right]_{F(x)=F_{m-1}(x)}\quad {\mbox{for }}i=1,\ldots ,n.} r_{im} = -\left[\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}\right]_{F(x)=F_{m-1}(x)} \quad \mbox{for } i=1,\ldots,n.$$
-Fit a base learner (e.g. tree) 
+**Initialize model with a constant value:**
+$${\displaystyle F_{0}(x)={\underset {\gamma }{\arg \min }}\sum _{i=1}^{n}L(y_{i},\gamma ).} 
+
+$$ F_0(x) = \underset{\gamma}{\arg\min} \sum_{i=1}^n L(y_i, \gamma).$$
+
+**For $$m = 1$$ to $$M$$:
+Compute so-called pseudo-residuals:**
+
+$${\displaystyle r_{im}=-\left[{\frac {\partial L(y_{i},F(x_{i}))}{\partial F(x_{i})}}\right]_{F(x)=F_{m-1}(x)}\quad {\mbox{for }}i=1,\ldots ,n.} \\r_{im} = -\left[\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}\right]_{F(x)=F_{m-1}(x)} \quad \mbox{for } i=1,\ldots,n.$$
+
+**Fit a base learner (e.g. tree) **
+
 $${\displaystyle h_{m}(x)} {\displaystyle h_{m}(x)} to pseudo-residuals, i.e. train it using the training set {\displaystyle \{(x_{i},r_{im})\}_{i=1}^{n}} \{(x_i, r_{im})\}_{i=1}^n.$$
 Compute multiplier 
 $${\displaystyle \gamma _{m}} \gamma _{m}$$ by solving the following one-dimensional optimization problem:
