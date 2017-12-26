@@ -224,7 +224,11 @@ The main advantages of Random Forests are:
 ## Gradient Boosting
 
 
-There is a lot of confusing notation and discussion around gradient boosting, when ultimately it is just the gradient flow in a functional space (ie. $$L^2$$). For example, consider the mean squared loss:
+There is a lot of confusing notation and discussion around gradient boosting, when ultimately it is just the gradient flow in a functional space (ie. $$L^2$$). 
+
+### Continous case
+
+For example, consider the mean squared loss:
 
 $$\mathcal{L}(y,f) : = \frac{1}{N} \sum_{i=1}^N (y_i - f(x_i))^.$$
 
@@ -244,6 +248,11 @@ $$Z_N(t) \sim Z_N(0) e^{-Mt},$$
 
 where $$M$$ depends only on the Hessian of $$\mathcal{L}$$ (constant in this case). Thus if we iterate far enough, we will always converge to every point - ie. over fit! In the machine learning setting, we need to account for this by introducing regularization on the learning rate and depth of the iterations. 
 
+### Discrete case
+
+In the discrete case, we solve:
+
+$$ \hat y^{t} = \hat y^{t-1} - \alpha \nabla \mathcal{L}_{\hat y^{t-1}} (y_i, \hat y^{t-1}). $$
 
 ## Gradient Boosted Trees
 
