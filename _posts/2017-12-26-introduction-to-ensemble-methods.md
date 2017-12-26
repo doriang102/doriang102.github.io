@@ -26,12 +26,14 @@ The main advantages of Random Forests are:
 
 ## Gradient Boosting
 
+The main idea in gradient boosting is to leverage the pattern in residuals and strenghten a weak prediction model, until our residuals become randomly (maybe random normal too) distributed. 
 
-There is a lot of confusing notation and discussion around gradient boosting, when ultimately it is just the gradient flow in a functional space (ie. $$L^2$$). 
 
 ### Continous case
 
-In this case we imagine that we have a loss funciton $$\mathcal{L}:X \times Y \to \mathbb{R}$$ equipped with some joint probability distribution $$p(y,x)$$ such that $$\mathcal{L} \in L^p(dp)$$. For example, in the ordinary least squares setting, we would seek to find $$f$$ such that
+There is a lot of confusing notation and discussion around gradient boosting, when ultimately it is just the gradient flow in a functional space (ie. $$L^2$$). 
+
+Imagine that we have a loss funciton $$\mathcal{L}:X \times Y \to \mathbb{R}$$ equipped with some joint probability distribution $$p(y,x)$$ such that $$\mathcal{L} \in L^p(dp)$$. For example, in the ordinary least squares setting, we would seek to find $$f$$ such that
 
 $$f = \textrm{argmin}_f \mathbb{E}_{x,y}  \frac{1}{2} (y - f(x))^2.$$
 
