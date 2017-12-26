@@ -94,7 +94,9 @@ $$
 
 The above minimiziation problem means we wish to find $$f_t(x)$$ which solves:
 
-$$\hat y^t(x) = \hat y^{t-1}(x) + \textrm{argmin}_{f_t} \sum_{i=1}^n l(y_i, \hat y_i^{t-1} + f_t(x_i)).$$
+$$\hat y^t(x) = \hat y^{t-1}(x) + \nu \textrm{argmin}_{f_t} \sum_{i=1}^n l(y_i, \hat y_i^{t-1} + f_t(x_i)),$$
+
+where $$\nu \in (0,1)$$ is the *learning rate*. Empirical studies indicate that having a smaller learning rate can dramatically improve performance. 
 
 **Note the following:**
 - The function depends on general $$x$$ since we want our model to generalize to data not necessarily in the training data.
@@ -102,7 +104,7 @@ $$\hat y^t(x) = \hat y^{t-1}(x) + \textrm{argmin}_{f_t} \sum_{i=1}^n l(y_i, \hat
 
 We perform a Taylor expansion of the above to simplify the above:
 
-$$\hat y^t(x) = \hat y^{t-1}(x) - \gamma_t \sum_{i=1}^n \nabla_{\hat y_i^{t-1}} l(y_i, \hat y_i^{t-1}).$$
+$$\hat y^t(x) = \hat y^{t-1}(x) - \nu \gamma_t \sum_{i=1}^n \nabla_{\hat y_i^{t-1}} l(y_i, \hat y_i^{t-1}).$$
 
 However, the above equation only makes sense for $$x=x_i$$ in the training set! So we must approximate the gradient at nearby places with a regression. Hence we compute
 
