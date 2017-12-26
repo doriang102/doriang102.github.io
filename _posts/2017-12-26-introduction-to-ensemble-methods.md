@@ -6,6 +6,12 @@ They both have their benefits and drawbacks - here is a quick summary of some of
 
 ![](/img/ensembling.png?raw=true)
 
+**Question: Which one should you use?**
+
+
+For a nice comparison, see https://github.com/zygmuntz/misc/tree/master/gbm_vs_rf. Essentially it appears that Gradient Boosted Trees have replaced Random Forests as the method of choice on Kaggle problems, and seem to provide overall better performance in a widge range of scenarios. However they are not easily parallelized (can you think of why before reading this post?) and thus take much longer to train. As with any modeling decision, one must consider what is the most important - model performance, training time, prediction time, or some combination of the above. 
+
+
 
 ## Random Forests
 
