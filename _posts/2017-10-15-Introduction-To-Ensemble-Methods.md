@@ -220,6 +220,14 @@ The main advantages of Random Forests are:
 
 Recall that our goal is to construct an estimator, $$\hat y$$ for y which is a collection of decision trees. The Random Forest method provided one way of doing this - simply construct many decision trees in parallel, then average the results out. A method which focucses on reducing the errors made by the previous decision trees is \textbf{Gradient Boosted Decision Trees}.
 
+There is a lot of confusing notation and discussion around gradient boosting, when ultimately it is just the gradient flow in a functional space (ie. $$L^2$$). For example, consider the mean squared loss:
+
+$$\mathcal{L}(y,f) : = \frac{1}{N} \sum_{i=1}^N (y_i - f(x_i))^.$$
+
+We can consider the $$L^2$$ gradient flow:
+
+$$ \partial_t f = - \nabla_{L^2} \mathcal{L}(y,f) = - \frac{2}{N} \sum_{i=1}^N (y_i - f(x_i)). $$
+
 Let's imagine we add a decision tree at each step:
 
 $$
