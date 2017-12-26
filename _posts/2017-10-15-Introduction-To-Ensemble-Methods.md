@@ -228,11 +228,11 @@ There is a lot of confusing notation and discussion around gradient boosting, wh
 
 ### Continous case
 
-For example, consider the mean squared loss with some joint probability distribution $$p(y,x)$$. For example, in the ordinary least squares setting, we would have
+In this case we imagine that we have a loss funciton $$\mathcal{L}:X \times Y \to \mathbb{R}$$ equipped with some joint probability distribution $$p(y,x)$$ such that $$\mathcal{L} \in L^p(dp)$$. For example, in the ordinary least squares setting, we would have
 
-$$p(y,x) = \frac{1}{2\pi} e^{-(x-\mu)^2}{2\sigma^2} f_x(x).$$
+$$p(y,x) = \frac{1}{2\pi} e^{-(x-\mu)^2}{2\sigma^2} f_x(x), $$
 
-If we define our loss function with respect to this distribution, we have
+with
 
 $$\mathcal{L}(y,f) : = \mathbb{E}_{x,y}  \frac{1}{2} (y - f(x))^2.$$
 
