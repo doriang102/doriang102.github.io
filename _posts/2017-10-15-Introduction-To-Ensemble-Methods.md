@@ -228,25 +228,29 @@ There is a lot of confusing notation and discussion around gradient boosting, wh
 
 ### Continous case
 
-For example, consider the mean squared loss:
+For example, consider the mean squared loss with some joint probability distribution $$p(y,x)$$. For example, in the ordinary least squares setting, we would have
 
-$$\mathcal{L}(y,f) : = \frac{1}{N} \sum_{i=1}^N (y_i - f(x_i))^.$$
+$$p(y,x) = \frac{1}{2\pi} e^{-(x-\mu)^2}{2\sigma^2} f_x(x).$$
 
-We can consider the $$L^2$$ gradient flow:
+If we define our loss function with respect to this distribution, we have
 
-$$ \partial_t f = - \nabla_{L^2} \mathcal{L}(y,f) = - \frac{2}{N} \sum_{i=1}^N (y_i - f(x_i)). $$
+$$\mathcal{L}(y,f) : = \mathbb{E}_{x,y}  \frac{1}{2} (y - f(x))^2.$$
 
-As with any ODE or PDE, we start with some initial condition, say $$f_0(x) = \frac{1}{N} \sum_i y_i$$, the average. How does this evolve under the above equation?
+We can consider the $$L^2(dp)$$ gradient flow:
 
-Since the above holds for all points $$x_j$$, we can write
+$$ \partial_t f = - \nabla_{L^2} \mathcal{L}(y,f) = - (y-f(x)), $$
 
-$$ \partial_t \frac{1}{N} \sum_i (f(x_i) - y_i) = - \nabla_{L^2} \mathcal{L}(y,f) = - \frac{2}{N} \sum_{i=1}^N (y_i - f(x_i)). $$
+where we note that $$ y - f(x)$$ is the gradient in $$L^2(dp)$$. Since $$y$ is constant we can define
 
-Setting $$Z_N(t) := \frac{1}{N} \sum_i (f(x_i) - y_i)$$ and using the standard theory of ODE, we conclude that
+$$ Z(t) = f(x_t)-y,$$
 
-$$Z_N(t) \sim Z_N(0) e^{-Mt},$$
+to obtain
 
-where $$M$$ depends only on the Hessian of $$\mathcal{L}$$ (constant in this case). Thus if we iterate far enough, we will always converge to every point - ie. over fit! In the machine learning setting, we need to account for this by introducing regularization on the learning rate and depth of the iterations. 
+$$ Z'(t) = - Z(t),$$
+
+which by the standard theory of ODE yields $$Z(t) = Z(0)e^{-t}$$. Thus we have $$f(x_t) \to y$$ under the gradient flow exponentially fast. 
+
+**Question** So are we done? We just iterate the gradient flow with respect to the functional space relevant to the loss function, right? Not exactly since we only have training data available. 
 
 ### Discrete case
 
