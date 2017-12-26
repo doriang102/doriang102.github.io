@@ -234,6 +234,16 @@ $$ \partial_t f = - \nabla_{L^2} \mathcal{L}(y,f) = - \frac{2}{N} \sum_{i=1}^N (
 
 As with any ODE or PDE, we start with some initial condition, say $$f_0(x) = \frac{1}{N} \sum_i y_i$$, the average. How does this evolve under the above equation?
 
+Since the above holds for all points $$x_j$$, we can write
+
+$$ \partial_t \frac{1}{N} \sum_i (f(x_i) - y_i) = - \nabla_{L^2} \mathcal{L}(y,f) = - \frac{2}{N} \sum_{i=1}^N (y_i - f(x_i)). $$
+
+Setting $$Z_N(t) := \frac{1}{N} \sum_i (f(x_i) - y_i)$$ and using the standard theory of ODE, we conclude that
+
+$$Z_N(t) \leq Z_N(0) e^{-Mt},$
+
+where $$M$$ depends only on the Hessian of $$\mathcal{L}$$ (constant in this case). Thus if we iterate far enough, we will always converge to every point - ie. over fit! In the machine learning setting, we need to account for this by introducing regularization on the learning rate and depth of the iterations. 
+
 
 ## Gradient Boosted Trees
 
