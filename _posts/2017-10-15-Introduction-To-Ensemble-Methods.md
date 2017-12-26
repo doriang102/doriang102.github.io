@@ -305,26 +305,27 @@ $$ r_{ij} = \nabla_{\hat y_i^{t-1}} l(y_i, \hat y_i^{t-1}),$$
 
 and let $$h_t(x)$$ be the decision tree which is solved from $$(x_i, r_{ij})$$. 
 
-**Algorithm**:
+### GBT Algorithm: 
 
-**Initialize model with a constant value:**
+**Step 1: Initialize model with a constant value:**
 
 $$ F_0(x) = \underset{\gamma}{\arg\min} \sum_{i=1}^n L(y_i, \gamma).$$
 
-**For $$m = 1$$ to $$M$$:
+**Step 2: For $$m = 1$$ to $$M$$:
 Compute so-called pseudo-residuals:**
 
 $${\displaystyle r_{im}=-\left[{\frac {\partial L(y_{i},F(x_{i}))}{\partial F(x_{i})}}\right]_{F(x)=F_{m-1}(x)}\quad {\mbox{for }}i=1,\ldots ,n.}$$
 
-**Fit a base learner (e.g. tree) to residuals**:
+**Step 3: Fit a base learner (e.g. tree) to residuals**:
 
 In other words, fit $${\displaystyle h_{m}(x)} $$ to pseudo-residuals, i.e. train it using the training set 
 $${\displaystyle \{(x_{i},r_{im})\}_{i=1}^{n}} \{(x_i, r_{im})\}_{i=1}^n.$$
 
-Compute multiplier $${\displaystyle \gamma _{m}} \gamma _{m}$$ by solving the following one-dimensional optimization problem:
+**Step 4: Compute multiplier $${\displaystyle \gamma _{m}}$$ by solving the following one-dimensional optimization problem:**
+
 $${\displaystyle \gamma _{m}={\underset {\gamma }{\operatorname {arg\,min} }}\sum _{i=1}^{n}L\left(y_{i},F_{m-1}(x_{i})+\gamma h_{m}(x_{i})\right).}$$
 
-**Update the model:**
+**Step 5: Update the model:**
 
 $${\displaystyle F_{m}(x)=F_{m-1}(x)+\gamma _{m}h_{m}(x).}$$
 
