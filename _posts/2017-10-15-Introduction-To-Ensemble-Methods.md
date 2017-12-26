@@ -262,6 +262,10 @@ where $$\alpha_t$$ is solved via line search.
 
 ## Gradient Boosted Trees
 
+So why can't we just solve the steepest descent problem? The main issue is explaiend well in *The Elements of Statistical Learning* by Hastie et al.
+
+*If minimizing the loss of the training data were the only goal, steepest descent would be the prefered strategy. The gradient is trivial to calculate for any differentiable loss function $$\mathcal{L}(y,f(x)$$ ...Unfortunately the gradient is only defined at training points $$x_i$$, whewreas our goal is to generalize $$\hat y^t$$ to new data not represented in the training set. *
+
 Recall that our goal is to construct an estimator, $$\hat y$$ for y which is a collection of decision trees. The Random Forest method provided one way of doing this - simply construct many decision trees in parallel, then average the results out. A method which focucses on reducing the errors made by the previous decision trees is *Gradient Boosted Decision Trees*.
 
 Let's imagine we add a decision tree at each step:
