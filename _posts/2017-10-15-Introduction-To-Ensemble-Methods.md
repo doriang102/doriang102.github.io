@@ -289,10 +289,10 @@ $$
 
 The above minimiziation problem means we wish to find $$f_t(x)$$ which solves:
 
-$$\hat y^t(x) = \hat y^{t-1}(x) + \argmin_{f} \sum_{i=1}^n l(y_i, \hat y_i^{t-1} + f_t(x_i)).$$
+$$\hat y^t(x) = \hat y^{t-1}(x) + \textrm{argmin}_{f_t} \sum_{i=1}^n l(y_i, \hat y_i^{t-1} + f_t(x_i)).$$
 
 **Note the following:**
-- The function depends on general $$x$$ since we want our model to generalie to data not necessarily in the training data.
+- The function depends on general $$x$$ since we want our model to generalize to data not necessarily in the training data.
 - The minimum problem is generally not tractable, so we need a way of approximating this minimization problem.
 
 We perform a Taylor expansion of the above to simplify the above:
@@ -305,6 +305,21 @@ $$ r_{ij} = \nabla_{\hat y_i^{t-1}} l(y_i, \hat y_i^{t-1}),$$
 
 and let $$h_t(x)$$ be the decision tree which is solved from $$(x_i, r_{ij})$$. 
 
+**Algorithm**:
+
+Initialize model with a constant value:
+$${\displaystyle F_{0}(x)={\underset {\gamma }{\arg \min }}\sum _{i=1}^{n}L(y_{i},\gamma ).} F_0(x) = \underset{\gamma}{\arg\min} \sum_{i=1}^n L(y_i, \gamma).$$
+For $$m = 1$$ to $$M$$:
+Compute so-called pseudo-residuals:
+$${\displaystyle r_{im}=-\left[{\frac {\partial L(y_{i},F(x_{i}))}{\partial F(x_{i})}}\right]_{F(x)=F_{m-1}(x)}\quad {\mbox{for }}i=1,\ldots ,n.} r_{im} = -\left[\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}\right]_{F(x)=F_{m-1}(x)} \quad \mbox{for } i=1,\ldots,n.$$
+Fit a base learner (e.g. tree) 
+$${\displaystyle h_{m}(x)} {\displaystyle h_{m}(x)} to pseudo-residuals, i.e. train it using the training set {\displaystyle \{(x_{i},r_{im})\}_{i=1}^{n}} \{(x_i, r_{im})\}_{i=1}^n.$$
+Compute multiplier 
+$${\displaystyle \gamma _{m}} \gamma _{m}$$ by solving the following one-dimensional optimization problem:
+$${\displaystyle \gamma _{m}={\underset {\gamma }{\operatorname {arg\,min} }}\sum _{i=1}^{n}L\left(y_{i},F_{m-1}(x_{i})+\gamma h_{m}(x_{i})\right).} \gamma_m = \underset{\gamma}{\operatorname{arg\,min}} \sum_{i=1}^n L\left(y_i, F_{m-1}(x_i) + \gamma h_m(x_i)\right).$$
+Update the model:
+$${\displaystyle F_{m}(x)=F_{m-1}(x)+\gamma _{m}h_{m}(x).} F_{m}(x)=F_{{m-1}}(x)+\gamma _{m}h_{m}(x).
+Output {\displaystyle F_{M}(x).} F_M(x).$$
 
 
 ### XGBoost
