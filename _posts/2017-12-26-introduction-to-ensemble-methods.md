@@ -1,6 +1,8 @@
 
 
-We will go over two main methods in this post - *Random Forests* and *Gradient Boosting*, falling under the categories of bagging and boosting methods respectively. Bagging methods take multiple trees or *weak learners*, trained in parallel, then combine the results. While boosting iterates and corrects the errors on the residuals in a recursive manner. 
+We will go over two main methods in this post - *Random Forests* and *Gradient Boosting*, falling under the categories of *Bagging* and *Boosting* methods respectively. Bagging methods take multiple trees or *weak learners*, trained in parallel, then combine the results. While boosting iterates and corrects the errors on the residuals in a recursive manner. 
+
+They both have their benefits and drawbacks - here is a quick summary of some of them.
 
 ![](/img/ensembling.png?raw=true)
 
