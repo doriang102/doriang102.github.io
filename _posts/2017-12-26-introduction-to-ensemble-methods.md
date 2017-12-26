@@ -9,7 +9,7 @@ They both have their benefits and drawbacks - here is a quick summary of some of
 
 ## Random Forests
 
-Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. If you haven't read my post on Decision Trees, please read that one first. Once you understand how decision trees work, building a random forest is an easy extension. One simply chooses random subsets of $$\tilde K < K$$ features where $$K$$ is the number of features and $J$ random rows. You then you train $$T$$ decision trees and average the results over the trees (you can also take the mode or median if you wish). To do variable importance you simply average out over all of the trees as well. 
+Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. If you haven't read my post on Decision Trees, please read that one first. Once you understand how decision trees work, building a random forest is an easy extension. One simply chooses random subsets of $$\tilde K < K$$ features where $$K$$ is the number of features and $$J$$ random rows. You then you train $$T$$ decision trees and average the results over the trees (you can also take the mode or median if you wish). To do variable importance you simply average out over all of the trees as well. 
 
 ![](/img/rfpic.png?raw=true)
 
