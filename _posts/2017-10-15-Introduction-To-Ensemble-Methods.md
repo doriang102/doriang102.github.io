@@ -283,7 +283,12 @@ $$
 \end{split}
 $$
 
-Next we do a Taylor expansion of the above and sum over all $$i$$:
+
+### XGBoost
+
+This implementation is slightly different than the usual so we cover it seperately. 
+
+We perform a Taylor expansion of the above and sum over all $$i$$:
 
 $$
 \mathcal{L}^{(t)}\approx \sum_{i=1}^n \underbrace{\ell(y_i,\hat{y}_i^{(t-1)})}_{\text{constant}}+\underbrace{g_i}_{\text{constant}}f_t(\mathbf{x}_i)+\frac{1}{2}\underbrace{h_i}_{\text{constant}}f_t^2(\mathbf{x}_i)+\Omega(f_t),$$
