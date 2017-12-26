@@ -1,6 +1,6 @@
 # Ensemble Methods
 
-We will go over two main methods here - bagging methods, and boosting methods. Bagging methods take multiple trees or *weak learners*, trained in parallele, then combine the result. While boosting iterates and corrects the errors on the residuals in a recursive manner. 
+We will go over two main methods here - random forests and gradient boosting, falling under the categories of bagging and boosting methods respectively. Bagging methods take multiple trees or *weak learners*, trained in parallel, then combine the results. While boosting iterates and corrects the errors on the residuals in a recursive manner. 
 
 ![](/img/ensembling.png?raw=true)
 
