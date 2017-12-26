@@ -316,14 +316,15 @@ Compute so-called pseudo-residuals:**
 
 $${\displaystyle r_{im}=-\left[{\frac {\partial L(y_{i},F(x_{i}))}{\partial F(x_{i})}}\right]_{F(x)=F_{m-1}(x)}\quad {\mbox{for }}i=1,\ldots ,n.}$$
 
-**Fit a base learner (e.g. tree) to residuals:
+**Fit a base learner (e.g. tree) to residuals**:
 
-In other words, fit $${\displaystyle h_{m}(x)}  to pseudo-residuals, i.e. train it using the training set $${\displaystyle \{(x_{i},r_{im})\}_{i=1}^{n}} \{(x_i, r_{im})\}_{i=1}^n.$$
+In other words, fit $${\displaystyle h_{m}(x)} $$ to pseudo-residuals, i.e. train it using the training set 
+$${\displaystyle \{(x_{i},r_{im})\}_{i=1}^{n}} \{(x_i, r_{im})\}_{i=1}^n.$$
 
 Compute multiplier $${\displaystyle \gamma _{m}} \gamma _{m}$$ by solving the following one-dimensional optimization problem:
 $${\displaystyle \gamma _{m}={\underset {\gamma }{\operatorname {arg\,min} }}\sum _{i=1}^{n}L\left(y_{i},F_{m-1}(x_{i})+\gamma h_{m}(x_{i})\right).}$$
 
-Update the model:
+**Update the model:**
 
 $${\displaystyle F_{m}(x)=F_{m-1}(x)+\gamma _{m}h_{m}(x).}$$
 
