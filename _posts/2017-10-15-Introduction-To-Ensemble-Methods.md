@@ -228,13 +228,9 @@ There is a lot of confusing notation and discussion around gradient boosting, wh
 
 ### Continous case
 
-In this case we imagine that we have a loss funciton $$\mathcal{L}:X \times Y \to \mathbb{R}$$ equipped with some joint probability distribution $$p(y,x)$$ such that $$\mathcal{L} \in L^p(dp)$$. For example, in the ordinary least squares setting, we would have
+In this case we imagine that we have a loss funciton $$\mathcal{L}:X \times Y \to \mathbb{R}$$ equipped with some joint probability distribution $$p(y,x)$$ such that $$\mathcal{L} \in L^p(dp)$$. For example, in the ordinary least squares setting, we would seek to find $$f$$ such that
 
-$$p(y,x) = \frac{1}{2\pi} e^{-\frac{(x-\mu)^2}{2\sigma^2}} f_x(x), $$
-
-with
-
-$$\mathcal{L}(y,f) : = \mathbb{E}_{x,y}  \frac{1}{2} (y - f(x))^2.$$
+$$f = \textrm{argmin}_f \mathbb{E}_{x,y}  \frac{1}{2} (y - f(x))^2.$$
 
 We can consider the $$L^2(dp)$$ gradient flow:
 
@@ -312,7 +308,7 @@ and let $$h_t(x)$$ be the decision tree which is solved from $$(x_i, r_{ij})$$.
 **Algorithm**:
 
 **Initialize model with a constant value:**
-$${\displaystyle F_{0}(x)={\underset {\gamma }{\arg \min }}\sum _{i=1}^{n}L(y_{i},\gamma ).} 
+$${\displaystyle F_{0}(x)={\underset {\gamma }{\arg \min }}\sum _{i=1}^{n}L(y_{i},\gamma ).} $$
 
 $$ F_0(x) = \underset{\gamma}{\arg\min} \sum_{i=1}^n L(y_i, \gamma).$$
 
