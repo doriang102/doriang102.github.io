@@ -240,7 +240,7 @@ We can consider the $$L^2(dp)$$ gradient flow:
 
 $$ \partial_t f = - \nabla_{L^2} \mathcal{L}(y,f) = - (y-f(x)), $$
 
-where we note that $$ y - f(x)$$ is the gradient in $$L^2(dp)$$. Since $$y$ is constant we can define
+where we note that $$ y - f(x)$$ is the gradient in $$L^2(dp)$$. Since $$y$$ is constant we can define
 
 $$ Z(t) = f(x_t)-y,$$
 
