@@ -128,7 +128,7 @@ $${\displaystyle r_{im}=-\left[{\frac {\partial L(y_{i},F(x_{i}))}{\partial F(x_
 **Step 3: Fit a base learner (e.g. tree) to residuals**:
 
 In other words, fit $${\displaystyle h_{m}(x)} $$ to pseudo-residuals, i.e. train it using the training set 
-$${\displaystyle \{(x_{i},r_{im})\}_{i=1}^{n}} \{(x_i, r_{im})\}_{i=1}^n.$$
+$${\displaystyle \{(x_{i},r_{im})\}_{i=1}^{n}}$$.
 
 **Step 4: Compute multiplier $${\displaystyle \gamma _{m}}$$ by solving the following one-dimensional optimization problem:**
 
