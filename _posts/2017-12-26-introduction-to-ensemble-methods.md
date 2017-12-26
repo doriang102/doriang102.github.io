@@ -17,7 +17,7 @@ In other words, our prediction would be
 
 $$\hat p_{RF}(y | x) = \frac{1}{K} \sum_{k=1}^K \hat p_K (y \vert x),$$
 
-where $$\ha p_K$$ is the estimator for an individual tree and $$\hat p_{RF}$$ is the estimator for the final tree based on averaging over the decision trees. Note that we can also take the mode or median instead of the average here.
+where $$\hat p_K$$ is the estimator for an individual tree and $$\hat p_{RF}$$ is the estimator for the final tree based on averaging over the decision trees. Note that we can also take the mode or median instead of the average here.
 
 The main advantages of Random Forests are:
 
