@@ -256,7 +256,7 @@ $$ \hat y^{t} = \hat y^{t-1} + \textrm{argmin}_h \sum_{i=1}^N\mathcal{L} (y_i, \
 
 Since this isn't computationally feasible, we iterate the gradient flow above with a learning rate $$\alpha$$:
 
-$$\hat y_j^{t} = \hat y_j^{t-1} - \alpha_t \sum_{i=1}^N \nabla \mathcal{L}_{\hat y_i^{t-1}} (y_i \hat y_i^{t-1}),$$
+$$\hat y_j^{t} = \hat y_j^{t-1} - \alpha_t \sum_{i=1}^N \nabla \mathcal{L}_{\hat y_i^{t-1}} (y_i, \hat y_i^{t-1}),$$
 
 where $$\alpha_t$$ is solved via line search. 
 
@@ -264,7 +264,7 @@ where $$\alpha_t$$ is solved via line search.
 
 So why can't we just solve the steepest descent problem? The main issue is explaiend well in *The Elements of Statistical Learning* by Hastie et al.
 
-*If minimizing the loss of the training data were the only goal, steepest descent would be the prefered strategy. The gradient is trivial to calculate for any differentiable loss function $$\mathcal{L}(y,f(x)$$ ...Unfortunately the gradient is only defined at training points $$x_i$$, whewreas our goal is to generalize $$\hat y^t$$ to new data not represented in the training set.*
+*"If minimizing the loss of the training data were the only goal, steepest descent would be the prefered strategy. The gradient is trivial to calculate for any differentiable loss function $$\mathcal{L}(y,f(x)$$ ...Unfortunately the gradient is only defined at training points $$x_i$$, whewreas our goal is to generalize $$\hat y^t$$ to new data not represented in the training set."*
 
 Recall that our goal is to construct an estimator, $$\hat y$$ for y which is a collection of decision trees. The Random Forest method provided one way of doing this - simply construct many decision trees in parallel, then average the results out. A method which focucses on reducing the errors made by the previous decision trees is *Gradient Boosted Decision Trees*.
 
@@ -283,9 +283,28 @@ Then how do we choose the best tree?
 
 $$
 \begin{split}\text{obj}^{(t)} & = \sum_{i=1}^n l(y_i, \hat{y}_i^{(t)}) + \sum_{i=1}^t\Omega(f_i) \\
-          & = \sum_{i=1}^n l(y_i, \hat{y}_i^{(t-1)} + f_t(x_i)) + \Omega(f_t) + constant
+          & = \sum_{i=1}^n l(y_i, \hat{y}_i^{(t-1)} + f_t(x_i)) + \Omega(f_t) + constant\\
 \end{split}
 $$
+
+The above minimiziation problem means we wish to find $$f_t(x)$$ which solves:
+
+$$\hat y^t(x) = \hat y^{t-1}(x) + \argmin_{f} \sum_{i=1}^n l(y_i, \hat y_i^{t-1} + f_t(x_i)).$$
+
+**Note the following:**
+- The function depends on general $$x$$ since we want our model to generalie to data not necessarily in the training data.
+- The minimum problem is generally not tractable, so we need a way of approximating this minimization problem.
+
+We perform a Taylor expansion of the above to simplify the above:
+
+$$\hat y^t(x) = \hat y^{t-1}(x) - \gamma_t \sum_{i=1}^n \nabla_{\hat y_i^{t-1}} l(y_i, \hat y_i^{t-1}).$$
+
+However, the above equation only makes sense for $$x=x_i$$ in the training set! So we must approximate the gradient at nearby places with a regression. Hence we compute
+
+$$ r_{ij} = \nabla_{\hat y_i^{t-1}} l(y_i, \hat y_i^{t-1}),$$
+
+and let $$h_t(x)$$ be the decision tree which is solved from $$(x_i, r_{ij})$$. 
+
 
 
 ### XGBoost
