@@ -197,6 +197,11 @@ Notice how the decision tree found the same thing we did manually? `petal_length
 
 # Ensemble Methods
 
+We will go over two main methods here - bagging methods, and boosting methods. Bagging methods take multiple trees or *weak learners*, trained in parallele, then combine the result. While boosting iterates and corrects the errors on the residuals in a recursive manner. 
+
+![](/img/ensembling.png?raw=true)
+
+
 ## Random Forests
 
 Random Forests are a simple but powerful extension of decision trees which help to prevent overfitting. One simply chooses random subsets of $$\tilde K < K$$ features where $$K$$ is the number of features. You then you train $$T$$ decision trees and average the results over the trees (you can also take the mode or median if you wish). To do variable importance you simply average out over all of the trees as well. 
