@@ -252,7 +252,9 @@ where $$M$$ depends only on the Hessian of $$\mathcal{L}$$ (constant in this cas
 
 In the discrete case, we solve:
 
-$$ \hat y^{t} = \hat y^{t-1} - \alpha \nabla \mathcal{L}_{\hat y^{t-1}} (y_i, \hat y^{t-1}). $$
+$$ \hat y^{t} = \hat y^{t-1} + \textrm{argmin}_h \sum_{i=1}^N\mathcal{L} (y_i, \hat y_i^{t-1} + h(x_i)). $$
+
+Since this isn't computationally feasible, we iterate the gradient flow above with a learning rate $$\alpha$$. 
 
 ## Gradient Boosted Trees
 
