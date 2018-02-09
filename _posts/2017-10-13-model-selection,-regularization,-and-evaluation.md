@@ -229,6 +229,45 @@ Plotting these coefficients looks like:
 Notice how in the Lasso case, all of the coefficients are either zero, or two orders of magnitude smaller than $$X[0]$$? The eometric explanation above is the reason. For Ridge on the other hand, the coefficients spread the error out evenly as we expect. 
 
 
+### A 3d interpretation to overfitting
+
+Recall that we noted above that by adding enough dimensions, we can solve *exactly* the linear algebra problem:
+
+$$ \mathbf{X}_k \beta =  \mathbf{y}. $$
+
+If we recall our scatter plot:
+ ![](/img/scatter_overfit_pink.png?raw=true)
+
+What we are really saying is that we have more *flexibility* if we add in other *fake* dimensions to our problem. Why is this? Essentially it boils down to now being able to use the hyperplane (instead of line) to hit the other points. To see this, let's extend our scatter plot to include the variable $\mathbf x_1$. We will then *shift* the plane so that it can hit the other points. 
+
+To understand this graph, **it is crucial to realize that it does not matter where we assume the $\mathbf x_2$ coordinate to lie here!** We now have the added flexibility of finding a hyperplane that can hit any points. Let's plot our original plane and a rotated one to illustrate:
+
+{% highlight ruby %}
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+
+for k in range(0,20,10):
+    fig = plt.figure(figsize=(10,10))
+    ax = plt.axes(projection='3d')
+    
+    ax.contour3D(X,Y,Z+k*Y, 50, cmap='binary')
+    ax.scatter(xx, yy, z, color='#ff3399',s=40)
+    
+    ax.plot_wireframe(xx, xx.T, Z, rstride=5, cstride=5)
+
+    #ax.plot(xx, yy, z, label='parametric curve')
+    ax.set_xlabel('X_0')
+    ax.set_ylabel('X_1')
+    ax.set_zlabel('Y');
+
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+{% endhighlight %}
+
+As we can see, we can still hit all of our original points, but now we are able to rotate our plane to hit other points as well! The added dimension has given us flexibility, and this is why we can pick up additional variance.
+ 
 **Conclusion:** Thus, **Lasso is often better for feature selection**. However once you have the "true" model, Ridge is better for performance according to most research (see papers of Andrew Ng if you are interested). 
 
 
