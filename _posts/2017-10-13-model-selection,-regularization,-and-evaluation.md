@@ -238,7 +238,7 @@ $$ \mathbf{X}_k \beta =  \mathbf{y}. $$
 If we recall our scatter plot:
  ![](/img/scatter_overfit_pink.png?raw=true)
 
-What we are really saying is that we have more *flexibility* if we add in other *fake* dimensions to our problem. Why is this? Essentially it boils down to now being able to use the hyperplane (instead of line) to hit the other points. To see this, let's extend our scatter plot to include the variable $\mathbf x_1$. We will then *shift* the plane so that it can hit the other points. 
+What we are really saying is that we have more *flexibility* if we add in other *fake* dimensions to our problem. Why is this? Essentially it boils down to now being able to use the hyperplane (instead of line) to hit the other points. To see this, let's extend our scatter plot to include the variable $$\mathbf x_1$$. We will then *shift* the plane so that it can hit the other points. 
 
 To understand this graph, **it is crucial to realize that it does not matter where we assume the $$\mathbf x_2$$ coordinate to lie here!** We now have the added flexibility of finding a hyperplane that can hit any points. Let's plot our original plane and a rotated one to illustrate:
 
