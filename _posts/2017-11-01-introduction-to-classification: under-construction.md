@@ -38,14 +38,11 @@ $$\mathcal{Q}(p) := \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) + (1-y_i)\log (1-p(
 but we assume that $$x \mapsto p(x)$$ is *piecewise constant* on regions $S \subset X$. 
 
 
-# Regularization
-
-
 # Classification Evaluation
 
 ## Precision vs. Recall
 
-For classification problems, accuracy is usually not a great metric. Why? Imagine you had only $$1%$$ of your data having a positive outcome $$y = 1$$. Then simply defining $$y \equiv 0$$ would result in $$99%$$ accuracy! How do we account for this? The first way is by defining precision and recall:
+For classification problems, accuracy is usually not a great metric. Why? Imagine you had only $$1\%$$ of your data having a positive outcome $$y = 1$$. Then simply defining $$y \equiv 0$$ would result in $$99%$$ accuracy! How do we account for this? The first way is by defining precision and recall:
 
 **Recall:** Out of all of the positive outcomes, what percentage does your model get right? More precisely
 
