@@ -240,7 +240,7 @@ If we recall our scatter plot:
 
 What we are really saying is that we have more *flexibility* if we add in other *fake* dimensions to our problem. Why is this? Essentially it boils down to now being able to use the hyperplane (instead of line) to hit the other points. To see this, let's extend our scatter plot to include the variable $\mathbf x_1$. We will then *shift* the plane so that it can hit the other points. 
 
-To understand this graph, **it is crucial to realize that it does not matter where we assume the $\mathbf x_2$ coordinate to lie here!** We now have the added flexibility of finding a hyperplane that can hit any points. Let's plot our original plane and a rotated one to illustrate:
+To understand this graph, **it is crucial to realize that it does not matter where we assume the $$\mathbf x_2$$ coordinate to lie here!** We now have the added flexibility of finding a hyperplane that can hit any points. Let's plot our original plane and a rotated one to illustrate:
 
 {% highlight ruby %}
 from mpl_toolkits.mplot3d import axes3d
@@ -266,6 +266,8 @@ ax = fig.add_subplot(111, projection='3d')
 
 {% endhighlight %}
 
+ ![](/img/3d_overfit1.png?raw=true)
+  ![](/img/3d_overfit2.png?raw=true)
 As we can see, we can still hit all of our original points, but now we are able to rotate our plane to hit other points as well! The added dimension has given us flexibility, and this is why we can pick up additional variance.
  
 **Conclusion:** Thus, **Lasso is often better for feature selection**. However once you have the "true" model, Ridge is better for performance according to most research (see papers of Andrew Ng if you are interested). 
