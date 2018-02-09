@@ -27,7 +27,7 @@ $\mathcal{Q}(p) := \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) + (1-y_i)\log (1-p(x
 Here we assume that we can parameterize our model as
 $$ p(y=1 \lvert x, \beta) = \frac{1}{1 + e^{-\beta \cdot x} } .$$
 
-The above is what is known as a *logit* function, which maps the continuous values $$-\beta \cdot x$$ to a range between $0$ and $1$.
+The above is what is known as a *logit* function, which maps the continuous values $$-\beta \cdot x$$ to a range between $$0$$ and $$1$$.
 
 ### Decision Trees
 
