@@ -33,9 +33,9 @@ The above is what is known as a *logit* function, which maps the continuous valu
 
 In this case, we don't have a parameterized model. See the discussion on Decision Trees in a previous blog post for more details. In this case we have as usual
 
-$\mathcal{Q}(p) := \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) + (1-y_i)\log (1-p(x_i)),$
+$$\mathcal{Q}(p) := \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) + (1-y_i)\log (1-p(x_i)),$$
 
-but we assume that $x \mapsto p(x)$ is *piecewise constant* on regions $S \subset X$. 
+but we assume that $$x \mapsto p(x)$$ is *piecewise constant* on regions $S \subset X$. 
 
 
 # Regularization
