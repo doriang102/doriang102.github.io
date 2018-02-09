@@ -22,7 +22,7 @@ This is our starting point for a large collection of classification models, whet
 ## Logistic Regression
 
 We aim to minimize, 
-$\mathcal{Q}(p) := \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) + (1-y_i)\log (1-p(x_i)).$
+$$\mathcal{Q}(p) := \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) + (1-y_i)\log (1-p(x_i)).$$
 
 Here we assume that we can parameterize our model as
 $$ p(y=1 \lvert x, \beta) = \frac{1}{1 + e^{-\beta \cdot x} } .$$
