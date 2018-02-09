@@ -36,7 +36,7 @@ In this case, we don't have a parameterized model. See the discussion on Decisio
 
 $$\mathcal{Q}(p) := \frac{1}{N}\sum_{k=1}^N  y_i \log p(x_i) + (1-y_i)\log (1-p(x_i)),$$
 
-but we assume that $$x \mapsto p(x)$$ is *piecewise constant* on regions $S \subset X$. 
+but we assume that $$x \mapsto p(x)$$ is *piecewise constant* on regions $$S \subset X$$. 
 
 
 # Classification Evaluation
