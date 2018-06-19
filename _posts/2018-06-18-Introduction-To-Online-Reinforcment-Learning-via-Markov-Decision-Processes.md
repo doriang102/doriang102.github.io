@@ -192,3 +192,85 @@ And the softmax function:
 def softmax(t):
     return np.exp(-t)/np.sum(np.exp(-t))
 {% endhighlight %}
+
+We see here that we want to nudge the parameters in the *good* directions - ie. the one with highest payoffs. This is very 
+analogous to importance sampling
+
+## Step 3: Keep on iterating and learning
+
+We now show the full code below which initializes uniform weights then does 100 iterations of exploring the graph. The 
+shortest path is then recorded as the "best" path and plotted below.
+
+
+{% highlight ruby %}
+s_current = 0
+# Initialize Weights
+W = np.matrix(np.ones(shape=(8,8)))
+#W *= 1/8
+
+# Initialize Weights
+theta = np.matrix(np.zeros(shape=(8,8)))
+
+# Initialize Weights to be learned
+for k in range(8):
+    W[k]=softmax(theta[k].squeeze())
+    
+    
+    
+best_path=[]
+best_length=1000
+found_after = 0
+for simulation in range(100):
+    s_current = 0
+    # Initialize Weights
+    theta = np.matrix(np.zeros(shape=(8,8)))
+
+    # Initialize Weights to be learned
+    for k in range(8):
+        W[k]=softmax(theta[k].squeeze())
+    path=[]
+    for t in range(10):
+        reward=-1
+        while reward < 0:
+            s_next = np.where(np.random.multinomial(1, np.array(W[s_current,:]).squeeze(), size=1)==1)[1][0]
+            reward = R[s_current,s_next]
+
+        path.append((s_current,s_next))
+        if reward == 100:
+            if len(path) < best_length:
+                best_path = path
+                best_length=len(best_path)
+                found_after = simulation
+                break
+        #print (s_current,s_next,R[s_current,s_next])
+
+        reward_next = R[s_current,s_next]
+        #print (s_next)
+        for m in range(8):
+            theta[s_current,m] = theta[s_current,m] + gradient(s_current,m,alpha=0.01)
+        for k in range(8):
+            W[k]=softmax(theta[k].squeeze())
+        s_current = s_next
+    
+print ("Found best path " + str(best_path) + " after " + str(found_after) + " simulations")
+
+
+
+# map cell to cell, add circular cell to goal point
+points_list = best_path
+goal = 7
+
+
+G=nx.Graph()
+G.add_edges_from(points_list)
+pos = nx.spring_layout(G)
+nx.draw_networkx_nodes(G,pos)
+nx.draw_networkx_edges(G,pos)
+nx.draw_networkx_labels(G,pos)
+plt.show()
+{% endhighlight %}
+**Output:**
+```
+Found best path [(0, 1), (1, 2), (2, 7)] after 5 simulations
+```
+![](/img/best_path.png?raw=true)
