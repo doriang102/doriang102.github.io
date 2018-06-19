@@ -48,4 +48,4 @@ $$
 \end{align}
 $$
 
-The amazing thing here is that while our policy depends on our choice of $$\theta_{s_{t},s_{t-1}}$, $p(s_{t+1} \lvert s_t,a_t)$$ does not! 
+The amazing thing here is that while our policy depends on our choice of $$\theta_{s_{t},s_{t-1}}$$, $$p(s_{t+1} \lvert s_t,a_t)$$ does not! 
