@@ -62,3 +62,44 @@ which is the transition probability of going from node m to node k. How do we de
 - We want to have a negative reward when we hit a barrier - ie. there is no edge in the graph. We set the reward in this case to be $$-1$$.
 - We want to favor possible directions (even if they haven't lead to the reward yet). So we set the reward to be $1$ if the edge exists. 
 - We define a reward of $$100$$ if our path reaches the goal: node 7.
+
+{% highlight ruby %} 
+# how many points in graph? x points
+MATRIX_SIZE = 8
+
+# create matrix x*y
+R = np.matrix(np.ones(shape=(MATRIX_SIZE, MATRIX_SIZE)))
+R *= -1
+
+# assign zeros to paths and 100 to goal-reaching point
+for point in points_list:
+    print(point)
+    if point[1] == goal:
+        R[point] = 100
+    else:
+        R[point] = 0
+
+    if point[0] == goal:
+        R[point[::-1]] = 100
+    else:
+        # reverse of point
+        R[point[::-1]]= 0
+
+# add goal point round trip
+R[goal,goal]= 100
+
+R
+{% endhighlight %}
+```
+(0, 1)
+(1, 2)
+(2, 7)
+matrix([[  -1.,    0.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
+        [   0.,   -1.,    0.,   -1.,   -1.,   -1.,   -1.,   -1.],
+        [  -1.,    0.,   -1.,   -1.,   -1.,   -1.,   -1.,  100.],
+        [  -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
+        [  -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
+        [  -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
+        [  -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
+        [  -1.,   -1.,    0.,   -1.,   -1.,   -1.,   -1.,  100.]]
+```
