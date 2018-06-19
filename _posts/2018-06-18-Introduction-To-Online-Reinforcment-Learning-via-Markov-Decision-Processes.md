@@ -90,7 +90,9 @@ R[goal,goal]= 100
 
 R
 {% endhighlight %}
+**Output:**
 ```
+
 (0, 1)
 (1, 2)
 (2, 7)
@@ -102,4 +104,29 @@ matrix([[  -1.,    0.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
         [  -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
         [  -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
         [  -1.,   -1.,    0.,   -1.,   -1.,   -1.,   -1.,  100.]]
+```
+
+
+
+### Step 1: Initializiation
+
+
+We assume that we can go in any direction, so we assume that $$\theta_{km} \equiv 0$$, giving equal probability to each direction.
+
+
+# Initialize Weights
+{% highlight ruby %} 
+theta = np.matrix(np.zeros(shape=(8,8)))
+theta
+{% endhighlight %}
+**Output:**
+```
+matrix([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+        [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+        [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+        [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+        [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+        [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+        [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+        [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]])
 ```
