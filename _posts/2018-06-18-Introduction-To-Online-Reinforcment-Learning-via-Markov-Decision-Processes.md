@@ -114,8 +114,9 @@ matrix([[  -1.,    0.,   -1.,   -1.,   -1.,   -1.,   -1.,   -1.],
 We assume that we can go in any direction, so we assume that $$\theta_{km} \equiv 0$$, giving equal probability to each direction.
 
 
-# Initialize Weights
+
 {% highlight ruby %} 
+# Initialize Weights
 theta = np.matrix(np.zeros(shape=(8,8)))
 theta
 {% endhighlight %}
@@ -130,3 +131,64 @@ matrix([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
         [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
         [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]])
 ```
+We define the corresponding probabilites based on $$\theta$$, which, as expected are uniform across possible paths
+
+
+{% highlight ruby %}
+# Initialize Weights to be learned
+for k in range(8):
+    W[k]=softmax(theta[k].squeeze())
+W
+{% endhighlight %}
+**Output:**
+```
+matrix([[ 0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125],
+        [ 0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125],
+        [ 0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125],
+        [ 0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125],
+        [ 0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125],
+        [ 0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125],
+        [ 0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125],
+        [ 0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125,  0.125]])
+```
+
+### Step 2: Choose a stochastic policy
+
+In our setting if are at node $k(t)$ at time t, then $$a_{k(t)} \sim \textrm{Mult}\left(\pi_{0k},\cdots,\pi_{7k}\right)$$
+We do this in Python via:
+
+{% highlight ruby %}
+s_next = np.where(np.random.multinomial(1, np.array(W[s_current,:]).squeeze(), size=1)==1)[1][0]
+{% endhighlight %}
+
+### Step 2: Oberve reward and update parameters in *good* directions
+
+Thus we want to find the best path. At each observation we want to **gradient descent** in the direction of best gradient: 
+   
+   
+ $$ \theta_{km}^t= \theta_{km}^{t-1} - R(t) \nabla_{\theta} \log \pi (k \lvert m) $$
+   
+For this we do a simple computation:
+
+$$ \log \pi (k \lvert m) = - \theta_{km} - \log \left( \sum_l e^{-\theta_{lm}}\right).$$
+
+
+Thus 
+
+$$ \nabla_{\theta_{km}} \log \pi (k \lvert m) = \pi(k \lvert m) - 1,$$
+
+a relative simple equation!
+
+
+We implement it as `gradient` below:
+{% highlight ruby %}
+def gradient(k,m,alpha=0.1):
+    #denom = sum([np.exp(-theta[k,l]) for l in range(8)])
+    return R[k,m]*(W[k,m]-1)
+{% endhighlight %}
+
+And the softmax function:
+{% highlight ruby %}
+def softmax(t):
+    return np.exp(-t)/np.sum(np.exp(-t))
+{% endhighlight %}
