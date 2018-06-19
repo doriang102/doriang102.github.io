@@ -52,7 +52,7 @@ The amazing thing here is that while our policy depends on our choice of $$\thet
 
 ## Our setting
 
-In our case, we have 7 nodes labeled $k=0,1,\cdots,7$ and we make the softmax prior:
+In our case, we have 7 nodes labeled $$k=0,1,\cdots,7$$ and we make the softmax prior:
 
 $$  \pi (k \lvert m ) = \frac{e^{-\theta_{k,m}}}{\sum_k e^{-\theta_{k,m}}},$$
 which is the transition probability of going from node m to node k. How do we define the rewards?
@@ -60,7 +60,7 @@ which is the transition probability of going from node m to node k. How do we de
 **Choice of Reward:**
 
 - We want to have a negative reward when we hit a barrier - ie. there is no edge in the graph. We set the reward in this case to be $$-1$$.
-- We want to favor possible directions (even if they haven't lead to the reward yet). So we set the reward to be $1$ if the edge exists. 
+- We want to favor possible directions (even if they haven't lead to the reward yet). So we set the reward to be $$1$$ if the edge exists. 
 - We define a reward of $$100$$ if our path reaches the goal: node 7.
 
 {% highlight ruby %} 
