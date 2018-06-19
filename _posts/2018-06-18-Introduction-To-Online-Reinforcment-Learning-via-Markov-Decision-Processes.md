@@ -1,5 +1,7 @@
 # Markov Decision Processes
 
+In this post, we will explore (literally!) how to find an optimal sequence of actions to reach a desired goal. These are the basic principles upon which Alpha Go was built (but in a much simpler setting). Before we get into the details, let's construct a basic graph. **Our goal will be to go from 0 to 7 in this example.**
+
 {% highlight ruby %} 
 import networkx as nx
 points_list = [(0,1), (1,5), (5,6), (5,4), (1,2), (2,3), (2,7)]
@@ -15,7 +17,7 @@ plt.show()
 
 ![](/img/mdp_graph.png?raw=true)
 
-Our goal is to find a sequence of actions, denote by policty $\pi$ to maximize the total reward: $$\mathbb{E}[R \lvert \pi] = \int p(\tau \lvert \pi) R(\tau)$$
+Our goal is to find a sequence of actions, denote by policty $$\pi$$ to maximize the total reward: $$\mathbb{E}[R \lvert \pi] = \int p(\tau \lvert \pi) R(\tau)$$
     
  where $$\tau$$ is the space of all *paths*, ie
  $$ \tau = (a_0,s_0,r_0,a_1,s_1,r_1,\cdots,a_t,s_t,r_t)$$
