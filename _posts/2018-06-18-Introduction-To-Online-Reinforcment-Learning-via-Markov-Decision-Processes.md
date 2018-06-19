@@ -17,13 +17,14 @@ plt.show()
 
 ![](/img/mdp_graph.png?raw=true)
 
-Our goal is to find a sequence of actions, denote by policty $$\pi$$ to maximize the total reward: $$\mathbb{E}[R \lvert \pi] = \int p(\tau \lvert \pi) R(\tau)$$
-    
- where $$\tau$$ is the space of all *paths*, ie
- $$ \tau = (a_0,s_0,r_0,a_1,s_1,r_1,\cdots,a_t,s_t,r_t)$$
+Our goal is to find a sequence of actions, denote by policty $$\pi$$ to maximize the total reward: $$\mathbb{E}[R \lvert \pi] = \int p(\tau \lvert \pi) R(\tau)$$ where $$\tau$$ is the space of all *paths*, ie $$ \tau = (a_0,s_0,r_0,a_1,s_1,r_1,\cdots,a_t,s_t,r_t)$$. 
+
+**What is the reward?**
+
+We will define this below in such a way as to take advantage of our goal and the structure of the graph. This is a common thing to do in reinforcement learning. 
  
  
-Now from the **Markov property** we have $$p(\tau \lvert \pi) = \prod_{t=1}^{T-1} p(s_{t+1}\lvert s_t,a_t) \pi (a_t \lvert s_t).$$
+From the **Markov property** we have $$p(\tau \lvert \pi) = \prod_{t=1}^{T-1} p(s_{t+1}\lvert s_t,a_t) \pi (a_t \lvert s_t).$$
 
 We will assume that $$\pi(a_t \lvert s_t)$$ is some stochastic policy, which has a form of
 
