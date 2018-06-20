@@ -1,11 +1,11 @@
 # UNDER CONSTRUCTION
 
 
-# Metropolis Hastings Algorithm
+## Metropolis Hastings Algorithm
 
 Let's assume we can sample from some distribution $$q(x)$$ and we wish to sample from a known distribution $$p(x)$$. 
 
-Our goal is to construct a **Markov Chain $$Q$$** whose stationary distribution is $p(x)$. This would mean that
+Our goal is to construct a **Markov Chain $$Q$$** whose stationary distribution is $$p(x)$$. This would mean that
 
 $$\pi(x') Q(x \lvert x')A(x \lvert x') = Q(x' \lvert x) \pi(x) A (x' \lvert x),$$
 
