@@ -10,7 +10,7 @@ for $$\pi(x) = p(x)$$ where $$Q$$ is the transition matrix and $$A$$ is the acce
 
 $$  \frac{A(x' \lvert x)}{A(x \lvert x')} = \frac{Q(x \lvert x') p(x')}{Q(x' \lvert x) p(x)}=: H(x'|x) .$$
 
-We want to sample $$x'$ from $$Q(\cdot \lvert x)$$ and accept it with probability $$A(x' \lvert x)$$. 
+We want to sample $$x'$$ from $$Q(\cdot \lvert x)$$ and accept it with probability $$A(x' \lvert x)$$. 
 
 What remains is:
 
