@@ -6,11 +6,11 @@ Our goal is to construct a **Markov Chain $Q$** whose stationary distribution is
 
 $$\pi(x') Q(x \lvert x')A(x \lvert x') = Q(x' \lvert x) \pi(x) A (x' \lvert x),$$
 
-for $\pi(x) = p(x)$ where $Q$ is the transition matrix and $A$ is the acceptance probability. The above is known as a **detailed balance**. In other words, the flow of mass $$x \mapsto x'$$ is the same as $x' \mapsto x$. Our acceptance probability is therefore 
+for $$\pi(x) = p(x)$$ where $$Q$$ is the transition matrix and $$A$$ is the acceptance probability. The above is known as a **detailed balance**. In other words, the flow of mass $$x \mapsto x'$$ is the same as $$x' \mapsto x$$. Our acceptance probability is therefore 
 
 $$  \frac{A(x' \lvert x)}{A(x \lvert x')} = \frac{Q(x \lvert x') p(x')}{Q(x' \lvert x) p(x)}=: H(x'|x) .$$
 
-We want to sample $$x'$ from $Q(\cdot \lvert x)$$ and accept it with probability $$A(x' \lvert x)$$. 
+We want to sample $$x'$ from $$Q(\cdot \lvert x)$$ and accept it with probability $$A(x' \lvert x)$$. 
 
 What remains is:
 
