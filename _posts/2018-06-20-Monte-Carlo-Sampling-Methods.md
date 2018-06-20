@@ -2,7 +2,7 @@
 
 In this approach we use the acceptance/rejection algorithm which is defined as follows. 
 
-Let's assume we can sample from some distribution $q(x)$ and we wish to sample from a known distribution $$p(x)$$. 
+Let's assume we can sample from some distribution $$q(x)$$ and we wish to sample from a known distribution $$p(x)$$. 
 
 Our goal is to construct a **Markov Chain $Q$** whose stationary distribution is $p(x)$. This would mean that
 
