@@ -1,4 +1,4 @@
-#UNDER CONSTRUCTION
+# UNDER CONSTRUCTION
 
 In this approach we use the acceptance/rejection algorithm which is defined as follows. 
 
