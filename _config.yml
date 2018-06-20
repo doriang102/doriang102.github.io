@@ -4,4 +4,4 @@ redcarpet:
     extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
 
 
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-cayman
