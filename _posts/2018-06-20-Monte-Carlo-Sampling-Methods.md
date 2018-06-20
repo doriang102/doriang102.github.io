@@ -43,7 +43,7 @@ The algorithm is defined as follows:
 
 $$ \alpha = \min\left\{1,\frac{q(x_t \lvert x_{t-1}) p(x_{t-1})}{q(x_{t-1} \lvert x_t) p(x_t)} \right\}.$$
 
-3) Sample $u \sim \textrm{Unif}[0,1]$. 
+3) Sample $$u \sim \textrm{Unif}[0,1]$$. 
 
 * If $$u < \alpha$$, then accept and return $$x_t$$. 
 * Otherwise set $$x_t = x_{t-1}$$. 
