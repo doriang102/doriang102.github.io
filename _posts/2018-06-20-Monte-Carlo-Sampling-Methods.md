@@ -50,6 +50,46 @@ $$ \alpha = \min\left\{1,\frac{q(x_t \lvert x_{t-1}) p(x_{t-1})}{q(x_{t-1} \lver
 
 4) Repeat step 1).
 
+**Example:**
+
+{% highlight ruby %}
+# Example
+
+def p(x):
+    return (1/np.sqrt(2*np.pi))*np.exp(-(x**2)/2)
+
+
+def T(xprime,x,delta=0.1):
+    if np.abs(xprime-x) < delta:
+        return 1
+    else:
+        return 0
+
+def A(xprime,x,delta=0.1):
+    alpha = min(1, (p(xprime))/p(x))
+    u = np.random.uniform(0,1)
+    if u < alpha:
+        return 1
+    else:
+        return 0
+
+def metropolis(max_iterations=100000,delta=0.1):
+    x_next = 0
+    x_vals=[]
+    for n in range(max_iterations):
+        x_candidate = np.random.uniform(x_next-delta,x_next+delta)
+        
+        accept = A(x_candidate,x_next)
+        if accept == 1:
+            x_next = x_candidate
+        else:
+            x_next = x_next
+        x_vals.append(x_next)
+    return x_vals
+
+x_vals = metropolis()
+{ % endhighlight % }
+
 ## Gibbs Sampling
 
 Note that the MH algorithm treats $p(x)$ as a black box and does not leverage any particular structure of $$p(x)$$. Similarly, the proposal distribution we choose typically does not depend on p(x) and also does not leverage any structure of $$p(x)$$.
