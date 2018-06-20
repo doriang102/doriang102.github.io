@@ -49,3 +49,29 @@ $$ \alpha = \min\left\{1,\frac{q(x_t \lvert x_{t-1}) p(x_{t-1})}{q(x_{t-1} \lver
 * Otherwise set $$x_t = x_{t-1}$$. 
 
 4) Repeat step 1).
+
+## Gibbs Sampling
+
+Note that the MH algorithm treats $p(x)$ as a black box and does not leverage any particular structure of $$p(x)$$. Similarly, the proposal distribution we choose typically does not depend on p(x) and also does not leverage any structure of $$p(x)$$.
+
+Gibbs sampling is a MCMC algorithm that repeatedly samples from the conditional distribution of one variable of the target distribution p, given all of the other variables. Gibbs sampling works as follows:
+
+
+Imagine that we have $$K$$ variables $$\mathbf X = (x_1,x_2,\cdots,x_k)$$ and we can calculate the posterior conditional distributions exactly. As before, let's try to sample from $$P(\mathbf X | D)$$ by constructing a Markov Chain. 
+
+In this case, we will choose $i$ randomly from $$\{1,2,\cdots,K\}$$ and hold all variables not equal to $$i$$ fixed to their previous values. We denote this vector as $$x_{-i}$$. Then we wish to sample a new value of $$x_i$$ from $$p(x_i' \lvert x_{-1})$$.
+
+So 
+
+$$ \alpha = \frac{ T(x_i',x_{-i} \lvert x_i, x_{i-1}) p(x_i,x_{i-1})}{T(x_i,x_{-i} \lvert x_i', x_{i-1}) p(x_i' ,x_{i-1})}. $$
+
+Since we can compute the posteriors directly, we set
+
+$$ T(x_i', x_{-i} \lvert x_i, x_{i-1}) = \frac{1}{K} p(x_i' \lvert x_{i-1}). $$
+
+Then 
+$$ \alpha = \frac{ p(x_i' \lvert x_{i-1}) p(x_i \lvert x_{i-1})p(x_{i-1})}{p(x_i \lvert x_{i-1}) p(x_i' \lvert x_{i-1})p(x_i' \lvert x_{-1}} = 1,$$
+
+so we **always accept the candidate sample in Gibbs sampling**. 
+
+
