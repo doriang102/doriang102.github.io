@@ -53,7 +53,6 @@ $$ \alpha = \min\left\{1,\frac{q(x_t \lvert x_{t-1}) p(x_{t-1})}{q(x_{t-1} \lver
 **Example:**
 
 {% highlight ruby %}
-# Example
 
 def p(x):
     return (1/np.sqrt(2*np.pi))*np.exp(-(x**2)/2)
