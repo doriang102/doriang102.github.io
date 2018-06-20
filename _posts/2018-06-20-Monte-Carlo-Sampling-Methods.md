@@ -59,7 +59,7 @@ Gibbs sampling is a MCMC algorithm that repeatedly samples from the conditional 
 
 Imagine that we have $$K$$ variables $$\mathbf X = (x_1,x_2,\cdots,x_k)$$ and we can calculate the posterior conditional distributions exactly. As before, let's try to sample from $$P(\mathbf X \lvert D)$$ by constructing a Markov Chain. 
 
-In this case, we will choose $i$ randomly from $$\{1,2,\cdots,K\}$$ and hold all variables not equal to $$i$$ fixed to their previous values. We denote this vector as $$x_{-i}$$. Then we wish to sample a new value of $$x_i$$ from $$p(x_i' \lvert x_{-1})$$.
+In this case, we will choose $$i$$ randomly from $$\{1,2,\cdots,K\}$$ and hold all variables not equal to $$i$$ fixed to their previous values. We denote this vector as $$x_{-i}$$. Then we wish to sample a new value of $$x_i$$ from $$p(x_i' \lvert x_{-1})$$.
 
 So 
 
