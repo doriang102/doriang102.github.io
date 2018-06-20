@@ -1,5 +1,8 @@
 # UNDER CONSTRUCTION
 
+
+# Metropolis Hastings Algorithm
+
 Let's assume we can sample from some distribution $$q(x)$$ and we wish to sample from a known distribution $$p(x)$$. 
 
 Our goal is to construct a **Markov Chain $Q$** whose stationary distribution is $p(x)$. This would mean that
@@ -23,8 +26,8 @@ $$A(x' \lvert x) = \min \left( 1, \frac{Q(x \lvert x') p(x')}{Q(x' \lvert x) p(x
 
 
 
-** Proof of balance: **
-Note that $H(x'\lvert x) H(x \lvert x') = 1$. 
+**Proof of balance:**
+Note that $$H(x'\lvert x) H(x \lvert x') = 1$$. 
 
 * **Case 1:** $$H(x' \lvert x) = 1$$. Then $$A(x' \lvert x) = A(x \lvert x') = 1$$
 * **Case 2:** $$H(x' \lvert x) > 1$$. Then $$A(x' \lvert x) = 1$$. Since $$H(x \lvert x') < 1$$ by the above, we have $$A(x \lvert x') = \frac{Q(x' \lvert x) p(x)}{Q(x \lvert x') p(x')}$$ which balances the above. 
@@ -43,6 +46,6 @@ $$ \alpha = \min\left\{1,\frac{q(x_t \lvert x_{t-1}) p(x_{t-1})}{q(x_{t-1} \lver
 3) Sample $u \sim \textrm{Unif}[0,1]$. 
 
 * If $$u < \alpha$$, then accept and return $$x_t$$. 
-* Otherwise set $x_t = x_{t-1}$. 
+* Otherwise set $$x_t = x_{t-1}$$. 
 
 4) Repeat step 1).
