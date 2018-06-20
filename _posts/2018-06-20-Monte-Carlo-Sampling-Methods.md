@@ -88,7 +88,7 @@ def metropolis(max_iterations=100000,delta=0.1):
     return x_vals
 
 x_vals = metropolis()
-{ % endhighlight % }
+{% endhighlight %}
 
 ## Gibbs Sampling
 
