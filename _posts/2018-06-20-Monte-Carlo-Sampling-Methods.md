@@ -2,6 +2,10 @@
 
 ## Inverse Sampling
 
+We will present a slightly more general treatment here than is usually seen. Imagine that we wish to sample from some probability measure $\nu$ but only have access to a probability distribution $\mu$ (eg. $\mu = \textrm{Unif}[0,1]$, a random number generator). 
+
+![](/img/optimal_transport.png?raw=true)
+
 
 ## Rejection Sampling
 
