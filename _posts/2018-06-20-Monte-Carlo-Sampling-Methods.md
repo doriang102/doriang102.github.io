@@ -1,5 +1,34 @@
 # UNDER CONSTRUCTION
 
+## Inverse Sampling
+
+
+## Rejection Sampling
+
+* Obtain a sample $${\displaystyle y}$$ from distribution $${\displaystyle Y}$$ and a sample $${\displaystyle u}$$ from $${\displaystyle \mathrm {Unif} (0,1)}$$  (the uniform distribution over the unit interval).
+
+
+* Check whether or not $${\textstyle u<f(y)/Mg(y)}$$ 
+* If this holds, accept $${\displaystyle y}$$ as a sample drawn from ${\displaystyle f}$;
+* if not, reject the value of $${\displaystyle y}$$ and return to the sampling step.
+
+The algorithm will take an average of $${\displaystyle M}$$ iterations to obtain a sample.
+### Example:
+
+Let $$f(x) = 1_{x>5}(x) \frac{1}{\sqrt{2\pi}} e^{-x^2/2}.$$ Then choose $$g(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}.$$
+
+Then $$f \leq g$$ with constant $$M=1$$. 
+
+
+{% highlight ruby %}
+def rejection_sample(cutoff):
+    g = np.random.normal(0,1,10000)
+    f = [x for x in g if x > cutoff ]
+    P_sim = len(f)/len(g)
+    return P_sim
+{% endhighlight %}
+
+
 
 ## Metropolis Hastings Algorithm
 
