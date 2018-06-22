@@ -2,6 +2,14 @@
 layout: default
 title: Data Science - Theory and Practice 
 ---
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 <div class="blurb">
 	<img src = '/img/dorian2.jpg'>
 	<h1>Hi there, </h1>My name is Dorian Goldman and this is my blog where I'll write about Data Science, Machine Learning, Music and other related topics.<br><br>
