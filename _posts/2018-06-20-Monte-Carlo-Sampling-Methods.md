@@ -50,6 +50,7 @@ Thus for any $$x$$ sampled from $$[0,1]$$, we just find the corresponding minimu
 s = np.random.uniform(0,1,1000)
 plt.hist(s)
 {% endhighlight %}
+![](/img/MC_uniform.png?raw=true)
 
 {% highlight ruby %}
 import math
@@ -76,6 +77,8 @@ binom_samp=[binomial_sample(n,p,x) for x in s]
 plt.hist(binom_samp)
 {% endhighlight %}
 
+![](/img/MC_binomial.png?raw=true)
+
 ### Example 2: Sampling binomial from normal
 
 {% highlight ruby %}
@@ -84,6 +87,8 @@ phi_mu = [0.5 + 0.5*math.erf(x) for x in s]
 T = [binomial_sample(n,p,x) for x in phi_mu]
 plt.hist(T)
 {% endhighlight %}
+
+![](/img/MC_binomial.png?raw=true)
 
 
 ## Rejection Sampling
