@@ -17,6 +17,7 @@ $$\nu(A) = \mu(T^{-1}(A)).$$
 In the case of one dimension, it turns out there is only one such map. Let $$F_{\nu}$$ and $$F_{\mu}$$ be defined by
 
 $$ F_{\nu}(x) = \int_{-\infty}^x d\nu(x)$$
+
 $$ F_{\mu}(x) = \int_{-\infty}^x d\mu(x)$$
 
 ## Rejection Sampling
