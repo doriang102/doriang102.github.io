@@ -24,6 +24,7 @@ Then the unique map which satisfies $$T \# \mu = \nu$$ is
 
 $$T = F_{\nu}^{-1} \circ F_{\mu}.$$
 
+Such a map always exists even in higher dimensions, assuming that $$\mu << \mathcal{L}$$. This is a result by [Brenier, 95]. 
 
 ## Rejection Sampling
 
