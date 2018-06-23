@@ -24,11 +24,17 @@ Then the unique map which satisfies $$T \# \mu = \nu$$ is
 
 $$T = F_{\nu}^{-1} \circ F_{\mu}.$$
 
-Such a map always exists even in higher dimensions, assuming that $$\mu << \mathcal{L}$$. This is a result by [Brenier, 95]. 
+Such a map always exists even in higher dimensions, assuming that $$\mu << \mathcal{L}$$. This is a result by [Brenier, 95]. In fact, he showed that 
+
+$$ T(x) = \nabla \Psi(x),$$
+
+where $$x \mapsto \Psi(x)$$ is a strictly convex function. 
 
 **Counterexample:**
 
-It's easy to see that such a map does not always exist, even in one dimension. Take as a counterexample, $$\mu = \delta_{x=0.5}$$ and $$\nu = \frac{1}{2}\delta_{x=0}+\frac{1}{2}\delta_{x=1}$$. This of course doesn't make sense as a function, since the mass needs to split itself across $$x=0$$ and $$x=1$$. 
+It's easy to see that such a map does not always exist, even in one dimension. Take as a counterexample, $$\mu = \delta_{x=0.5}$$ and $$\nu = \frac{1}{2}\delta_{x=0}+\frac{1}{2}\delta_{x=1}$$. This of course doesn't make sense as a function, since the mass needs to split itself across $$x=0$$ and $$x=1$$. The same would hold if $$\nu = \textrm{Unif}[0,1]$$ in fact. So the essential rule to remember is **mass can't split**. 
+
+Now that we've reviewed some Optimal Transport Theory (see Cedric Villani's excellent books on the topic if you're interested), let's get back to the main point. Now that we know that $$T$$ transports the mass of $$\mu$$ to $$\nu$$, let's use it to sample $$\nu$$ from $$\mu$$. We will focus on one dimension now. 
 
 
 ## Rejection Sampling
