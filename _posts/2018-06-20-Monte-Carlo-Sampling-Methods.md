@@ -26,6 +26,19 @@ $$T = F_{\nu}^{-1} \circ F_{\mu}.$$
 
 Such a map always exists even in higher dimensions, assuming that $$\mu << \mathcal{L}$$. This is a result by [Brenier, 95]. 
 
+**Counterexample:**
+
+It's easy to see that such a map does not always exist, even in one dimension. Take as a counterexample, $$\mu = \delta_{x=0}$$ and $$\nu = \textrm{Unif}[0,1]$$. Then for the condition to hold, we would need
+$$
+\begin{equation*}
+T(x)=
+\begin{cases}
+  0 \textrm{ if } x < 0 \\      
+  1 \textrm{ if } x > 0 
+\end{cases}
+\end{equation*}
+$$
+
 ## Rejection Sampling
 
 * Obtain a sample $${\displaystyle y}$$ from distribution $${\displaystyle Y}$$ and a sample $${\displaystyle u}$$ from $${\displaystyle \mathrm {Unif} (0,1)}$$  (the uniform distribution over the unit interval).
