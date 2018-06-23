@@ -6,7 +6,7 @@ We will present a slightly more general treatment here than is usually seen. Ima
 
 ![](/img/optimal_transport.png?raw=true)
 
-Given i.i.d samples $$\{x_i\}$$ sampled from $\mu, how do we generate samples from $\mu$. The solution lies in the *push forward map* or an *optimal transport map*. More precisely, we say 
+Given i.i.d samples $$\{x_i\}$$ sampled from $$\mu$$, how do we generate samples from $$\nu$$. The solution lies in the *push forward map* or an *optimal transport map*. More precisely, we say 
 
 $$T \# \mu = \nu $$
 
