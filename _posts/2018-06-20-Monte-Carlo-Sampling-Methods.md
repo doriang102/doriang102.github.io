@@ -125,7 +125,27 @@ def rejection_sample(cutoff):
     return P_sim
 {% endhighlight %}
 
+Now let's see how well this does. We'll do that by evaluating the actual area under the Gaussian for $$x > \textrm{cutoff}$$. 
+First let's define some important functions:
 
+{% highlight ruby %}
+def phi(x):
+    'Cumulative distribution function for the standard normal distribution'
+    return (1.0 + math.erf(x / np.sqrt(2.0))) / 2.0
+def actual_value(cutoff):
+    return 1 - phi(cutoff)
+{% endhighlight %}
+
+{% highlight ruby %}
+rs_estimates = []
+actual_values = []
+for k in range(1,4):
+    rs_estimates.append(rejection_sample(k))
+    actual_values.append(actual_value(k))
+plt.plot(rs_estimates,label='RS')
+plt.plot(actual_values,label='Actual')
+plt.legend()
+{% endhighlight %}
 
 ## Metropolis Hastings Algorithm
 
