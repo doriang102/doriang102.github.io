@@ -36,7 +36,45 @@ It's easy to see that such a map does not always exist, even in one dimension. T
 
 Now that we've reviewed some Optimal Transport Theory (see Cedric Villani's excellent books on the topic if you're interested), let's get back to the main point. Now that we know that $$T$$ transports the mass of $$\mu$$ to $$\nu$$, let's use it to sample $$\nu$$ from $$\mu$$. We will focus on one dimension now. 
 
+### Example 1: Sampling Binomial from Uniform
 
+We know that if $$x \sim \textrm{Unif}[0,1]$$ then $$\Phi^{-1}(x) \sim \textrm{Bin}(n,p)(k).$$ First define the CDF of the binomial distribution:
+
+$$\Phi(k) = \sum_{j \leq k} {n \choose j} p^j (1-p)^{n-j}.$$
+
+Thus $$\Phi^{-1}(x) = \min_{k} \{ \Phi(k) \geq x\}.$$
+
+Thus for any $$x$$ sampled from $$[0,1]$$, we just find the corresponding minimum value of $$k$$ such that $$\Phi(k) \geq x$$. 
+
+{% highlight ruby %}
+s = np.random.uniform(0,1,1000)
+plt.hist(s)
+{% endhighlight %}
+
+{% highlight ruby %}
+import math
+def nCr(n,r):
+    f = math.factorial
+    return f(n) / f(r) / f(n-r)
+def binomial(n,p,k):
+    return nCr(n,k)*(p**k)*(1-p)**(n-k)
+def binomial_cdf(n,p,k):
+    return sum([binomial(n,p,j) for j in range(0,k)])
+def binomial_sample(n,p,x):
+    for j in range(0,n):
+        if binomial_cdf(n,p,j)> x:
+            return j-1
+    
+p = 0.5
+n = 100
+{% endhighlight %}
+
+Now let's plot the results
+
+{% highlight ruby %}
+binom_samp=[binomial_sample(n,p,x) for x in s]
+plt.hist(binom_samp)
+{% endhighlight %}
 ## Rejection Sampling
 
 * Obtain a sample $${\displaystyle y}$$ from distribution $${\displaystyle Y}$$ and a sample $${\displaystyle u}$$ from $${\displaystyle \mathrm {Unif} (0,1)}$$  (the uniform distribution over the unit interval).
