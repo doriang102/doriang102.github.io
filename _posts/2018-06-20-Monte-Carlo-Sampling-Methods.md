@@ -18,7 +18,12 @@ In the case of one dimension, it turns out there is only one such map. Let $$F_{
 
 $$ F_{\nu}(x) = \int_{-\infty}^x d\nu(x)$$
 
-$$ F_{\mu}(x) = \int_{-\infty}^x d\mu(x)$$
+$$ F_{\mu}(x) = \int_{-\infty}^x d\mu(x).$$
+
+Then the unique map which satisfies $$T \# \mu = \nu$$ is
+
+$$T = F_{\nu}^{-1} \circ F_{\mu}.$$
+
 
 ## Rejection Sampling
 
