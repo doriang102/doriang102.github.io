@@ -75,6 +75,17 @@ Now let's plot the results
 binom_samp=[binomial_sample(n,p,x) for x in s]
 plt.hist(binom_samp)
 {% endhighlight %}
+
+### Example 2: Sampling binomial from normal
+
+{% highlight ruby %}
+s = np.random.normal(0,1,1000)
+phi_mu = [0.5 + 0.5*math.erf(x) for x in s]
+T = [binomial_sample(n,p,x) for x in phi_mu]
+plt.hist(T)
+{% endhighlight %}
+
+
 ## Rejection Sampling
 
 * Obtain a sample $${\displaystyle y}$$ from distribution $${\displaystyle Y}$$ and a sample $${\displaystyle u}$$ from $${\displaystyle \mathrm {Unif} (0,1)}$$  (the uniform distribution over the unit interval).
