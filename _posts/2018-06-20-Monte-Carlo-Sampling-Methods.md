@@ -1,6 +1,6 @@
 # UNDER CONSTRUCTION
 
-In this post, we will consider various methods of sampling. We will go (roughly) in order of preference of methods. Ideally, we can invert the CDF for our distribution for sampling, but this isn't always possible. We present our methods in increasing order of desperation overall, however we note that importance sampling is rather a solution to the problems presented by rejection sampling, and Gibbs sampling is a special case of Metropolis. 
+In this post, we will consider various methods of sampling. We will go (roughly) in order of preference of methods. Ideally, we can invert the CDF for our distribution for sampling, but this isn't always possible. We present our methods in increasing order of desperation overall, however we note that importance sampling is rather a solution to the problems presented by rejection sampling, and Gibbs sampling is a special case of Metropolis. Some of the later topics on Metropolis/Gibbs were faciliated by fruitful conversations with [Michael Lewis](https://math.nyu.edu/~mjlewis/).
 
 
 * Inverse Sampling
