@@ -1,5 +1,14 @@
 # UNDER CONSTRUCTION
 
+In this post, we will consider various methods of sampling. We will go (roughly) in order of preference of methods. Ideally, we can invert the CDF for our distribution for sampling, but this isn't always possible. We present our methods in increasing order of desperation overall, however we note that importance sampling is rather a solution to the problems presented by rejection sampling, and Gibbs sampling is a special case of Metropolis. 
+
+
+* Inverse Sampling
+* Rejection Sampling
+* Importance Sampling
+* Metropolois Hastings 
+* Gibbs Sampling
+
 ## Inverse Sampling
 
 We will present a slightly more general treatment here than is usually seen. Imagine that we wish to sample from some probability measure $$\nu$$ but only have access to a probability distribution $$\mu$$ (eg. $$\mu = \textrm{Unif}[0,1]$$, a random number generator). Now if we can generate samples from $$\mu$$, is there a way to obtain samples from $$\nu$$? We could if there was some sort of map which took elements of the $$\sigma$$-algebra of $$\mu$$ to $$\nu$$. 
