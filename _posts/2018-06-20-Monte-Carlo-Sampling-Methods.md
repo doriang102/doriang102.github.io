@@ -15,7 +15,7 @@ We will present a slightly more general treatment here than is usually seen. Ima
 
 ![](/img/optimal_transport.png?raw=true)
 
-Given i.i.d samples $$\{x_i\}$$ sampled from $$\mu$$, how do we generate samples from $$\nu$$. The solution lies in the *push forward map* or an *optimal transport map*. More precisely, we say 
+Given i.i.d samples $$\{x_i\}$$ sampled from $$\mu$$, how do we generate samples from $$\nu$$. The solution lies in the *push forward map* or an *transport map*. More precisely, we say 
 
 $$T \# \mu = \nu $$
 
@@ -37,7 +37,9 @@ Such a map always exists even in higher dimensions, assuming that $$\mu << \math
 
 $$ T(x) = \nabla \Psi(x),$$
 
-where $$x \mapsto \Psi(x)$$ is a strictly convex function. 
+where $$x \mapsto \Psi(x)$$ is a strictly convex function. Moreover $$ x \mapsto T(x)$$ minimizes the so called *Wasserstein distance*:
+
+$$\mathcal{W}(\mu,\nu) = \inf_{T \# \mu = \nu} \int \left | x - T(x)\right|^2 d\mu(x).$$
 
 **Counterexample:**
 
