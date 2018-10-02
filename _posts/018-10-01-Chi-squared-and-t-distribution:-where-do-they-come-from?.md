@@ -18,4 +18,4 @@ $$ p\left(z = \sum_{i=1}^k X_i^2\right) = \prod_{i=1}^k p\left(X_i \big \lvert \
 
 Since each $$X_i \sim \mathcal{N}(0,1)$$ we have, letting $$z = \sum_{i=1}^k x_i^2$$,
 
-$$ dp(z = \sum_{i=1}^k X_i^2) = \frac{1}{(\sqrt{2\pi}^k} \prod_{i=1}^k e^{-x_i^2/2} z^{\frac{k-1}{2}}. $$
+$$ dp\left(z = \sum_{i=1}^k X_i^2\right) = \frac{1}{(\sqrt{2\pi}^k} \prod_{i=1}^k e^{-x_i^2/2} z^{\frac{k-1}{2}}. $$
