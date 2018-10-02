@@ -1,6 +1,6 @@
 ## Under Construction
 
-A common derivation that is overlooked in many disucssions on statistis is the derivation of $$\chi^2$ and the student's t distribution.
+A common derivation that is overlooked in many disucssions on statistis is the derivation of $$\chi^2$$ and the student's t distribution.
 
 ## Chi Squared
 
@@ -51,3 +51,13 @@ Why can't we multiply $$p(z_1)$$ and $$p(z_2))$$? Because both depend on each $$
 In probablistic terms, this is really just a rewriting of the joint distirbution $$p(Z_1,Z_2)$$ as
 
 $$p(Z) = p\left(Z_1,Z_2 \lvert Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right)= p\left(Z_1 \lvert Z_2,Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right)p(Z_2) . $$
+
+We can rewrite the condition as 
+
+$$ Z^2 Z_2 = Z_1 k$$. 
+
+Recall that we now from the above section that $$Z_1 \sim \mathcal{N}(0,1)$$ and $$Z_2 \sim \chi_k^2$$. 
+
+Thus
+
+$$p\left(Z_1 \lvert Z_2,Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right)p(Z_2) \sim e^{-z^2 z_2/2k} e^{-z_2/2} z_2^{k/2 -1} e^{-z_2/2}$$
