@@ -32,3 +32,8 @@ Rewriting the product we have
 $$ dp\left(z = \sum_{i=1}^k X_i^2\right) = C_k\frac{1}{(\sqrt{2\pi})^k} e^{-z/2} z^{\frac{k}{2}-1}.$$
 
 
+## Student's t distribution
+
+Now that we have derived $$\chi^2$, how can we derive the student's t distribution? Recall that this is defined as 
+
+$$ Z = \frac{\sum_{i=1]^k X_i}{\frac{1}{\sqrt{k}}\sum_{i=1}^k X_i^2}.$$
