@@ -27,6 +27,8 @@ Since each $$X_i \sim \mathcal{N}(0,1)$$ we have, letting $$z = \sum_{i=1}^k x_i
 $$ dp\left(z = \sum_{i=1}^k X_i^2\right) = C_k\frac{1}{(\sqrt{2\pi})^k} \prod_{i=1}^k e^{-x_i^2/2} z^{\frac{k}{2}-1}. $$
 
 Rewriting the product we have 
+
+
 $$ dp\left(z = \sum_{i=1}^k X_i^2\right) = C_k\frac{1}{(\sqrt{2\pi})^k} e^{-z/2} z^{\frac{k}{2}-1}.$$
 
 
