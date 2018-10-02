@@ -85,7 +85,7 @@ where $$\eta(z) \in [0,z]$$. Integrating we have
 
 $$ \left| \Phi_k(z) - \Phi_{\mathcal{N}(0,1)}(z) \right| \leq \frac{\mathbb{E}(\lvert z \rvert ^4)}{k^3}.$$
 
-So assuming that $$Z$$ has a finite fourth moment, we have $$O(\mathbb{E}(\lvert z \rvert^4) k^{-3})$$ error estiamtes on the cdf. If we set $$M^4$  to be the fourth moment of $$Z$$, then we need 
+So assuming that $$Z$$ has a finite fourth moment, we have $$O(\mathbb{E}(\lvert z \rvert^4) k^{-3})$$ error estiamtes on the cdf. If we set $$M^4$$  to be the fourth moment of $$Z$$, then we need 
 
 $$ \frac{M_4}{k^3} << 0.05.$$
 
