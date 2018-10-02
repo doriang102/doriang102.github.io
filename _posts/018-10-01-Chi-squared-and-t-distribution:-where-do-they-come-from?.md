@@ -14,7 +14,7 @@ $$p(z = \sum_{i=1}^k X_i^2)$$.
 
 This is simply a rewriting of the above, but an important one. It allows us to understand that we are seeking to find the probability of an entire level set - in particular the level sets of $$Z$$ which are spheres. Since $$\{X_i\}_{i=1}^k$$ are independent. we can write
 
-$$ p\left(z = \sum_{i=1}^k X_i^2\right) = \prod_{i=1}^k p\left(X_i \lvert \sum_{i=1}^k X_i^2 = z\right). $$
+$$ p\left(z = \sum_{i=1}^k X_i^2\right) = \prod_{i=1}^k p\left(X_i \big \lvert \sum_{i=1}^k X_i^2 = z\right). $$
 
 Since each $$X_i \sim \mathcal{N}(0,1)$$ we have, letting $$z = \sum_{i=1}^k x_i^2$$,
 
