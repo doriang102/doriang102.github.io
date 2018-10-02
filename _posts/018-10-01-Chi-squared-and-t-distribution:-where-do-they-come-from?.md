@@ -41,4 +41,13 @@ $$ Z = \frac{\sum_{i=1}^k X_i}{\frac{1}{\sqrt{k}}\sum_{i=1}^k X_i^2}.$$
 The naive hope is that we could define a variable such as
 
 $$ Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}},$$
+
 and multiply the distributions of $$Z_1$$ and $$Z_2$$. This isn't possible however since $$Z_1$$ and $$Z_2$$ are clearly not indepenedent here. 
+
+### Before you look at the solution, think about this
+
+Why can't we multiply $$p(z_1)$$ and $$p(z_2))$$? Because both depend on each $$X_i$$ so we can't use independence. What would be a simpler case where we could solve this? What if we restricted to the level set of $$Z_2$$ where $$Z_2$$ is constant and then derived the probability when $$Z_1$$ varied? This would indeed be a legitmate approach. 
+
+In probablistic terms, this is really just a rewriting of the joint distirbution $$p(Z_1,Z_2)$$ as
+
+$$p(Z) = p\left(Z_1,Z_2 \lvert Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right) = \leftp(Z_1 \lvert Z_2, Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right).$$
