@@ -61,3 +61,13 @@ Recall that we now from the above section that $$Z_1 \sim \mathcal{N}(0,1)$$ and
 Thus
 
 $$p\left(Z_1 \lvert Z_2,Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right)p(Z_2) \sim e^{-z^2 z_2/2k} e^{-z_2/2} z_2^{k/2 -1} e^{-z_2/2}$$
+
+Rewriting this we have the right side is equal to
+
+$$ C_k e^{-z_2(1+z^2/2k)} z^{k/2-1}. $$
+
+We need to integrate over all such $$z_2$$ though! So 
+
+$$\int_{-\infty}^{+\infty} C_k e^{-z_2(1+z^2/2k)} z^{k/2-1} = \tilde C_k \left(1 + z^2/2k\right)^{-k/2},$$
+
+where we've used integration by parts $$k$$ times. 
