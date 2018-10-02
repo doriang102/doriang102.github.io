@@ -8,7 +8,7 @@ This derivation is often glossed over in many discussions of statistical signifi
 
 $$Z = \sum_{i=1}^k X_i^2.$$
 
-How can we derive the pdf of $Z$? The first thing we need to understand is what we are trying to compute. Indeed, our goal is to find
+How can we derive the pdf of $$Z$$? The first thing we need to understand is what we are trying to compute. Indeed, our goal is to find
 
 $$p(z = \sum_{i=1}^k X_i^2)$$. 
 
