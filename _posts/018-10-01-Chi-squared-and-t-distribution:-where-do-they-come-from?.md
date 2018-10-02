@@ -89,5 +89,7 @@ So assuming that $$Z$$ has a finite fourth moment, we have $$O(\mathbb{E}(\lvert
 
 $$ \frac{M_4}{k^3} < 10^{-3}.$$
 
+Since we have $$\textrm{Var}(Z) = 1$$, a rough estimate for $$M_4$$ is $$3 \sigma_{X_i}=3$$. Thus we can expect this order of maginitude for our error if we have $$ k > 14$$. 
+
 
 
