@@ -16,7 +16,7 @@ This is simply a rewriting of the above, but an important one. It allows us to u
 
 $$ p\left(z = \sum_{i=1}^k X_i^2\right) = \prod_{i=1}^k p\left(X_i \big \lvert \sum_{i=1}^k X_i^2 = z\right). $$
 
-The key thing to note here is that we are trying to find the volume of a small region in $$\mathbb{R}^k$ where $$z = \sum_{i=1}^k x_i^2$$. In this sense, using polar coordinates, we have 
+The key thing to note here is that we are trying to find the volume of a small region in $$\mathbb{R}^k$$ where $$z = \sum_{i=1}^k x_i^2$$. In this sense, using polar coordinates, we have 
 
 $$ dV = C_kp(z) z^{\frac{k}{2}-1}dz,$$
 
