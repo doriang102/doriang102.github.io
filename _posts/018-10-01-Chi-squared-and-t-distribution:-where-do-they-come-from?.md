@@ -50,4 +50,4 @@ Why can't we multiply $$p(z_1)$$ and $$p(z_2))$$? Because both depend on each $$
 
 In probablistic terms, this is really just a rewriting of the joint distirbution $$p(Z_1,Z_2)$$ as
 
-$$p(Z) = p\left(Z_1,Z_2 \lvert Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right) = \left p(Z_1 \lvert Z_2, Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right).$$
+$$p(Z) = p\left(Z_1,Z_2 \lvert Z = \frac{Z_1}{\sqrt{Z_2}/\sqrt{k}}\right)$$
