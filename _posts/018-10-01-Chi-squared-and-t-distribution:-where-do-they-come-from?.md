@@ -68,6 +68,28 @@ $$ C_k e^{-z_2(1+z^2/2k)} z^{k/2-1}. $$
 
 We need to integrate over all such $$z_2$$ though! So 
 
-$$\int_{-\infty}^{+\infty} C_k e^{-z_2(1+z^2/2k)} z^{k/2-1} = \tilde C_k \left(1 + z^2/2k\right)^{-k/2},$$
+$$\int_{-\infty}^{+\infty} C_k e^{-z_2(1+z^2/2k)} z^{k/2-1} = \tilde C_k \left(1 + z^2/k\right)^{-(k+1)/2},$$
 
 where we've used integration by parts $$k$$ times. 
+
+### Is this really worth it?
+
+We know that
+
+$$ f_k(z) = \left(1 + z^2/k\right)^{-k/2} \to e^{-z^2/2} \textrm{ as } k \to +\infty.$$
+
+Taking the log of both sides, we have 
+
+$$ \left| f_k(z) - e^{-z^2/2} \right| = \frac{\eta(z)^4}{k^3},$$
+where $$\eta(z) \in [0,z]$$. Integrating we have
+
+$$ \left \Phi_k(z) - \Phi_{\mathcal{N}(0,1)}(z) \right| \leq \frac{\mathbb{E}(|z|^4)}{k^3}.$$
+
+So assuming that $$Z$$ has a finite fourth moment, we have $$O(\mathbb{E}(|z|^4) k^{-3})$$ error estiamtes on the cdf. If we assume that $$\hat \mumu_z$$ is the empircal mean of $$Z$$, then we need 
+
+$$ \frac{\hat \mu_Z}{k^3} << 0.05.$$
+
+Or that 
+
+$$ k >> \left(\frac{\hat \mu_z}{0.05}\right)^{1/3}.$$
+
