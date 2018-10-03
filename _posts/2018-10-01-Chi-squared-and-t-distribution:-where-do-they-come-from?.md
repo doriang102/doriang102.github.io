@@ -83,4 +83,12 @@ $$ f_k(z) = \left(1 + z^2/k\right)^{-k/2} \to e^{-z^2/2} \textrm{ as } k \to +\i
 
 $$\left(1 + z^2/k\right)^{-k/2} \geq e^{-z^2/2}.$$
 
-The proof follows immediately by taking the log of the left side of the equation and performing a second order Taylor expansion of the $\log$, observing the positivity of the remainder term. 
+The proof follows immediately by taking the log of the left side of the equation and performing a second order Taylor expansion of the $$\log$$, observing the positivity of the remainder term. 
+
+Let 
+
+$$f_k(z) = \left(1 + z^2/k\right)^{-k/2}. $$
+
+Then
+
+$$ \log f_k(z) = -\frac{k}{2} \log \left(1 + z^2/k\right).$$
