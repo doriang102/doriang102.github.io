@@ -79,4 +79,8 @@ We know that
 $$ f_k(z) = \left(1 + z^2/k\right)^{-k/2} \to e^{-z^2/2} \textrm{ as } k \to +\infty.$$
 
 
+**Lemma:** For all $$ k \geq 1$$, we have 
+
+$$\left(1 + z^2/k\right)^{-k/2} \geq e^{-z^2/2}.$$
+
 
