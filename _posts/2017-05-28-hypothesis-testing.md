@@ -26,7 +26,7 @@ $$
 Let's begin by the assumptions that the frequentist makes:
 
 **We make the following assumptions:**
-- Both $$\{X_i^R\}$$ and $$\{X_i^B\}$$ form a collection of independent, identitically dstirbuted random variables (i.i.d). 
+- Both $$\{X_i^R\}$$ and $$\{X_i^B\}$$ form a collection of independent, identitically distributed random variables (i.i.d). 
 - Moreover, for each $$i$$, $$X_i^R$$ and $$X_i^B$$ are sampled from fixed Bernoulli distributions with means $$p_R$$ and $$p_B$$ respectively.
 
 
