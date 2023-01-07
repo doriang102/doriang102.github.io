@@ -2,4 +2,6 @@ name: Data Science - Theory and Practice
 markdown: kramdown
 redcarpet:
     extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
-theme: jekyll-theme-dinky
+remote_theme: pages-themes/slate@v0.2.0
+plugins:
+- jekyll-remote-theme
